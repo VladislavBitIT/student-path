@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_MSU_PRIVATE_REG_COPY",
+  "university_id": "UNIV_MSU",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Передать факультету МГУ регистрацию из частного жилья",
+  "summary": "После оформления хозяином жилья представьте иностранному отделу факультета паспорт, регистрацию и миграционную карту, если она выдавалась.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "msu_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "private_home"
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "msu_registration_received",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_MSU_PRIVATE_REG_COPY"
+    ]
+  },
+  "instructions": [
+    "После оформления хозяином жилья представьте иностранному отделу факультета паспорт, регистрацию и миграционную карту, если она выдавалась."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "online",
+    "name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+    "url": "https://international.msu.ru/faculties",
+    "contacts": [],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_MSU_PRIVATE_REG_COPY",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_MSU_PRIVATE_REG_COPY"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_MSU_AFTER",
+      "locator": "Учёт вне общежития",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MSU_FACULTIES",
+      "locator": "Учёт вне общежития",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MSU_PRIVATE_REG_COPY"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:36:33.319008Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

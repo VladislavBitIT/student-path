@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/source.schema.json",
+  "title": "source",
+  "description": "Реестр первоисточников. Запись источника не является правилом. Проверка URL не подтверждает достоверность.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^SRC_[A-Z0-9_]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "legislation",
+        "government_guidance",
+        "university_guidance",
+        "other"
+      ]
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 1
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "jurisdiction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(?:-[A-Z]{2})?$"
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "published_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "effective_period": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "format": "date"
+        },
+        "through": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "verification_status": {
+      "enum": [
+        "unverified",
+        "verified",
+        "superseded",
+        "unavailable"
+      ]
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_review_on": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "reviewed_at",
+        "reviewer",
+        "next_review_on"
+      ],
+      "additionalProperties": false
+    },
+    "superseded_by": {
+      "type": "string",
+      "pattern": "^SRC_[A-Z0-9_]+$"
+    },
+    "snapshot": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9_./-]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "kind",
+    "publisher",
+    "url",
+    "jurisdiction",
+    "language",
+    "retrieved_at",
+    "verification_status"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "verification_status": {
+            "const": "verified"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "review"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verification_status": {
+            "const": "superseded"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "superseded_by"
+        ]
+      }
+    }
+  ]
+}

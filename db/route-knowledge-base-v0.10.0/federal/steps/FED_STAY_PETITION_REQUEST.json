@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_STAY_PETITION_REQUEST",
+  "kind": "federal",
+  "version": 2,
+  "status": "draft",
+  "title": "Передайте подтверждение обучения для ходатайства о продлении пребывания",
+  "summary": "Передайте подтверждение действующего обучения организации, которая направляет учебное ходатайство в МВД.",
+  "category": "stay_status",
+  "research_process_ids": [
+    "PROC_STAY_EXTENSION"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "residence_status",
+            "value": "temporary_stay"
+          },
+          {
+            "op": "eq",
+            "fact": "needs_study_stay_extension",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "is_enrolled",
+            "value": true
+          }
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "is_in_russia",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "stay_extension_needed",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_STAY_PETITION_REQUEST"
+    ]
+  },
+  "instructions": [
+    "Передайте подтверждение действующего обучения организации, которая направляет учебное ходатайство в МВД.",
+    "Укажите дату окончания разрешённого пребывания и получите подтверждение передачи документов для ходатайства."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "original",
+      "evidence": [
+        {
+          "source_id": "SRC_STUDENT_EXTEND",
+          "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    },
+    {
+      "id": "DOC_ENROLLMENT",
+      "title": "Документ о действующем обучении",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_STUDENT_EXTEND",
+          "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Образовательная организация — податель ходатайства по статье 17 115-ФЗ",
+    "selection_basis": "Получатель документов внутри вуза определяется UniversityConfig; юридическое действие организации — направить ходатайство в МВД.",
+    "information_url": "https://epp.genproc.gov.ru/ru/proc_76/activity/legal-education/explain/e1958283/",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Документы для учебного ходатайства переданы",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Общий безвизовый лимит с 2025 года — 90 суток в календарном году, но законные основания продления рассматриваются отдельно.",
+      "unresolved_ids": [
+        "UNR_STAY_EXTENSION",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_STAY_PETITION_REQUEST",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. 20 дней из разъяснения — срок ходатайства организации, не установленный федеральный срок передачи студентом документов. Проверить программы, форму и текущий порядок продления.",
+      "unresolved_ids": [
+        "UNR_STEP_STAY_PETITION_REQUEST"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_CHANGES",
+      "severity": "blocking",
+      "message": "Подтвердить действия и сроки при смене паспорта, статуса, переводе/академическом отпуске/отчислении, аннулировании документа и длительном выезде. Пересчет применимости не равен исполнению уведомительной обязанности.",
+      "unresolved_ids": [
+        "UNR_AUDIT_CHANGES"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Документ о действующем обучении",
+      "fields": [
+        "/documents/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Общий безвизовый лимит с 2025 года — 90 суток в календарном году, но законные основания продления рассматриваются отдельно.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Передайте подтверждение действующего обучения организации, которая направляет учебное ходатайство в МВД. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Разъяснение статьи 17 115-ФЗ: ходатайство образовательной организации о продлении",
+      "supports": "Укажите дату окончания разрешённого пребывания и получите подтверждение передачи документов для ходатайства. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_STUDENT_EXTEND",
+      "locator": "Отдельный аудит профилей 26.09.2026",
+      "supports": "Техническая граница действия: текущая процедура в РФ не назначается как выполненная до приезда; подготовку можно показывать отдельно.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_STAY_PETITION_REQUEST",
+    "UNR_STAY_EXTENSION",
+    "UNR_CURRENT_EDITION",
+    "UNR_AUDIT_CHANGES",
+    "UNR_AUDIT_STAY_COUNTER"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T06:25:00Z",
+    "reviewer": "Отдельный аудит профилей и границ применения; неподтвержденные поля сохранены как блокирующие пробелы",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_STAY_PETITION_REQUEST",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_STAY_PETITION_REQUEST",
+      "note": "20 дней из разъяснения — срок ходатайства организации, не установленный федеральный срок передачи студентом документов. Проверить программы, форму и текущий порядок продления."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/trigger"
+      ],
+      "unresolved_id": "UNR_AUDIT_CHANGES",
+      "note": "Подтвердить действия и сроки при смене паспорта, статуса, переводе/академическом отпуске/отчислении, аннулировании документа и длительном выезде. Пересчет применимости не равен исполнению уведомительной обязанности."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_AUDIT_STAY_COUNTER",
+      "note": "Повторный въезд не обнуляет суммарную историю пребывания; расчет действующего лимита и исключений пока не реализован."
+    }
+  ]
+}

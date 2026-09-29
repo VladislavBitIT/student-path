@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_ITMO_WORK_STUDY_PROOF",
+  "university_id": "UNIV_ITMO",
+  "target_step_id": "FED_WORK_STUDY_PROOF",
+  "target_step_version": 2,
+  "version": 2,
+  "status": "draft",
+  "applicability": {
+    "op": "eq",
+    "fact": "itmo_current_student",
+    "value": true
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "В my.itmo откройте «Заявки» и закажите справку с места учебы для работодателя; получите ее по уведомлению Студенческого офиса."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Студенческий офис ИТМО",
+      "address": "Санкт-Петербург, ул. Ломоносова, 9, кабинет 1400",
+      "url": "https://my.itmo.ru/requests",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "so@itmo.ru",
+          "label": "Студенческий офис"
+        },
+        {
+          "kind": "phone",
+          "value": "+7 (812) 480-90-00",
+          "label": "Студенческий офис"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_ITMO_WORK_STUDY_PROOF",
+        "severity": "blocking",
+        "message": "Сохранена подтвержденная местная часть; недостающие детали требуют уточнения.",
+        "unresolved_ids": [
+          "UNR_ITMO_WORK_STUDY_PROOF"
+        ]
+      },
+      {
+        "id": "WARN_ITMO_AUTHENTICATED_FORMS",
+        "severity": "blocking",
+        "message": "Ссылки my.itmo ведут на авторизацию. Публичное назначение подтверждено страницами ИТМО; поля форм, доступы и успешная отправка после входа не проверены. Форма 086/у /requests/new/8326 не открылась инструментом.",
+        "unresolved_ids": [
+          "UNR_ITMO_AUTHENTICATED_FORMS"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_ITMO_FAQ",
+      "locator": "Заказ и получение документов: справка с места учёбы, my.itmo, получение по уведомлению; контакты ответственного подразделения на странице источника",
+      "supports": "Сопоставление перечисленных локальных полей с разделом страницы. Это не подтверждение федеральных оснований и не закрытие локальных пробелов.",
+      "fields": [
+        "/additions/instructions/0",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_DOCUMENTS",
+      "locator": "Заказ и получение документов: справка с места учёбы, my.itmo, получение по уведомлению; контакты ответственного подразделения на странице источника",
+      "supports": "Сопоставление перечисленных локальных полей с разделом страницы. Это не подтверждение федеральных оснований и не закрытие локальных пробелов.",
+      "fields": [
+        "/additions/instructions/0",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_CONTACTS",
+      "locator": "Заказ и получение документов: справка с места учёбы, my.itmo, получение по уведомлению; контакты ответственного подразделения на странице источника",
+      "supports": "Сопоставление перечисленных локальных полей с разделом страницы. Это не подтверждение федеральных оснований и не закрытие локальных пробелов.",
+      "fields": [
+        "/additions/instructions/0",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_ITMO_WORK_STUDY_PROOF",
+    "UNR_ITMO_AUTHENTICATED_FORMS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:40:30.570901Z",
+    "reviewer": "Повторное самостоятельное исследование официальных страниц в последовательном обзоре десяти вузов",
+    "next_review_on": "2026-10-26"
+  }
+}

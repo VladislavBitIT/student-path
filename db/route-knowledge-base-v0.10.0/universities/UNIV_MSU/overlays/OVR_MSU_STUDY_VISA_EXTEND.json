@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_MSU_STUDY_VISA_EXTEND",
+  "university_id": "UNIV_MSU",
+  "target_step_id": "FED_STUDY_VISA_EXTEND",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "msu_campus",
+        "value": "main"
+      },
+      {
+        "op": "always"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Передайте визовый пакет иностранному отделу своего факультета. Для ИСАА опубликованы кабинет 1.61 и visa.iaas@org.msu.ru."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+      "url": "https://international.msu.ru/faculties",
+      "contacts": [],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_MSU_STUDY_VISA_EXTEND",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_MSU_STUDY_VISA_EXTEND"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_MSU_STUDY_VISA_EXTEND_1",
+        "title": "Паспорт и действующая виза с копиями",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_AFTER",
+            "locator": "Продление учебной визы; ИСАА — продление",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MSU_STUDY_VISA_EXTEND_2",
+        "title": "Копия регистрации",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_AFTER",
+            "locator": "Продление учебной визы; ИСАА — продление",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MSU_STUDY_VISA_EXTEND_3",
+        "title": "Две фотографии 3×4",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_AFTER",
+            "locator": "Продление учебной визы; ИСАА — продление",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MSU_STUDY_VISA_EXTEND_4",
+        "title": "Подтверждение обучения",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_AFTER",
+            "locator": "Продление учебной визы; ИСАА — продление",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MSU_STUDY_VISA_EXTEND_5",
+        "title": "Квитанция с актуальными реквизитами без использования старой суммы из памятки",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_AFTER",
+            "locator": "Продление учебной визы; ИСАА — продление",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_MSU_STUDY_VISA_EXTEND",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "Общая памятка: 30 дней; ИСАА: 45 календарных дней до окончания визы. До выбора факультета единый местный срок неизвестен.",
+        "state": "unknown",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_MSU_STUDY_VISA_EXTEND"
+          ]
+        },
+        "source_id": "SRC_MSU_AFTER",
+        "locator": "Продление учебной визы; ИСАА — продление",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MSU_AFTER",
+      "locator": "Продление учебной визы; ИСАА — продление",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MSU_IAAS",
+      "locator": "Продление учебной визы; ИСАА — продление",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MSU_FACULTIES",
+      "locator": "Продление учебной визы; ИСАА — продление",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MSU_STUDY_VISA_EXTEND"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:36:33.319008Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

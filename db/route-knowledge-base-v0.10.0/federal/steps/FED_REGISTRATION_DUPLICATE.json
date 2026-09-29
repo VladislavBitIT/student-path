@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_REGISTRATION_DUPLICATE",
+  "kind": "federal",
+  "version": 1,
+  "status": "draft",
+  "title": "Подайте заявление о дубликате подтверждения миграционного учёта",
+  "summary": "Сообщите подразделению МВД об утрате подтверждения действующей учётной записи.",
+  "category": "accounting",
+  "research_process_ids": [
+    "PROC_LOST_REGISTRATION"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "registration_proof_lost",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "registration_proof_lost",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_REGISTRATION_DUPLICATE"
+    ]
+  },
+  "instructions": [
+    "Сообщите подразделению МВД об утрате подтверждения действующей учётной записи.",
+    "Подайте заявление о выдаче дубликата с документом личности; получите дубликат после проверки сведений."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "original",
+      "evidence": [
+        {
+          "source_id": "SRC_REG9",
+          "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    },
+    {
+      "id": "DOC_DUPLICATE_REQUEST",
+      "title": "Заявление о выдаче дубликата",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_REG9",
+          "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Подразделение по вопросам миграции МВД",
+    "selection_basis": "По соответствующей учётной записи.",
+    "information_url": "https://pvsmvd.ru/docs/156",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Заявление о дубликате подано",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Отсутствие записи и потеря бумажного подтверждения — разные ситуации.",
+      "unresolved_ids": [
+        "UNR_LOST_REGISTRATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_REGISTRATION_DUPLICATE",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Указанные в исследовании 3 рабочих дня относятся к действиям МВД, не к сроку заявления пользователя. Точный комплект и якорь срока услуги уточнить.",
+      "unresolved_ids": [
+        "UNR_STEP_REGISTRATION_DUPLICATE"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Заявление о выдаче дубликата",
+      "fields": [
+        "/documents/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Отсутствие записи и потеря бумажного подтверждения — разные ситуации.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Сообщите подразделению МВД об утрате подтверждения действующей учётной записи. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG9",
+      "locator": "Правила по постановлению № 9; исследованные положения об учёте/дубликате, редакция страницы 26.01.2026",
+      "supports": "Подайте заявление о выдаче дубликата с документом личности; получите дубликат после проверки сведений. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_REGISTRATION_DUPLICATE",
+    "UNR_LOST_REGISTRATION",
+    "UNR_CURRENT_EDITION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T06:06:57Z",
+    "reviewer": "Проверка федеральной карточки по сохранённым и повторно прочитанным государственным материалам",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_REGISTRATION_DUPLICATE",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_REGISTRATION_DUPLICATE",
+      "note": "Указанные в исследовании 3 рабочих дня относятся к действиям МВД, не к сроку заявления пользователя. Точный комплект и якорь срока услуги уточнить."
+    }
+  ]
+}

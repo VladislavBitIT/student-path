@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/federal_catalog.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "step_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^FED_[A-Z0-9_]+$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "code",
+          "title",
+          "step_ids"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "process_disposition": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "process_id": {
+            "type": "string",
+            "pattern": "^PROC_[A-Z0-9_]+$"
+          },
+          "step_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^FED_[A-Z0-9_]+$"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unresolved_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^UNR_[A-Z0-9_]+$"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "process_id",
+          "step_ids",
+          "reason",
+          "unresolved_ids"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "as_of",
+    "categories",
+    "process_disposition",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

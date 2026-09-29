@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_RUDN_ADAPTATION_CHECKIN",
+  "university_id": "UNIV_RUDN",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Прибыть в центр адаптации РУДН",
+  "summary": "Прибудьте к назначенному размещению в центр адаптации, Миклухо-Маклая 5, корпус2, блок15.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "rudn_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "rudn_needs_adaptation_housing",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "border_entry",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_RUDN_ADAPTATION_CHECKIN"
+    ]
+  },
+  "instructions": [
+    "Прибудьте к назначенному размещению в центр адаптации, Миклухо-Маклая 5, корпус2, блок15."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "physical",
+    "name": "Центр адаптации иностранных граждан РУДН",
+    "address": "Москва, ул. Миклухо-Маклая, 5, корпус 2, блок 15",
+    "contacts": [],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_RUDN_ADAPTATION_CHECKIN",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_RUDN_ADAPTATION_CHECKIN"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_RUDN_HOUSING",
+      "locator": "Порядок предоставления места",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_RUDN_ADAPTATION_CHECKIN"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:47:31.010529Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

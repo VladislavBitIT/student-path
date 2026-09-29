@@ -1,0 +1,69 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "universities": 10,
+    "cards": 122,
+    "source_registry_records": 149,
+    "link_checks": 168,
+    "reminder_eligible_cards": 42,
+    "university_card_counts": {
+      "UNIV_HSE": 14,
+      "UNIV_ITMO": 24,
+      "UNIV_KFU": 14,
+      "UNIV_MEPHI": 10,
+      "UNIV_MIPT": 9,
+      "UNIV_MSU": 12,
+      "UNIV_NSU": 7,
+      "UNIV_RUDN": 14,
+      "UNIV_SPBU": 10,
+      "UNIV_TSU": 8
+    },
+    "verification_status_counts": {
+      "confirmed_campaign_2026": 6,
+      "confirmed_current": 92,
+      "confirmed_current_with_exclusions": 15,
+      "confirmed_event_based": 8,
+      "confirmed_faculty_specific": 1
+    },
+    "deadline_kind_counts": {
+      "after_document_received": 7,
+      "after_process_completion": 2,
+      "authority_defined": 5,
+      "before_application_completion": 1,
+      "before_enrollment_or_checkin": 2,
+      "conditional": 3,
+      "contract_defined": 1,
+      "event_based": 35,
+      "faculty_specific": 1,
+      "immediate_after_incident": 4,
+      "numeric_window": 3,
+      "office_defined": 1,
+      "processing_duration": 4,
+      "processing_duration_advisory": 1,
+      "published_relative_rule": 4,
+      "recurring": 1,
+      "relative_after_event": 10,
+      "relative_before_event": 8,
+      "relative_before_expiry": 11,
+      "relative_to_arrival": 2,
+      "relative_to_event": 6,
+      "university_defined": 6,
+      "university_scheduled": 3,
+      "workflow_milestone": 1
+    }
+  },
+  "gates": {
+    "all_10_universities_present": true,
+    "all_122_cards_present": true,
+    "every_card_has_source": true,
+    "every_card_has_explicit_deadline_semantics": true,
+    "no_unhandled_card_gaps": true,
+    "no_stale_fees_in_active_fields": true,
+    "reminders_only_when_rule_is_safe": true,
+    "all_used_sources_registered": true,
+    "every_active_source_has_verified_url": true,
+    "every_card_has_readable_verified_evidence": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "mipt_campus",
+      "label": "Кампус/область локальной инструкции",
+      "type": "enum",
+      "dictionary_id": "mipt_campuses"
+    },
+    {
+      "code": "mipt_preparatory",
+      "label": "Слушатель подготовительного отделения",
+      "type": "boolean"
+    },
+    {
+      "code": "mipt_own_dormitory",
+      "label": "Проживает в общежитии МФТИ",
+      "type": "boolean"
+    },
+    {
+      "code": "mipt_absence_over_24h",
+      "label": "Планируется отсутствие свыше 24 часов",
+      "type": "boolean"
+    },
+    {
+      "code": "mipt_single_entry_visa",
+      "label": "Текущая виза однократная",
+      "type": "boolean"
+    }
+  ]
+}

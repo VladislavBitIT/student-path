@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "id": "event_types",
+  "status": "maintained",
+  "description": "Локальные события, подтверждаемые сервисом; не правовые обязанности.",
+  "entries": [
+    {
+      "code": "spbu_policy_received",
+      "label": "Получен полис ДМС"
+    },
+    {
+      "code": "spbu_private_registration_received",
+      "label": "Получен учёт по частному адресу"
+    },
+    {
+      "code": "spbu_dorm_assignment_ready",
+      "label": "Опубликовано распределение в общежитие"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_RUDN_STUDY_VISA_EXTEND",
+  "university_id": "UNIV_RUDN",
+  "target_step_id": "FED_STUDY_VISA_EXTEND",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "rudn_campus",
+        "value": "main"
+      },
+      {
+        "op": "always"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Выберите «МФЦ → Визовая поддержка → Приём документов для продления многократной визы». Загрузите заявку, выберите дату подачи; затем сдайте паспорт в назначенный специалистом день."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "МФЦ РУДН",
+      "address": "Москва, ул. Миклухо-Маклая, 6, цокольный этаж",
+      "url": "https://lk.rudn.ru/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "mfc@rudn.ru",
+          "label": "МФЦ РУДН"
+        }
+      ],
+      "appointment_required": "yes"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_RUDN_STUDY_VISA_EXTEND",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_RUDN_STUDY_VISA_EXTEND"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_RUDN_STUDY_VISA_EXTEND_1",
+        "title": "Удостоверение личности и две копии",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_VISA",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_STUDY_VISA_EXTEND_2",
+        "title": "Две копии страницы визы",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_VISA",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_STUDY_VISA_EXTEND_3",
+        "title": "Миграционная карта и копия",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_VISA",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ],
+        "condition": {
+          "op": "eq",
+          "fact": "migration_card_required",
+          "value": true
+        }
+      },
+      {
+        "id": "DOC_OVR_RUDN_STUDY_VISA_EXTEND_4",
+        "title": "Учёт и копия",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_VISA",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_STUDY_VISA_EXTEND_5",
+        "title": "Договор обучения либо направление Минобрнауки",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_VISA",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_STUDY_VISA_EXTEND_6",
+        "title": "Чек актуальной пошлины",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_VISA",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_STUDY_VISA_EXTEND_7",
+        "title": "Две матовые фотографии 3×4",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_VISA",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_RUDN_STUDY_VISA_EXTEND",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "За 45 дней до окончания визы",
+        "state": "unknown",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_RUDN_STUDY_VISA_EXTEND"
+          ]
+        },
+        "source_id": "SRC_RUDN_VISA",
+        "locator": "Как заказать и получить услугу",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_RUDN_VISA",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUDN_MFC",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_RUDN_STUDY_VISA_EXTEND"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:47:31.010529Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

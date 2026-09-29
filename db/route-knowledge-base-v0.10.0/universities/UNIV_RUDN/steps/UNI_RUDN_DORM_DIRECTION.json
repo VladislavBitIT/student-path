@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_RUDN_DORM_DIRECTION",
+  "university_id": "UNIV_RUDN",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Получить направление в общежитие РУДН",
+  "summary": "Передайте комплект в управление размещения в МФЦ и получите направление.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "rudn_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "rudn_own_dormitory",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "rudn_dorm_direction_needed",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_RUDN_DORM_DIRECTION"
+    ]
+  },
+  "instructions": [
+    "Передайте комплект в управление размещения в МФЦ и получите направление."
+  ],
+  "documents": [
+    {
+      "id": "DOC_UNI_RUDN_DORM_DIRECTION_1",
+      "title": "Паспорт",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_RUDN_HOUSING",
+          "locator": "Порядок предоставления места",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    },
+    {
+      "id": "DOC_UNI_RUDN_DORM_DIRECTION_2",
+      "title": "Две цветные фотографии 3×4",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_RUDN_HOUSING",
+          "locator": "Порядок предоставления места",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    },
+    {
+      "id": "DOC_UNI_RUDN_DORM_DIRECTION_3",
+      "title": "Временное удостоверение международного департамента",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_RUDN_HOUSING",
+          "locator": "Порядок предоставления места",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    },
+    {
+      "id": "DOC_UNI_RUDN_DORM_DIRECTION_4",
+      "title": "Заключение КДЦ РУДН о возможности проживания",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_RUDN_HOUSING",
+          "locator": "Порядок предоставления места",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    },
+    {
+      "id": "DOC_UNI_RUDN_DORM_DIRECTION_5",
+      "title": "Студенческий билет или временное удостоверение с номером билета",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_RUDN_HOUSING",
+          "locator": "Порядок предоставления места",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "hybrid",
+    "name": "МФЦ РУДН",
+    "address": "Москва, ул. Миклухо-Маклая, 6, цокольный этаж",
+    "url": "https://lk.rudn.ru/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "mfc@rudn.ru",
+        "label": "МФЦ РУДН"
+      }
+    ],
+    "appointment_required": "yes"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_RUDN_DORM_DIRECTION",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_RUDN_DORM_DIRECTION"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_RUDN_HOUSING",
+      "locator": "Порядок предоставления места",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination",
+        "/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_RUDN_DORM_DIRECTION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:47:31.010529Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

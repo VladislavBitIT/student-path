@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_NSU_VISA_APPLY",
+  "university_id": "UNIV_NSU",
+  "target_step_id": "FED_VISA_APPLY",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "nsu_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "nsu_ciep_student",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Скачайте электронную копию приглашения из личного кабинета ЦМУП для выбранного консульства."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Центр международных учебных программ НГУ",
+      "url": "https://ciep.nsu.ru/kakpostupit",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "ciep@nsu.ru",
+          "label": "ЦМУП"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_NSU_VISA_APPLY",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_NSU_VISA_APPLY"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_NSU_ADMISSION",
+      "locator": "Приглашение и виза",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_NSU_VISA_APPLY"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:30:00.761040Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

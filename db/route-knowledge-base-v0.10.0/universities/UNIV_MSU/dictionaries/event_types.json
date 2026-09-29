@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "id": "event_types",
+  "status": "maintained",
+  "description": "Локальные события, подтверждаемые сервисом; не правовые обязанности.",
+  "entries": [
+    {
+      "code": "msu_registration_received",
+      "label": "Получена регистрация по частному адресу"
+    },
+    {
+      "code": "msu_medical_proofs_received",
+      "label": "Получены документы медосвидетельствования и дактилоскопии"
+    }
+  ]
+}

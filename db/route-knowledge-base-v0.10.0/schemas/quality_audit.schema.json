@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/quality_audit.schema.json",
+  "title": "quality_audit",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "package_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "enum": [
+        "content_blocked",
+        "ready_for_review"
+      ]
+    },
+    "meaning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "languages": {
+      "type": "object",
+      "properties": {
+        "product_language": {
+          "const": "ru"
+        },
+        "ru": {
+          "const": "available"
+        },
+        "en": {
+          "enum": [
+            "not_provided",
+            "available"
+          ]
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "product_language",
+        "ru",
+        "en",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "checked_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "state": {
+            "enum": [
+              "content_retrieved",
+              "tool_unavailable",
+              "login_or_javascript"
+            ]
+          },
+          "observed_redirect": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "url",
+          "source_ids",
+          "checked_at",
+          "state",
+          "observed_redirect",
+          "note"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "object_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "field": {
+            "type": "string",
+            "pattern": "^/"
+          },
+          "state": {
+            "enum": [
+              "technical_control",
+              "source_mapped_partial",
+              "unmapped"
+            ]
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unresolved_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "object_id",
+          "field",
+          "state",
+          "source_ids",
+          "unresolved_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "as_of",
+    "package_version",
+    "decision",
+    "meaning",
+    "languages",
+    "links",
+    "claims",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

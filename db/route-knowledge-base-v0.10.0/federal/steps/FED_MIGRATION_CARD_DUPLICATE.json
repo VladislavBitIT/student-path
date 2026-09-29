@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_MIGRATION_CARD_DUPLICATE",
+  "kind": "federal",
+  "version": 1,
+  "status": "draft",
+  "title": "Заявите об утрате миграционной карты и получите дубликат",
+  "summary": "Сообщите территориальному подразделению МВД об утрате или порче миграционной карты.",
+  "category": "changes",
+  "research_process_ids": [
+    "PROC_LOST_CARD"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "migration_card_required",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "migration_card_lost",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "migration_card_lost",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "partial",
+    "known": {
+      "amount": 3,
+      "unit": "day_unspecified",
+      "direction": "after",
+      "anchor_description": "Утрата/порча миграционной карты",
+      "actor": "student",
+      "legal_text": "В памятке МИД — в течение 3 дней; единица и действующий порядок требуют проверки."
+    },
+    "calculation_allowed": false,
+    "unresolved_ids": [
+      "UNR_STEP_MIGRATION_CARD_DUPLICATE"
+    ]
+  },
+  "instructions": [
+    "Сообщите территориальному подразделению МВД об утрате или порче миграционной карты.",
+    "Предъявите документ личности для проверки данных и оформления дубликата."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "original",
+      "evidence": [
+        {
+          "source_id": "SRC_CARD",
+          "locator": "Миграционная карта: оформление и утрата",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Территориальное подразделение МВД",
+    "selection_basis": "По месту обращения в рамках установленного порядка выдачи дубликата.",
+    "information_url": "https://www.kdmid.ru/cons/visas/migration-card/",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Об утрате заявлено, дубликат запрошен",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Не назначать тем, кто законно освобождён от карты.",
+      "unresolved_ids": [
+        "UNR_LOST_CARD",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_MIGRATION_CARD_DUPLICATE",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Памятка МИД содержит старое название ФМС. Подтвердить № 413, единицу трёхдневного срока, заявление и компетенцию МВД; дубликат не продлевает пребывание.",
+      "unresolved_ids": [
+        "UNR_STEP_MIGRATION_CARD_DUPLICATE"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "В памятке МИД — в течение 3 дней; единица и действующий порядок требуют проверки.",
+      "fields": [
+        "/deadline/known"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Не назначать тем, кто законно освобождён от карты.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Сообщите территориальному подразделению МВД об утрате или порче миграционной карты. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_CARD",
+      "locator": "Миграционная карта: оформление и утрата — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Предъявите документ личности для проверки данных и оформления дубликата. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_MIGRATION_CARD_DUPLICATE",
+    "UNR_LOST_CARD",
+    "UNR_CURRENT_EDITION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T06:06:57Z",
+    "reviewer": "Проверка федеральной карточки по сохранённым и повторно прочитанным государственным материалам",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_MIGRATION_CARD_DUPLICATE",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_MIGRATION_CARD_DUPLICATE",
+      "note": "Памятка МИД содержит старое название ФМС. Подтвердить № 413, единицу трёхдневного срока, заявление и компетенцию МВД; дубликат не продлевает пребывание."
+    }
+  ]
+}

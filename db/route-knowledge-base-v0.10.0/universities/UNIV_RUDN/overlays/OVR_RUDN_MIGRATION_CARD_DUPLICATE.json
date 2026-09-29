@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_RUDN_MIGRATION_CARD_DUPLICATE",
+  "university_id": "UNIV_RUDN",
+  "target_step_id": "FED_MIGRATION_CARD_DUPLICATE",
+  "target_step_version": 1,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "rudn_campus",
+        "value": "main"
+      },
+      {
+        "op": "always"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Оформите заявление об утрате в обслуживающем РУДН отделении полиции на Миклухо-Маклая, 19. Через «Регистрация граждан» запишитесь в МФЦ на подачу местного пакета восстановления."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "МФЦ РУДН",
+      "address": "Москва, ул. Миклухо-Маклая, 6, цокольный этаж",
+      "url": "https://lk.rudn.ru/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "mfc@rudn.ru",
+          "label": "МФЦ РУДН"
+        }
+      ],
+      "appointment_required": "yes"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_RUDN_MIGRATION_CARD_DUPLICATE",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_RUDN_MIGRATION_CARD_DUPLICATE"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_RUDN_MIGRATION_CARD_DUPLICATE_1",
+        "title": "Удостоверение личности и копия",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_CARD",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_MIGRATION_CARD_DUPLICATE_2",
+        "title": "Учёт и копия",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_CARD",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_MIGRATION_CARD_DUPLICATE_3",
+        "title": "Копия визы",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_CARD",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ],
+        "condition": {
+          "op": "eq",
+          "fact": "has_study_visa",
+          "value": true
+        }
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_RUDN_CARD",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUDN_MFC",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_RUDN_MIGRATION_CARD_DUPLICATE"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:47:31.010529Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

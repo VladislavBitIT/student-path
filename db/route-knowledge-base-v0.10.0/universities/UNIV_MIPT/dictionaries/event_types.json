@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "id": "event_types",
+  "status": "maintained",
+  "description": "Локальные события, подтверждаемые сервисом; не правовые обязанности.",
+  "entries": [
+    {
+      "code": "mipt_policy_received",
+      "label": "Получен страховой полис"
+    },
+    {
+      "code": "mipt_fingerprint_proof_received",
+      "label": "Получено подтверждение дактилоскопии"
+    },
+    {
+      "code": "mipt_pass_needed",
+      "label": "Нужен пропуск слушателю"
+    }
+  ]
+}

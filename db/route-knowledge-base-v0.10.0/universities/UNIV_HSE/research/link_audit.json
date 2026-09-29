@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_HSE",
+  "checked_on": "2026-09-26",
+  "scope": "Новое чтение официальных страниц; формы не отправлялись.",
+  "checks": [
+    {
+      "url": "https://ivisa.hse.ru/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ivisa.hse.ru/",
+      "detail": "Новости о федеральных изменениях — повод для проверки, а не федеральное основание."
+    },
+    {
+      "url": "https://ivisa.hse.ru/faq",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ivisa.hse.ru/faq",
+      "detail": "Внутри страницы различаются суммы и встречаются правовые обобщения; они исключены из правил."
+    },
+    {
+      "url": "https://ivisa.hse.ru/rvpo",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ivisa.hse.ru/rvpo",
+      "detail": "Дата обновления не установлена; подтверждены только местные сведения."
+    },
+    {
+      "url": "https://ivisa.hse.ru/bamacis3",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ivisa.hse.ru/bamacis3",
+      "detail": "Местная передача копий отделена от срока обращения в МВД; вид учебной программы уточняется."
+    },
+    {
+      "url": "https://spb.hse.ru/pochemuchnik/interstud/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://spb.hse.ru/pochemuchnik/interstud/",
+      "detail": "Дата обновления не установлена; подтверждены только местные сведения."
+    },
+    {
+      "url": "https://nnov.hse.ru/intnn/istudents/migration",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://nnov.hse.ru/intnn/istudents/migration",
+      "detail": "Частное жильё оформляется через принимающую сторону; общий пересказ семи дней не импортирован."
+    },
+    {
+      "url": "https://perm.hse.ru/upr/inoffice/intoffice",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://perm.hse.ru/upr/inoffice/intoffice",
+      "detail": "Дата обновления не установлена; подтверждены только местные сведения."
+    },
+    {
+      "url": "https://perm.hse.ru/istudents/visaregextension",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://perm.hse.ru/istudents/visaregextension",
+      "detail": "Дата обновления не установлена; подтверждены только местные сведения."
+    },
+    {
+      "url": "https://perm.hse.ru/istudents/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://perm.hse.ru/istudents/",
+      "detail": "Страница регистрации не загрузилась. Наличие ссылки не подтверждает её содержание."
+    },
+    {
+      "url": "https://lk.hse.ru/student-service/student-service-first?components=23813",
+      "checked_on": "2026-09-26",
+      "result": "empty_ui",
+      "resolved_url": "https://lk.hse.ru/student-service/student-service-first?components=23813",
+      "detail": "После входа форма не проверена."
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^TEST_CLOCK_[A-Z0-9_]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "synthetic": {
+            "const": true
+          },
+          "model": {
+            "$ref": "deadline.schema.json"
+          },
+          "facts": {
+            "$ref": "test_scenario.schema.json#/properties/facts"
+          },
+          "events": {
+            "$ref": "test_scenario.schema.json#/properties/events"
+          },
+          "trigger_event": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "test_scenario.schema.json#/properties/events/items"
+              }
+            ]
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "calendars": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "calendar_dictionary.schema.json#/properties/entries/items"
+            }
+          },
+          "expected": {
+            "type": "object",
+            "properties": {
+              "state": {
+                "enum": [
+                  "known",
+                  "unknown",
+                  "none"
+                ]
+              },
+              "at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "state"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "at"
+                  ],
+                  "not": {
+                    "required": [
+                      "reason"
+                    ]
+                  }
+                },
+                "else": {
+                  "not": {
+                    "required": [
+                      "at"
+                    ]
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "state": {
+                      "const": "unknown"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "reason"
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "required": [
+                      "reason"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "synthetic",
+          "model",
+          "facts",
+          "events",
+          "trigger_event",
+          "as_of",
+          "calendars",
+          "expected"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "purpose",
+    "cases"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/deadline_test_suite.schema.json"
+}

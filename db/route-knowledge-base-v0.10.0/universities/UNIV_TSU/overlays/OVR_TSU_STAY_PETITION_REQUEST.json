@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_TSU_STAY_PETITION_REQUEST",
+  "university_id": "UNIV_TSU",
+  "target_step_id": "FED_STAY_PETITION_REQUEST",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "tsu_campus",
+            "value": "main"
+          },
+          {
+            "op": "all",
+            "args": [
+              {
+                "op": "eq",
+                "fact": "visa_free_entry",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "fact": "accommodation_type",
+                "value": "private_home"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "tsu_cis_visa_free",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Получите ходатайство в кабинете 327, сообщив точный адрес проживания."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Отдел визового сопровождения ТГУ",
+      "address": "Томск, пр. Ленина, 36, главный корпус, кабинет 327",
+      "url": "https://tsu.ru/university/structure/upravl/inter_upr.php?nv=on",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "visa@mail.tsu.ru",
+          "label": "Визовое сопровождение"
+        },
+        {
+          "kind": "phone",
+          "value": "+7 (3822) 526-945",
+          "label": "Визовое сопровождение"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_TSU_STAY_PETITION_REQUEST",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_TSU_STAY_PETITION_REQUEST"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_TSU_STAY_PETITION_REQUEST_1",
+        "title": "Справка об обучении",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_TSU_VISA",
+            "locator": "Visa Support: раздел для студентов",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_TSU_STAY_PETITION_REQUEST_2",
+        "title": "Паспорт",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_TSU_VISA",
+            "locator": "Visa Support: раздел для студентов",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_TSU_STAY_PETITION_REQUEST_3",
+        "title": "Миграционная карта с целью учёба",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_TSU_VISA",
+            "locator": "Visa Support: раздел для студентов",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ],
+        "condition": {
+          "op": "eq",
+          "fact": "migration_card_required",
+          "value": true
+        }
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_TSU_VISA",
+      "locator": "Visa Support: раздел для студентов",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_TSU_CONTACT",
+      "locator": "Visa Support: раздел для студентов",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_TSU_STAY_PETITION_REQUEST"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:37:54.661491Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

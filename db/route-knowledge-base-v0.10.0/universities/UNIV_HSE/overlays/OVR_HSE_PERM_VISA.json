@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_HSE_PERM_VISA",
+  "university_id": "UNIV_HSE",
+  "target_step_id": "FED_STUDY_VISA_EXTEND",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "hse_campus",
+        "value": "perm"
+      },
+      {
+        "op": "eq",
+        "fact": "full_time",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Передайте в международный отдел заявление, копии паспорта с отметками, миграционную карту, регистрацию, фото 3×4 и квитанцию."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Отдел международного сотрудничества ВШЭ — Пермь",
+      "url": "https://perm.hse.ru/upr/inoffice/intoffice",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "supportperm@hse.ru",
+          "label": "Отдел международного сотрудничества ВШЭ — Пермь"
+        },
+        {
+          "kind": "phone",
+          "value": "+7 (342) 254-41-64",
+          "label": "Отдел международного сотрудничества ВШЭ — Пермь"
+        }
+      ],
+      "appointment_required": "unknown",
+      "address": "Пермь, Студенческая, 38, кабинет 205"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_HSE_PERM_VISA",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_HSE_PERM_VISA"
+        ]
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_HSE_PERM_VISA",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "Для перехода с однократной визы — не позднее 45 дней до её окончания",
+        "state": "unknown",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_HSE_PERM_VISA"
+          ]
+        },
+        "source_id": "SRC_HSE_PERM_EXTENSION",
+        "locator": "Профильный раздел указанной страницы",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_HSE_PERM_EXTENSION",
+      "locator": "Профильный раздел указанной страницы",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_HSE_PERM",
+      "locator": "Профильный раздел указанной страницы",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_HSE_PERM_VISA"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:26:55.858077Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

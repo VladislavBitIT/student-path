@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_ITMO_HOST_DOCUMENTS",
+  "university_id": "UNIV_ITMO",
+  "target_step_id": "FED_HOST_DOCUMENTS",
+  "target_step_version": 2,
+  "version": 2,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "dormitory"
+      },
+      {
+        "op": "eq",
+        "fact": "itmo_dorm_is_itmo",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Передайте пакет для учета в ОМУ ИТМО по адресу общежития ИТМО."
+    ],
+    "destination": {
+      "kind": "physical",
+      "name": "Отдел миграционного учета ИТМО",
+      "address": "Санкт-Петербург, ул. Ломоносова, 9, кабинет 2139d",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "omu@itmo.ru",
+          "label": "ОМУ"
+        },
+        {
+          "kind": "phone",
+          "value": "+7 (812) 480-09-17",
+          "label": "ОМУ; подтверждено двумя русскими страницами"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_ITMO_HOST_DOCUMENTS",
+        "severity": "blocking",
+        "message": "Сохранена подтвержденная местная часть; недостающие детали требуют уточнения.",
+        "unresolved_ids": [
+          "UNR_ITMO_HOST_DOCUMENTS"
+        ]
+      },
+      {
+        "id": "WARN_ITMO_ARRIVAL_DEADLINES",
+        "severity": "blocking",
+        "message": "Сентябрьская миграционная страница дает 3 рабочих дня после прибытия; гайд заселения — день заселения/следующий рабочий день. Якоря и приоритет различаются; FAQ не уточняет рабочие дни. Хранить варианты, не выбирать молча минимум.",
+        "unresolved_ids": [
+          "UNR_ITMO_ARRIVAL_DEADLINES"
+        ]
+      },
+      {
+        "id": "WARN_ITMO_CONTACT_VARIANTS",
+        "severity": "blocking",
+        "message": "Телефон ОМУ на актуальной странице и странице отчисления: +7 (812) 480-09-17; английский гайд содержит +7 (812) 607-04-60. Выбран подтвержденный двумя русскими страницами контакт, альтернативный номер не включен в рабочие контакты. Часы приема и запись не подтверждены.",
+        "unresolved_ids": [
+          "UNR_ITMO_CONTACT_VARIANTS"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_ITMO_PAID_CONTRACT",
+        "title": "Договор платного обучения",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_ITMO_MIGRATION",
+            "locator": "Перечень документов соответствующей локальной процедуры",
+            "supports": "Локальная позиция перечня."
+          }
+        ],
+        "condition": {
+          "op": "eq",
+          "fact": "itmo_paid_education",
+          "value": true
+        }
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_ITMO_HOST_ARRIVAL",
+        "scope": "university_internal",
+        "title": "Передача документов ОМУ",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "3 рабочих дня после прибытия",
+        "state": "conflict",
+        "deadline": {
+          "kind": "partial",
+          "known": {
+            "amount": 3,
+            "unit": "business_day",
+            "direction": "after",
+            "anchor_description": "Прибытие; точный якорь требует согласования",
+            "actor": "student",
+            "legal_text": "Внутренний срок ИТМО, не федеральная норма."
+          },
+          "calculation_allowed": false,
+          "unresolved_ids": [
+            "UNR_ITMO_ARRIVAL_DEADLINES"
+          ]
+        },
+        "source_id": "SRC_ITMO_MIGRATION",
+        "locator": "Локальная инструкция на официальной странице ИТМО",
+        "checked_on": "2026-09-26"
+      },
+      {
+        "id": "LD_ITMO_DORM_ARRIVAL",
+        "scope": "university_internal",
+        "title": "Обращение после заселения",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "День заселения либо следующий рабочий день",
+        "state": "conflict",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_ITMO_ARRIVAL_DEADLINES"
+          ]
+        },
+        "source_id": "SRC_ITMO_HOUSING_RU",
+        "locator": "Локальная инструкция на официальной странице ИТМО",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_ITMO_MIGRATION",
+      "locator": "Регистрация: комплект для ОМУ и ограничение общежитиями университета; заселение и миграционный учёт; контакты ответственного подразделения на странице источника",
+      "supports": "Сопоставление перечисленных локальных полей с разделом страницы. Это не подтверждение федеральных оснований и не закрытие локальных пробелов.",
+      "fields": [
+        "/additions/instructions/0",
+        "/additions/destination",
+        "/additions/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_HOUSING_RU",
+      "locator": "Регистрация: комплект для ОМУ и ограничение общежитиями университета; заселение и миграционный учёт; контакты ответственного подразделения на странице источника",
+      "supports": "Сопоставление перечисленных локальных полей с разделом страницы. Это не подтверждение федеральных оснований и не закрытие локальных пробелов.",
+      "fields": [
+        "/additions/instructions/0",
+        "/additions/destination",
+        "/additions/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_ITMO_HOST_DOCUMENTS",
+    "UNR_ITMO_ARRIVAL_DEADLINES",
+    "UNR_ITMO_CONTACT_VARIANTS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:40:30.570901Z",
+    "reviewer": "Повторное самостоятельное исследование официальных страниц в последовательном обзоре десяти вузов",
+    "next_review_on": "2026-10-26"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_RUDN_RVPO_APPLY",
+  "university_id": "UNIV_RUDN",
+  "target_step_id": "FED_RVPO_APPLY",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "rudn_campus",
+        "value": "main"
+      },
+      {
+        "op": "always"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Закажите «МФЦ → Копии и дубликаты → Комплект документов для РВПО», выберите программу и формат. Получите электронный комплект в кабинете либо бумажный с удостоверением личности."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "МФЦ РУДН",
+      "address": "Москва, ул. Миклухо-Маклая, 6, цокольный этаж",
+      "url": "https://lk.rudn.ru/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "mfc@rudn.ru",
+          "label": "МФЦ РУДН"
+        }
+      ],
+      "appointment_required": "yes"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_RUDN_RVPO_APPLY",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_RUDN_RVPO_APPLY"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_RUDN_RVPO",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUDN_MFC",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_RUDN_RVPO_APPLY"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:47:31.010529Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

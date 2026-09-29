@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_EBS_REGISTER",
+  "kind": "federal",
+  "version": 2,
+  "status": "draft",
+  "title": "Зарегистрируйте биометрию в ЕБС для оформления связи",
+  "summary": "Обратитесь в банк, уполномоченный зарегистрировать необходимую биометрию в ЕБС.",
+  "category": "digital",
+  "research_process_ids": [
+    "PROC_SIM_EBS"
+  ],
+  "actor": "student",
+  "obligation": "optional",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "gte",
+            "fact": "age_years",
+            "value": 18
+          },
+          {
+            "op": "eq",
+            "fact": "wants_sim",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "has_snils",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "esia_confirmed",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "ebs_registered",
+            "value": false
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "sim_selected",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_EBS_REGISTER"
+    ]
+  },
+  "instructions": [
+    "Обратитесь в банк, уполномоченный зарегистрировать необходимую биометрию в ЕБС.",
+    "Предъявите документ личности и сведения профиля; пройдите предусмотренную процедуру регистрации."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "original",
+      "evidence": [
+        {
+          "source_id": "SRC_SIM",
+          "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    },
+    {
+      "id": "DOC_SNILS",
+      "title": "Сведения о СНИЛС",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_SIM",
+          "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Банк, выполняющий требуемую регистрацию в ЕБС",
+    "selection_basis": "Выбрать по актуальному перечню участвующих банков.",
+    "information_url": "https://www.mos.ru/upload/documents/files/1478/Okazanieradiotelefonnihyslygpodvijnoiradiotelefonnoisvyazivtomchisleinostrannimgrajdanamilicambezgrajdanstva.pdf",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Необходимая регистрация в ЕБС выполнена",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Памятка указывает ограничения количества номеров; точный лимит и исключения подтверждать по актуальному 126-ФЗ. Миграционная дактилоскопия не заменяет автоматически ЕБС.",
+      "unresolved_ids": [
+        "UNR_SIM_EBS",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_EBS_REGISTER",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Проверить актуальную форму биометрической регистрации и банки. Дактилоскопия МВД и ruID не подставляются вместо ЕБС автоматически.",
+      "unresolved_ids": [
+        "UNR_STEP_EBS_REGISTER"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_MINORS",
+      "severity": "blocking",
+      "message": "Подготовить отдельные процедуры представителя до 14 лет, ИНН/ЕСИА/ЕБС/SIM для несовершеннолетних и проверить допустимые документы. Исключение из взрослой карточки не означает отсутствие права.",
+      "unresolved_ids": [
+        "UNR_AUDIT_MINORS"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Сведения о СНИЛС",
+      "fields": [
+        "/documents/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Памятка указывает ограничения количества номеров; точный лимит и исключения подтверждать по актуальному 126-ФЗ. Миграционная дактилоскопия не заменяет автоматически ЕБС.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Обратитесь в банк, уполномоченный зарегистрировать необходимую биометрию в ЕБС. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Предъявите документ личности и сведения профиля; пройдите предусмотренную процедуру регистрации. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_EBS_REGISTER",
+    "UNR_SIM_EBS",
+    "UNR_CURRENT_EDITION",
+    "UNR_AUDIT_MINORS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T06:25:00Z",
+    "reviewer": "Отдельный аудит профилей и границ применения; неподтвержденные поля сохранены как блокирующие пробелы",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_EBS_REGISTER",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_EBS_REGISTER",
+      "note": "Проверить актуальную форму биометрической регистрации и банки. Дактилоскопия МВД и ruID не подставляются вместо ЕБС автоматически."
+    },
+    {
+      "fields": [
+        "/applicability"
+      ],
+      "unresolved_id": "UNR_AUDIT_MINORS",
+      "note": "Подготовить отдельные процедуры представителя до 14 лет, ИНН/ЕСИА/ЕБС/SIM для несовершеннолетних и проверить допустимые документы. Исключение из взрослой карточки не означает отсутствие права."
+    }
+  ]
+}

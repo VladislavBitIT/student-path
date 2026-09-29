@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_MIPT",
+  "checked_on": "2026-09-26",
+  "scope": "Новое чтение официальных страниц; формы не отправлялись.",
+  "checks": [
+    {
+      "url": "https://pk.mipt.ru/foreign/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://pk.mipt.ru/foreign/",
+      "detail": "Есть правовые обобщения без исключений. Вид дней не указан; указания о всеобщей миграционной карте и трёх днях безвизовым не перенесены в федеральный слой."
+    },
+    {
+      "url": "https://pk.mipt.ru/foreign/bachelor_master_phd/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://pk.mipt.ru/foreign/bachelor_master_phd/",
+      "detail": "Смешаны инструкции ruID и поступления онлайн; такой маршрут не признан достоверным без отдельного подтверждения сервиса."
+    },
+    {
+      "url": "https://eng.mipt.ru/info/preparatory_faq/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://eng.mipt.ru/info/preparatory_faq/",
+      "detail": "Отдельные цены и COVID-указания относятся к 2022 году. Область — подготовительное отделение; регистрация ошибочно названа temporary residence permit и не должна превращаться в РВП."
+    },
+    {
+      "url": "https://eng.mipt.ru/docs/preparatory_faq/Application_for_Leaving_the_Dormitory.pdf",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://eng.mipt.ru/docs/preparatory_faq/Application_for_Leaving_the_Dormitory.pdf",
+      "detail": "Правовые утверждения формы о регистрации через 72 часа/7 дней не используются как федеральные нормы."
+    },
+    {
+      "url": "https://eng.mipt.ru/info/preparatory_faq/docs/Application%20for%20Russian%20visa.pdf",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://eng.mipt.ru/info/preparatory_faq/docs/Application%20for%20Russian%20visa.pdf",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://globaluni.mipt.ru/sveden/objects/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://globaluni.mipt.ru/sveden/objects/",
+      "detail": "Поиск показывает документ об оплате 2026/27, но при чтении его текст не подтверждён; суммы и условия не извлечены."
+    }
+  ]
+}

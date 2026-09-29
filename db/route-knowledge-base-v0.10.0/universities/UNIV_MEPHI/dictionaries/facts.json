@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "mephi_campus",
+      "label": "Кампус/область локальной инструкции",
+      "type": "enum",
+      "dictionary_id": "mephi_campuses"
+    },
+    {
+      "code": "mephi_own_dormitory",
+      "label": "Проживание в общежитии НИЯУ МИФИ",
+      "type": "boolean"
+    },
+    {
+      "code": "mephi_university_invitation",
+      "label": "Подтверждён маршрут приглашения через университет, а не Минобрнауки",
+      "type": "boolean"
+    },
+    {
+      "code": "mephi_prep_contract",
+      "label": "Контрактное подготовительное отделение",
+      "type": "boolean"
+    }
+  ]
+}

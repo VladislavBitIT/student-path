@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_MSU_INVITATION_REQUEST",
+  "university_id": "UNIV_MSU",
+  "target_step_id": "FED_INVITATION_REQUEST",
+  "target_step_version": 3,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "msu_campus",
+        "value": "main"
+      },
+      {
+        "op": "always"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Выберите свой факультет в официальном каталоге и отправьте его иностранному отделу заполненную анкету, согласие и паспортные сканы."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+      "url": "https://international.msu.ru/faculties",
+      "contacts": [],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_MSU_INVITATION_REQUEST",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_MSU_INVITATION_REQUEST"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_MSU_INVITATION_REQUEST_1",
+        "title": "Анкета приглашения по ссылке на странице МГУ",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_BEFORE",
+            "locator": "Приглашение; контакты факультетов",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MSU_INVITATION_REQUEST_2",
+        "title": "Подписанное согласие на обработку персональных данных",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_BEFORE",
+            "locator": "Приглашение; контакты факультетов",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MSU_INVITATION_REQUEST_3",
+        "title": "Скан первых двух страниц паспорта с фотографией",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_BEFORE",
+            "locator": "Приглашение; контакты факультетов",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MSU_BEFORE",
+      "locator": "Приглашение; контакты факультетов",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MSU_FACULTIES",
+      "locator": "Приглашение; контакты факультетов",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MSU_INVITATION_REQUEST"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:36:33.319008Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

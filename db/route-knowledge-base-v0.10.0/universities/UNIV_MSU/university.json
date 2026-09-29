@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNIV_MSU",
+  "name": "МГУ имени М. В. Ломоносова",
+  "status": "draft",
+  "timezone": "Europe/Moscow",
+  "contacts": [],
+  "overlay_ids": [
+    "OVR_MSU_INVITATION_REQUEST",
+    "OVR_MSU_VISA_APPLY",
+    "OVR_MSU_VISA_COLLECT_ABROAD",
+    "OVR_MSU_HOST_DOCUMENTS",
+    "OVR_MSU_STUDY_VISA_EXTEND",
+    "OVR_MSU_STUDY_VISA_COLLECT",
+    "OVR_MSU_DMS_CONTRACT"
+  ],
+  "step_ids": [
+    "UNI_MSU_PREARRIVAL_NOTIFY",
+    "UNI_MSU_TRAVEL_NOTIFY",
+    "UNI_MSU_PRIVATE_REG_COPY",
+    "UNI_MSU_MEDICAL_COPY",
+    "UNI_MSU_POLICY_COPY"
+  ],
+  "evidence": [
+    {
+      "source_id": "SRC_MSU_BEFORE",
+      "locator": "Название и локальная область источника",
+      "supports": "Университет и назначение раздела."
+    }
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:36:33.319008Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  },
+  "extension_resources": {
+    "facts": "universities/UNIV_MSU/dictionaries/facts.json",
+    "event_types": "universities/UNIV_MSU/dictionaries/event_types.json",
+    "dictionaries": [
+      "universities/UNIV_MSU/dictionaries/msu_campuses.json"
+    ]
+  }
+}

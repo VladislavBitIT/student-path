@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/trigger.schema.json",
+  "title": "trigger",
+  "description": "Событийный или профильный запуск. История событий и пользовательский профиль принадлежат сервису.",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "event"
+        },
+        "event_type": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "occurrence": {
+          "enum": [
+            "each",
+            "first",
+            "latest"
+          ]
+        },
+        "where": {
+          "$ref": "applicability.schema.json"
+        }
+      },
+      "required": [
+        "kind",
+        "event_type",
+        "occurrence",
+        "where"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "profile"
+        },
+        "when": {
+          "enum": [
+            "initial",
+            "on_change",
+            "initial_or_change"
+          ]
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "when",
+        "fields"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_ITMO",
+  "checked_on": "2026-09-26",
+  "scope": "Все HTTP(S)-ссылки новых объектов ИТМО и исследованные локальные сервисы; email/телефоны сверены с публикациями, звонки и отправка писем не выполнялись.",
+  "checks": [
+    {
+      "url": "https://int.itmo.ru/ru/important_documents",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://int.itmo.ru/ru/important_documents",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://student.itmo.ru/ru/campus/dorms_and_aparts/booking",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://student.itmo.ru/ru/campus/dorms_and_aparts/booking",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://student.itmo.ru/en/campus/dorms_and_aparts/booking",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://student.itmo.ru/en/campus/dorms_and_aparts/booking",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://int.itmo.ru/ru/faq",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://int.itmo.ru/ru/faq",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://int.itmo.ru/ru/bachelors_programs",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://int.itmo.ru/ru/bachelors_programs",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://student.itmo.ru/ru/contacts",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://student.itmo.ru/ru/contacts",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://student.itmo.ru/ru/services/documents",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://student.itmo.ru/ru/services/documents",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://student.itmo.ru/ru/services/health/medicine",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://student.itmo.ru/ru/services/health/medicine",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://abit.itmo.ru/page/66",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://abit.itmo.ru/page/66",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://student.itmo.ru/ru/education/status/expulsion",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://student.itmo.ru/ru/education/status/expulsion",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://student.itmo.ru/ru/education/status/academic_leave",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://student.itmo.ru/ru/education/status/academic_leave",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://aspirantura.itmo.ru/ru/postuplenie/postuplenie-aspirantov/postuplenie-aspirantov-2026/pravila-priema-2026",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://aspirantura.itmo.ru/ru/postuplenie/postuplenie-aspirantov/postuplenie-aspirantov-2026/pravila-priema-2026",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://int.itmo.ru/ru/how_to_work_at_itmo",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://int.itmo.ru/ru/how_to_work_at_itmo",
+      "detail": "Текст публичной страницы получен; это не подтверждение каждой изложенной там правовой нормы."
+    },
+    {
+      "url": "https://my.itmo.ru/",
+      "checked_on": "2026-09-26",
+      "result": "login_redirect",
+      "resolved_url": "https://my.itmo.ru/login?redirect=/",
+      "detail": "Официальная ссылка разрешается в страницу входа; содержимое после авторизации не проверялось."
+    },
+    {
+      "url": "https://my.itmo.ru/requests",
+      "checked_on": "2026-09-26",
+      "result": "login_redirect",
+      "resolved_url": "https://my.itmo.ru/login?redirect=/requests",
+      "detail": "Официальная ссылка разрешается в страницу входа; содержимое после авторизации не проверялось."
+    },
+    {
+      "url": "https://my.itmo.ru/services/dormitories",
+      "checked_on": "2026-09-26",
+      "result": "login_redirect",
+      "resolved_url": "https://my.itmo.ru/login?redirect=/services/dormitories",
+      "detail": "Официальная ссылка разрешается в страницу входа; содержимое после авторизации не проверялось."
+    },
+    {
+      "url": "https://my.itmo.ru/requests/new/8308",
+      "checked_on": "2026-09-26",
+      "result": "login_redirect",
+      "resolved_url": "https://my.itmo.ru/login?redirect=/requests/new/8308",
+      "detail": "Официальная ссылка разрешается в страницу входа; содержимое после авторизации не проверялось."
+    },
+    {
+      "url": "https://my.itmo.ru/requests/new/4888",
+      "checked_on": "2026-09-26",
+      "result": "login_redirect",
+      "resolved_url": "https://my.itmo.ru/login?redirect=/requests/new/4888",
+      "detail": "Официальная ссылка разрешается в страницу входа; содержимое после авторизации не проверялось."
+    },
+    {
+      "url": "https://my.itmo.ru/requests/new/6006",
+      "checked_on": "2026-09-26",
+      "result": "login_redirect",
+      "resolved_url": "https://my.itmo.ru/login?redirect=/requests/new/6006",
+      "detail": "Официальная ссылка разрешается в страницу входа; содержимое после авторизации не проверялось."
+    },
+    {
+      "url": "https://itmo.id/",
+      "checked_on": "2026-09-26",
+      "result": "login_redirect",
+      "resolved_url": "https://id.itmo.ru/login",
+      "detail": "Переход на официальный сервис идентификации."
+    },
+    {
+      "url": "https://abitlk.itmo.ru/",
+      "checked_on": "2026-09-26",
+      "result": "empty_ui",
+      "resolved_url": "https://abitlk.itmo.ru/",
+      "detail": "Сайт ответил, но текст интерфейса не извлечен; загрузка/отправка документов не проверялась."
+    },
+    {
+      "url": "https://helpdesk.itmo.ru/",
+      "checked_on": "2026-09-26",
+      "result": "tool_unavailable",
+      "resolved_url": "https://helpdesk.itmo.ru/",
+      "detail": "Недоступно через веб-инструмент; это не заключение о недоступности пользователю."
+    },
+    {
+      "url": "https://my.itmo.ru/requests/new/8326",
+      "checked_on": "2026-09-26",
+      "result": "tool_unavailable",
+      "resolved_url": "https://my.itmo.ru/requests/new/8326",
+      "detail": "Официальная ссылка формы 086/у не открылась; доступ после входа не проверен."
+    },
+    {
+      "url": "https://student.itmo.ru/ru/campus/dorms_and_aparts/%40block1410622738",
+      "checked_on": "2026-09-26",
+      "result": "popup_unresolved",
+      "resolved_url": "https://student.itmo.ru/ru/campus/dorms_and_aparts/%40block1410622738",
+      "detail": "Ссылка раскрывающегося блока: инструмент получил 404. Не использовать как самостоятельную рабочую форму."
+    },
+    {
+      "url": "https://student.itmo.ru/ru/campus/dorms_and_aparts/%40block1410622737",
+      "checked_on": "2026-09-26",
+      "result": "popup_unresolved",
+      "resolved_url": "https://student.itmo.ru/ru/campus/dorms_and_aparts/%40block1410622737",
+      "detail": "Ссылка раскрывающегося блока: инструмент получил 404. Не использовать как самостоятельную рабочую форму."
+    }
+  ]
+}

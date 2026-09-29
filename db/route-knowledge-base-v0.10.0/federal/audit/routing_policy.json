@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Контракт аудита и интеграции: предположения о праве не переносятся между изменившимися контекстами. Не вычисляет правовые льготы.",
+  "invalidations": [
+    {
+      "event_type": "border_entry",
+      "facts": [
+        "ordinary_arrival_accounting",
+        "self_notice_legal_ground",
+        "amina_applicable",
+        "medical_exam_required",
+        "fingerprint_required",
+        "migration_card_required",
+        "arrival_notice_submitted",
+        "needs_study_stay_extension",
+        "entry_on",
+        "entry_at"
+      ],
+      "reason": "Старый правовой вывод теряет подтвержденность; свежие facts этого события могут явно восстановить его. Постоянный номер СНИЛС/ИНН и пройденная дактилоскопия не сбрасываются."
+    },
+    {
+      "event_type": "accommodation_arrival",
+      "facts": [
+        "ordinary_arrival_accounting",
+        "host_handles_notification",
+        "self_notice_legal_ground",
+        "amina_applicable",
+        "arrival_notice_submitted",
+        "arrival_on"
+      ],
+      "reason": "Старый правовой вывод теряет подтвержденность; свежие facts этого события могут явно восстановить его. Постоянный номер СНИЛС/ИНН и пройденная дактилоскопия не сбрасываются."
+    },
+    {
+      "event_type": "identity_data_changed",
+      "facts": [
+        "study_visa_needed",
+        "visa_restoration_required",
+        "ruid_applicable"
+      ],
+      "reason": "Старый правовой вывод теряет подтвержденность; свежие facts этого события могут явно восстановить его. Постоянный номер СНИЛС/ИНН и пройденная дактилоскопия не сбрасываются."
+    },
+    {
+      "event_type": "residence_status_changed",
+      "facts": [
+        "study_visa_needed",
+        "visa_free_entry",
+        "migration_card_required",
+        "ordinary_arrival_accounting",
+        "host_handles_notification",
+        "self_notice_legal_ground",
+        "amina_applicable",
+        "needs_study_stay_extension",
+        "needs_visa_extension",
+        "residence_registration_required",
+        "annual_notice_required",
+        "medical_exam_required",
+        "medical_repeat_required",
+        "fingerprint_required",
+        "oms_entitled",
+        "rvp_ground_confirmed",
+        "vnh_ground_confirmed",
+        "ruid_applicable",
+        "relies_on_student_work_exemption"
+      ],
+      "reason": "Старый правовой вывод теряет подтвержденность; свежие facts этого события могут явно восстановить его. Постоянный номер СНИЛС/ИНН и пройденная дактилоскопия не сбрасываются."
+    },
+    {
+      "event_type": "education_conditions_changed",
+      "facts": [
+        "needs_study_stay_extension",
+        "needs_visa_extension",
+        "rvpo_program_eligible",
+        "student_work_program_eligible",
+        "relies_on_student_work_exemption"
+      ],
+      "reason": "Старый правовой вывод теряет подтвержденность; свежие facts этого события могут явно восстановить его. Постоянный номер СНИЛС/ИНН и пройденная дактилоскопия не сбрасываются."
+    },
+    {
+      "event_type": "study_ended",
+      "facts": [
+        "needs_study_stay_extension",
+        "needs_visa_extension",
+        "rvpo_program_eligible"
+      ],
+      "reason": "Старый правовой вывод теряет подтвержденность; свежие facts этого события могут явно восстановить его. Постоянный номер СНИЛС/ИНН и пройденная дактилоскопия не сбрасываются."
+    }
+  ],
+  "aliases": [
+    {
+      "event_type": "accommodation_moved",
+      "also_triggers": "accommodation_arrival"
+    },
+    {
+      "event_type": "return_to_accommodation",
+      "also_triggers": "accommodation_arrival"
+    },
+    {
+      "event_type": "replacement_passport_received",
+      "also_triggers": "identity_data_changed"
+    }
+  ],
+  "conflicts": [
+    {
+      "code": "ACCOUNTING_REGIME_CONFLICT",
+      "applicability": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "ordinary_arrival_accounting",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "amina_applicable",
+            "value": true
+          }
+        ]
+      },
+      "step_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_SELF_ARRIVAL_NOTICE"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_AMINA"
+      ]
+    }
+  ]
+}

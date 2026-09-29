@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0.0",
+  "as_of": "2026-09-26",
+  "verdict": "partial_coverage_with_blockers",
+  "findings": [
+    {
+      "code": "SNILS_AGE",
+      "title": "Необоснованная граница 18 лет для СНИЛС",
+      "disposition": "fixed",
+      "description": "Карточки личного обращения расширены на 14–17 лет. До 14 лет право не отрицается: нужен маршрут законного представителя.",
+      "step_ids": [
+        "FED_SNILS_REGISTER",
+        "FED_SNILS_UPDATE",
+        "FED_SNILS_COPY"
+      ],
+      "source_ids": [
+        "SRC_SNILS",
+        "SRC_AUDIT_SNILS_AGE"
+      ],
+      "unresolved_ids": []
+    },
+    {
+      "code": "PHASE",
+      "title": "До приезда и после приезда смешивались",
+      "disposition": "fixed",
+      "description": "Добавлен явный факт нахождения в РФ. Неизвестное местонахождение дает pending, а не догадку.",
+      "step_ids": [
+        "FED_VISA_APPLY",
+        "FED_VISA_COLLECT_ABROAD",
+        "FED_HOST_DOCUMENTS",
+        "FED_HOTEL_IDENTIFY",
+        "FED_SELF_ARRIVAL_NOTICE",
+        "FED_RESIDENCE_REGISTER",
+        "FED_ACCOUNTING_DATA_UPDATE",
+        "FED_STAY_PETITION_REQUEST",
+        "FED_STUDY_VISA_EXTEND",
+        "FED_STUDY_VISA_COLLECT"
+      ],
+      "source_ids": [
+        "SRC_VISA",
+        "SRC_REG9"
+      ],
+      "unresolved_ids": []
+    },
+    {
+      "code": "SIM_TRIGGER",
+      "title": "Пропуск пользователя с уже зарегистрированной биометрией",
+      "disposition": "fixed",
+      "description": "SIM-карточка запускается от готового профиля, а не только нового события ebs_ready. Повторные снимки одного состояния не создают дубликат.",
+      "step_ids": [
+        "FED_SIM_CONTRACT"
+      ],
+      "source_ids": [
+        "SRC_SIM"
+      ],
+      "unresolved_ids": []
+    },
+    {
+      "code": "OMS_WORKER",
+      "title": "Отсутствовала ветка временно пребывающего работника ЕАЭС",
+      "disposition": "fixed",
+      "description": "Добавлена отдельная карточка и собственные документы. Для неработающего студента та же ветка не применяется; иные основания ОМС проверяются отдельно.",
+      "step_ids": [
+        "FED_OMS_EAEU_EMPLOYEE",
+        "FED_OMS_APPLY"
+      ],
+      "source_ids": [
+        "SRC_OMS_WORK",
+        "SRC_EAEU"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_OMS_EAEU"
+      ]
+    },
+    {
+      "code": "CITIZENSHIP",
+      "title": "Пустой справочник и отсутствие проверяемой матрицы гражданств",
+      "disposition": "partial",
+      "description": "Добавлено 10 гражданств для тестов и сравнительная исследовательская таблица. Обнаружено противоречие старого разъяснения о Беларуси; универсальный срок не введен.",
+      "step_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_ENTRY_RULE_CHECK"
+      ],
+      "source_ids": [
+        "SRC_AUDIT_BY",
+        "SRC_AUDIT_REG_CONFLICT",
+        "SRC_AUDIT_REG_COMPARE"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_CITIZENSHIP"
+      ]
+    },
+    {
+      "code": "AMINA",
+      "title": "Коллизия обычного учета и эксперимента",
+      "disposition": "unresolved",
+      "description": "Пробел зарегистрирован; соответствующие карточки не получают статус verified и не допускаются к автоматическому исполнению.",
+      "step_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_SELF_ARRIVAL_NOTICE"
+      ],
+      "source_ids": [
+        "SRC_AMINA121"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_AMINA"
+      ]
+    },
+    {
+      "code": "MEDICAL",
+      "title": "Медицинские переходные и повторные случаи",
+      "disposition": "unresolved",
+      "description": "Пробел зарегистрирован; соответствующие карточки не получают статус verified и не допускаются к автоматическому исполнению.",
+      "step_ids": [
+        "FED_MEDICAL_INITIAL",
+        "FED_MEDICAL_REPEAT"
+      ],
+      "source_ids": [
+        "SRC_MED2026"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_MEDICAL_TRANSITION"
+      ]
+    },
+    {
+      "code": "CHANGES",
+      "title": "Устаревшие выводы после изменения обстоятельств",
+      "disposition": "partial",
+      "description": "Добавлены сброс устаревших правовых выводов и события смены статуса/паспорта/учебных условий. Правовые обязанности уведомления и специальные сроки остаются unresolved.",
+      "step_ids": [
+        "FED_ACCOUNTING_DATA_UPDATE",
+        "FED_STAY_PETITION_REQUEST"
+      ],
+      "source_ids": [
+        "SRC_REG9",
+        "SRC_LAW115"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_CHANGES"
+      ]
+    },
+    {
+      "code": "RETURN",
+      "title": "Учет после гостиницы/стационара",
+      "disposition": "unresolved",
+      "description": "Пробел зарегистрирован; соответствующие карточки не получают статус verified и не допускаются к автоматическому исполнению.",
+      "step_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_HOTEL_IDENTIFY"
+      ],
+      "source_ids": [
+        "SRC_LAW109"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_HOSPITAL_RETURN"
+      ]
+    },
+    {
+      "code": "WORK",
+      "title": "Нестуденческие основания работы",
+      "disposition": "unresolved",
+      "description": "Пробел зарегистрирован; соответствующие карточки не получают статус verified и не допускаются к автоматическому исполнению.",
+      "step_ids": [
+        "FED_WORK_STUDY_PROOF"
+      ],
+      "source_ids": [
+        "SRC_EAEU"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_WORK_OTHER"
+      ]
+    },
+    {
+      "code": "SPECIAL",
+      "title": "Особые статусы и несколько гражданств",
+      "disposition": "unresolved",
+      "description": "Пробел зарегистрирован; соответствующие карточки не получают статус verified и не допускаются к автоматическому исполнению.",
+      "step_ids": [
+        "FED_ENTRY_RULE_CHECK"
+      ],
+      "source_ids": [
+        "SRC_LAW115"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_SPECIAL"
+      ]
+    },
+    {
+      "code": "RUID",
+      "title": "Неполная проверка ruID после поправок",
+      "disposition": "unresolved",
+      "description": "Пробел зарегистрирован; соответствующие карточки не получают статус verified и не допускаются к автоматическому исполнению.",
+      "step_ids": [
+        "FED_RUID_STANDARD",
+        "FED_RUID_EMERGENCY"
+      ],
+      "source_ids": [
+        "SRC_RUID468"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_RUID_CURRENT"
+      ]
+    },
+    {
+      "code": "VISA_PURPOSE",
+      "title": "Безвизовость не равна разрешению на учебный въезд",
+      "disposition": "unresolved",
+      "description": "Пробел зарегистрирован; соответствующие карточки не получают статус verified и не допускаются к автоматическому исполнению.",
+      "step_ids": [
+        "FED_ENTRY_RULE_CHECK",
+        "FED_VISA_APPLY"
+      ],
+      "source_ids": [
+        "SRC_ENTRY_TABLE"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_ENTRY_PURPOSE"
+      ]
+    },
+    {
+      "code": "ACCOMMODATION",
+      "title": "Родственники, знакомые, стационар и поликлиника",
+      "disposition": "confirmed_boundary",
+      "description": "Частное жилье остается private_home независимо от родства. Госпитализация требует фактического стационарного пребывания; outpatient_visit не запускает учет в больнице. Принимающая сторона определяется местом проживания.",
+      "step_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_HOTEL_IDENTIFY"
+      ],
+      "source_ids": [
+        "SRC_LAW109",
+        "SRC_AUDIT_HOST"
+      ],
+      "unresolved_ids": []
+    },
+    {
+      "code": "ANNUAL",
+      "title": "РВП, РВПО и ВНЖ не объединены",
+      "disposition": "confirmed_boundary",
+      "description": "Проверены отдельные карточки ежегодных уведомлений РВП/ВНЖ. РВПО не включается в них через одно лишь общее название разрешения.",
+      "step_ids": [
+        "FED_RVP_ANNUAL_NOTICE",
+        "FED_VNH_ANNUAL_NOTICE"
+      ],
+      "source_ids": [
+        "SRC_RVPO_GUIDE",
+        "SRC_VNH_NOTICE"
+      ],
+      "unresolved_ids": []
+    },
+    {
+      "code": "NO_SCENARIOS",
+      "title": "Отсутствие профильных проверок",
+      "disposition": "fixed",
+      "description": "Добавлены вручную заданные ожидания и отдельный исполнитель аудита. Проверка структуры сама по себе не подтверждает полноту правовых ветвей.",
+      "step_ids": [],
+      "source_ids": [],
+      "unresolved_ids": []
+    },
+    {
+      "code": "STAY_COUNTER",
+      "title": "Повторный въезд и суммарное пребывание",
+      "disposition": "unresolved",
+      "description": "Новые события больше не наследуют старый вывод о продлении. Сам расчет допустимого суммарного пребывания отсутствует: не допускается обещание нового полного лимита после пересечения границы.",
+      "step_ids": [
+        "FED_ENTRY_RULE_CHECK",
+        "FED_STAY_PETITION_REQUEST"
+      ],
+      "source_ids": [
+        "SRC_STAY",
+        "SRC_LAW115"
+      ],
+      "unresolved_ids": [
+        "UNR_AUDIT_STAY_COUNTER"
+      ]
+    }
+  ],
+  "country_comparisons": [
+    {
+      "countries": [
+        "by"
+      ],
+      "reported_exemption_days": 90,
+      "anchor": "въезд в РФ; не дата прибытия к новому адресу",
+      "operational": false,
+      "source_ids": [
+        "SRC_AUDIT_BY",
+        "SRC_AUDIT_REG_COMPARE"
+      ],
+      "limitation": "Противоречивое старое обобщение 30 дней не применяется.",
+      "unresolved_ids": [
+        "UNR_AUDIT_CITIZENSHIP"
+      ]
+    },
+    {
+      "countries": [
+        "kz"
+      ],
+      "reported_exemption_days": 30,
+      "anchor": "въезд в РФ; не дата прибытия к новому адресу",
+      "operational": false,
+      "source_ids": [
+        "SRC_KZ_TREATY",
+        "SRC_AUDIT_REG_COMPARE"
+      ],
+      "limitation": "Нужен действующий текст двустороннего соглашения.",
+      "unresolved_ids": [
+        "UNR_AUDIT_CITIZENSHIP"
+      ]
+    },
+    {
+      "countries": [
+        "am",
+        "kg"
+      ],
+      "reported_exemption_days": 30,
+      "anchor": "въезд в РФ; не дата прибытия к новому адресу",
+      "operational": false,
+      "source_ids": [
+        "SRC_EAEU",
+        "SRC_AUDIT_REG_COMPARE"
+      ],
+      "limitation": "Не переносить основание работника ЕАЭС на неработающего студента; проверить договорные основания отдельно.",
+      "unresolved_ids": [
+        "UNR_AUDIT_CITIZENSHIP"
+      ]
+    },
+    {
+      "countries": [
+        "uz"
+      ],
+      "reported_exemption_days": 15,
+      "anchor": "въезд в РФ; не дата прибытия к новому адресу",
+      "operational": false,
+      "source_ids": [
+        "SRC_UZ_TREATY",
+        "SRC_AUDIT_REG_COMPARE"
+      ],
+      "limitation": "Проверить исключения, учет после льготного периода и переезд.",
+      "unresolved_ids": [
+        "UNR_AUDIT_CITIZENSHIP"
+      ]
+    },
+    {
+      "countries": [
+        "tj"
+      ],
+      "reported_exemption_days": 15,
+      "anchor": "въезд в РФ; не дата прибытия к новому адресу",
+      "operational": false,
+      "source_ids": [
+        "SRC_TJ_TREATY",
+        "SRC_AUDIT_REG_COMPARE"
+      ],
+      "limitation": "Проверить текущую редакцию и тип размещения.",
+      "unresolved_ids": [
+        "UNR_AUDIT_CITIZENSHIP"
+      ]
+    },
+    {
+      "countries": [
+        "cn",
+        "in",
+        "de"
+      ],
+      "reported_exemption_days": null,
+      "anchor": "въезд в РФ; не дата прибытия к новому адресу",
+      "operational": false,
+      "source_ids": [
+        "SRC_ENTRY_TABLE",
+        "SRC_VISA"
+      ],
+      "limitation": "Гражданство без типа паспорта и цели не определяет учебный визовый режим.",
+      "unresolved_ids": [
+        "UNR_AUDIT_CITIZENSHIP"
+      ]
+    }
+  ],
+  "limitations": [
+    "Все карточки остаются draft. Прохождение сценария означает совпадение логики с ожиданием, а не подтверждение нормы закона.",
+    "Известные периоды 90/30/15 дней сохранены только как исследовательские ориентиры; автоматических дедлайнов по ним нет.",
+    "Карта охватывает перечисленные пользователем оси и найденные особые случаи; полная правовая матрица всех гражданств и статусов пока не подтверждена."
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/test_scenario.schema.json",
+  "title": "test_scenario",
+  "description": "Контрактный сценарий для будущего Route Engine. included/excluded/pending — точные непересекающиеся множества.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0.0",
+        "1.1.0"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^TEST_[A-Z0-9_]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "university_id": {
+      "type": "string",
+      "pattern": "^UNIV_[A-Z0-9_]+$"
+    },
+    "facts": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean"
+        ]
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "event_type": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "occurred_at": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+          },
+          "facts": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$"
+            },
+            "additionalProperties": {
+              "type": [
+                "string",
+                "number",
+                "boolean"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "event_type",
+          "occurred_at",
+          "facts"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "expected": {
+      "type": "object",
+      "properties": {
+        "included_step_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "excluded_step_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "pending_step_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "applied_overlay_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^OVR_[A-Z0-9_]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "unresolved_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^UNR_[A-Z0-9_]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "deadlines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "step_id": {
+                "type": "string",
+                "pattern": "^[A-Z][A-Z0-9_]*$"
+              },
+              "state": {
+                "enum": [
+                  "known",
+                  "none",
+                  "unknown"
+                ]
+              },
+              "at": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+              }
+            },
+            "required": [
+              "step_id",
+              "state"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "state": {
+                      "const": "known"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "at"
+                  ]
+                },
+                "else": {
+                  "not": {
+                    "required": [
+                      "at"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "included_step_ids",
+        "excluded_step_ids",
+        "pending_step_ids",
+        "applied_overlay_ids",
+        "unresolved_ids",
+        "deadlines"
+      ],
+      "additionalProperties": false
+    },
+    "evaluation_mode": {
+      "const": "content_audit"
+    },
+    "scope_step_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "expected_instances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "state": {
+            "enum": [
+              "included",
+              "pending"
+            ]
+          }
+        },
+        "required": [
+          "step_id",
+          "event_id",
+          "state"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "as_of",
+    "facts",
+    "events",
+    "expected"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.1.0"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "evaluation_mode",
+          "scope_step_ids",
+          "rationale",
+          "source_ids",
+          "expected_instances"
+        ]
+      },
+      "else": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "evaluation_mode"
+              ]
+            },
+            {
+              "required": [
+                "scope_step_ids"
+              ]
+            },
+            {
+              "required": [
+                "rationale"
+              ]
+            },
+            {
+              "required": [
+                "source_ids"
+              ]
+            },
+            {
+              "required": [
+                "expected_instances"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

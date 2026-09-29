@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_RUDN",
+  "checked_on": "2026-09-26",
+  "scope": "Новое чтение официальных страниц; формы не отправлялись.",
+  "checks": [
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/multifunctional-center",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/priem-dokumentov-dlya-prodleniya-mnogokratnoy-vizy",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/priem-dokumentov-dlya-prodleniya-mnogokratnoy-vizy",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/oformlenie-hodataystva-o-postanovke-na-migracionnyy-uchet",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/oformlenie-hodataystva-o-postanovke-na-migracionnyy-uchet",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/postanovka-na-pervichnyy-migracionnyy-uchet-dlya-stran-s-vizovymbezvizovym-rejimom",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/postanovka-na-pervichnyy-migracionnyy-uchet-dlya-stran-s-vizovymbezvizovym-rejimom",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/prodlenie-migracionnogo-ucheta-dlya-stran-s-vizovymbezvizovym-rejimom",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/prodlenie-migracionnogo-ucheta-dlya-stran-s-vizovymbezvizovym-rejimom",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/vosstanovlenie-otryvnoy-chasti-blanka-uvedomleniya-o-pribytii-inostrannogo-grajdanina",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/vosstanovlenie-otryvnoy-chasti-blanka-uvedomleniya-o-pribytii-inostrannogo-grajdanina",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/vosstanovlenie-migracionnoy-karty",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/vosstanovlenie-migracionnoy-karty",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/oformlenie-snils",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/oformlenie-snils",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/komplekt-dokumentov-dlya-razresheniya-na-vremennoe-projivanie-v-celyah-polucheniya-obrazovaniya-rvpo",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/komplekt-dokumentov-dlya-razresheniya-na-vremennoe-projivanie-v-celyah-polucheniya-obrazovaniya-rvpo",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/life/accomodation",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/life/accomodation",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://www.rudn.ru/science/dad/aspirantura/postuplenie",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.rudn.ru/science/dad/aspirantura/postuplenie",
+      "detail": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+    },
+    {
+      "url": "https://lk.rudn.ru/",
+      "checked_on": "2026-09-26",
+      "result": "tool_unavailable",
+      "resolved_url": "https://lk.rudn.ru/",
+      "detail": "Содержимое инструментарий не получил; заявки не отправлялись."
+    }
+  ]
+}

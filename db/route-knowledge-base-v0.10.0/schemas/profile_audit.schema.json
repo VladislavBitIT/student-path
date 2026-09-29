@@ -1,0 +1,148 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "verdict": {
+      "const": "partial_coverage_with_blockers"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "disposition": {
+            "enum": [
+              "fixed",
+              "partial",
+              "unresolved",
+              "confirmed_boundary"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "step_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unresolved_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "code",
+          "title",
+          "disposition",
+          "description",
+          "step_ids",
+          "source_ids",
+          "unresolved_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "country_comparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "countries": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "reported_exemption_days": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "operational": {
+            "const": false
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "limitation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unresolved_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "countries",
+          "reported_exemption_days",
+          "anchor",
+          "operational",
+          "source_ids",
+          "limitation",
+          "unresolved_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "as_of",
+    "verdict",
+    "findings",
+    "country_comparisons",
+    "limitations"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/profile_audit.schema.json"
+}

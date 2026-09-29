@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "id": "itmo_study_levels",
+  "status": "maintained",
+  "description": "Область локальных инструкций ИТМО; не федеральное основание льготы.",
+  "entries": [
+    {
+      "code": "bachelor",
+      "label": "Бакалавриат"
+    },
+    {
+      "code": "master",
+      "label": "Магистратура"
+    },
+    {
+      "code": "phd",
+      "label": "Аспирантура"
+    },
+    {
+      "code": "preparatory",
+      "label": "Подготовительное отделение"
+    },
+    {
+      "code": "exchange",
+      "label": "Обменная программа"
+    }
+  ]
+}

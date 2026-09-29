@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "nsu_campus",
+      "label": "Кампус/область локальной инструкции",
+      "type": "enum",
+      "dictionary_id": "nsu_campuses"
+    },
+    {
+      "code": "nsu_ciep_student",
+      "label": "Обучение по программе ЦМУП",
+      "type": "boolean"
+    },
+    {
+      "code": "nsu_own_dormitory",
+      "label": "Назначено общежитие НГУ",
+      "type": "boolean"
+    },
+    {
+      "code": "nsu_ciep_contract_route",
+      "label": "Контрактный маршрут ЦМУП; не приглашение по квоте Министерства",
+      "type": "boolean"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/unresolved_item.schema.json",
+  "title": "unresolved_item",
+  "description": "Неопределенности хранятся отдельно и явно связываются с затронутыми объектами.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^UNR_[A-Z0-9_]+$"
+    },
+    "status": {
+      "enum": [
+        "open",
+        "in_progress",
+        "resolved",
+        "dismissed"
+      ]
+    },
+    "severity": {
+      "enum": [
+        "informational",
+        "blocking"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "affected_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z][A-Z0-9_]*$"
+      },
+      "minItems": 0
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^SRC_[A-Z0-9_]+$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "resolution": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "pattern": "^SRC_[A-Z0-9_]+$"
+              },
+              "locator": {
+                "type": "string",
+                "minLength": 1
+              },
+              "supports": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "source_id",
+              "locator",
+              "supports"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "resolved_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        }
+      },
+      "required": [
+        "text",
+        "evidence",
+        "resolved_at"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "status",
+    "severity",
+    "question",
+    "affected_ids",
+    "created_at",
+    "candidate_source_ids"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "resolved",
+              "dismissed"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "resolution"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "resolution"
+          ]
+        }
+      }
+    }
+  ]
+}

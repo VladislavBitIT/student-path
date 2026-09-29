@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/warnings.schema.json",
+  "title": "warnings",
+  "description": "Предупреждения с источником или явно зарегистрированной неопределенностью.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[A-Z][A-Z0-9_]*$"
+      },
+      "severity": {
+        "enum": [
+          "info",
+          "warning",
+          "blocking"
+        ]
+      },
+      "message": {
+        "type": "string",
+        "minLength": 1
+      },
+      "condition": {
+        "$ref": "applicability.schema.json"
+      },
+      "evidence": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "source_id": {
+              "type": "string",
+              "pattern": "^SRC_[A-Z0-9_]+$"
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "supports": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "source_id",
+            "locator",
+            "supports"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1
+      },
+      "unresolved_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^UNR_[A-Z0-9_]+$"
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      }
+    },
+    "required": [
+      "id",
+      "severity",
+      "message"
+    ],
+    "additionalProperties": false,
+    "anyOf": [
+      {
+        "required": [
+          "evidence"
+        ]
+      },
+      {
+        "required": [
+          "unresolved_ids"
+        ]
+      }
+    ]
+  },
+  "minItems": 0
+}

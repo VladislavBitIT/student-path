@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_MEPHI_INVITATION_DEGREE",
+  "university_id": "UNIV_MEPHI",
+  "target_step_id": "FED_INVITATION_REQUEST",
+  "target_step_version": 3,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "mephi_campus",
+        "value": "main"
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "mephi_university_invitation",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "mephi_prep_contract",
+            "value": false
+          }
+        ]
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "После издания приказа о зачислении подайте запрос приглашения в учебный отдел своего института."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Учебный отдел своего института МИФИ; сведения о зачислении",
+      "url": "https://admission.mephi.ru/",
+      "contacts": [],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_MEPHI_INVITATION_DEGREE",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_MEPHI_INVITATION_DEGREE"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MEPHI_INVITE",
+      "locator": "Визовая поддержка, пункт 3",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MEPHI_INVITATION_DEGREE"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:40:44.639146Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

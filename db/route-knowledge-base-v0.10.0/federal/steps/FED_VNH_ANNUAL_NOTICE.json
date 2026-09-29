@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_VNH_ANNUAL_NOTICE",
+  "kind": "federal",
+  "version": 2,
+  "status": "draft",
+  "title": "Подайте ежегодное уведомление о проживании по ВНЖ",
+  "summary": "Подготовьте уведомление о подтверждении проживания по ВНЖ с предусмотренными сведениями.",
+  "category": "stay_status",
+  "research_process_ids": [
+    "PROC_ANNUAL_NOTICE"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "residence_status",
+            "value": "vnh"
+          },
+          {
+            "op": "eq",
+            "fact": "annual_notice_required",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "permit_anniversary",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "partial",
+    "known": {
+      "amount": 2,
+      "unit": "calendar_month",
+      "direction": "after",
+      "anchor_description": "Истечение очередного года со дня получения ВНЖ",
+      "actor": "student",
+      "legal_text": "Статья 8 пункт 11: в течение двух месяцев после очередной годовщины получения ВНЖ.",
+      "anchor_fact": "permit_anniversary_at"
+    },
+    "calculation_allowed": false,
+    "unresolved_ids": [
+      "UNR_STEP_VNH_ANNUAL_NOTICE"
+    ]
+  },
+  "instructions": [
+    "Подготовьте уведомление о подтверждении проживания по ВНЖ с предусмотренными сведениями.",
+    "Подайте его в МВД по месту жительства, а при его отсутствии — по месту пребывания, допустимым способом; сохраните подтверждение."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "original",
+      "evidence": [
+        {
+          "source_id": "SRC_VNH_NOTICE",
+          "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    },
+    {
+      "id": "DOC_VNH",
+      "title": "Вид на жительство",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_VNH_NOTICE",
+          "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    },
+    {
+      "id": "DOC_ANNUAL_NOTICE",
+      "title": "Уведомление о подтверждении проживания",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_VNH_NOTICE",
+          "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Территориальный орган МВД",
+    "selection_basis": "По месту жительства; при отсутствии — по месту пребывания.",
+    "information_url": "https://government.ru/docs/all/97329/?page=9",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Ежегодное уведомление подано",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "РВПО имеет специальное освобождение; уважительные причины и периодическая личная подача требуют отдельной проверки.",
+      "unresolved_ids": [
+        "UNR_ANNUAL_NOTICE",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_VNH_ANNUAL_NOTICE",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Проверить актуальный комплект и канал, личную подачу раз в пять лет, уважительные причины поздней подачи и календарное исчисление. РВПО не входит в эту карточку.",
+      "unresolved_ids": [
+        "UNR_STEP_VNH_ANNUAL_NOTICE"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_CHANGES",
+      "severity": "blocking",
+      "message": "Подтвердить действия и сроки при смене паспорта, статуса, переводе/академическом отпуске/отчислении, аннулировании документа и длительном выезде. Пересчет применимости не равен исполнению уведомительной обязанности.",
+      "unresolved_ids": [
+        "UNR_AUDIT_CHANGES"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Вид на жительство",
+      "fields": [
+        "/documents/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Уведомление о подтверждении проживания",
+      "fields": [
+        "/documents/2"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Статья 8 пункт 11: в течение двух месяцев после очередной годовщины получения ВНЖ.",
+      "fields": [
+        "/deadline/known"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "РВПО имеет специальное освобождение; уважительные причины и периодическая личная подача требуют отдельной проверки.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Подготовьте уведомление о подтверждении проживания по ВНЖ с предусмотренными сведениями. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VNH_NOTICE",
+      "locator": "115-ФЗ, статья 8, пункт 11; найденный консолидированный фрагмент",
+      "supports": "Подайте его в МВД по месту жительства, а при его отсутствии — по месту пребывания, допустимым способом; сохраните подтверждение. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_VNH_ANNUAL_NOTICE",
+    "UNR_ANNUAL_NOTICE",
+    "UNR_CURRENT_EDITION",
+    "UNR_AUDIT_CHANGES"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T06:25:00Z",
+    "reviewer": "Отдельный аудит профилей и границ применения; неподтвержденные поля сохранены как блокирующие пробелы",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_VNH_ANNUAL_NOTICE",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_VNH_ANNUAL_NOTICE",
+      "note": "Проверить актуальный комплект и канал, личную подачу раз в пять лет, уважительные причины поздней подачи и календарное исчисление. РВПО не входит в эту карточку."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/trigger"
+      ],
+      "unresolved_id": "UNR_AUDIT_CHANGES",
+      "note": "Подтвердить действия и сроки при смене паспорта, статуса, переводе/академическом отпуске/отчислении, аннулировании документа и длительном выезде. Пересчет применимости не равен исполнению уведомительной обязанности."
+    }
+  ]
+}

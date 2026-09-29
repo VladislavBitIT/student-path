@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNIV_RUDN",
+  "name": "Российский университет дружбы народов имени Патриса Лумумбы",
+  "status": "draft",
+  "timezone": "Europe/Moscow",
+  "contacts": [
+    {
+      "kind": "email",
+      "value": "mfc@rudn.ru",
+      "label": "МФЦ РУДН"
+    }
+  ],
+  "overlay_ids": [
+    "OVR_RUDN_INVITATION_REQUEST",
+    "OVR_RUDN_HOST_DOCUMENTS",
+    "OVR_RUDN_PRIVATE_PETITION",
+    "OVR_RUDN_DORM_EXTENSION",
+    "OVR_RUDN_STUDY_VISA_EXTEND",
+    "OVR_RUDN_STUDY_VISA_COLLECT",
+    "OVR_RUDN_REGISTRATION_DUPLICATE",
+    "OVR_RUDN_MIGRATION_CARD_DUPLICATE",
+    "OVR_RUDN_SNILS_REGISTER",
+    "OVR_RUDN_RVPO_APPLY"
+  ],
+  "step_ids": [
+    "UNI_RUDN_ADAPTATION_CHECKIN",
+    "UNI_RUDN_DORM_DIRECTION",
+    "UNI_RUDN_DORM_LEASE",
+    "UNI_RUDN_DORM_PAYMENT"
+  ],
+  "evidence": [
+    {
+      "source_id": "SRC_RUDN_MFC",
+      "locator": "Название и локальная область источника",
+      "supports": "Университет и назначение раздела."
+    }
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:47:31.010529Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  },
+  "extension_resources": {
+    "facts": "universities/UNIV_RUDN/dictionaries/facts.json",
+    "event_types": "universities/UNIV_RUDN/dictionaries/event_types.json",
+    "dictionaries": [
+      "universities/UNIV_RUDN/dictionaries/rudn_campuses.json"
+    ]
+  }
+}

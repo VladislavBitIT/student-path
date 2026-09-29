@@ -1,0 +1,331 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/university_overlay.schema.json",
+  "title": "university_overlay",
+  "description": "Только добавления. Нельзя удалить федеральное требование, изменить срок, применимость или доказательства. Одновременно применимые overlays на одну цель запрещены.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0.0",
+        "1.1.0"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^OVR_[A-Z0-9_]+$"
+    },
+    "university_id": {
+      "type": "string",
+      "pattern": "^UNIV_[A-Z0-9_]+$"
+    },
+    "target_step_id": {
+      "type": "string",
+      "pattern": "^FED_[A-Z0-9_]+$"
+    },
+    "target_step_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "retired"
+      ]
+    },
+    "applicability": {
+      "$ref": "applicability.schema.json"
+    },
+    "effective_period": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "format": "date"
+        },
+        "through": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "additions": {
+      "type": "object",
+      "properties": {
+        "instructions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "documents": {
+          "$ref": "documents.schema.json",
+          "minItems": 1
+        },
+        "destination": {
+          "$ref": "destination.schema.json"
+        },
+        "warnings": {
+          "$ref": "warnings.schema.json",
+          "minItems": 1
+        },
+        "local_deadlines": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "scope": {
+                "const": "university_internal"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "applicability": {
+                "$ref": "applicability.schema.json"
+              },
+              "reported_text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "state": {
+                "enum": [
+                  "partial",
+                  "conflict",
+                  "unknown",
+                  "confirmed"
+                ]
+              },
+              "deadline": {
+                "$ref": "deadline.schema.json"
+              },
+              "source_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "locator": {
+                "type": "string",
+                "minLength": 1
+              },
+              "checked_on": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "required": [
+              "id",
+              "scope",
+              "title",
+              "applicability",
+              "reported_text",
+              "state",
+              "deadline",
+              "source_id",
+              "locator",
+              "checked_on"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "state": {
+                      "const": "confirmed"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "deadline": {
+                      "properties": {
+                        "kind": {
+                          "enum": [
+                            "fixed",
+                            "relative",
+                            "none"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "else": {
+                  "properties": {
+                    "deadline": {
+                      "properties": {
+                        "kind": {
+                          "enum": [
+                            "partial",
+                            "unknown"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "minProperties": 1
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^SRC_[A-Z0-9_]+$"
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "checked_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "support_level": {
+            "enum": [
+              "direct",
+              "partial"
+            ]
+          }
+        },
+        "required": [
+          "source_id",
+          "locator",
+          "supports"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "unresolved_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^UNR_[A-Z0-9_]+$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_review_on": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "reviewed_at",
+        "reviewer",
+        "next_review_on"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "university_id",
+    "target_step_id",
+    "target_step_version",
+    "version",
+    "status",
+    "applicability",
+    "effective_period",
+    "additions",
+    "evidence",
+    "unresolved_ids"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "verified"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "review"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.1.0"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "evidence": {
+            "items": {
+              "required": [
+                "fields",
+                "checked_on",
+                "support_level"
+              ]
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "additions": {
+            "not": {
+              "required": [
+                "local_deadlines"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

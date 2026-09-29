@@ -1,0 +1,198 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "university_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checked_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "federal_step_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "federal_step_version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "disposition": {
+            "enum": [
+              "overlay_created",
+              "no_confirmed_overlay"
+            ]
+          },
+          "overlay_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "checked_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "dimensions": {
+            "type": "object",
+            "properties": {
+              "department": {
+                "enum": [
+                  "not_confirmed",
+                  "confirmed",
+                  "partial",
+                  "login_required",
+                  "partial_or_conflicting"
+                ]
+              },
+              "address": {
+                "enum": [
+                  "not_confirmed",
+                  "confirmed",
+                  "partial",
+                  "login_required",
+                  "partial_or_conflicting"
+                ]
+              },
+              "email": {
+                "enum": [
+                  "not_confirmed",
+                  "confirmed",
+                  "partial",
+                  "login_required",
+                  "partial_or_conflicting"
+                ]
+              },
+              "phone": {
+                "enum": [
+                  "not_confirmed",
+                  "confirmed",
+                  "partial",
+                  "login_required",
+                  "partial_or_conflicting"
+                ]
+              },
+              "local_form": {
+                "enum": [
+                  "not_confirmed",
+                  "confirmed",
+                  "partial",
+                  "login_required",
+                  "partial_or_conflicting"
+                ]
+              },
+              "internal_sequence": {
+                "enum": [
+                  "not_confirmed",
+                  "confirmed",
+                  "partial",
+                  "login_required",
+                  "partial_or_conflicting"
+                ]
+              },
+              "additional_documents": {
+                "enum": [
+                  "not_confirmed",
+                  "confirmed",
+                  "partial",
+                  "login_required",
+                  "partial_or_conflicting"
+                ]
+              },
+              "internal_deadline": {
+                "enum": [
+                  "not_confirmed",
+                  "confirmed",
+                  "partial",
+                  "login_required",
+                  "partial_or_conflicting"
+                ]
+              },
+              "dormitory_specifics": {
+                "enum": [
+                  "not_confirmed",
+                  "confirmed",
+                  "partial",
+                  "login_required",
+                  "partial_or_conflicting"
+                ]
+              }
+            },
+            "required": [
+              "department",
+              "address",
+              "email",
+              "phone",
+              "local_form",
+              "internal_sequence",
+              "additional_documents",
+              "internal_deadline",
+              "dormitory_specifics"
+            ],
+            "additionalProperties": false
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unresolved_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "federal_step_id",
+          "federal_step_version",
+          "disposition",
+          "overlay_ids",
+          "checked_source_ids",
+          "dimensions",
+          "reason",
+          "unresolved_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "federal_snapshot": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "university_id",
+    "checked_on",
+    "rows",
+    "limitations",
+    "federal_snapshot"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/university_coverage.schema.json"
+}

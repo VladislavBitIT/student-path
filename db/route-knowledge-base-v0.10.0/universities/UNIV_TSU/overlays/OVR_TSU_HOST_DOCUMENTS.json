@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_TSU_HOST_DOCUMENTS",
+  "university_id": "UNIV_TSU",
+  "target_step_id": "FED_HOST_DOCUMENTS",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "tsu_campus",
+            "value": "main"
+          },
+          {
+            "op": "eq",
+            "fact": "tsu_own_dormitory",
+            "value": true
+          }
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "dormitory"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "В день прибытия передайте паспортному столу назначенного общежития паспорт, карту при наличии и подтверждение поездки."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Паспортный стол назначенного общежития ТГУ",
+      "url": "https://www.edc.tsu.ru/en/visa",
+      "contacts": [],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_TSU_HOST_DOCUMENTS",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_TSU_HOST_DOCUMENTS"
+        ]
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_TSU_HOST_DOCUMENTS",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "В день прибытия",
+        "state": "unknown",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_TSU_HOST_DOCUMENTS"
+          ]
+        },
+        "source_id": "SRC_TSU_VISA",
+        "locator": "Visa Support: раздел для студентов",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_TSU_VISA",
+      "locator": "Visa Support: раздел для студентов",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_TSU_CONTACT",
+      "locator": "Visa Support: раздел для студентов",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_TSU_HOST_DOCUMENTS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:37:54.661491Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_OMS_EAEU_EMPLOYEE",
+  "kind": "federal",
+  "version": 2,
+  "status": "draft",
+  "title": "Подайте документы на ОМС как временно пребывающий работник ЕАЭС",
+  "summary": "Обратитесь в выбранную страховую организацию системы ОМС с документами работающего гражданина ЕАЭС.",
+  "category": "health",
+  "research_process_ids": [
+    "PROC_OMS"
+  ],
+  "actor": "student",
+  "obligation": "optional",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "is_in_russia",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "residence_status",
+        "value": "temporary_stay"
+      },
+      {
+        "op": "in",
+        "fact": "citizenship_country",
+        "values": [
+          "am",
+          "by",
+          "kz",
+          "kg"
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "employment_contract_active",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "lawful_employment",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "oms_entitled",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "oms_entitlement_confirmed",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_AUDIT_OMS_EAEU"
+    ]
+  },
+  "instructions": [
+    "Выберите страховую медицинскую организацию системы ОМС в своем регионе.",
+    "Подайте документ личности, СНИЛС, действующий трудовой договор и подтверждение учета по месту пребывания.",
+    "Получите подтверждение оформления полиса; проверьте срок его действия."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Документ личности",
+      "requirement": "required",
+      "form": "original",
+      "evidence": [
+        {
+          "source_id": "SRC_OMS_WORK",
+          "locator": "Категория временно пребывающих трудящихся государств ЕАЭС; перечень документов",
+          "supports": "Документ личности"
+        }
+      ]
+    },
+    {
+      "id": "DOC_SNILS",
+      "title": "СНИЛС",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_OMS_WORK",
+          "locator": "Категория временно пребывающих трудящихся государств ЕАЭС; перечень документов",
+          "supports": "СНИЛС"
+        }
+      ]
+    },
+    {
+      "id": "DOC_EMPLOYMENT",
+      "title": "Действующий трудовой договор",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_OMS_WORK",
+          "locator": "Категория временно пребывающих трудящихся государств ЕАЭС; перечень документов",
+          "supports": "Действующий трудовой договор"
+        }
+      ]
+    },
+    {
+      "id": "DOC_ARRIVAL",
+      "title": "Отрывная часть уведомления о прибытии или ее копия с местом и сроком пребывания",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_OMS_WORK",
+          "locator": "Категория временно пребывающих трудящихся государств ЕАЭС; перечень документов",
+          "supports": "Отрывная часть уведомления о прибытии или ее копия с местом и сроком пребывания"
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Страховая медицинская организация в системе ОМС",
+    "selection_basis": "Выбирается в регионе обслуживания; московские адреса не распространяются на другие субъекты.",
+    "information_url": "https://www.mgfoms.ru/chastnye-lica/poluchenie-i-zamena/poluchenie-polisa-oms/trudyashchiesya-inostrannye-grazhdane/",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Документы на оформление полиса ОМС поданы",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [],
+  "warnings": [
+    {
+      "id": "WARN_AUDIT_OMS_EAEU",
+      "severity": "blocking",
+      "message": "Сверить действующую федеральную норму ОМС, случаи ГПХ, освобождения от учета и подтверждение проживания в экспериментальном режиме. Региональный перечень документов не заменяет эти проверки.",
+      "unresolved_ids": [
+        "UNR_AUDIT_OMS_EAEU"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_OMS_WORK",
+      "locator": "Разделы «Категории лиц», «Для формирования полиса», «Куда обратиться»",
+      "supports": "Отдельная категория работающих граждан ЕАЭС; студенчество само по себе не создает этого права. Московские каналы МФЦ не переносятся в другие регионы.",
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/instructions",
+        "/destination",
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_OMS_WORK",
+      "locator": "Разделы «Категории лиц», «Для формирования полиса», «Куда обратиться»",
+      "supports": "Редакционное решение маршрута в рамках описанной заявительной услуги/экстренного обращения. Отсутствие назначенного календарного дедлайна в карточке не является доказательством отсутствия всех связанных сроков.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_AUDIT_OMS_EAEU"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T07:54:30Z",
+    "reviewer": "Отдельный аудит профилей и границ применения; неподтвержденные поля сохранены как блокирующие пробелы",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions",
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_AUDIT_OMS_EAEU",
+      "note": "Сверить действующую федеральную норму ОМС, случаи ГПХ, освобождения от учета и подтверждение проживания в экспериментальном режиме. Региональный перечень документов не заменяет эти проверки."
+    }
+  ]
+}

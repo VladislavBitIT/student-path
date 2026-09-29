@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_HSE_PERM_TRAVEL",
+  "university_id": "UNIV_HSE",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Подать заявление о поездке в ВШЭ — Пермь",
+  "summary": "Перед поездкой заполните заявление об отъезде в международном отделе, кабинет 205.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "hse_campus",
+        "value": "perm"
+      },
+      {
+        "op": "eq",
+        "fact": "full_time",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "departure_planned",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_HSE_PERM_TRAVEL"
+    ]
+  },
+  "instructions": [
+    "Перед поездкой заполните заявление об отъезде в международном отделе, кабинет 205."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "hybrid",
+    "name": "Отдел международного сотрудничества ВШЭ — Пермь",
+    "url": "https://perm.hse.ru/upr/inoffice/intoffice",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "supportperm@hse.ru",
+        "label": "Отдел международного сотрудничества ВШЭ — Пермь"
+      },
+      {
+        "kind": "phone",
+        "value": "+7 (342) 254-41-64",
+        "label": "Отдел международного сотрудничества ВШЭ — Пермь"
+      }
+    ],
+    "appointment_required": "unknown",
+    "address": "Пермь, Студенческая, 38, кабинет 205"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_HSE_PERM_TRAVEL",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_HSE_PERM_TRAVEL"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_HSE_PERM_EXTENSION",
+      "locator": "Локальная передача сведений",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_HSE_PERM",
+      "locator": "Локальная передача сведений",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_HSE_PERM_TRAVEL"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:26:55.858077Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

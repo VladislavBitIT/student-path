@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/research_process.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^PROC_[A-Z0-9_]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "before_entry",
+          "entry",
+          "after_entry",
+          "during_stay",
+          "change",
+          "departure"
+        ]
+      },
+      "minItems": 1
+    },
+    "scope": {
+      "enum": [
+        "federal",
+        "federal_with_regional_experiment",
+        "adjacent_conditional"
+      ]
+    },
+    "research_status": {
+      "enum": [
+        "partially_documented",
+        "candidate"
+      ]
+    },
+    "operational": {
+      "const": false
+    },
+    "applicability": {
+      "$ref": "research_claim.schema.json"
+    },
+    "trigger": {
+      "$ref": "research_claim.schema.json"
+    },
+    "obligation": {
+      "$ref": "research_claim.schema.json"
+    },
+    "deadlines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "$ref": "research_claim.schema.json"
+          },
+          "amount": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "unit": {
+            "enum": [
+              "calendar_day",
+              "business_day",
+              "hour",
+              "calendar_month",
+              "calendar_year",
+              "date",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "calculation_ready": {
+            "const": false
+          }
+        },
+        "required": [
+          "description",
+          "amount",
+          "unit",
+          "anchor",
+          "actor",
+          "calculation_ready"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "destination": {
+      "$ref": "research_claim.schema.json"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "$ref": "research_claim.schema.json"
+      },
+      "minItems": 1
+    },
+    "required_documents": {
+      "type": "array",
+      "items": {
+        "$ref": "research_claim.schema.json"
+      },
+      "minItems": 1
+    },
+    "expected_result": {
+      "$ref": "research_claim.schema.json"
+    },
+    "exceptions": {
+      "$ref": "research_claim.schema.json"
+    },
+    "change_effects": {
+      "$ref": "research_claim.schema.json"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^SRC_[A-Z0-9_]+$"
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source_id",
+          "locator",
+          "supports"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "unresolved_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^UNR_[A-Z0-9_]+$"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "phases",
+    "scope",
+    "research_status",
+    "operational",
+    "applicability",
+    "trigger",
+    "obligation",
+    "deadlines",
+    "destination",
+    "actions",
+    "required_documents",
+    "expected_result",
+    "exceptions",
+    "change_effects",
+    "evidence",
+    "unresolved_ids"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_ITMO_DORM_SLOT",
+  "university_id": "UNIV_ITMO",
+  "kind": "university",
+  "version": 2,
+  "status": "draft",
+  "title": "Выберите время заселения в my.itmo",
+  "summary": "Откройте «Общежития» после уведомления о месте и выберите доступные дату и время; сохраните подтверждение.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "itmo_dorm_assigned",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "itmo_account_available",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "itmo_dorm_assigned",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_ITMO_DORM_SLOT_CONFLICT"
+    ]
+  },
+  "instructions": [
+    "Откройте «Общежития» после уведомления о месте и выберите доступные дату и время; сохраните подтверждение."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "online",
+    "name": "my.itmo — Общежития",
+    "url": "https://my.itmo.ru/services/dormitories",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "campus@itmo.ru",
+        "label": "Заселение"
+      },
+      {
+        "kind": "phone",
+        "value": "+7 (812) 480-90-00 доб. 7",
+        "label": "Заселение"
+      },
+      {
+        "kind": "email",
+        "value": "int.students@itmo.ru",
+        "label": "Сопровождение иностранных студентов"
+      }
+    ],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Выберите время заселения в my.itmo — действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_ITMO_STEP_DORM_SLOT",
+      "severity": "blocking",
+      "message": "Подтвержденные локальные сведения сохранены; пробелы перечислены в unresolved.",
+      "unresolved_ids": [
+        "UNR_ITMO_STEP_DORM_SLOT"
+      ]
+    },
+    {
+      "id": "WARN_ITMO_DORM_SLOT_CONFLICT",
+      "severity": "blocking",
+      "message": "Русский гайд: выбор времени за 48 часов, 24 часа для МСГ. Английский: 48 часов, 24 часа для иностранных студентов. Приоритет не установлен; точный дедлайн для иностранца заблокирован, нужно уточнение campus@itmo.ru.",
+      "unresolved_ids": [
+        "UNR_ITMO_DORM_SLOT_CONFLICT"
+      ]
+    },
+    {
+      "id": "WARN_ITMO_AUTHENTICATED_FORMS",
+      "severity": "blocking",
+      "message": "Ссылки my.itmo ведут на авторизацию. Публичное назначение подтверждено страницами ИТМО; поля форм, доступы и успешная отправка после входа не проверены. Форма 086/у /requests/new/8326 не открылась инструментом.",
+      "unresolved_ids": [
+        "UNR_ITMO_AUTHENTICATED_FORMS"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_ITMO_HOUSING_RU",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Локальные сведения ИТМО; область применения ограничена карточкой.",
+      "fields": [
+        "/instructions",
+        "/applicability",
+        "/destination",
+        "/documents",
+        "/deadline"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_HOUSING_EN",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Локальные сведения ИТМО; область применения ограничена карточкой.",
+      "fields": [
+        "/instructions",
+        "/applicability",
+        "/destination",
+        "/documents",
+        "/deadline"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_HOUSING_RU",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Результат означает подтверждение пользователем выполнения описанного действия; не гарантирует положительное решение университета.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_HOUSING_RU",
+      "locator": "Локальное указание срока в источнике карточки",
+      "supports": "Опубликованный внутренний срок; неполное исчисление остаётся unresolved.",
+      "fields": [
+        "/deadline",
+        "/reported_deadline_text"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_ITMO_STEP_DORM_SLOT",
+    "UNR_ITMO_DORM_SLOT_CONFLICT",
+    "UNR_ITMO_AUTHENTICATED_FORMS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:40:30.570901Z",
+    "reviewer": "Повторное самостоятельное исследование официальных страниц в последовательном обзоре десяти вузов",
+    "next_review_on": "2026-10-26"
+  },
+  "reported_deadline_text": "48 часов; область исключения 24 часа расходится в языковых версиях"
+}

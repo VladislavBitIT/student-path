@@ -1,0 +1,13 @@
+node_modules
+dist
+apps/miniapp/dist
+coverage
+pnpm-lock.yaml
+openapi.json
+research/
+PROJECT_SNAPSHOT.md
+
+# Immutable vendor release: preserve checksums.
+db/knowledge-release-2026-09-29/
+db/route-knowledge-base-v0.10.0/
+docs/CONTENT_STATUS_ORIGINAL.md

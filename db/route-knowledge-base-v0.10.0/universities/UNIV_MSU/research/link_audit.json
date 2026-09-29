@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_MSU",
+  "checked_on": "2026-09-26",
+  "scope": "Новое чтение официальных страниц; формы не отправлялись.",
+  "checks": [
+    {
+      "url": "https://international.msu.ru/before",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://international.msu.ru/before",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://international.msu.ru/arrival",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://international.msu.ru/arrival",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://international.msu.ru/after",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://international.msu.ru/after",
+      "detail": "Есть неподтверждённые на 2026 год правовые сроки и суммы пошлин; они не перенесены в федеральный слой. Различные местные сроки сохранены как нерасчётные."
+    },
+    {
+      "url": "https://international.msu.ru/faculties",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://international.msu.ru/faculties",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://international.msu.ru/healthcare",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://international.msu.ru/healthcare",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://iaas.msu.ru/inostrannym-studentam/vizovo-migraczionnye-voprosy/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://iaas.msu.ru/inostrannym-studentam/vizovo-migraczionnye-voprosy/",
+      "detail": "Инструкция только ИСАА. Отличается от общевузовского срока 30 дней; не распространена на другие факультеты."
+    }
+  ]
+}

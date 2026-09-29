@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "university_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checked_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "checked_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "result": {
+            "enum": [
+              "page_text",
+              "login_redirect",
+              "empty_ui",
+              "tool_unavailable",
+              "popup_unresolved"
+            ]
+          },
+          "resolved_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "url",
+          "checked_on",
+          "result",
+          "resolved_url",
+          "detail"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "university_id",
+    "checked_on",
+    "scope",
+    "checks"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/university_link_audit.schema.json"
+}

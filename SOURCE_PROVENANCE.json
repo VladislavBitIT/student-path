@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "distribution": "student-path-source-submission",
+  "data_packaging": "runtime-subset",
+  "description": "Производная комплектация данных для сдачи. Исходные базы сохранены в рабочем проекте. Активные данные и правила не изменены.",
+  "original_locks": {
+    "route-knowledge-base-v0.10.0": {
+      "package_version": "0.10.0",
+      "file_count": 363,
+      "tree_sha256": "db5c353d1f2268659fd4185e2b202d6961dbc561a920d1650318e5f05b50d704",
+      "source_archive_sha256": "d44d99cea4812566368f6ac938126a809bd3de195a3965a79e5ce7cc793e53e5"
+    },
+    "knowledge-release-2026-09-29": {
+      "archive_sha256": "5e780b0bed17806e6ced5f72761c5fd63ad4e4e541091374aa00f091029771d3",
+      "checksums_sha256": "389974b4ac574257d78cdae825a09a5aca1aa6efb60eccc61c11aee02cc0789d",
+      "reference_archive_sha256": "5a1fcd17bf6bad42928eb1c6bd1ba5afaff412dc3edda95f4f28489f3f8ce929"
+    }
+  },
+  "packaged_locks": {
+    "route-knowledge-base-v0.10.0": {
+      "package_version": "0.10.0",
+      "file_count": 343,
+      "tree_sha256": "7a3207acc1d8f3a9ea3add436a0d93111e5f0bb661e1d9e4cd040ee916e72ebc",
+      "source_archive_sha256": "d44d99cea4812566368f6ac938126a809bd3de195a3965a79e5ce7cc793e53e5"
+    },
+    "knowledge-release-2026-09-29": {
+      "archive_sha256": "5e780b0bed17806e6ced5f72761c5fd63ad4e4e541091374aa00f091029771d3",
+      "checksums_sha256": "4a52875227fcbe009dd955e590e88be047c8d6cc02b9a99f9610191b0baf365b",
+      "reference_archive_sha256": "5a1fcd17bf6bad42928eb1c6bd1ba5afaff412dc3edda95f4f28489f3f8ce929"
+    }
+  },
+  "preserved_active_json_files": 287,
+  "active_json_verified_byte_identical": true,
+  "excluded_patterns": [
+    "db/route-knowledge-base-v0.10.0/**/*.md",
+    "db/knowledge-release-2026-09-29/**/*.md",
+    "db/knowledge-release-2026-09-29/traceability/**"
+  ],
+  "metadata_changes": {
+    "db/knowledge-release-2026-09-29/RELEASE_MANIFEST.json": {
+      "original_sha256": "de0f9866667810539af05e93c45dae0247a1f8545801893d2b9159df98d36866",
+      "changes": [
+        "Removed entrypoint for the excluded development import guide.",
+        "Identified runtime-subset distribution and provenance file."
+      ]
+    }
+  },
+  "validation_scope": {
+    "runtime_integrity": "All packaged data files remain covered by the recalculated locks/checksums; runtime validation is unchanged.",
+    "content_validation": "Active import, audit, legacy JSON, source TXT snapshots, and validation scripts are unchanged.",
+    "historical_traceability": "Original release traceability archive, its copied source tree and their tests are omitted. validate_release.py therefore does not compare the optional original traceability tree.",
+    "archive_sha256": "Original content-import identifier retained; this is not the checksum of the new submission ZIP."
+  },
+  "code_commit": "a9544d24c4dd8c98eb948d483dae7aa3a63dfa35",
+  "excluded_file_count": 391,
+  "presentation": "Deferred by owner; to be added separately",
+  "checks": {
+    "integration_api": {
+      "passed": 38
+    },
+    "integration_verified_release": {
+      "passed": 3
+    },
+    "smoke_safety_tests": {
+      "passed": 5
+    },
+    "typecheck": "passed",
+    "targeted_eslint_prettier": "passed",
+    "openapi_freshness": "passed",
+    "official_data_api_validation": {
+      "result": "passed",
+      "revision": "8504a6d9b39e6f652bce689d96e88538d7541c6b",
+      "warnings": 0
+    },
+    "public_read_only_checks": {
+      "passed": 3
+    },
+    "docker_build": {
+      "result": "passed",
+      "cache": "used",
+      "seconds": 31.9
+    },
+    "docker_services_healthy": 5,
+    "docker_mock_smoke": "passed including cleanup",
+    "protected_endpoints_without_auth": 13,
+    "response_serialization_field_preservation": "passed",
+    "cross_user_isolation": "passed",
+    "malformed_step_uuid": "regression fixed: HTTP 400 instead of 500",
+    "real_MAX_client": "not verified; separate manual acceptance",
+    "presentation": "not included; added separately"
+  },
+  "previous_code_commit": "37a851ada3fbbc2ed1ec2bdf750c01bcc155be60",
+  "application_changes": [
+    "Document actual API response schemas without dropping existing fields",
+    "Extend existing local mock smoke with profile, instructions, progress and reminder lifecycle",
+    "Include the same smoke in Docker runtime and document reproducible invocation",
+    "Reject malformed step UUID in status requests with HTTP 400 instead of 500"
+  ],
+  "deployment": "Not deployed as part of this task",
+  "data_packaging_reused_from": "Сдача_Путь_студента_2026-09-30; data trees and locks byte-identical"
+}

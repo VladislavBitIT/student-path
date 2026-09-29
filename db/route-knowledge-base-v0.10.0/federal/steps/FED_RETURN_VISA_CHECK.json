@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_RETURN_VISA_CHECK",
+  "kind": "federal",
+  "version": 3,
+  "status": "draft",
+  "title": "Проверьте право обратного въезда перед поездкой",
+  "summary": "Сверьте дату предполагаемого возвращения со сроком действия паспорта и визы.",
+  "category": "changes",
+  "research_process_ids": [
+    "PROC_EXIT_REENTRY"
+  ],
+  "actor": "student",
+  "obligation": "recommended",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "has_study_visa",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "departure_planned",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_RETURN_VISA_CHECK"
+    ]
+  },
+  "instructions": [
+    "Сверьте дату предполагаемого возвращения со сроком действия паспорта и визы.",
+    "Проверьте кратность визы и наличие допустимого основания повторного въезда; сохраните результат проверки до выезда."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "recommended",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_VISA",
+          "locator": "Оформление российских виз",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ],
+      "instructions": "Используйте точные реквизиты документа. Карточка не устанавливает обязанность передавать оригинал для этого действия."
+    },
+    {
+      "id": "DOC_VISA",
+      "title": "Действующая учебная виза",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_VISA",
+          "locator": "Оформление российских виз",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Личные проездные документы; при несоответствии — выдавшее визу МВД/консульство",
+    "selection_basis": "Проверка документов выполняется пользователем; уточнение у органа выдачи.",
+    "information_url": "https://www.kdmid.ru/cons/visas/",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Проверены срок и кратность для обратного въезда",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Выезд не обнуляет суммарный годовой лимит безвизового пребывания; многократность визы существенна.",
+      "unresolved_ids": [
+        "UNR_EXIT_REENTRY",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_RETURN_VISA_CHECK",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Не подтверждены все договорные/статусные исключения, выезд при незавершённой заявке и ограничения въезда. Поездка не обнуляет годовой безвизовый лимит.",
+      "unresolved_ids": [
+        "UNR_STEP_RETURN_VISA_CHECK"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_ENTRY_PURPOSE",
+      "severity": "blocking",
+      "message": "Проверять цель, вид паспорта и действующий статус отдельно от гражданства: туристический/электронный безвизовый режим не доказывает право въезда для длительной учебы. Требуются особые документы при РВП/РВПО/ВНЖ.",
+      "unresolved_ids": [
+        "UNR_AUDIT_ENTRY_PURPOSE"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Действующая учебная виза",
+      "fields": [
+        "/documents/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Выезд не обнуляет суммарный годовой лимит безвизового пребывания; многократность визы существенна.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Сверьте дату предполагаемого возвращения со сроком действия паспорта и визы. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Проверьте кратность визы и наличие допустимого основания повторного въезда; сохраните результат проверки до выезда. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_RETURN_VISA_CHECK",
+    "UNR_EXIT_REENTRY",
+    "UNR_CURRENT_EDITION",
+    "UNR_AUDIT_ENTRY_PURPOSE",
+    "UNR_QUALITY_REMOTE_PASSPORT"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T07:54:30Z",
+    "reviewer": "Финальный аудит: исправлены перечисленные поля; статус draft сохранён",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_RETURN_VISA_CHECK",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_RETURN_VISA_CHECK",
+      "note": "Не подтверждены все договорные/статусные исключения, выезд при незавершённой заявке и ограничения въезда. Поездка не обнуляет годовой безвизовый лимит."
+    },
+    {
+      "fields": [
+        "/applicability"
+      ],
+      "unresolved_id": "UNR_AUDIT_ENTRY_PURPOSE",
+      "note": "Проверять цель, вид паспорта и действующий статус отдельно от гражданства: туристический/электронный безвизовый режим не доказывает право въезда для длительной учебы. Требуются особые документы при РВП/РВПО/ВНЖ."
+    },
+    {
+      "fields": [
+        "/documents/0"
+      ],
+      "unresolved_id": "UNR_QUALITY_REMOTE_PASSPORT",
+      "note": "Обязательность предъявления оригинала источником не установлена."
+    }
+  ]
+}

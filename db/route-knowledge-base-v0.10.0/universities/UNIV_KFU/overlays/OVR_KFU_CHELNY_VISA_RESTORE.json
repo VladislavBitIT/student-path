@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_KFU_CHELNY_VISA_RESTORE",
+  "university_id": "UNIV_KFU",
+  "target_step_id": "FED_VISA_RESTORE",
+  "target_step_version": 1,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "kfu_campus",
+        "value": "chelny"
+      },
+      {
+        "op": "always"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Передайте документы в отдел международной деятельности НЧИ КФУ; используйте комплект соответствующего раздела страницы НЧИ."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Отдел международной деятельности НЧИ КФУ",
+      "address": "Набережные Челны, комплекс 1/18, кабинет 221А (остановка «Театр кукол / Молодёжная»)",
+      "url": "https://kpfu.ru/chelny/international-activities/pravila-prebyvaniya-inostrannyh-grazhdan/prodlenie-rossijskoj-vizy",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "EVMaksimova@kpfu.ru",
+          "label": "НЧИ"
+        },
+        {
+          "kind": "phone",
+          "value": "+7 (8552) 39-63-12",
+          "label": "НЧИ"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_KFU_CHELNY_VISA_RESTORE",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_KFU_CHELNY_VISA_RESTORE"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_KFU_CHELNY",
+      "locator": "Профильный раздел локальной процедуры",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_KFU_CHELNY_VISA_RESTORE"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:43:51.618487Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

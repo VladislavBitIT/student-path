@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_TSU",
+  "checked_on": "2026-09-26",
+  "scope": "Новое чтение официальных страниц; формы не отправлялись.",
+  "checks": [
+    {
+      "url": "https://www.edc.tsu.ru/en/visa",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://www.edc.tsu.ru/en/visa",
+      "detail": "Полный текст получен поисковой выдачей официальной страницы; прямое открытие вернуло 502. Указанные суммы пошлин, бесплатность регистрации, универсальные сроки и основания РВП не приняты за действующие федеральные нормы."
+    },
+    {
+      "url": "https://tsu.ru/university/structure/upravl/inter_upr.php?nv=on",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://tsu.ru/university/structure/upravl/inter_upr.php?nv=on",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://studentcenter.tsu.ru/en/housing/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://studentcenter.tsu.ru/en/housing/",
+      "detail": "Недатированная страница; тарифы не использованы; точка обслуживания может отличаться от справочника главного корпуса."
+    },
+    {
+      "url": "https://ggf.tsu.ru/studentam/inostrannymstudentam/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ggf.tsu.ru/studentam/inostrannymstudentam/",
+      "detail": "Правовые утверждения о ruID, уведомлениях и пошлинах требуют федерального первоисточника; не включены в федеральные карточки."
+    },
+    {
+      "url": "https://ggf.tsu.ru/obyavleniya/Prohozhdenie_medicinskogo_osvidetelstvovaniya/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ggf.tsu.ru/obyavleniya/Prohozhdenie_medicinskogo_osvidetelstvovaniya/",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://forms.yandex.ru/cloud/6a83d1ff6d2d735ae991e21d",
+      "checked_on": "2026-09-26",
+      "result": "tool_unavailable",
+      "resolved_url": "https://forms.yandex.ru/cloud/6a83d1ff6d2d735ae991e21d",
+      "detail": "Форма не получена и не отправлялась; поля неизвестны."
+    },
+    {
+      "url": "https://philology.tsu.ru/node/4065",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://philology.tsu.ru/node/4065",
+      "detail": "Даты обновления нет; тарифы, список уполномоченных медорганизаций и федеральные сроки не подтверждены, в универсальный маршрут не перенесены."
+    }
+  ]
+}

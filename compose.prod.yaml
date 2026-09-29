@@ -1,0 +1,154 @@
+name: first30-prod
+
+x-runtime-env: &runtime-env
+  - ${FIRST30_CONFIG_DIR:-/opt/first30}/production.env
+  - ${FIRST30_CONFIG_DIR:-/opt/first30}/runtime.env
+
+x-server-env: &server-env
+  - ${FIRST30_CONFIG_DIR:-/opt/first30}/production.env
+  - ${FIRST30_CONFIG_DIR:-/opt/first30}/runtime.env
+  - ${FIRST30_CONFIG_DIR:-/opt/first30}/secrets.env
+
+x-server: &server
+  image: first30-server:production
+  build:
+    context: .
+    dockerfile: Dockerfile
+  env_file: *server-env
+  networks: [application]
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    env_file: *runtime-env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks: [application]
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"']
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  migrate:
+    <<: *server
+    env_file: *runtime-env
+    command: ['node', 'dist/migrate.js']
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: 'no'
+
+  seed:
+    <<: *server
+    env_file: *runtime-env
+    command: ['node', 'dist/seed.js']
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: 'no'
+
+  api:
+    <<: *server
+    command: ['node', 'dist/api.js']
+    depends_on:
+      postgres:
+        condition: service_healthy
+      seed:
+        condition: service_completed_successfully
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://127.0.0.1:3000/health/ready').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  bot:
+    <<: *server
+    command: ['node', 'dist/bot.js']
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'node', '-e', 'process.kill(1, 0)']
+      interval: 15s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  worker:
+    <<: *server
+    command: ['node', 'dist/worker.js']
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'node', '-e', 'process.kill(1, 0)']
+      interval: 15s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  miniapp:
+    image: first30-miniapp:production
+    build:
+      context: .
+      dockerfile: apps/miniapp/Dockerfile
+      args:
+        VITE_API_BASE_URL: ''
+        VITE_DEMO_MODE: 'false'
+        VITE_MAX_BOT_USERNAME: ${MAX_BOT_USERNAME:-}
+    networks: [application]
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://127.0.0.1:4173/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2.10-alpine
+    ports:
+      - '80:80'
+      - '443:443'
+      - '443:443/udp'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks: [application]
+    depends_on:
+      api:
+        condition: service_healthy
+      miniapp:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://127.0.0.1:2019/config/']
+      interval: 10s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+networks:
+  application:
+
+volumes:
+  postgres_data:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,93 @@
+# Публичные проверки опубликованного HTTPS-сервера; запросы не изменяют данные.
+# Основной сценарий с изменением данных: scripts/demo-smoke.ts, только локальный
+# Docker с имитацией MAX. Запуск и контракт: README.md#воспроизводимая-проверка-api.
+# Официальная схема поддерживает dependsOn/extract, но задаёт один HTTPS baseUrl.
+# Локальная dev-авторизация намеренно не включена в проверки production.
+schemaVersion: '1.0'
+
+solution:
+  name: 'Путь студента'
+
+api:
+  baseUrl: 'https://student-way.tw1.su'
+  openapi: './openapi.json'
+  defaultHeaders:
+    Accept: 'application/json'
+
+checks:
+  - id: 'health-live'
+    name: 'Проверка работы приложения'
+    description: 'Безопасная повторяемая проверка работы HTTP-процесса.'
+    method: 'GET'
+    path: '/health/live'
+    role: 'public'
+    expected:
+      statusCodes: [200]
+      contentType: 'application/json'
+      requiredFields: ['status']
+      bodySchema:
+        type: object
+        required: ['status']
+        properties:
+          status:
+            type: string
+            const: 'ok'
+    timeoutMs: 5000
+    repeatable: true
+
+  - id: 'health-ready'
+    name: 'Проверка готовности приложения'
+    description: >-
+      Безопасная повторяемая проверка готовности API и PostgreSQL на опубликованном сервере.
+      Последовательный сценарий авторизации, маршрута, прогресса и напоминаний запускается
+      отдельно в локальном Docker: scripts/demo-smoke.ts; README.md#воспроизводимая-проверка-api.
+    method: 'GET'
+    path: '/health/ready'
+    role: 'public'
+    expected:
+      statusCodes: [200]
+      contentType: 'application/json'
+      requiredFields: ['status', 'database', 'maxProvider']
+      bodySchema:
+        type: object
+        required: ['status', 'database', 'maxProvider']
+        properties:
+          status:
+            type: string
+            const: 'ready'
+          database:
+            type: string
+            const: 'ok'
+          maxProvider:
+            type: string
+            const: 'real'
+    timeoutMs: 5000
+    repeatable: true
+
+  - id: 'legal'
+    name: 'Правовые сведения'
+    description: >-
+      Публичная повторяемая проверка наличия правовых сведений и статуса контактной информации.
+      Ответ явно сообщает, что оператор данных и адрес поддержки пока не утверждены владельцем.
+    method: 'GET'
+    path: '/api/legal'
+    role: 'public'
+    expected:
+      statusCodes: [200]
+      contentType: 'application/json'
+      requiredFields: ['privacy', 'terms', 'support']
+      bodySchema:
+        type: object
+        required: ['privacy', 'terms', 'support']
+        properties:
+          privacy:
+            type: string
+            minLength: 1
+          terms:
+            type: string
+            minLength: 1
+          support:
+            type: string
+            minLength: 1
+    timeoutMs: 5000
+    repeatable: true

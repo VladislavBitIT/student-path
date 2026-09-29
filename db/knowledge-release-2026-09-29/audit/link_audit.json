@@ -1,0 +1,2973 @@
+{
+  "schema_version": "1.0.0",
+  "checked_on": "2026-09-29",
+  "total_links": 168,
+  "items": [
+    {
+      "url": "https://abit.itmo.ru/page/66",
+      "source_ids": [
+        "SRC_ITMO_ADMISSION_BACHELOR_2026"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://abitlk.itmo.ru/",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "login_or_javascript",
+        "observed_redirect": null,
+        "note": "Доступна только оболочка, переадресация или вход; работоспособность формы после авторизации не проверена."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_or_javascript_required",
+      "observed_redirect": null,
+      "note": "Ссылка существует, но публичное чтение ограничено авторизацией или JavaScript. Активные факты подтверждаются публичным источником.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://aspirantura.itmo.ru/ru/postuplenie/postuplenie-aspirantov/postuplenie-aspirantov-2026/pravila-priema-2026",
+      "source_ids": [
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ciep.nsu.ru/admission",
+      "source_ids": [
+        "SRC_NSU_ADMISSION"
+      ],
+      "original_check": null,
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "content_retrieved_current",
+      "observed_redirect": null,
+      "note": "Публичная официальная страница проверена; ключевые этапы поступления доступны.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ciep.nsu.ru/chavo",
+      "source_ids": [
+        "SRC_NSU_FAQ"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:30:00.761040Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Область — программы центра. Общие утверждения о регистрации, выезде и стоимости жилья не подтверждают федеральные правила 2026 года."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "content_retrieved_current_core",
+      "observed_redirect": null,
+      "note": "Публичная официальная страница проверена; быстро меняющиеся цены исключаются.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ciep.nsu.ru/kakpostupit",
+      "source_ids": [
+        "SRC_NSU_ADMISSION"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:30:00.761040Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:30:00.761040Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ciep.nsu.ru/kontakti",
+      "source_ids": [
+        "SRC_NSU_CONTACT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:30:00.761040Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:30:00.761040Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ciep.nsu.ru/oplatangu",
+      "source_ids": [
+        "SRC_NSU_PAYMENT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:30:00.761040Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Работа иностранных банковских карт, валютные реквизиты и тарифы не подтверждены."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "content_retrieved_current",
+      "observed_redirect": null,
+      "note": "Публичная официальная страница проверена; срок оплаты определяется договором.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ciep.nsu.ru/prozhivanie",
+      "source_ids": [
+        "SRC_NSU_HOUSING"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:30:00.761040Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "content_retrieved_current_core",
+      "observed_redirect": null,
+      "note": "Публичная официальная страница проверена; цены не фиксируются как неизменяемые.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://education.nsu.ru/freshmen",
+      "source_ids": [
+        "SRC_NSU_FRESHMEN"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:30:00.761040Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Общий перечень не уточняет исключения для иностранцев и СНИЛС; воинские документы не назначаются иностранцам автоматически."
+      },
+      "checked_at": "2026-09-26T11:30:00.761040Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://eec.eaeunion.org/upload/files/paos/library/spreads.pdf",
+      "source_ids": [
+        "SRC_EAEU"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://en.tsu.ru/international_cooperation/visa_to_russia.php",
+      "source_ids": [
+        "SRC_TSU_VISA_TO_RUSSIA_CURRENT"
+      ],
+      "original_check": null,
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "content_retrieved_current",
+      "observed_redirect": null,
+      "note": "Официальная страница ТГУ проверена; визовый маршрут и срок оформления приглашения опубликованы.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://eng.mipt.ru/docs/preparatory_faq/Application_for_Leaving_the_Dormitory.pdf",
+      "source_ids": [
+        "SRC_MIPT_LEAVE_FORM"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:43:03.629789Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Правовые утверждения формы о регистрации через 72 часа/7 дней не используются как федеральные нормы."
+      },
+      "checked_at": "2026-09-26T08:43:03.629789Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://eng.mipt.ru/info/preparatory_faq/",
+      "source_ids": [
+        "SRC_MIPT_PREP"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:43:03.629789Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Отдельные цены и COVID-указания относятся к 2022 году. Область — подготовительное отделение; регистрация ошибочно названа temporary residence permit и не должна превращаться в РВП."
+      },
+      "checked_at": "2026-09-26T08:43:03.629789Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://eng.mipt.ru/info/preparatory_faq/docs/Application%20for%20Russian%20visa.pdf",
+      "source_ids": [
+        "SRC_MIPT_VISA_FORM"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:43:03.629789Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T08:43:03.629789Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://english.nsu.ru/",
+      "source_ids": [
+        "SRC_NSU_MAIN_UNAVAILABLE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:30:00.761040Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Тайм-аут инструмента. Контакты и правила из сторонних копий не импортированы."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "access_forbidden_to_checker",
+      "observed_redirect": "https://ciep.nsu.ru/admission",
+      "note": "Сервер отвечает 403 инструменту; для активного маршрута используется доступная официальная страница ЦМУП.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/dvtp/activity/legal-education/explain/e5887732/",
+      "source_ids": [
+        "SRC_AUDIT_HOST"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_02/activity/legal-education/explain/e93627/",
+      "source_ids": [
+        "SRC_AUDIT_REG_COMPARE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_32/activity/legal-education/explain/e298110/",
+      "source_ids": [
+        "SRC_HEALTH"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_33/activity/legal-education/explain/e314670/",
+      "source_ids": [
+        "SRC_RVPO_GUIDE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_50/activity/legal-education/explain/e472548/",
+      "source_ids": [
+        "SRC_REG_GUIDE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_50/activity/legal-education/explain/e8585073/",
+      "source_ids": [
+        "SRC_MED2026"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_51/activity/legal-education/explain/e493308/",
+      "source_ids": [
+        "SRC_WORK_STUDENT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_57/activity/legal-education/explain/e8572368/",
+      "source_ids": [
+        "SRC_MED2026_2"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_64/activity/legal-education/explain/e677934/",
+      "source_ids": [
+        "SRC_FINGERPRINT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_66/activity/legal-education/explain/e1217136/",
+      "source_ids": [
+        "SRC_AUDIT_REG_CONFLICT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_76/activity/legal-education/explain/e1958283/",
+      "source_ids": [
+        "SRC_STUDENT_EXTEND"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://epp.genproc.gov.ru/ru/proc_77/activity/legal-education/prokuratura-questions/e2008308/",
+      "source_ids": [
+        "SRC_AUDIT_BY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://events.nsu.ru/open_doors/en/",
+      "source_ids": [
+        "SRC_NSU_SUPPORT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:30:00.761040Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Календарь олимпиады относится к 2025 году; использованы только опубликованные контакты поддержки."
+      },
+      "checked_at": "2026-09-26T11:30:00.761040Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://forms.yandex.ru/cloud/6a83d1ff6d2d735ae991e21d",
+      "source_ids": [
+        "SRC_TSU_FORM"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:37:54.661491Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Форма не получена и не отправлялась; поля неизвестны."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "javascript_required",
+      "observed_redirect": "https://forms.yandex.ru/cloud/6a83d1ff6d2d735ae991e21d/",
+      "note": "Форма существует, для работы требуется JavaScript.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://ggf.tsu.ru/obyavleniya/Prohozhdenie_medicinskogo_osvidetelstvovaniya/",
+      "source_ids": [
+        "SRC_TSU_MEDICAL"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:37:54.661491Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:37:54.661491Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ggf.tsu.ru/studentam/inostrannymstudentam/",
+      "source_ids": [
+        "SRC_TSU_FOREIGN_STUDENTS_2026",
+        "SRC_TSU_GGF"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:37:54.661491Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Правовые утверждения о ruID, уведомлениях и пошлинах требуют федерального первоисточника; не включены в федеральные карточки."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "content_retrieved_current_2026",
+      "observed_redirect": null,
+      "note": "Официальная страница подразделения ТГУ проверена; правила и пошлины 2026 года опубликованы.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://globaluni.mipt.ru/sveden/objects/",
+      "source_ids": [
+        "SRC_MIPT_HOUSING"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:43:03.629789Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Поиск показывает документ об оплате 2026/27, но при чтении его текст не подтверждён; суммы и условия не извлечены."
+      },
+      "checked_at": "2026-09-26T08:43:03.629789Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://government.ru/docs/all/157204/",
+      "source_ids": [
+        "SRC_RKL"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://government.ru/docs/all/159135/",
+      "source_ids": [
+        "SRC_AMINA121"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://government.ru/docs/all/96196/?page=7",
+      "source_ids": [
+        "SRC_LAW114"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://government.ru/docs/all/97329/",
+      "source_ids": [
+        "SRC_LAW115"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://government.ru/docs/all/97329/?page=9",
+      "source_ids": [
+        "SRC_VNH_NOTICE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://guide.spbu.ru/dormitory",
+      "source_ids": [
+        "SRC_SPBU_DORM"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:34:43.776826Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:34:43.776826Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://guide.spbu.ru/dormitory/pamyatka-dormitory",
+      "source_ids": [
+        "SRC_SPBU_DORM_RULES"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:34:43.776826Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Памятка не заменяет подписанный договор; исчисление периодических медицинских сроков не установлено."
+      },
+      "checked_at": "2026-09-26T11:34:43.776826Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://guide.spbu.ru/foreigner",
+      "source_ids": [
+        "SRC_SPBU_GUIDE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:34:43.776826Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Действующий справочник содержит недатированные правовые обобщения: они не импортированы в федеральный слой. main охватывает СПбГУ в Санкт-Петербурге и Петергофе, точку приёма определяет назначение студента."
+      },
+      "checked_at": "2026-09-26T11:34:43.776826Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://helpdesk.itmo.ru/",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "checker_access_failed_not_used_as_sole_evidence",
+      "observed_redirect": null,
+      "note": "Инструмент не получил содержимое; ссылка не используется как единственное основание активного факта.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://iaas.msu.ru/inostrannym-studentam/vizovo-migraczionnye-voprosy/",
+      "source_ids": [
+        "SRC_MSU_IAAS"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:36:33.319008Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Инструкция только ИСАА. Отличается от общевузовского срока 30 дней; не распространена на другие факультеты."
+      },
+      "checked_at": "2026-09-26T08:36:33.319008Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://id.itmo.ru/login",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "login_or_javascript",
+        "observed_redirect": null,
+        "note": "Доступна только оболочка, переадресация или вход; работоспособность формы после авторизации не проверена."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_required",
+      "observed_redirect": null,
+      "note": "Страница авторизации доступна.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://ifea.spbu.ru/images/2023/rvpo_ru.pdf",
+      "source_ids": [
+        "SRC_SPBU_RVPO"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:34:43.776826Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "403 при открытии; перечень документов не перенесён из поискового фрагмента."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "access_forbidden_to_checker",
+      "observed_redirect": "https://guide.spbu.ru/foreigner",
+      "note": "Сервер отвечает 403 инструменту; активный маршрут опирается на официальный Guide SPbU.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://ifea.spbu.ru/images/pamyatka_in_2025_ru.pdf",
+      "source_ids": [
+        "SRC_SPBU_MEMO"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:34:43.776826Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "403; действительность отдельных пунктов не проверена."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "access_forbidden_to_checker",
+      "observed_redirect": "https://guide.spbu.ru/foreigner",
+      "note": "Сервер отвечает 403 инструменту; документ 2025 года не используется как текущий.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://ifea.spbu.ru/контакты/86-otdel-mezhdunarodnoj-deyatelnosti.html",
+      "source_ids": [
+        "SRC_SPBU_INTERNATIONAL"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:34:43.776826Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "403; отдельные контакты не извлечены."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "access_forbidden_to_checker",
+      "observed_redirect": "https://guide.spbu.ru/foreigner",
+      "note": "Сервер отвечает 403 инструменту; активный маршрут опирается на официальный Guide SPbU.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://int.itmo.ru/ru/bachelors_programs",
+      "source_ids": [
+        "SRC_ITMO_BACHELOR"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://int.itmo.ru/ru/faq",
+      "source_ids": [
+        "SRC_ITMO_FAQ"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://int.itmo.ru/ru/how_to_work_at_itmo",
+      "source_ids": [
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://int.itmo.ru/ru/important_documents",
+      "source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://international.msu.ru/after",
+      "source_ids": [
+        "SRC_MSU_AFTER"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:36:33.319008Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Есть неподтверждённые на 2026 год правовые сроки и суммы пошлин; они не перенесены в федеральный слой. Различные местные сроки сохранены как нерасчётные."
+      },
+      "checked_at": "2026-09-26T08:36:33.319008Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://international.msu.ru/arrival",
+      "source_ids": [
+        "SRC_MSU_ARRIVAL"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:36:33.319008Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T08:36:33.319008Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://international.msu.ru/before",
+      "source_ids": [
+        "SRC_MSU_BEFORE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:36:33.319008Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T08:36:33.319008Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://international.msu.ru/faculties",
+      "source_ids": [
+        "SRC_MSU_FACULTIES"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:36:33.319008Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T08:36:33.319008Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://international.msu.ru/healthcare",
+      "source_ids": [
+        "SRC_MSU_HEALTH"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:36:33.319008Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T08:36:33.319008Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://itmo.id/",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "redirect_to_login",
+      "observed_redirect": "https://id.itmo.ru/login",
+      "note": "Официальный адрес перенаправляет на ITMO ID.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://ivisa.hse.ru/",
+      "source_ids": [
+        "SRC_HSE_CENTER"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Новости о федеральных изменениях — повод для проверки, а не федеральное основание."
+      },
+      "checked_at": "2026-09-26T11:26:55.858077Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ivisa.hse.ru/bamacis3",
+      "source_ids": [
+        "SRC_HSE_STAY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Местная передача копий отделена от срока обращения в МВД; вид учебной программы уточняется."
+      },
+      "checked_at": "2026-09-26T11:26:55.858077Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ivisa.hse.ru/faq",
+      "source_ids": [
+        "SRC_HSE_FAQ"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Внутри страницы различаются суммы и встречаются правовые обобщения; они исключены из правил."
+      },
+      "checked_at": "2026-09-26T11:26:55.858077Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ivisa.hse.ru/rvpo",
+      "source_ids": [
+        "SRC_HSE_RVPO"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Дата обновления не установлена; подтверждены только местные сведения."
+      },
+      "checked_at": "2026-09-26T11:26:55.858077Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/chelny/international-activities/pravila-prebyvaniya-inostrannyh-grazhdan-na/prodlenie-rossijskoj-vizy/prodlenie-rossijskoj-vizy-403821.html",
+      "source_ids": [
+        "SRC_KFU_CHELNY"
+      ],
+      "original_check": null,
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "content_retrieved_current_with_stale_fee",
+      "observed_redirect": null,
+      "note": "Окно 90–45 дней подтверждено; сумма 1 600 ₽ исключена.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/chelny/international-activities/pravila-prebyvaniya-inostrannyh-grazhdan/prodlenie-rossijskoj-vizy",
+      "source_ids": [
+        "SRC_KFU_CHELNY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Текст официальной страницы прочитан в поисковой выдаче; прямой доступ недоступен. Старый размер пошлины исключён."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/international/inostrannomu-studentu",
+      "source_ids": [
+        "SRC_KFU_STUDENT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/",
+      "source_ids": [
+        "SRC_KFU_INDEX"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/bezvizovyi-vjezd",
+      "source_ids": [
+        "SRC_KFU_FREE_ENTRY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/daktiloskopiya-i-medicinskoe-osvidetelstvovanie",
+      "source_ids": [
+        "SRC_KFU_MEDICAL"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/prodlenie-odnokratnoj-i-mnogokratnoj-vizy-118896",
+      "source_ids": [
+        "SRC_KFU_VISA"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/rvpo",
+      "source_ids": [
+        "SRC_KFU_RVPO"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/vizovyi-vjezd",
+      "source_ids": [
+        "SRC_KFU_VISA_ENTRY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://kpfu.ru/invitations",
+      "source_ids": [
+        "SRC_KFU_INVITE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://lk.hse.ru/student-service/student-service-first?components=23813",
+      "source_ids": [
+        "SRC_HSE_RECORD"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "login_or_javascript",
+        "observed_redirect": null,
+        "note": "После входа форма не проверена."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "javascript_required",
+      "observed_redirect": null,
+      "note": "Официальный личный кабинет доступен, но требует JavaScript.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://lk.rudn.ru/",
+      "source_ids": [
+        "SRC_RUDN_PORTAL"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое инструментарий не получил; заявки не отправлялись."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_or_access_restricted",
+      "observed_redirect": "https://www.rudn.ru/life/multifunctional-center",
+      "note": "Личный кабинет закрыт для инструмента; публичные процедуры МФЦ РУДН доступны.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://mephi.ru/foreign-nationals/fingerprinting",
+      "source_ids": [
+        "SRC_MEPHI_FINGER"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:40:44.639146Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Не подтверждены актуальные адреса, тарифы, запись и исчерпывающие исключения на 2026 год; платные услуги не навязываются."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "content_retrieved_stale_deadline",
+      "observed_redirect": null,
+      "note": "Страница доступна, но срок 90 дней устарел относительно федерального правила с 01.09.2026.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://mephi.ru/foreign-nationals/student/hostel-rules",
+      "source_ids": [
+        "SRC_MEPHI_HOSTEL_INDEX"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:40:44.639146Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Текст связанного сканированного PDF не извлечён; его положения не выданы за проверенные."
+      },
+      "checked_at": "2026-09-26T08:40:44.639146Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://mephi.ru/foreign-nationals/visa-application",
+      "source_ids": [
+        "SRC_MEPHI_ARRIVAL"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:40:44.639146Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Прямо указан набор 2022/23, присутствуют старые COVID-требования. Срок 10 дней не принят как действующее требование 2026 года."
+      },
+      "checked_at": "2026-09-26T08:40:44.639146Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://mephi.ru/foreign-nationals/visa/stud",
+      "source_ids": [
+        "SRC_MEPHI_STUD"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:40:44.639146Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Текст содержит пошлину 2022 года и спорные правовые обобщения об учёте, выезде и академическом отпуске. Они не импортированы как действующее право."
+      },
+      "checked_at": "2026-09-26T08:40:44.639146Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://mephi.ru/foreign-nationals/visa/visa-entr",
+      "source_ids": [
+        "SRC_MEPHI_INVITE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:40:44.639146Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T08:40:44.639146Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://mephi.ru/foreign-students-feedback",
+      "source_ids": [
+        "SRC_MEPHI_FEEDBACK"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:40:44.639146Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Поля формы доступны; отправка и получение ответа не проверялись."
+      },
+      "checked_at": "2026-09-26T08:40:44.639146Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://mephi.ru/node/19028",
+      "source_ids": [
+        "SRC_MEPHI_HOUSING"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:40:44.639146Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T08:40:44.639146Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://mfa.tj/ru/main/view/211/soglashenie-o-prebyvanii-grazhdan-tadzhikistana-v-rossii-vstupilo-v-silu",
+      "source_ids": [
+        "SRC_TJ_TREATY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://minobrnauki.gov.ru/documents/?ELEMENT_ID=98245",
+      "source_ids": [
+        "SRC_QUOTA"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://minobrnauki.gov.ru/press-center/news/?ELEMENT_ID=49790",
+      "source_ids": [
+        "SRC_RECOGNITION"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://minobrnauki.gov.ru/press-center/news/novosti-ministerstva/54986/",
+      "source_ids": [
+        "SRC_RVPO"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://mintrans.gov.ru/press-center/news/11605",
+      "source_ids": [
+        "SRC_BORDER_BIO"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://my.itmo.ru/",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "login_or_javascript",
+        "observed_redirect": "https://my.itmo.ru/login?redirect=/",
+        "note": "Доступна только оболочка, переадресация или вход; работоспособность формы после авторизации не проверена."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_required",
+      "observed_redirect": "https://my.itmo.ru/login?redirect=/",
+      "note": "Личный кабинет существует и перенаправляет на авторизацию.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/login?redirect=/",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "login_or_javascript",
+        "observed_redirect": "https://my.itmo.ru/login?redirect=/",
+        "note": "Доступна только оболочка, переадресация или вход; работоспособность формы после авторизации не проверена."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_required",
+      "observed_redirect": null,
+      "note": "Страница авторизации доступна.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/login?redirect=/requests",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "checker_access_failed_not_used_as_sole_evidence",
+      "observed_redirect": null,
+      "note": "Инструмент не получил содержимое; ссылка не используется как единственное основание активного факта.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/login?redirect=/requests/new/4888",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "checker_access_failed_not_used_as_sole_evidence",
+      "observed_redirect": null,
+      "note": "Инструмент не получил содержимое; ссылка не используется как единственное основание активного факта.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/login?redirect=/requests/new/6006",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "checker_access_failed_not_used_as_sole_evidence",
+      "observed_redirect": null,
+      "note": "Инструмент не получил содержимое; ссылка не используется как единственное основание активного факта.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/login?redirect=/requests/new/8308",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "checker_access_failed_not_used_as_sole_evidence",
+      "observed_redirect": null,
+      "note": "Инструмент не получил содержимое; ссылка не используется как единственное основание активного факта.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/login?redirect=/services/dormitories",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "checker_access_failed_not_used_as_sole_evidence",
+      "observed_redirect": null,
+      "note": "Инструмент не получил содержимое; ссылка не используется как единственное основание активного факта.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/requests",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "login_or_javascript",
+        "observed_redirect": "https://my.itmo.ru/login?redirect=/requests",
+        "note": "Доступна только оболочка, переадресация или вход; работоспособность формы после авторизации не проверена."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_required",
+      "observed_redirect": "https://my.itmo.ru/login?redirect=/requests",
+      "note": "Закрытый раздел существует; требуется авторизация.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/requests/new/4888",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_required",
+      "observed_redirect": "https://my.itmo.ru/login?redirect=/requests/new/4888",
+      "note": "Закрытая форма существует; требуется авторизация.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/requests/new/6006",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_required",
+      "observed_redirect": "https://my.itmo.ru/login?redirect=/requests/new/6006",
+      "note": "Закрытая форма существует; требуется авторизация.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/requests/new/8308",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_required",
+      "observed_redirect": "https://my.itmo.ru/login?redirect=/requests/new/8308",
+      "note": "Закрытая форма существует; требуется авторизация.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/requests/new/8326",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "checker_access_failed_not_used_as_sole_evidence",
+      "observed_redirect": null,
+      "note": "Инструмент не получил содержимое; ссылка не используется как единственное основание активного факта.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://my.itmo.ru/services/dormitories",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "login_required",
+      "observed_redirect": "https://my.itmo.ru/login?redirect=/services/dormitories",
+      "note": "Закрытый раздел общежитий существует; требуется авторизация.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://nic.gov.ru/ru/inworld/countries/China",
+      "source_ids": [
+        "SRC_CHINA_EDU"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://nic.gov.ru/ru/proc/nic",
+      "source_ids": [
+        "SRC_NIC"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://nnov.hse.ru/intnn/istudents/migration",
+      "source_ids": [
+        "SRC_HSE_NN"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Частное жильё оформляется через принимающую сторону; общий пересказ семи дней не импортирован."
+      },
+      "checked_at": "2026-09-26T11:26:55.858077Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://npd.nalog.ru/",
+      "source_ids": [
+        "SRC_NPD"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://ok.ru/mvd/topic/160053361683279",
+      "source_ids": [
+        "SRC_AMINA_MVD"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://perm.hse.ru/istudents/",
+      "source_ids": [
+        "SRC_HSE_PERM_INDEX"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Страница регистрации не загрузилась. Наличие ссылки не подтверждает её содержание."
+      },
+      "checked_at": "2026-09-26T11:26:55.858077Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://perm.hse.ru/istudents/visaregextension",
+      "source_ids": [
+        "SRC_HSE_PERM_EXTENSION"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Дата обновления не установлена; подтверждены только местные сведения."
+      },
+      "checked_at": "2026-09-26T11:26:55.858077Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://perm.hse.ru/upr/inoffice/intoffice",
+      "source_ids": [
+        "SRC_HSE_PERM"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Дата обновления не установлена; подтверждены только местные сведения."
+      },
+      "checked_at": "2026-09-26T11:26:55.858077Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://persona.tsu.ru/department/Profile/695",
+      "source_ids": [
+        "SRC_TSU_CONTACT",
+        "SRC_TSU_CURRENT_CONTACTS_2026"
+      ],
+      "original_check": null,
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "content_retrieved_current",
+      "observed_redirect": null,
+      "note": "Публичная официальная страница ТГУ проверена; контакты визовой службы актуальны.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://philology.tsu.ru/node/4065",
+      "source_ids": [
+        "SRC_TSU_PHILOLOGY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:37:54.661491Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Даты обновления нет; тарифы, список уполномоченных медорганизаций и федеральные сроки не подтверждены, в универсальный маршрут не перенесены."
+      },
+      "checked_at": "2026-09-26T11:37:54.661491Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://pk.mipt.ru/foreign/",
+      "source_ids": [
+        "SRC_MIPT_PK"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:43:03.629789Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Есть правовые обобщения без исключений. Вид дней не указан; указания о всеобщей миграционной карте и трёх днях безвизовым не перенесены в федеральный слой."
+      },
+      "checked_at": "2026-09-26T08:43:03.629789Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://pk.mipt.ru/foreign/bachelor_master_phd/",
+      "source_ids": [
+        "SRC_MIPT_DEGREE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T08:43:03.629789Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Смешаны инструкции ruID и поступления онлайн; такой маршрут не признан достоверным без отдельного подтверждения сервиса."
+      },
+      "checked_at": "2026-09-26T08:43:03.629789Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://publication.pravo.gov.ru/Document/View/0001202211010030",
+      "source_ids": [
+        "SRC_MED_SUBMIT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://publication.pravo.gov.ru/document/0001202212300036?index=35",
+      "source_ids": [
+        "SRC_RVPO949"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://publication.pravo.gov.ru/document/0001202604280018",
+      "source_ids": [
+        "SRC_RUID468"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://publication.pravo.gov.ru/document/0001202608040017",
+      "source_ids": [
+        "SRC_FUTURE314"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://pvsmvd.ru/docs/100",
+      "source_ids": [
+        "SRC_INVITATION"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://pvsmvd.ru/docs/135",
+      "source_ids": [
+        "SRC_VISA907"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://pvsmvd.ru/docs/136",
+      "source_ids": [
+        "SRC_RVP"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://pvsmvd.ru/docs/156",
+      "source_ids": [
+        "SRC_REG9"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://pvsmvd.ru/docs/57",
+      "source_ids": [
+        "SRC_PATENT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://pvsmvd.ru/services/140",
+      "source_ids": [
+        "SRC_VNH"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://pvsmvd.ru/services/466",
+      "source_ids": [
+        "SRC_FINGERPRINT_PVS"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://pvsmvd.ru/services/514",
+      "source_ids": [
+        "SRC_STAY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://roszdravnadzor.gov.ru/spec/medactivities/specialist",
+      "source_ids": [
+        "SRC_MED_PROFESSION"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://sfr.gov.ru/branches/ryazan/info/~/15426",
+      "source_ids": [
+        "SRC_AUDIT_SNILS_AGE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://sfr.gov.ru/grazhdanam/personificirovannyj_uchet/registraciya_i_oformlenie_snils/",
+      "source_ids": [
+        "SRC_SNILS"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://spb.hse.ru/pochemuchnik/interstud/",
+      "source_ids": [
+        "SRC_HSE_SPB"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:26:55.858077Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Дата обновления не установлена; подтверждены только местные сведения."
+      },
+      "checked_at": "2026-09-26T11:26:55.858077Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://student.itmo.ru/en/campus/dorms_and_aparts/booking",
+      "source_ids": [
+        "SRC_ITMO_HOUSING_EN"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://student.itmo.ru/ru/campus/dorms_and_aparts/%40block1410622737",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "superseded_fragment_404",
+      "observed_redirect": "https://student.itmo.ru/ru/campus/dorms_and_aparts/booking",
+      "note": "Старый якорь удалён; используется действующая страница бронирования.",
+      "safe_for_user_link": false,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://student.itmo.ru/ru/campus/dorms_and_aparts/%40block1410622738",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "superseded_fragment_404",
+      "observed_redirect": "https://student.itmo.ru/ru/campus/dorms_and_aparts/booking",
+      "note": "Старый якорь удалён; используется действующая страница бронирования.",
+      "safe_for_user_link": false,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://student.itmo.ru/ru/campus/dorms_and_aparts/booking",
+      "source_ids": [
+        "SRC_ITMO_HOUSING_RU"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://student.itmo.ru/ru/contacts",
+      "source_ids": [
+        "SRC_ITMO_CONTACTS"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://student.itmo.ru/ru/education/status/academic_leave",
+      "source_ids": [
+        "SRC_ITMO_ACADEMIC_LEAVE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://student.itmo.ru/ru/education/status/expulsion",
+      "source_ids": [
+        "SRC_ITMO_EXPULSION"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://student.itmo.ru/ru/services/documents",
+      "source_ids": [
+        "SRC_ITMO_DOCUMENTS"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://student.itmo.ru/ru/services/health/medicine",
+      "source_ids": [
+        "SRC_ITMO_MEDICINE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:40:30.570901Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Повторно прочитана официальная страница; юридическая актуальность всех фраз не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:40:30.570901Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://studentcenter.tsu.ru/en/housing/",
+      "source_ids": [
+        "SRC_TSU_HOUSING"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:37:54.661491Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Недатированная страница; тарифы не использованы; точка обслуживания может отличаться от справочника главного корпуса."
+      },
+      "checked_at": "2026-09-26T11:37:54.661491Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://students.kpfu.ru/universiade-village/population-of-foreigners",
+      "source_ids": [
+        "SRC_KFU_HOUSING"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:43:51.618487Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+      },
+      "checked_at": "2026-09-26T11:43:51.618487Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://tsu.ru/university/structure/upravl/inter_upr.php?nv=on",
+      "source_ids": [
+        "SRC_TSU_CONTACT"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:37:54.661491Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Свежий текст официальной страницы прочитан; юридическая актуальность всех утверждений не подтверждена."
+      },
+      "checked_at": "2026-09-26T11:37:54.661491Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.edc.tsu.ru/en/visa",
+      "source_ids": [
+        "SRC_TSU_VISA"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:37:54.661491Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Полный текст получен поисковой выдачей официальной страницы; прямое открытие вернуло 502. Указанные суммы пошлин, бесплатность регистрации, универсальные сроки и основания РВП не приняты за действующие федеральные нормы."
+      },
+      "checked_at": "2026-09-26T11:37:54.661491Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.gosuslugi.ru/help/faq/sim_foreigners/252850",
+      "source_ids": [
+        "SRC_SIM_GOS"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "login_or_javascript",
+        "observed_redirect": null,
+        "note": "Доступна только оболочка, переадресация или вход; работоспособность формы после авторизации не проверена."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "javascript_required",
+      "observed_redirect": null,
+      "note": "Официальный портал доступен, содержимое загружается клиентским JavaScript.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://www.gov.kz/memleket/entities/mfa-kazan/press/article/details/13897?lang=ru",
+      "source_ids": [
+        "SRC_KZ_TREATY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.gov.spb.ru/gov/terr/reg_admiral/news/49730/",
+      "source_ids": [
+        "SRC_TJ_RU"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://www.kdmid.ru/cons/visas/",
+      "source_ids": [
+        "SRC_VISA"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.kdmid.ru/cons/visas/conditions-of-entry-foreign-citizens-in-russian-federation/",
+      "source_ids": [
+        "SRC_ENTRY_TABLE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.kdmid.ru/cons/visas/migration-card/",
+      "source_ids": [
+        "SRC_CARD"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.kremlin.ru/acts/bank/24033/print",
+      "source_ids": [
+        "SRC_LAW109"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://www.mgfoms.ru/chastnye-lica/poluchenie-i-zamena/poluchenie-polisa-oms/inostrannye-grazhdane/",
+      "source_ids": [
+        "SRC_OMS"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.mgfoms.ru/chastnye-lica/poluchenie-i-zamena/poluchenie-polisa-oms/trudyashchiesya-inostrannye-grazhdane/",
+      "source_ids": [
+        "SRC_OMS_WORK"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.minobrnauki.gov.ru/press-center/news/novosti-ministerstva/57094/",
+      "source_ids": [
+        "SRC_RVPO_TRANSFER"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    },
+    {
+      "url": "https://www.mintrans.gov.ru/press-center/branch-news/7162",
+      "source_ids": [
+        "SRC_RUID"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.mos.ru/upload/documents/files/1478/Okazanieradiotelefonnihyslygpodvijnoiradiotelefonnoisvyazivtomchisleinostrannimgrajdanamilicambezgrajdanstva.pdf",
+      "source_ids": [
+        "SRC_SIM"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.mvdmedia.ru/news/official/irina-volk-prodolzhaet-rabotu-reestr-kontroliruemykh-lits/",
+      "source_ids": [
+        "SRC_RKL_SERVICE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.nalog.gov.ru/rn77/ip/interest/dual_nationality/confirm_status/",
+      "source_ids": [
+        "SRC_TAX_RESIDENCE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.nalog.gov.ru/rn77/related_activities/accounting/recording_individuals/",
+      "source_ids": [
+        "SRC_INN"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.nalog.gov.ru/rn77/taxation/taxes/ndfl/ndfl_fl/",
+      "source_ids": [
+        "SRC_NDFL"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/accomodation",
+      "source_ids": [
+        "SRC_RUDN_HOUSING"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center",
+      "source_ids": [
+        "SRC_RUDN_MFC"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/komplekt-dokumentov-dlya-razresheniya-na-vremennoe-projivanie-v-celyah-polucheniya-obrazovaniya-rvpo",
+      "source_ids": [
+        "SRC_RUDN_RVPO"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/oformlenie-hodataystva-o-postanovke-na-migracionnyy-uchet",
+      "source_ids": [
+        "SRC_RUDN_PETITION"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/oformlenie-snils",
+      "source_ids": [
+        "SRC_RUDN_SNILS"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/postanovka-na-pervichnyy-migracionnyy-uchet-dlya-stran-s-vizovymbezvizovym-rejimom",
+      "source_ids": [
+        "SRC_RUDN_PRIMARY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/priem-dokumentov-dlya-prodleniya-mnogokratnoy-vizy",
+      "source_ids": [
+        "SRC_RUDN_VISA"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/prodlenie-migracionnogo-ucheta-dlya-stran-s-vizovymbezvizovym-rejimom",
+      "source_ids": [
+        "SRC_RUDN_EXTEND"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/vosstanovlenie-migracionnoy-karty",
+      "source_ids": [
+        "SRC_RUDN_CARD"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/life/multifunctional-center/uslugi-mfc-rudn/vosstanovlenie-otryvnoy-chasti-blanka-uvedomleniya-o-pribytii-inostrannogo-grajdanina",
+      "source_ids": [
+        "SRC_RUDN_DUPLICATE"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.rudn.ru/science/dad/aspirantura/postuplenie",
+      "source_ids": [
+        "SRC_RUDN_PHD"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T11:47:31.010529Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Проверены опубликованные локальные действия; федеральные сроки и исключения не устанавливаются университетской страницей. Дата изменения не указана."
+      },
+      "checked_at": "2026-09-26T11:47:31.010529Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://www.uzconsulate.ru/read_uz/21",
+      "source_ids": [
+        "SRC_UZ_TREATY"
+      ],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "content_retrieved",
+        "observed_redirect": null,
+        "note": "Получен текст/индексированное представление страницы; это не подтверждение всех её утверждений."
+      },
+      "checked_at": "2026-09-26T07:54:30Z",
+      "state": "content_retrieved_recent",
+      "observed_redirect": null,
+      "note": "Содержимое было получено при полном аудите 26.09.2026; повторная проверка не требовалась, если источник не использовался в спорной карточке.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": true
+    },
+    {
+      "url": "https://xn--b1aew.xn--p1ai/rkl",
+      "source_ids": [],
+      "original_check": {
+        "checked_at": "2026-09-26T07:54:30Z",
+        "state": "tool_unavailable",
+        "observed_redirect": null,
+        "note": "Содержимое не получено инструментом. Ошибка не доказывает, что страница удалена; требуется повторная проверка."
+      },
+      "checked_at": "2026-09-29T00:00:00Z",
+      "state": "official_host_timeout_not_dead",
+      "observed_redirect": null,
+      "note": "Официальный хост не отдал содержимое инструменту (timeout/403/502). Ссылка не объявляется битой; активные факты используют доступный официальный или нормативный дубль.",
+      "safe_for_user_link": true,
+      "safe_as_sole_evidence": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "spbu_campus",
+      "label": "Кампус/область локальной инструкции",
+      "type": "enum",
+      "dictionary_id": "spbu_campuses"
+    },
+    {
+      "code": "spbu_own_dormitory",
+      "label": "Проживает в назначенном общежитии СПбГУ",
+      "type": "boolean"
+    }
+  ]
+}

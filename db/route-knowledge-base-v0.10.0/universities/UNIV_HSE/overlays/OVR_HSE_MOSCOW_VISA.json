@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_HSE_MOSCOW_VISA",
+  "university_id": "UNIV_HSE",
+  "target_step_id": "FED_STUDY_VISA_EXTEND",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "hse_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "full_time",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Откройте ссылку записи на визу, выберите приём, затем лично подайте пакет в Центр сервиса «Студент»."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Визовый центр ВШЭ — Москва; приём через Центр сервиса «Студент»",
+      "url": "https://ivisa.hse.ru/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "visa-registration@hse.ru",
+          "label": "Визовый центр ВШЭ — Москва; приём через Центр сервиса «Студент»"
+        },
+        {
+          "kind": "phone",
+          "value": "+7 (495) 531-00-63",
+          "label": "Визовый центр ВШЭ — Москва; приём через Центр сервиса «Студент»"
+        }
+      ],
+      "appointment_required": "yes",
+      "address": "Москва, Покровский бульвар, 11; центр D007, документы — Центр сервиса «Студент»"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_HSE_MOSCOW_VISA",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_HSE_MOSCOW_VISA"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_HSE_MOSCOW_VISA_1",
+        "title": "Паспорт",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_HSE_FAQ",
+            "locator": "Профильный раздел указанной страницы",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_HSE_MOSCOW_VISA_2",
+        "title": "Оригинал и копия миграционной карты",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_HSE_FAQ",
+            "locator": "Профильный раздел указанной страницы",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_HSE_MOSCOW_VISA_3",
+        "title": "Квитанция по реквизитам из ответа на запись",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_HSE_FAQ",
+            "locator": "Профильный раздел указанной страницы",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_HSE_MOSCOW_VISA",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "В московском FAQ указан интервал от 90 до 45 дней до конца визы; в другом разделе встречается 40 дней.",
+        "state": "unknown",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_HSE_MOSCOW_VISA"
+          ]
+        },
+        "source_id": "SRC_HSE_FAQ",
+        "locator": "Профильный раздел указанной страницы",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_HSE_FAQ",
+      "locator": "Профильный раздел указанной страницы",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_HSE_CENTER",
+      "locator": "Профильный раздел указанной страницы",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_HSE_MOSCOW_VISA"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:26:55.858077Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

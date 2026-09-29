@@ -1,0 +1,370 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^TEST_ROUTE_[A-Z0-9_]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "user_profile": {
+            "type": "object",
+            "properties": {
+              "facts": {
+                "$ref": "test_scenario.schema.json#/properties/facts"
+              }
+            },
+            "required": [
+              "facts"
+            ],
+            "additionalProperties": false
+          },
+          "university": {
+            "type": "object",
+            "properties": {
+              "state": {
+                "enum": [
+                  "not_selected",
+                  "configured",
+                  "unconfigured"
+                ]
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^UNIV_[A-Z0-9_]+$"
+              }
+            },
+            "required": [
+              "state"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "state": {
+                      "const": "not_selected"
+                    }
+                  }
+                },
+                "then": {
+                  "not": {
+                    "required": [
+                      "id"
+                    ]
+                  }
+                },
+                "else": {
+                  "required": [
+                    "id"
+                  ]
+                }
+              }
+            ]
+          },
+          "events": {
+            "$ref": "test_scenario.schema.json#/properties/events"
+          },
+          "scope_step_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected": {
+            "type": "object",
+            "properties": {
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "forbidden_steps": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "pending_steps": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "instances": {
+                "$ref": "test_scenario.schema.json#/properties/expected_instances"
+              },
+              "overlays": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "overlay_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "step_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "event_id": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "overlay_id",
+                    "step_id",
+                    "event_id"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "pending_overlay_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "ordering": {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "const": "partial_order"
+                  },
+                  "before": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "before_step_id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "after_step_id": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "before_step_id",
+                        "after_step_id"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "uniqueItems": true
+                  },
+                  "note": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "kind",
+                  "before",
+                  "note"
+                ],
+                "additionalProperties": false
+              },
+              "deadlines": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "step_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "event_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "layer": {
+                      "enum": [
+                        "federal",
+                        "university_internal"
+                      ]
+                    },
+                    "overlay_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "local_deadline_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "state": {
+                      "enum": [
+                        "known",
+                        "unknown",
+                        "none"
+                      ]
+                    },
+                    "at": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  },
+                  "required": [
+                    "step_id",
+                    "event_id",
+                    "layer",
+                    "state"
+                  ],
+                  "additionalProperties": false,
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "state": {
+                            "const": "known"
+                          }
+                        }
+                      },
+                      "then": {
+                        "required": [
+                          "at"
+                        ]
+                      },
+                      "else": {
+                        "not": {
+                          "required": [
+                            "at"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "if": {
+                        "required": [
+                          "overlay_id"
+                        ]
+                      },
+                      "then": {
+                        "required": [
+                          "local_deadline_id"
+                        ],
+                        "properties": {
+                          "layer": {
+                            "const": "university_internal"
+                          }
+                        }
+                      },
+                      "else": {
+                        "not": {
+                          "required": [
+                            "local_deadline_id"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "unresolved_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "executable_steps": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "steps",
+              "forbidden_steps",
+              "pending_steps",
+              "instances",
+              "overlays",
+              "pending_overlay_ids",
+              "ordering",
+              "deadlines",
+              "unresolved_ids",
+              "executable_steps"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "tags",
+          "as_of",
+          "user_profile",
+          "university",
+          "events",
+          "scope_step_ids",
+          "source_ids",
+          "rationale",
+          "expected"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "purpose",
+    "cases"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/route_test_suite.schema.json"
+}

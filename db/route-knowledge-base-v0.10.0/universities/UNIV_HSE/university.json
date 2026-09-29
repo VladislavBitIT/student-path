@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNIV_HSE",
+  "name": "НИУ ВШЭ",
+  "status": "draft",
+  "timezone": "Europe/Moscow",
+  "contacts": [],
+  "overlay_ids": [
+    "OVR_HSE_MOSCOW_VISA",
+    "OVR_HSE_MOSCOW_RVPO",
+    "OVR_HSE_MOSCOW_NEW_PASSPORT",
+    "OVR_HSE_MOSCOW_DUPLICATE",
+    "OVR_HSE_SPB_HOST",
+    "OVR_HSE_NN_HOST",
+    "OVR_HSE_SPB_VISA",
+    "OVR_HSE_PERM_VISA",
+    "OVR_HSE_PERM_COLLECT",
+    "OVR_HSE_SPB_STAY"
+  ],
+  "step_ids": [
+    "UNI_HSE_RVPO_COPY",
+    "UNI_HSE_EXTENDED_COPY",
+    "UNI_HSE_SPB_PRIVATE_COPY",
+    "UNI_HSE_PERM_TRAVEL"
+  ],
+  "evidence": [
+    {
+      "source_id": "SRC_HSE_CENTER",
+      "locator": "Название и локальная область источника",
+      "supports": "Университет и назначение раздела."
+    }
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:26:55.858077Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  },
+  "extension_resources": {
+    "facts": "universities/UNIV_HSE/dictionaries/facts.json",
+    "event_types": "universities/UNIV_HSE/dictionaries/event_types.json",
+    "dictionaries": [
+      "universities/UNIV_HSE/dictionaries/hse_campuses.json"
+    ]
+  }
+}

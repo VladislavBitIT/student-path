@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_RUDN_INVITATION_REQUEST",
+  "university_id": "UNIV_RUDN",
+  "target_step_id": "FED_INVITATION_REQUEST",
+  "target_step_version": 3,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "rudn_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "rudn_paid_phd",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Отправьте на phd@rudn.ru один пакет с темой «Запрос приглашения. ФИО», указав домашний адрес по-русски и город получения визы."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Департамент аспирантуры РУДН",
+      "url": "https://www.rudn.ru/science/dad/aspirantura/postuplenie",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "phd@rudn.ru",
+          "label": "Аспирантура"
+        }
+      ],
+      "appointment_required": "no"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_RUDN_INVITATION_REQUEST",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_RUDN_INVITATION_REQUEST"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_RUDN_INVITATION_REQUEST_1",
+        "title": "Скан паспорта",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PHD",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_INVITATION_REQUEST_2",
+        "title": "Нотариальный перевод паспорта",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PHD",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_INVITATION_REQUEST_3",
+        "title": "Диплом специалиста/магистра без приложения",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PHD",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_INVITATION_REQUEST_4",
+        "title": "Нотариальный перевод диплома",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PHD",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_INVITATION_REQUEST_5",
+        "title": "Скан договора",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PHD",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_RUDN_PHD",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_RUDN_INVITATION_REQUEST"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:47:31.010529Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

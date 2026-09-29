@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_MIPT_INVITATION_REQUEST",
+  "university_id": "UNIV_MIPT",
+  "target_step_id": "FED_INVITATION_REQUEST",
+  "target_step_version": 3,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "mipt_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "mipt_preparatory",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Заполните связанную PDF-анкету и направьте подготовительному отделению."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Подготовительное отделение МФТИ",
+      "url": "https://eng.mipt.ru/info/preparatory_faq/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "foundationcourse@phystech.edu",
+          "label": "Подготовительное отделение"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_MIPT_INVITATION_REQUEST",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_MIPT_INVITATION_REQUEST"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_MIPT_INVITATION_REQUEST_1",
+        "title": "Анкета Application for Russian visa",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MIPT_VISA_FORM",
+            "locator": "Visa Invitation",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MIPT_VISA_FORM",
+      "locator": "Visa Invitation",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MIPT_PREP",
+      "locator": "Visa Invitation",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MIPT_INVITATION_REQUEST"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:43:03.629789Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

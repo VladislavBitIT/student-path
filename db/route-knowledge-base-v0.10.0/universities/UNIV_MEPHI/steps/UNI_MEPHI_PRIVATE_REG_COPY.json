@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_MEPHI_PRIVATE_REG_COPY",
+  "university_id": "UNIV_MEPHI",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Передать МИФИ копию регистрации по частному адресу",
+  "summary": "Передайте копию оформленной регистрации в Г-106.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "mephi_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "private_home"
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "mephi_private_registration_received",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_MEPHI_PRIVATE_REG_COPY"
+    ]
+  },
+  "instructions": [
+    "Передайте копию оформленной регистрации в Г-106."
+  ],
+  "documents": [
+    {
+      "id": "DOC_UNI_MEPHI_PRIVATE_REG_COPY_1",
+      "title": "Копия регистрации",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_MEPHI_STUD",
+          "locator": "Первичный учёт вне общежития",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "hybrid",
+    "name": "Управление организационно-технического сопровождения международной деятельности, Г-106",
+    "address": "Москва, Каширское шоссе, 31, кабинет Г-106",
+    "url": "https://mephi.ru/foreign-nationals/visa/stud",
+    "contacts": [],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_MEPHI_PRIVATE_REG_COPY",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_MEPHI_PRIVATE_REG_COPY"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_MEPHI_STUD",
+      "locator": "Первичный учёт вне общежития",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination",
+        "/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MEPHI_PRIVATE_REG_COPY"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:40:44.639146Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

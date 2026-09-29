@@ -1,0 +1,140 @@
+name: pervye-30
+
+x-app-environment: &app-environment
+  NODE_ENV: development
+  DATABASE_URL: postgresql://pervye30:dev-only-password@postgres:5432/pervye30
+  APP_BASE_URL: http://localhost:3000
+  MINIAPP_PUBLIC_URL: http://localhost:4173
+  ALLOWED_ORIGINS: http://localhost:4173,http://localhost:5173
+  SESSION_SECRET: dev-only-first30-session-secret-change-in-production
+  MAX_PROVIDER: mock
+  MAX_UPDATE_MODE: mock
+  MAX_API_BASE_URL: https://platform-api2.max.ru
+  MAX_INIT_DATA_TTL_SECONDS: '3600'
+  LLM_PROVIDER: none
+  DEFAULT_UNIVERSITY: ITMO
+  DEFAULT_TIMEZONE: Europe/Moscow
+  LOG_LEVEL: info
+  API_PORT: '3000'
+  WORKER_POLL_INTERVAL_MS: '1000'
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: pervye30
+      POSTGRES_USER: pervye30
+      POSTGRES_PASSWORD: dev-only-password
+    ports:
+      - '54329:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U pervye30 -d pervye30']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  postgres-test:
+    image: postgres:17-alpine
+    profiles: ['test']
+    environment:
+      POSTGRES_DB: pervye30_test
+      POSTGRES_USER: pervye30
+      POSTGRES_PASSWORD: dev-only-test-password
+    ports:
+      - '54330:5432'
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U pervye30 -d pervye30_test']
+      interval: 2s
+      timeout: 2s
+      retries: 20
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ['sh', '-c', 'node dist/migrate.js && node dist/seed.js && node dist/api.js']
+    environment: *app-environment
+    ports:
+      - '3000:3000'
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://127.0.0.1:3000/health/ready').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ['node', 'dist/bot.js']
+    environment: *app-environment
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'node', '-e', 'process.kill(1, 0)']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ['node', 'dist/worker.js']
+    environment: *app-environment
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'node', '-e', 'process.kill(1, 0)']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  miniapp:
+    build:
+      context: .
+      dockerfile: apps/miniapp/Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:3000
+        VITE_DEMO_MODE: 'true'
+    environment:
+      PORT: '4173'
+    ports:
+      - '4173:4173'
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://127.0.0.1:4173/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

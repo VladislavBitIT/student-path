@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "useUnknownInCatchVariables": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["node", "vitest/globals"],
+    "paths": {
+      "@first30/config": ["./packages/config/src/index.ts"],
+      "@first30/database": ["./packages/database/src/index.ts"],
+      "@first30/domain": ["./packages/domain/src/index.ts"],
+      "@first30/i18n": ["./packages/i18n/src/index.ts"],
+      "@first30/max-adapter": ["./packages/max-adapter/src/index.ts"],
+      "@first30/application": ["./packages/application/src/index.ts"]
+    }
+  },
+  "include": ["apps/**/*.ts", "apps/**/*.tsx", "packages/**/*.ts", "scripts/**/*.ts", "tests/**/*.ts", "tests/**/*.tsx"]
+}

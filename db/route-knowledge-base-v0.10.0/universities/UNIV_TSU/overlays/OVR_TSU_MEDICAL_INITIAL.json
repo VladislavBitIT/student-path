@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_TSU_MEDICAL_INITIAL",
+  "university_id": "UNIV_TSU",
+  "target_step_id": "FED_MEDICAL_INITIAL",
+  "target_step_version": 3,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "tsu_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "tsu_first_year_level_one",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Запишитесь через форму, указанную в инструкции организованного сбора; дальнейшие сведения придут по электронной почте."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Организованный сбор иностранных первокурсников ТГУ",
+      "url": "https://forms.yandex.ru/cloud/6a83d1ff6d2d735ae991e21d",
+      "contacts": [],
+      "appointment_required": "yes"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_TSU_MEDICAL_INITIAL",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_TSU_MEDICAL_INITIAL"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_TSU_MEDICAL",
+      "locator": "Шаги 1–2 и форма",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_TSU_MEDICAL_INITIAL"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:37:54.661491Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

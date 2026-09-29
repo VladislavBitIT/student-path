@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_KFU_INVITE_QUOTA",
+  "university_id": "UNIV_KFU",
+  "target_step_id": "FED_INVITATION_REQUEST",
+  "target_step_version": 3,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "kfu_campus",
+        "value": "main"
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "kfu_quota_continuing",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "kfu_direct_invitation",
+            "value": false
+          }
+        ]
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Направьте запрос визовой поддержки в учебный отдел ДВС на education@kpfu.ru."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Учебный отдел ДВС КФУ",
+      "url": "https://kpfu.ru/international/inostrannomu-studentu",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "education@kpfu.ru",
+          "label": "Гослиния"
+        }
+      ],
+      "appointment_required": "no"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_KFU_INVITE_QUOTA",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_KFU_INVITE_QUOTA"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_KFU_INVITE_QUOTA_1",
+        "title": "Скан основной страницы загранпаспорта",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_KFU_INVITE",
+            "locator": "Профильный раздел локальной процедуры",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_KFU_INVITE_QUOTA_2",
+        "title": "Скан нотариального перевода паспорта",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_KFU_INVITE",
+            "locator": "Профильный раздел локальной процедуры",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_KFU_INVITE",
+      "locator": "Профильный раздел локальной процедуры",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_KFU_STUDENT",
+      "locator": "Профильный раздел локальной процедуры",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_KFU_INVITE_QUOTA"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:43:51.618487Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

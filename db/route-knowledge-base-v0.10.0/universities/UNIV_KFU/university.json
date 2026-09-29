@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNIV_KFU",
+  "name": "Казанский (Приволжский) федеральный университет",
+  "status": "draft",
+  "timezone": "Europe/Moscow",
+  "contacts": [
+    {
+      "kind": "phone",
+      "value": "+7 (843) 206-52-89 доб. 8135",
+      "label": "Паспортно-визовый отдел"
+    }
+  ],
+  "overlay_ids": [
+    "OVR_KFU_INVITE_DIRECT",
+    "OVR_KFU_INVITE_QUOTA",
+    "OVR_KFU_HOST_DOCUMENTS",
+    "OVR_KFU_STAY_PETITION_REQUEST",
+    "OVR_KFU_STUDY_VISA_EXTEND",
+    "OVR_KFU_VISA_RESTORE",
+    "OVR_KFU_MEDICAL_INITIAL",
+    "OVR_KFU_RVPO_APPLY",
+    "OVR_KFU_CHELNY_STUDY_VISA_EXTEND",
+    "OVR_KFU_CHELNY_VISA_RESTORE"
+  ],
+  "step_ids": [
+    "UNI_KFU_CONTINUING_NOTIFY",
+    "UNI_KFU_CONTROL_SHEET",
+    "UNI_KFU_PREP_LEASE",
+    "UNI_KFU_TRAVEL_NOTIFY"
+  ],
+  "evidence": [
+    {
+      "source_id": "SRC_KFU_INDEX",
+      "locator": "Название и локальная область источника",
+      "supports": "Университет и назначение раздела."
+    }
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:43:51.618487Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  },
+  "extension_resources": {
+    "facts": "universities/UNIV_KFU/dictionaries/facts.json",
+    "event_types": "universities/UNIV_KFU/dictionaries/event_types.json",
+    "dictionaries": [
+      "universities/UNIV_KFU/dictionaries/kfu_campuses.json"
+    ]
+  }
+}

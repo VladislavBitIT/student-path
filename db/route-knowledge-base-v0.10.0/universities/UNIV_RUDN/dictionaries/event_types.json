@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "id": "event_types",
+  "status": "maintained",
+  "description": "Локальные события, подтверждаемые сервисом; не правовые обязанности.",
+  "entries": [
+    {
+      "code": "rudn_dorm_direction_needed",
+      "label": "Нужно направление в постоянное общежитие"
+    },
+    {
+      "code": "rudn_dorm_direction_received",
+      "label": "Получено направление в постоянное общежитие"
+    },
+    {
+      "code": "rudn_housing_bill_received",
+      "label": "Получен счёт за проживание"
+    }
+  ]
+}

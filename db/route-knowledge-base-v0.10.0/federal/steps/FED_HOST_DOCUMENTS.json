@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_HOST_DOCUMENTS",
+  "kind": "federal",
+  "version": 2,
+  "status": "draft",
+  "title": "Передайте принимающей стороне документы для учёта по адресу проживания",
+  "summary": "Предъявите документы стороне, которая фактически предоставила вам место проживания.",
+  "category": "accounting",
+  "research_process_ids": [
+    "PROC_ARRIVAL_REGISTRATION"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "ordinary_arrival_accounting",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "host_handles_notification",
+            "value": true
+          },
+          {
+            "op": "in",
+            "fact": "accommodation_type",
+            "values": [
+              "dormitory",
+              "private_home",
+              "other"
+            ]
+          }
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "is_in_russia",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "accommodation_arrival",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_HOST_DOCUMENTS"
+    ]
+  },
+  "instructions": [
+    "Предъявите документы стороне, которая фактически предоставила вам место проживания.",
+    "Сообщите дату прибытия по этому адресу и передайте предусмотренные сведения для уведомления МВД."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "original",
+      "evidence": [
+        {
+          "source_id": "SRC_REG_GUIDE",
+          "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    },
+    {
+      "id": "DOC_MIGRATION_CARD",
+      "title": "Миграционная карта",
+      "requirement": "conditional",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_REG_GUIDE",
+          "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ],
+      "condition": {
+        "op": "eq",
+        "fact": "migration_card_required",
+        "value": true
+      }
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Фактическая принимающая сторона",
+    "selection_basis": "В общежитии — предоставившая место организация; в жилье — принимающая сторона по реальному адресу.",
+    "information_url": "https://epp.genproc.gov.ru/ru/proc_50/activity/legal-education/explain/e472548/",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Документы для уведомления о прибытии переданы",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Договоры, гостиницы/стационары, самостоятельное уведомление и эксперимент Москвы/области — отдельные ветки.",
+      "unresolved_ids": [
+        "UNR_ARRIVAL_REGISTRATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_HOST_DOCUMENTS",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Общий срок подачи 7 рабочих дней относится к уведомлению принимающей стороны, а не к отдельному личному дедлайну передачи студентом. Нужны договорные освобождения и точный состав копий.",
+      "unresolved_ids": [
+        "UNR_STEP_HOST_DOCUMENTS"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_CITIZENSHIP",
+      "severity": "blocking",
+      "message": "Нужна актуальная матрица договоров по гражданству, документу, цели въезда, льготному периоду и типу размещения. Не переносить 30 дней ЕАЭС на всех студентов и Беларусь; не превращать освобождение в срок подачи студентом.",
+      "unresolved_ids": [
+        "UNR_AUDIT_CITIZENSHIP"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_AMINA",
+      "severity": "blocking",
+      "message": "Подтвердить текущую редакцию 121-ФЗ, переход с сохраненного обычного учета, исключения и правила гостиниц/стационаров. Пока конфликт ordinary_arrival_accounting и amina_applicable блокирует выбор режима; отсутствие шага Амина не означает освобождение.",
+      "unresolved_ids": [
+        "UNR_AUDIT_AMINA"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_HOSPITAL_RETURN",
+      "severity": "blocking",
+      "message": "Сверить сохранение/прекращение предыдущего учета при гостинице и стационаре и действия после возвращения. Сам факт возвращения создает контекст проверки; не устанавливает автоматически обязанность новой постановки.",
+      "unresolved_ids": [
+        "UNR_AUDIT_HOSPITAL_RETURN"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Миграционная карта",
+      "fields": [
+        "/documents/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Договоры, гостиницы/стационары, самостоятельное уведомление и эксперимент Москвы/области — отдельные ветки.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Предъявите документы стороне, которая фактически предоставила вам место проживания. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Сообщите дату прибытия по этому адресу и передайте предусмотренные сведения для уведомления МВД. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Отдельный аудит профилей 26.09.2026",
+      "supports": "Техническая граница действия: текущая процедура в РФ не назначается как выполненная до приезда; подготовку можно показывать отдельно.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_HOST_DOCUMENTS",
+    "UNR_ARRIVAL_REGISTRATION",
+    "UNR_CURRENT_EDITION",
+    "UNR_AUDIT_CITIZENSHIP",
+    "UNR_AUDIT_AMINA",
+    "UNR_AUDIT_HOSPITAL_RETURN"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T06:25:00Z",
+    "reviewer": "Отдельный аудит профилей и границ применения; неподтвержденные поля сохранены как блокирующие пробелы",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_HOST_DOCUMENTS",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_HOST_DOCUMENTS",
+      "note": "Общий срок подачи 7 рабочих дней относится к уведомлению принимающей стороны, а не к отдельному личному дедлайну передачи студентом. Нужны договорные освобождения и точный состав копий."
+    },
+    {
+      "fields": [
+        "/applicability"
+      ],
+      "unresolved_id": "UNR_AUDIT_CITIZENSHIP",
+      "note": "Нужна актуальная матрица договоров по гражданству, документу, цели въезда, льготному периоду и типу размещения. Не переносить 30 дней ЕАЭС на всех студентов и Беларусь; не превращать освобождение в срок подачи студентом."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/instructions"
+      ],
+      "unresolved_id": "UNR_AUDIT_AMINA",
+      "note": "Подтвердить текущую редакцию 121-ФЗ, переход с сохраненного обычного учета, исключения и правила гостиниц/стационаров. Пока конфликт ordinary_arrival_accounting и amina_applicable блокирует выбор режима; отсутствие шага Амина не означает освобождение."
+    },
+    {
+      "fields": [
+        "/applicability"
+      ],
+      "unresolved_id": "UNR_AUDIT_HOSPITAL_RETURN",
+      "note": "Сверить сохранение/прекращение предыдущего учета при гостинице и стационаре и действия после возвращения. Сам факт возвращения создает контекст проверки; не устанавливает автоматически обязанность новой постановки."
+    }
+  ]
+}

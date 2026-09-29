@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_MSU_HOST_DOCUMENTS",
+  "university_id": "UNIV_MSU",
+  "target_step_id": "FED_HOST_DOCUMENTS",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "msu_campus",
+            "value": "main"
+          },
+          {
+            "op": "all",
+            "args": [
+              {
+                "op": "eq",
+                "fact": "accommodation_type",
+                "value": "dormitory"
+              },
+              {
+                "op": "eq",
+                "fact": "msu_own_dormitory",
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "dormitory"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Передайте иностранному отделу факультета паспортные копии и подтверждение проживания в общежитии МГУ."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+      "url": "https://international.msu.ru/faculties",
+      "contacts": [],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_MSU_HOST_DOCUMENTS",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_MSU_HOST_DOCUMENTS"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_MSU_HOST_DOCUMENTS_1",
+        "title": "Копии заполненных страниц паспорта",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_AFTER",
+            "locator": "Миграционный учёт в общежитии",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MSU_HOST_DOCUMENTS_2",
+        "title": "Справка общежития с адресом, комнатой и сроком либо зарегистрированный договор найма",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_AFTER",
+            "locator": "Миграционный учёт в общежитии",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MSU_HOST_DOCUMENTS_3",
+        "title": "Копия миграционной карты",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MSU_AFTER",
+            "locator": "Миграционный учёт в общежитии",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ],
+        "condition": {
+          "op": "eq",
+          "fact": "migration_card_required",
+          "value": true
+        }
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_MSU_HOST_DOCUMENTS",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "Памятка одновременно называет следующий рабочий день после прибытия, следующий день после заселения и три рабочих дня после въезда; единый срок не рассчитан.",
+        "state": "unknown",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_MSU_HOST_DOCUMENTS"
+          ]
+        },
+        "source_id": "SRC_MSU_AFTER",
+        "locator": "Миграционный учёт в общежитии",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MSU_AFTER",
+      "locator": "Миграционный учёт в общежитии",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MSU_FACULTIES",
+      "locator": "Миграционный учёт в общежитии",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MSU_HOST_DOCUMENTS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:36:33.319008Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

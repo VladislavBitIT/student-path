@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "rudn_campus",
+      "label": "Кампус/область локальной инструкции",
+      "type": "enum",
+      "dictionary_id": "rudn_campuses"
+    },
+    {
+      "code": "rudn_own_dormitory",
+      "label": "Предоставлена комната общежития РУДН",
+      "type": "boolean"
+    },
+    {
+      "code": "rudn_private_petition_eligible",
+      "label": "Очная либо очно-заочная форма для услуги частного ходатайства",
+      "type": "boolean"
+    },
+    {
+      "code": "rudn_cis_visa_free",
+      "label": "Безвизовый студент СНГ, охваченный опубликованной услугой продления",
+      "type": "boolean"
+    },
+    {
+      "code": "rudn_paid_phd",
+      "label": "Контрактная аспирантура, счёт обучения оплачен",
+      "type": "boolean"
+    },
+    {
+      "code": "rudn_needs_adaptation_housing",
+      "label": "Назначено первичное размещение в центре адаптации",
+      "type": "boolean"
+    }
+  ]
+}

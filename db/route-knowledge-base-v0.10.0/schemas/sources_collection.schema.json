@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/sources_collection.schema.json",
+  "title": "sources_collection",
+  "description": "Коллекция source",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "source.schema.json"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "items"
+  ],
+  "additionalProperties": false
+}

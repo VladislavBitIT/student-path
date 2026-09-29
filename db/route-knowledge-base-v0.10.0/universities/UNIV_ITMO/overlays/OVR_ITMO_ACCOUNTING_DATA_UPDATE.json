@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_ITMO_ACCOUNTING_DATA_UPDATE",
+  "university_id": "UNIV_ITMO",
+  "target_step_id": "FED_ACCOUNTING_DATA_UPDATE",
+  "target_step_version": 2,
+  "version": 2,
+  "status": "draft",
+  "applicability": {
+    "op": "always"
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "При новом паспорте сообщите изменившиеся сведения в ОМУ."
+    ],
+    "destination": {
+      "kind": "physical",
+      "name": "Отдел миграционного учета ИТМО",
+      "address": "Санкт-Петербург, ул. Ломоносова, 9, кабинет 2139d",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "omu@itmo.ru",
+          "label": "ОМУ"
+        },
+        {
+          "kind": "phone",
+          "value": "+7 (812) 480-09-17",
+          "label": "ОМУ; подтверждено двумя русскими страницами"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_ITMO_ACCOUNTING_DATA_UPDATE",
+        "severity": "blocking",
+        "message": "Сохранена подтвержденная местная часть; недостающие детали требуют уточнения.",
+        "unresolved_ids": [
+          "UNR_ITMO_ACCOUNTING_DATA_UPDATE"
+        ]
+      },
+      {
+        "id": "WARN_ITMO_LOCAL_TIME",
+        "severity": "blocking",
+        "message": "Не опубликованы полные правила отсчета внутренних сроков, часы окончания приема и календарь. «45 дней» не превращать в рабочие дни, а «1,5 месяца» — автоматически в 45 дней.",
+        "unresolved_ids": [
+          "UNR_ITMO_LOCAL_TIME"
+        ]
+      },
+      {
+        "id": "WARN_ITMO_CONTACT_VARIANTS",
+        "severity": "blocking",
+        "message": "Телефон ОМУ на актуальной странице и странице отчисления: +7 (812) 480-09-17; английский гайд содержит +7 (812) 607-04-60. Выбран подтвержденный двумя русскими страницами контакт, альтернативный номер не включен в рабочие контакты. Часы приема и запись не подтверждены.",
+        "unresolved_ids": [
+          "UNR_ITMO_CONTACT_VARIANTS"
+        ]
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_ITMO_IDENTITY",
+        "scope": "university_internal",
+        "title": "Сообщение об изменении документа",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "1 рабочий день",
+        "state": "partial",
+        "deadline": {
+          "kind": "partial",
+          "known": {
+            "amount": 1,
+            "unit": "business_day",
+            "direction": "after",
+            "anchor_description": "Получение нового паспорта/гражданства",
+            "actor": "student",
+            "legal_text": "Внутренний срок ИТМО, не федеральная норма."
+          },
+          "calculation_allowed": false,
+          "unresolved_ids": [
+            "UNR_ITMO_LOCAL_TIME"
+          ]
+        },
+        "source_id": "SRC_ITMO_MIGRATION",
+        "locator": "Локальная инструкция на официальной странице ИТМО",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_ITMO_MIGRATION",
+      "locator": "Продление срока пребывания и регистрации: изменение паспорта/гражданства, 1 рабочий день; контакты ответственного подразделения на странице источника",
+      "supports": "Сопоставление перечисленных локальных полей с разделом страницы. Это не подтверждение федеральных оснований и не закрытие локальных пробелов.",
+      "fields": [
+        "/additions/instructions/0",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_ITMO_ACCOUNTING_DATA_UPDATE",
+    "UNR_ITMO_LOCAL_TIME",
+    "UNR_ITMO_CONTACT_VARIANTS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:40:30.570901Z",
+    "reviewer": "Повторное самостоятельное исследование официальных страниц в последовательном обзоре десяти вузов",
+    "next_review_on": "2026-10-26"
+  }
+}

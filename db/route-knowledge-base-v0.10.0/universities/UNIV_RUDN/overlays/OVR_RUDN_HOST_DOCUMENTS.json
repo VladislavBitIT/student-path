@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_RUDN_HOST_DOCUMENTS",
+  "university_id": "UNIV_RUDN",
+  "target_step_id": "FED_HOST_DOCUMENTS",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "rudn_campus",
+            "value": "main"
+          },
+          {
+            "op": "eq",
+            "fact": "rudn_own_dormitory",
+            "value": true
+          }
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "dormitory"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "В личном кабинете откройте «Сервисы → МФЦ РУДН → Регистрация граждан → Постановка на миграционный учёт», выберите свою ветку въезда и подайте комплект."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "МФЦ РУДН",
+      "address": "Москва, ул. Миклухо-Маклая, 6, цокольный этаж",
+      "url": "https://lk.rudn.ru/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "mfc@rudn.ru",
+          "label": "МФЦ РУДН"
+        }
+      ],
+      "appointment_required": "yes"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_RUDN_HOST_DOCUMENTS",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_RUDN_HOST_DOCUMENTS"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_RUDN_HOST_DOCUMENTS_1",
+        "title": "Удостоверение личности и копия",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PRIMARY",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_HOST_DOCUMENTS_2",
+        "title": "Миграционная карта и копия",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PRIMARY",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ],
+        "condition": {
+          "op": "eq",
+          "fact": "migration_card_required",
+          "value": true
+        }
+      },
+      {
+        "id": "DOC_OVR_RUDN_HOST_DOCUMENTS_3",
+        "title": "Страница визы и копия",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PRIMARY",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ],
+        "condition": {
+          "op": "eq",
+          "fact": "has_study_visa",
+          "value": true
+        }
+      },
+      {
+        "id": "DOC_OVR_RUDN_HOST_DOCUMENTS_4",
+        "title": "Копия удостоверения родителя и свидетельства о рождении с переводом",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PRIMARY",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ],
+        "condition": {
+          "op": "lt",
+          "fact": "age_years",
+          "value": 18
+        }
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_RUDN_HOST_DOCUMENTS",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "Три дня после заключения договора общежития",
+        "state": "unknown",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_RUDN_HOST_DOCUMENTS"
+          ]
+        },
+        "source_id": "SRC_RUDN_PRIMARY",
+        "locator": "Как заказать и получить услугу",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_RUDN_PRIMARY",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUDN_MFC",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUDN_HOUSING",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_RUDN_HOST_DOCUMENTS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:47:31.010529Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

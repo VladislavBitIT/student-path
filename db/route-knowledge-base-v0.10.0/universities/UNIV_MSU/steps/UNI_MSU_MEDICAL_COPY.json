@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_MSU_MEDICAL_COPY",
+  "university_id": "UNIV_MSU",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Передать факультету МГУ медицинские подтверждения",
+  "summary": "Передайте иностранному отделу факультета копии полученных медицинских документов и подтверждения дактилоскопии.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "msu_campus",
+        "value": "main"
+      },
+      {
+        "op": "always"
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "msu_medical_proofs_received",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_MSU_MEDICAL_COPY"
+    ]
+  },
+  "instructions": [
+    "Передайте иностранному отделу факультета копии полученных медицинских документов и подтверждения дактилоскопии."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "online",
+    "name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+    "url": "https://international.msu.ru/faculties",
+    "contacts": [],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_MSU_MEDICAL_COPY",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_MSU_MEDICAL_COPY"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_MSU_AFTER",
+      "locator": "Медосвидетельствование и дактилоскопия",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MSU_FACULTIES",
+      "locator": "Медосвидетельствование и дактилоскопия",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MSU_MEDICAL_COPY"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:36:33.319008Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

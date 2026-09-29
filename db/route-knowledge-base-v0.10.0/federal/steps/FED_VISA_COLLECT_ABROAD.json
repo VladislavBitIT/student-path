@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_VISA_COLLECT_ABROAD",
+  "kind": "federal",
+  "version": 3,
+  "status": "draft",
+  "title": "Получите паспорт с выданной учебной визой",
+  "summary": "Получите паспорт способом, указанным консульским учреждением.",
+  "category": "entry",
+  "research_process_ids": [
+    "PROC_STUDY_VISA"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "study_visa_needed",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "is_in_russia",
+        "value": false
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "consular_visa_ready",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_VISA_COLLECT_ABROAD"
+    ]
+  },
+  "instructions": [
+    "Получите паспорт способом, указанным консульским учреждением.",
+    "Сверьте ФИО, номер паспорта, цель, даты и кратность выданной визы с заявлением; при несоответствии обратитесь в выдавшее учреждение."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "authority",
+    "name": "Консульское учреждение РФ, рассматривавшее заявление",
+    "selection_basis": "Получение у органа выдачи либо разрешённым им способом.",
+    "information_url": "https://www.kdmid.ru/cons/visas/",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Получена и проверена учебная виза",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "МИД указывает для учебной визы 18 месяцев срока паспорта от начала визы; конкретные исключения и ВИЧ-требование проверить по категории.",
+      "unresolved_ids": [
+        "UNR_STUDY_VISA",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_VISA_COLLECT_ABROAD",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Точный способ выдачи/исправления ошибки и срок получения зависят от консульского порядка; не обещать выдачу после одной подачи.",
+      "unresolved_ids": [
+        "UNR_STEP_VISA_COLLECT_ABROAD"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "МИД указывает для учебной визы 18 месяцев срока паспорта от начала визы; конкретные исключения и ВИЧ-требование проверить по категории.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Получите паспорт способом, указанным консульским учреждением. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Сверьте ФИО, номер паспорта, цель, даты и кратность выданной визы с заявлением; при несоответствии обратитесь в выдавшее учреждение. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Отдельный аудит профилей 26.09.2026",
+      "supports": "Граница сценария консульской подачи за рубежом; нахождение в РФ не запускает эту карточку. Внутрироссийское оформление требует своей процедуры.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_VISA_COLLECT_ABROAD",
+    "UNR_STUDY_VISA",
+    "UNR_CURRENT_EDITION",
+    "UNR_QUALITY_VISA_COLLECTION_DOCUMENTS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T07:54:30Z",
+    "reviewer": "Финальный аудит: исправлены перечисленные поля; статус draft сохранён",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_VISA_COLLECT_ABROAD",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_VISA_COLLECT_ABROAD",
+      "note": "Точный способ выдачи/исправления ошибки и срок получения зависят от консульского порядка; не обещать выдачу после одной подачи."
+    },
+    {
+      "fields": [
+        "/documents"
+      ],
+      "unresolved_id": "UNR_QUALITY_VISA_COLLECTION_DOCUMENTS",
+      "note": "Не переносить получаемый паспорт в перечень обязательных приложений."
+    }
+  ]
+}

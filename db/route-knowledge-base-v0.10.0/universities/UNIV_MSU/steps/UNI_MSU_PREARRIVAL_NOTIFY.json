@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_MSU_PREARRIVAL_NOTIFY",
+  "university_id": "UNIV_MSU",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Сообщить факультету МГУ данные прибытия",
+  "summary": "Отправьте факультету дату и время прибытия, аэропорт и рейс, телефон, сведения о страховке при наличии и адрес частного жилья либо время заселения в общежитие.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "msu_campus",
+        "value": "main"
+      },
+      {
+        "op": "always"
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "trip_planned",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_MSU_PREARRIVAL_NOTIFY"
+    ]
+  },
+  "instructions": [
+    "Отправьте факультету дату и время прибытия, аэропорт и рейс, телефон, сведения о страховке при наличии и адрес частного жилья либо время заселения в общежитие."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "online",
+    "name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+    "url": "https://international.msu.ru/faculties",
+    "contacts": [],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_MSU_PREARRIVAL_NOTIFY",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_MSU_PREARRIVAL_NOTIFY"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_MSU_BEFORE",
+      "locator": "Подготовка к приезду",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MSU_FACULTIES",
+      "locator": "Подготовка к приезду",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MSU_PREARRIVAL_NOTIFY"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:36:33.319008Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_ESIA_CONFIRM",
+  "kind": "federal",
+  "version": 2,
+  "status": "draft",
+  "title": "Подтвердите учётную запись Госуслуг",
+  "summary": "Выберите доступный иностранцу очный способ подтверждения ЕСИА в участвующем центре/банке.",
+  "category": "digital",
+  "research_process_ids": [
+    "PROC_ESIA"
+  ],
+  "actor": "student",
+  "obligation": "optional",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "needs_esia",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "has_snils",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "esia_confirmed",
+            "value": false
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "digital_service_selected",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_ESIA_CONFIRM"
+    ]
+  },
+  "instructions": [
+    "Выберите доступный иностранцу очный способ подтверждения ЕСИА в участвующем центре/банке.",
+    "Предъявите документ личности и СНИЛС; проверьте совпадение данных учётной записи с документами."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "original",
+      "evidence": [
+        {
+          "source_id": "SRC_SIM",
+          "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    },
+    {
+      "id": "DOC_SNILS",
+      "title": "Сведения о СНИЛС",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_SIM",
+          "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Центр подтверждения ЕСИА/участвующий банк",
+    "selection_basis": "Выбранный официальный пункт, поддерживающий подтверждение иностранцев.",
+    "information_url": "https://www.mos.ru/upload/documents/files/1478/Okazanieradiotelefonnihyslygpodvijnoiradiotelefonnoisvyazivtomchisleinostrannimgrajdanamilicambezgrajdanstva.pdf",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Учётная запись ЕСИА подтверждена",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Не строить замкнутую зависимость «SIM нужна для ЕСИА, ЕСИА нужна для SIM»: памятка предусматривает очные способы.",
+      "unresolved_ids": [
+        "UNR_ESIA",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_ESIA_CONFIRM",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Сценарий без российского номера и актуальный перечень банков/центров требуется проверить. Подтверждение ЕСИА не приравнивается к получению SIM.",
+      "unresolved_ids": [
+        "UNR_STEP_ESIA_CONFIRM"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_MINORS",
+      "severity": "blocking",
+      "message": "Подготовить отдельные процедуры представителя до 14 лет, ИНН/ЕСИА/ЕБС/SIM для несовершеннолетних и проверить допустимые документы. Исключение из взрослой карточки не означает отсутствие права.",
+      "unresolved_ids": [
+        "UNR_AUDIT_MINORS"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Сведения о СНИЛС",
+      "fields": [
+        "/documents/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Не строить замкнутую зависимость «SIM нужна для ЕСИА, ЕСИА нужна для SIM»: памятка предусматривает очные способы.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Выберите доступный иностранцу очный способ подтверждения ЕСИА в участвующем центре/банке. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_SIM",
+      "locator": "Памятка: последовательность СНИЛС → ЕСИА → ЕБС → оператор связи",
+      "supports": "Предъявите документ личности и СНИЛС; проверьте совпадение данных учётной записи с документами. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_ESIA_CONFIRM",
+    "UNR_ESIA",
+    "UNR_CURRENT_EDITION",
+    "UNR_AUDIT_MINORS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T06:25:00Z",
+    "reviewer": "Отдельный аудит профилей и границ применения; неподтвержденные поля сохранены как блокирующие пробелы",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_ESIA_CONFIRM",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_ESIA_CONFIRM",
+      "note": "Сценарий без российского номера и актуальный перечень банков/центров требуется проверить. Подтверждение ЕСИА не приравнивается к получению SIM."
+    },
+    {
+      "fields": [
+        "/applicability"
+      ],
+      "unresolved_id": "UNR_AUDIT_MINORS",
+      "note": "Подготовить отдельные процедуры представителя до 14 лет, ИНН/ЕСИА/ЕБС/SIM для несовершеннолетних и проверить допустимые документы. Исключение из взрослой карточки не означает отсутствие права."
+    }
+  ]
+}

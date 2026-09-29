@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_MEPHI_REGISTRATION_DUPLICATE",
+  "university_id": "UNIV_MEPHI",
+  "target_step_id": "FED_REGISTRATION_DUPLICATE",
+  "target_step_version": 1,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "mephi_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "mephi_own_dormitory",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Заявите в Г-106 об утрате университетской регистрации и запросите дубликат."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Управление организационно-технического сопровождения международной деятельности, Г-106",
+      "address": "Москва, Каширское шоссе, 31, кабинет Г-106",
+      "url": "https://mephi.ru/foreign-nationals/visa/stud",
+      "contacts": [],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_MEPHI_REGISTRATION_DUPLICATE",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_MEPHI_REGISTRATION_DUPLICATE"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MEPHI_STUD",
+      "locator": "Утрата уведомления",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MEPHI_REGISTRATION_DUPLICATE"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:40:44.639146Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

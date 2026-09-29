@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_SPBU",
+  "checked_on": "2026-09-26",
+  "scope": "Новое чтение официальных страниц; формы не отправлялись.",
+  "checks": [
+    {
+      "url": "https://guide.spbu.ru/foreigner",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://guide.spbu.ru/foreigner",
+      "detail": "Действующий справочник содержит недатированные правовые обобщения: они не импортированы в федеральный слой. main охватывает СПбГУ в Санкт-Петербурге и Петергофе, точку приёма определяет назначение студента."
+    },
+    {
+      "url": "https://guide.spbu.ru/dormitory",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://guide.spbu.ru/dormitory",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://guide.spbu.ru/dormitory/pamyatka-dormitory",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://guide.spbu.ru/dormitory/pamyatka-dormitory",
+      "detail": "Памятка не заменяет подписанный договор; исчисление периодических медицинских сроков не установлено."
+    },
+    {
+      "url": "https://ifea.spbu.ru/images/2023/rvpo_ru.pdf",
+      "checked_on": "2026-09-26",
+      "result": "tool_unavailable",
+      "resolved_url": "https://ifea.spbu.ru/images/2023/rvpo_ru.pdf",
+      "detail": "403 при открытии; перечень документов не перенесён из поискового фрагмента."
+    },
+    {
+      "url": "https://ifea.spbu.ru/images/pamyatka_in_2025_ru.pdf",
+      "checked_on": "2026-09-26",
+      "result": "tool_unavailable",
+      "resolved_url": "https://ifea.spbu.ru/images/pamyatka_in_2025_ru.pdf",
+      "detail": "403; действительность отдельных пунктов не проверена."
+    },
+    {
+      "url": "https://ifea.spbu.ru/контакты/86-otdel-mezhdunarodnoj-deyatelnosti.html",
+      "checked_on": "2026-09-26",
+      "result": "tool_unavailable",
+      "resolved_url": "https://ifea.spbu.ru/контакты/86-otdel-mezhdunarodnoj-deyatelnosti.html",
+      "detail": "403; отдельные контакты не извлечены."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_KFU",
+  "checked_on": "2026-09-26",
+  "scope": "Новое чтение официальных страниц; формы не отправлялись.",
+  "checks": [
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/",
+      "detail": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+    },
+    {
+      "url": "https://kpfu.ru/invitations",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://kpfu.ru/invitations",
+      "detail": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/vizovyi-vjezd",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/vizovyi-vjezd",
+      "detail": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/bezvizovyi-vjezd",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/bezvizovyi-vjezd",
+      "detail": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/prodlenie-odnokratnoj-i-mnogokratnoj-vizy-118896",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/prodlenie-odnokratnoj-i-mnogokratnoj-vizy-118896",
+      "detail": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/daktiloskopiya-i-medicinskoe-osvidetelstvovanie",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/daktiloskopiya-i-medicinskoe-osvidetelstvovanie",
+      "detail": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+    },
+    {
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/rvpo",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/rvpo",
+      "detail": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+    },
+    {
+      "url": "https://kpfu.ru/international/inostrannomu-studentu",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://kpfu.ru/international/inostrannomu-studentu",
+      "detail": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+    },
+    {
+      "url": "https://students.kpfu.ru/universiade-village/population-of-foreigners",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://students.kpfu.ru/universiade-village/population-of-foreigners",
+      "detail": "Только локальные сведения. Федеральные сроки, суммы пошлин и медицинские исключения отдельно не подтверждены."
+    },
+    {
+      "url": "https://kpfu.ru/chelny/international-activities/pravila-prebyvaniya-inostrannyh-grazhdan/prodlenie-rossijskoj-vizy",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://kpfu.ru/chelny/international-activities/pravila-prebyvaniya-inostrannyh-grazhdan/prodlenie-rossijskoj-vizy",
+      "detail": "Текст официальной страницы прочитан в поисковой выдаче; прямой доступ недоступен. Старый размер пошлины исключён."
+    }
+  ]
+}

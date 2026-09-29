@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_TAX_RESIDENCE_CONFIRM",
+  "kind": "federal",
+  "version": 2,
+  "status": "draft",
+  "title": "Подайте заявление о подтверждении налогового резидентства",
+  "summary": "Подготовьте заявление о представлении документа, подтверждающего статус налогового резидента РФ.",
+  "category": "protection",
+  "research_process_ids": [
+    "PROC_TAX"
+  ],
+  "actor": "student",
+  "obligation": "optional",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "tax_residence_certificate_needed",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "tax_certificate_needed",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_TAX_RESIDENCE_CONFIRM"
+    ]
+  },
+  "instructions": [
+    "Заполните заявление о подтверждении налогового резидентства по форме приложения № 1 к приказу, указанному на странице ФНС; укажите нужный календарный год.",
+    "Выберите подачу через интерактивный сервис по ссылке на странице ФНС, лично в экспедицию ФНС (Москва, Неглинная, 23) либо почтой в МИ ФНС по ЦОД (125373, Москва, Походный проезд, домовладение 3).",
+    "Документы, подтверждающие пребывание и обстоятельства обращения, можно приложить по желанию. Прилагаемые документы на иностранном языке требуют перевода на русский и заверения в установленном порядке."
+  ],
+  "documents": [
+    {
+      "id": "DOC_TAX_RESIDENCE_REQUEST",
+      "title": "Заявление о подтверждении налогового резидентства",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_TAX_RESIDENCE",
+          "locator": "Подтверждение статуса налогового резидента РФ",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "ФНС России",
+    "selection_basis": "ФНС/МИ ФНС по ЦОД; способы подачи перечислены в инструкции. Это не выбор произвольной местной инспекции.",
+    "information_url": "https://www.nalog.gov.ru/rn77/ip/interest/dual_nationality/confirm_status/",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Заявление о подтверждении налогового статуса подано",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Общее определение резидентства — 183 календарных дня за 12 следующих подряд месяцев с исключениями; миграционное ВНЖ не определяет его автоматически.",
+      "unresolved_ids": [
+        "UNR_TAX",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_TAX_RESIDENCE_CONFIRM",
+      "severity": "blocking",
+      "message": "Сроки рассмотрения заявления ведомством не являются сроком подачи для студента. Миграционное ВНЖ само по себе не доказывает налоговое резидентство. Отдельные исключения и исчисление статуса остаются в unresolved.",
+      "unresolved_ids": [
+        "UNR_STEP_TAX_RESIDENCE_CONFIRM"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Подтверждение статуса налогового резидента РФ — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Подтверждение статуса налогового резидента РФ — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Подтверждение статуса налогового резидента РФ — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Подтверждение статуса налогового резидента РФ — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Подтверждение статуса налогового резидента РФ — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Подтверждение статуса налогового резидента РФ — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Заявление о подтверждении налогового резидентства",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Подтверждение статуса налогового резидента РФ — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Общее определение резидентства — 183 календарных дня за 12 следующих подряд месяцев с исключениями; миграционное ВНЖ не определяет его автоматически.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Порядок представления заявления: форма, три канала подачи и добровольные приложения; раздел до порядка выдачи",
+      "supports": "Указанный способ подачи или состав добровольных приложений.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "direct"
+    },
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Порядок представления заявления: форма, три канала подачи и добровольные приложения; раздел до порядка выдачи",
+      "supports": "Указанный способ подачи или состав добровольных приложений.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "direct"
+    },
+    {
+      "source_id": "SRC_TAX_RESIDENCE",
+      "locator": "Порядок представления заявления: форма, три канала подачи и добровольные приложения; раздел до порядка выдачи",
+      "supports": "Указанный способ подачи или состав добровольных приложений.",
+      "fields": [
+        "/instructions/2"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "direct"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_TAX_RESIDENCE_CONFIRM",
+    "UNR_TAX",
+    "UNR_CURRENT_EDITION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T07:54:30Z",
+    "reviewer": "Финальный аудит: исправлены перечисленные поля; статус draft сохранён",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_TAX_RESIDENCE_CONFIRM",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_TAX_RESIDENCE_CONFIRM",
+      "note": "Миграционный ВНЖ не доказывает налоговое резидентство. Точный комплект, способ подачи и срок услуги должны быть подтверждены отдельно от определения 183 дней."
+    }
+  ]
+}

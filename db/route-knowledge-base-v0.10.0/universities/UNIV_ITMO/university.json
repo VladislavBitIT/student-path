@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNIV_ITMO",
+  "name": "Университет ИТМО",
+  "status": "draft",
+  "timezone": "Europe/Moscow",
+  "contacts": [
+    {
+      "kind": "email",
+      "value": "omu@itmo.ru",
+      "label": "ОМУ"
+    },
+    {
+      "kind": "phone",
+      "value": "+7 (812) 480-09-17",
+      "label": "ОМУ; подтверждено двумя русскими страницами"
+    },
+    {
+      "kind": "email",
+      "value": "int.students@itmo.ru",
+      "label": "Центр обучения иностранных студентов"
+    },
+    {
+      "kind": "phone",
+      "value": "+7 (812) 480-09-12",
+      "label": "Контакт из блока подразделения"
+    },
+    {
+      "kind": "phone",
+      "value": "+7 (812) 480-09-19",
+      "label": "Контакт из блока подразделения"
+    },
+    {
+      "kind": "email",
+      "value": "so@itmo.ru",
+      "label": "Студенческий офис"
+    },
+    {
+      "kind": "phone",
+      "value": "+7 (812) 480-90-00",
+      "label": "Студенческий офис"
+    },
+    {
+      "kind": "url",
+      "value": "https://my.itmo.ru/",
+      "label": "my.itmo"
+    }
+  ],
+  "overlay_ids": [
+    "OVR_ITMO_INVITATION_REQUEST",
+    "OVR_ITMO_VISA_APPLY",
+    "OVR_ITMO_EDU_RECOGNITION_CHECK",
+    "OVR_ITMO_HOST_DOCUMENTS",
+    "OVR_ITMO_ACCOUNTING_DATA_UPDATE",
+    "OVR_ITMO_STAY_PETITION_REQUEST",
+    "OVR_ITMO_STUDY_VISA_EXTEND",
+    "OVR_ITMO_MEDICAL_INITIAL",
+    "OVR_ITMO_FINGERPRINT_PHOTO",
+    "OVR_ITMO_DMS_CONTRACT",
+    "OVR_ITMO_WORK_STUDY_PROOF",
+    "OVR_ITMO_VNH_APPLY"
+  ],
+  "step_ids": [
+    "UNI_ITMO_PREARRIVAL_NOTIFY",
+    "UNI_ITMO_DORM_REQUEST",
+    "UNI_ITMO_MEDICAL_UPLOAD",
+    "UNI_ITMO_DORM_SLOT",
+    "UNI_ITMO_DORM_CHECKIN",
+    "UNI_ITMO_TRAVEL_NOTIFY",
+    "UNI_ITMO_ARRIVAL_CARD_COPY",
+    "UNI_ITMO_STATUS_NOTIFY",
+    "UNI_ITMO_MEDICAL_VISIT",
+    "UNI_ITMO_CLEARANCE",
+    "UNI_ITMO_POST_EXPULSION_DOCS",
+    "UNI_ITMO_DORM_APPLICANT_REQUEST"
+  ],
+  "evidence": [
+    {
+      "source_id": "SRC_ITMO_MIGRATION",
+      "locator": "Контакты соответствующего подразделения",
+      "supports": "Контакты подтверждены публичной страницей ИТМО; спорные альтернативы вынесены в unresolved."
+    },
+    {
+      "source_id": "SRC_ITMO_BACHELOR",
+      "locator": "Контакты соответствующего подразделения",
+      "supports": "Контакты подтверждены публичной страницей ИТМО; спорные альтернативы вынесены в unresolved."
+    },
+    {
+      "source_id": "SRC_ITMO_CONTACTS",
+      "locator": "Контакты соответствующего подразделения",
+      "supports": "Контакты подтверждены публичной страницей ИТМО; спорные альтернативы вынесены в unresolved."
+    }
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:40:30.570901Z",
+    "reviewer": "Официальные ресурсы ИТМО: проверка локальных процедур и раздельных сроков",
+    "next_review_on": "2026-10-26"
+  },
+  "extension_resources": {
+    "facts": "universities/UNIV_ITMO/dictionaries/facts.json",
+    "event_types": "universities/UNIV_ITMO/dictionaries/event_types.json",
+    "dictionaries": [
+      "universities/UNIV_ITMO/dictionaries/itmo_study_levels.json"
+    ]
+  }
+}

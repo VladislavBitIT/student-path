@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_MIPT_PASS",
+  "university_id": "UNIV_MIPT",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Получить пропуск слушателя МФТИ",
+  "summary": "Предъявите паспорт в бюро пропусков и получите пропуск.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "mipt_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "mipt_preparatory",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "mipt_pass_needed",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_MIPT_PASS"
+    ]
+  },
+  "instructions": [
+    "Предъявите паспорт в бюро пропусков и получите пропуск."
+  ],
+  "documents": [
+    {
+      "id": "DOC_UNI_MIPT_PASS_1",
+      "title": "Паспорт",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_MIPT_PREP",
+          "locator": "Student Pass Card",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "physical",
+    "name": "Бюро пропусков, Новый корпус МФТИ",
+    "address": "Долгопрудный, Первомайская улица, 5; слева от входа",
+    "contacts": [],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_MIPT_PASS",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_MIPT_PASS"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_MIPT_PREP",
+      "locator": "Student Pass Card",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination",
+        "/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MIPT_PASS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:43:03.629789Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

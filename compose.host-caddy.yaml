@@ -1,0 +1,11 @@
+services:
+  api:
+    ports:
+      - '127.0.0.1:3010:3000'
+
+  miniapp:
+    ports:
+      - '127.0.0.1:4174:4173'
+
+  caddy:
+    profiles: [embedded-caddy]

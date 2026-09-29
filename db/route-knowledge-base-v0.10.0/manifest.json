@@ -1,0 +1,1051 @@
+{
+  "schema_version": "1.1.0",
+  "package_id": "route_knowledge_base",
+  "package_version": "0.10.0",
+  "created_on": "2026-09-26",
+  "content_status": "draft",
+  "production_ready": false,
+  "language": "ru",
+  "schema_dialect": "https://json-schema.org/draft/2020-12/schema",
+  "schema_files": [
+    "schemas/source.schema.json",
+    "schemas/applicability.schema.json",
+    "schemas/trigger.schema.json",
+    "schemas/deadline.schema.json",
+    "schemas/destination.schema.json",
+    "schemas/documents.schema.json",
+    "schemas/result.schema.json",
+    "schemas/warnings.schema.json",
+    "schemas/federal_step.schema.json",
+    "schemas/university_step.schema.json",
+    "schemas/university_overlay.schema.json",
+    "schemas/university_config.schema.json",
+    "schemas/unresolved_item.schema.json",
+    "schemas/test_scenario.schema.json",
+    "schemas/dictionary.schema.json",
+    "schemas/fact_dictionary.schema.json",
+    "schemas/calendar_dictionary.schema.json",
+    "schemas/sources_collection.schema.json",
+    "schemas/unresolved_collection.schema.json",
+    "schemas/scenarios_collection.schema.json",
+    "schemas/manifest.schema.json",
+    "schemas/research_claim.schema.json",
+    "schemas/research_process.schema.json",
+    "schemas/research_process_collection.schema.json",
+    "schemas/source_audit.schema.json",
+    "schemas/federal_catalog.schema.json",
+    "schemas/audit_policy.schema.json",
+    "schemas/profile_audit.schema.json",
+    "schemas/university_coverage.schema.json",
+    "schemas/university_link_audit.schema.json",
+    "schemas/route_test_suite.schema.json",
+    "schemas/deadline_test_suite.schema.json",
+    "schemas/quality_audit.schema.json"
+  ],
+  "resources": [
+    {
+      "path": "dictionaries/countries.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "dictionaries/residence_statuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "dictionaries/accommodation_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "dictionaries/calendars.json",
+      "schema": "schemas/calendar_dictionary.schema.json"
+    },
+    {
+      "path": "sources/sources.json",
+      "schema": "schemas/sources_collection.schema.json"
+    },
+    {
+      "path": "unresolved/unresolved.json",
+      "schema": "schemas/unresolved_collection.schema.json"
+    },
+    {
+      "path": "tests/federal_scenarios.json",
+      "schema": "schemas/scenarios_collection.schema.json"
+    },
+    {
+      "path": "tests/university_scenarios.json",
+      "schema": "schemas/scenarios_collection.schema.json"
+    },
+    {
+      "path": "federal/research/process_map.json",
+      "schema": "schemas/research_process_collection.schema.json"
+    },
+    {
+      "path": "sources/research_audit.json",
+      "schema": "schemas/source_audit.schema.json"
+    },
+    {
+      "path": "federal/catalog.json",
+      "schema": "schemas/federal_catalog.schema.json"
+    },
+    {
+      "path": "federal/audit/routing_policy.json",
+      "schema": "schemas/audit_policy.schema.json"
+    },
+    {
+      "path": "federal/audit/profile_audit.json",
+      "schema": "schemas/profile_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_ITMO/dictionaries/itmo_study_levels.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_ITMO/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_ITMO/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_ITMO/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_ITMO/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "tests/route_scenarios.json",
+      "schema": "schemas/route_test_suite.schema.json"
+    },
+    {
+      "path": "tests/deadline_cases.json",
+      "schema": "schemas/deadline_test_suite.schema.json"
+    },
+    {
+      "path": "sources/quality_audit.json",
+      "schema": "schemas/quality_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MSU/dictionaries/msu_campuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MSU/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MSU/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MSU/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MSU/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MEPHI/dictionaries/mephi_campuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MEPHI/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MEPHI/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MEPHI/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MEPHI/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MIPT/dictionaries/mipt_campuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MIPT/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MIPT/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MIPT/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_MIPT/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_HSE/dictionaries/hse_campuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_HSE/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_HSE/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_HSE/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_HSE/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_NSU/dictionaries/nsu_campuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_NSU/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_NSU/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_NSU/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_NSU/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_SPBU/dictionaries/spbu_campuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_SPBU/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_SPBU/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_SPBU/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_SPBU/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_TSU/dictionaries/tsu_campuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_TSU/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_TSU/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_TSU/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_TSU/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_KFU/dictionaries/kfu_campuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_KFU/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_KFU/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_KFU/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_KFU/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    },
+    {
+      "path": "universities/UNIV_RUDN/dictionaries/rudn_campuses.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_RUDN/dictionaries/facts.json",
+      "schema": "schemas/fact_dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_RUDN/dictionaries/event_types.json",
+      "schema": "schemas/dictionary.schema.json"
+    },
+    {
+      "path": "universities/UNIV_RUDN/research/federal_coverage.json",
+      "schema": "schemas/university_coverage.schema.json"
+    },
+    {
+      "path": "universities/UNIV_RUDN/research/link_audit.json",
+      "schema": "schemas/university_link_audit.schema.json"
+    }
+  ],
+  "federal_steps": [
+    "federal/steps/FED_ENTRY_RULE_CHECK.json",
+    "federal/steps/FED_INVITATION_REQUEST.json",
+    "federal/steps/FED_VISA_APPLY.json",
+    "federal/steps/FED_VISA_COLLECT_ABROAD.json",
+    "federal/steps/FED_EDU_RECOGNITION_CHECK.json",
+    "federal/steps/FED_EDU_RECOGNITION_APPLY.json",
+    "federal/steps/FED_RUID_STANDARD.json",
+    "federal/steps/FED_RUID_EMERGENCY.json",
+    "federal/steps/FED_MIGRATION_CARD_ENTRY.json",
+    "federal/steps/FED_HOST_DOCUMENTS.json",
+    "federal/steps/FED_REGISTRATION_CONFIRMATION.json",
+    "federal/steps/FED_HOTEL_IDENTIFY.json",
+    "federal/steps/FED_SELF_ARRIVAL_NOTICE.json",
+    "federal/steps/FED_RESIDENCE_REGISTER.json",
+    "federal/steps/FED_REGISTRATION_DUPLICATE.json",
+    "federal/steps/FED_ACCOUNTING_DATA_UPDATE.json",
+    "federal/steps/FED_STAY_PETITION_REQUEST.json",
+    "federal/steps/FED_STUDY_VISA_EXTEND.json",
+    "federal/steps/FED_STUDY_VISA_COLLECT.json",
+    "federal/steps/FED_RVPO_APPLY.json",
+    "federal/steps/FED_RVP_APPLY.json",
+    "federal/steps/FED_VNH_APPLY.json",
+    "federal/steps/FED_VNH_ANNUAL_NOTICE.json",
+    "federal/steps/FED_RVP_ANNUAL_NOTICE.json",
+    "federal/steps/FED_MEDICAL_INITIAL.json",
+    "federal/steps/FED_MEDICAL_REPEAT.json",
+    "federal/steps/FED_FINGERPRINT_PHOTO.json",
+    "federal/steps/FED_OMS_APPLY.json",
+    "federal/steps/FED_DMS_CONTRACT.json",
+    "federal/steps/FED_EMERGENCY_HELP.json",
+    "federal/steps/FED_MIGRATION_CARD_DUPLICATE.json",
+    "federal/steps/FED_VISA_RESTORE.json",
+    "federal/steps/FED_RETURN_VISA_CHECK.json",
+    "federal/steps/FED_WORK_STUDY_PROOF.json",
+    "federal/steps/FED_WORK_STUDY_END_NOTIFY.json",
+    "federal/steps/FED_SNILS_REGISTER.json",
+    "federal/steps/FED_SNILS_UPDATE.json",
+    "federal/steps/FED_SNILS_COPY.json",
+    "federal/steps/FED_INN_APPLY.json",
+    "federal/steps/FED_ESIA_CONFIRM.json",
+    "federal/steps/FED_EBS_REGISTER.json",
+    "federal/steps/FED_SIM_CONTRACT.json",
+    "federal/steps/FED_RKL_CHECK.json",
+    "federal/steps/FED_RKL_CLARIFY.json",
+    "federal/steps/FED_TAX_RESIDENCE_CONFIRM.json",
+    "federal/steps/FED_OMS_EAEU_EMPLOYEE.json"
+  ],
+  "universities": [
+    {
+      "config": "universities/UNIV_ITMO/university.json",
+      "overlays": [
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_INVITATION_REQUEST.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_VISA_APPLY.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_EDU_RECOGNITION_CHECK.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_HOST_DOCUMENTS.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_ACCOUNTING_DATA_UPDATE.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_MEDICAL_INITIAL.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_FINGERPRINT_PHOTO.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_DMS_CONTRACT.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_WORK_STUDY_PROOF.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_VNH_APPLY.json"
+      ],
+      "steps": [
+        "universities/UNIV_ITMO/steps/UNI_ITMO_PREARRIVAL_NOTIFY.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_DORM_REQUEST.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_MEDICAL_UPLOAD.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_DORM_SLOT.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_DORM_CHECKIN.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_TRAVEL_NOTIFY.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_ARRIVAL_CARD_COPY.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_STATUS_NOTIFY.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_MEDICAL_VISIT.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_CLEARANCE.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_POST_EXPULSION_DOCS.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_DORM_APPLICANT_REQUEST.json"
+      ]
+    },
+    {
+      "config": "universities/UNIV_MSU/university.json",
+      "overlays": [
+        "universities/UNIV_MSU/overlays/OVR_MSU_INVITATION_REQUEST.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_VISA_APPLY.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_VISA_COLLECT_ABROAD.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_HOST_DOCUMENTS.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_STUDY_VISA_COLLECT.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_DMS_CONTRACT.json"
+      ],
+      "steps": [
+        "universities/UNIV_MSU/steps/UNI_MSU_PREARRIVAL_NOTIFY.json",
+        "universities/UNIV_MSU/steps/UNI_MSU_TRAVEL_NOTIFY.json",
+        "universities/UNIV_MSU/steps/UNI_MSU_PRIVATE_REG_COPY.json",
+        "universities/UNIV_MSU/steps/UNI_MSU_MEDICAL_COPY.json",
+        "universities/UNIV_MSU/steps/UNI_MSU_POLICY_COPY.json"
+      ]
+    },
+    {
+      "config": "universities/UNIV_MEPHI/university.json",
+      "overlays": [
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_INVITATION_DEGREE.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_INVITATION_PREP.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_HOST_DOCUMENTS.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_REGISTRATION_CONFIRMATION.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_ACCOUNTING_DATA_UPDATE.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_REGISTRATION_DUPLICATE.json"
+      ],
+      "steps": [
+        "universities/UNIV_MEPHI/steps/UNI_MEPHI_PRIVATE_REG_COPY.json",
+        "universities/UNIV_MEPHI/steps/UNI_MEPHI_ARRIVAL_REQUEST.json"
+      ]
+    },
+    {
+      "config": "universities/UNIV_MIPT/university.json",
+      "overlays": [
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_INVITATION_REQUEST.json",
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_HOST_DOCUMENTS.json",
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_REGISTRATION_CONFIRMATION.json",
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_STUDY_VISA_COLLECT.json"
+      ],
+      "steps": [
+        "universities/UNIV_MIPT/steps/UNI_MIPT_POLICY_COPY.json",
+        "universities/UNIV_MIPT/steps/UNI_MIPT_FINGERPRINT_COPY.json",
+        "universities/UNIV_MIPT/steps/UNI_MIPT_LEAVE_DORM.json",
+        "universities/UNIV_MIPT/steps/UNI_MIPT_PASS.json"
+      ]
+    },
+    {
+      "config": "universities/UNIV_HSE/university.json",
+      "overlays": [
+        "universities/UNIV_HSE/overlays/OVR_HSE_MOSCOW_VISA.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_MOSCOW_RVPO.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_MOSCOW_NEW_PASSPORT.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_MOSCOW_DUPLICATE.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_SPB_HOST.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_NN_HOST.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_SPB_VISA.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_PERM_VISA.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_PERM_COLLECT.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_SPB_STAY.json"
+      ],
+      "steps": [
+        "universities/UNIV_HSE/steps/UNI_HSE_RVPO_COPY.json",
+        "universities/UNIV_HSE/steps/UNI_HSE_EXTENDED_COPY.json",
+        "universities/UNIV_HSE/steps/UNI_HSE_SPB_PRIVATE_COPY.json",
+        "universities/UNIV_HSE/steps/UNI_HSE_PERM_TRAVEL.json"
+      ]
+    },
+    {
+      "config": "universities/UNIV_NSU/university.json",
+      "overlays": [
+        "universities/UNIV_NSU/overlays/OVR_NSU_INVITATION_REQUEST.json",
+        "universities/UNIV_NSU/overlays/OVR_NSU_VISA_APPLY.json",
+        "universities/UNIV_NSU/overlays/OVR_NSU_VISA_COLLECT_ABROAD.json"
+      ],
+      "steps": [
+        "universities/UNIV_NSU/steps/UNI_NSU_ARRIVAL_NOTIFY.json",
+        "universities/UNIV_NSU/steps/UNI_NSU_DORM_CHECKIN.json",
+        "universities/UNIV_NSU/steps/UNI_NSU_PAYMENT_PROOF.json",
+        "universities/UNIV_NSU/steps/UNI_NSU_CONTRACT.json"
+      ]
+    },
+    {
+      "config": "universities/UNIV_SPBU/university.json",
+      "overlays": [
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_INVITATION_REQUEST.json",
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_HOST_DOCUMENTS.json",
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_ACCOUNTING_DATA_UPDATE.json"
+      ],
+      "steps": [
+        "universities/UNIV_SPBU/steps/UNI_SPBU_ARRIVAL_NOTIFY.json",
+        "universities/UNIV_SPBU/steps/UNI_SPBU_PRIVATE_COPY.json",
+        "universities/UNIV_SPBU/steps/UNI_SPBU_POLICY_COPY.json",
+        "universities/UNIV_SPBU/steps/UNI_SPBU_TRAVEL_NOTIFY.json",
+        "universities/UNIV_SPBU/steps/UNI_SPBU_DORM_ASSIGNMENT.json"
+      ]
+    },
+    {
+      "config": "universities/UNIV_TSU/university.json",
+      "overlays": [
+        "universities/UNIV_TSU/overlays/OVR_TSU_INVITATION_REQUEST.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_HOST_DOCUMENTS.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_MEDICAL_INITIAL.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_FINGERPRINT_PHOTO.json"
+      ],
+      "steps": [
+        "universities/UNIV_TSU/steps/UNI_TSU_TRAVEL_NOTIFY.json",
+        "universities/UNIV_TSU/steps/UNI_TSU_MEDICAL_COPY.json"
+      ]
+    },
+    {
+      "config": "universities/UNIV_KFU/university.json",
+      "overlays": [
+        "universities/UNIV_KFU/overlays/OVR_KFU_INVITE_DIRECT.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_INVITE_QUOTA.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_HOST_DOCUMENTS.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_VISA_RESTORE.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_MEDICAL_INITIAL.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_RVPO_APPLY.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_CHELNY_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_CHELNY_VISA_RESTORE.json"
+      ],
+      "steps": [
+        "universities/UNIV_KFU/steps/UNI_KFU_CONTINUING_NOTIFY.json",
+        "universities/UNIV_KFU/steps/UNI_KFU_CONTROL_SHEET.json",
+        "universities/UNIV_KFU/steps/UNI_KFU_PREP_LEASE.json",
+        "universities/UNIV_KFU/steps/UNI_KFU_TRAVEL_NOTIFY.json"
+      ]
+    },
+    {
+      "config": "universities/UNIV_RUDN/university.json",
+      "overlays": [
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_INVITATION_REQUEST.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_HOST_DOCUMENTS.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_PRIVATE_PETITION.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_DORM_EXTENSION.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_STUDY_VISA_COLLECT.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_REGISTRATION_DUPLICATE.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_MIGRATION_CARD_DUPLICATE.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_SNILS_REGISTER.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_RVPO_APPLY.json"
+      ],
+      "steps": [
+        "universities/UNIV_RUDN/steps/UNI_RUDN_ADAPTATION_CHECKIN.json",
+        "universities/UNIV_RUDN/steps/UNI_RUDN_DORM_DIRECTION.json",
+        "universities/UNIV_RUDN/steps/UNI_RUDN_DORM_LEASE.json",
+        "universities/UNIV_RUDN/steps/UNI_RUDN_DORM_PAYMENT.json"
+      ]
+    }
+  ],
+  "integration_contract_version": "1.5.0",
+  "built_at": "2026-09-26T11:58:20.936507Z",
+  "information_checked_on": "2026-09-26",
+  "supported_universities": [
+    {
+      "id": "UNIV_ITMO",
+      "name": "Университет ИТМО",
+      "config": "universities/UNIV_ITMO/university.json",
+      "content_status": "draft"
+    },
+    {
+      "id": "UNIV_MSU",
+      "name": "МГУ имени М. В. Ломоносова",
+      "config": "universities/UNIV_MSU/university.json",
+      "content_status": "draft"
+    },
+    {
+      "id": "UNIV_MEPHI",
+      "name": "НИЯУ МИФИ",
+      "config": "universities/UNIV_MEPHI/university.json",
+      "content_status": "draft"
+    },
+    {
+      "id": "UNIV_MIPT",
+      "name": "МФТИ",
+      "config": "universities/UNIV_MIPT/university.json",
+      "content_status": "draft"
+    },
+    {
+      "id": "UNIV_HSE",
+      "name": "НИУ ВШЭ",
+      "config": "universities/UNIV_HSE/university.json",
+      "content_status": "draft"
+    },
+    {
+      "id": "UNIV_NSU",
+      "name": "Новосибирский государственный университет",
+      "config": "universities/UNIV_NSU/university.json",
+      "content_status": "draft"
+    },
+    {
+      "id": "UNIV_SPBU",
+      "name": "Санкт-Петербургский государственный университет",
+      "config": "universities/UNIV_SPBU/university.json",
+      "content_status": "draft"
+    },
+    {
+      "id": "UNIV_TSU",
+      "name": "Национальный исследовательский Томский государственный университет",
+      "config": "universities/UNIV_TSU/university.json",
+      "content_status": "draft"
+    },
+    {
+      "id": "UNIV_KFU",
+      "name": "Казанский (Приволжский) федеральный университет",
+      "config": "universities/UNIV_KFU/university.json",
+      "content_status": "draft"
+    },
+    {
+      "id": "UNIV_RUDN",
+      "name": "Российский университет дружбы народов имени Патриса Лумумбы",
+      "config": "universities/UNIV_RUDN/university.json",
+      "content_status": "draft"
+    }
+  ],
+  "components": [
+    {
+      "id": "manifest",
+      "purpose": "Точка загрузки и состав финальной сборки",
+      "files": [
+        "manifest.json"
+      ]
+    },
+    {
+      "id": "documentation",
+      "purpose": "Текущие инструкции интегратора и необходимые отчёты",
+      "files": [
+        "QUALITY_REPORT.md",
+        "README.md",
+        "integration/ARCHITECTURE_AUDIT.md",
+        "integration/AUTHORING.md",
+        "integration/FEDERAL_LAYER.md",
+        "integration/INTEGRATION.md",
+        "integration/PROFILE_AUDIT.md",
+        "integration/RESEARCH.md",
+        "integration/UNIVERSITIES.md",
+        "tests/README.md",
+        "universities/UNIV_HSE/README.md",
+        "universities/UNIV_ITMO/README.md",
+        "universities/UNIV_KFU/README.md",
+        "universities/UNIV_MEPHI/README.md",
+        "universities/UNIV_MIPT/README.md",
+        "universities/UNIV_MSU/README.md",
+        "universities/UNIV_NSU/README.md",
+        "universities/UNIV_RUDN/README.md",
+        "universities/UNIV_SPBU/README.md",
+        "universities/UNIV_TSU/README.md"
+      ]
+    },
+    {
+      "id": "schemas",
+      "purpose": "Формальные схемы всех JSON-объектов",
+      "files": [
+        "schemas/applicability.schema.json",
+        "schemas/audit_policy.schema.json",
+        "schemas/calendar_dictionary.schema.json",
+        "schemas/deadline.schema.json",
+        "schemas/deadline_test_suite.schema.json",
+        "schemas/destination.schema.json",
+        "schemas/dictionary.schema.json",
+        "schemas/documents.schema.json",
+        "schemas/fact_dictionary.schema.json",
+        "schemas/federal_catalog.schema.json",
+        "schemas/federal_step.schema.json",
+        "schemas/manifest.schema.json",
+        "schemas/profile_audit.schema.json",
+        "schemas/quality_audit.schema.json",
+        "schemas/research_claim.schema.json",
+        "schemas/research_process.schema.json",
+        "schemas/research_process_collection.schema.json",
+        "schemas/result.schema.json",
+        "schemas/route_test_suite.schema.json",
+        "schemas/scenarios_collection.schema.json",
+        "schemas/source.schema.json",
+        "schemas/source_audit.schema.json",
+        "schemas/sources_collection.schema.json",
+        "schemas/test_scenario.schema.json",
+        "schemas/trigger.schema.json",
+        "schemas/university_config.schema.json",
+        "schemas/university_coverage.schema.json",
+        "schemas/university_link_audit.schema.json",
+        "schemas/university_overlay.schema.json",
+        "schemas/university_step.schema.json",
+        "schemas/unresolved_collection.schema.json",
+        "schemas/unresolved_item.schema.json",
+        "schemas/warnings.schema.json"
+      ]
+    },
+    {
+      "id": "shared_dictionaries",
+      "purpose": "Общие типы фактов, событий и справочники",
+      "files": [
+        "dictionaries/accommodation_types.json",
+        "dictionaries/calendars.json",
+        "dictionaries/countries.json",
+        "dictionaries/event_types.json",
+        "dictionaries/facts.json",
+        "dictionaries/residence_statuses.json"
+      ]
+    },
+    {
+      "id": "sources_and_evidence",
+      "purpose": "Официальные источники, проверенные фрагменты с хешами и пределы доказательств",
+      "files": [
+        "sources/quality_audit.json",
+        "sources/research_audit.json",
+        "sources/snapshots/SRC_AMINA121.txt",
+        "sources/snapshots/SRC_AMINA_MVD.txt",
+        "sources/snapshots/SRC_CARD.txt",
+        "sources/snapshots/SRC_CHINA_EDU.txt",
+        "sources/snapshots/SRC_EAEU.txt",
+        "sources/snapshots/SRC_ENTRY_TABLE.txt",
+        "sources/snapshots/SRC_FINGERPRINT.txt",
+        "sources/snapshots/SRC_FINGERPRINT_PVS.txt",
+        "sources/snapshots/SRC_HEALTH.txt",
+        "sources/snapshots/SRC_INN.txt",
+        "sources/snapshots/SRC_INVITATION.txt",
+        "sources/snapshots/SRC_KZ_TREATY.txt",
+        "sources/snapshots/SRC_LAW109.txt",
+        "sources/snapshots/SRC_LAW114.txt",
+        "sources/snapshots/SRC_MED2026.txt",
+        "sources/snapshots/SRC_MED2026_2.txt",
+        "sources/snapshots/SRC_MED_PROFESSION.txt",
+        "sources/snapshots/SRC_MED_SUBMIT.txt",
+        "sources/snapshots/SRC_NDFL.txt",
+        "sources/snapshots/SRC_NPD.txt",
+        "sources/snapshots/SRC_OMS.txt",
+        "sources/snapshots/SRC_OMS_WORK.txt",
+        "sources/snapshots/SRC_PATENT.txt",
+        "sources/snapshots/SRC_QUOTA.txt",
+        "sources/snapshots/SRC_RECOGNITION.txt",
+        "sources/snapshots/SRC_REG9.txt",
+        "sources/snapshots/SRC_REG_GUIDE.txt",
+        "sources/snapshots/SRC_RKL.txt",
+        "sources/snapshots/SRC_RUID.txt",
+        "sources/snapshots/SRC_RVP.txt",
+        "sources/snapshots/SRC_RVPO.txt",
+        "sources/snapshots/SRC_RVPO949.txt",
+        "sources/snapshots/SRC_RVPO_GUIDE.txt",
+        "sources/snapshots/SRC_RVPO_TRANSFER.txt",
+        "sources/snapshots/SRC_SIM.txt",
+        "sources/snapshots/SRC_SNILS.txt",
+        "sources/snapshots/SRC_STAY.txt",
+        "sources/snapshots/SRC_STUDENT_EXTEND.txt",
+        "sources/snapshots/SRC_TAX_RESIDENCE.txt",
+        "sources/snapshots/SRC_TJ_RU.txt",
+        "sources/snapshots/SRC_TJ_TREATY.txt",
+        "sources/snapshots/SRC_UZ_TREATY.txt",
+        "sources/snapshots/SRC_VISA.txt",
+        "sources/snapshots/SRC_VISA907.txt",
+        "sources/snapshots/SRC_VNH.txt",
+        "sources/snapshots/SRC_VNH_NOTICE.txt",
+        "sources/snapshots/SRC_WORK_STUDENT.txt",
+        "sources/sources.json"
+      ]
+    },
+    {
+      "id": "federal",
+      "purpose": "Федеральные шаги, каталог, структурированное покрытие и политика пересчёта",
+      "files": [
+        "federal/audit/profile_audit.json",
+        "federal/audit/routing_policy.json",
+        "federal/catalog.json",
+        "federal/research/process_map.json",
+        "federal/steps/FED_ACCOUNTING_DATA_UPDATE.json",
+        "federal/steps/FED_DMS_CONTRACT.json",
+        "federal/steps/FED_EBS_REGISTER.json",
+        "federal/steps/FED_EDU_RECOGNITION_APPLY.json",
+        "federal/steps/FED_EDU_RECOGNITION_CHECK.json",
+        "federal/steps/FED_EMERGENCY_HELP.json",
+        "federal/steps/FED_ENTRY_RULE_CHECK.json",
+        "federal/steps/FED_ESIA_CONFIRM.json",
+        "federal/steps/FED_FINGERPRINT_PHOTO.json",
+        "federal/steps/FED_HOST_DOCUMENTS.json",
+        "federal/steps/FED_HOTEL_IDENTIFY.json",
+        "federal/steps/FED_INN_APPLY.json",
+        "federal/steps/FED_INVITATION_REQUEST.json",
+        "federal/steps/FED_MEDICAL_INITIAL.json",
+        "federal/steps/FED_MEDICAL_REPEAT.json",
+        "federal/steps/FED_MIGRATION_CARD_DUPLICATE.json",
+        "federal/steps/FED_MIGRATION_CARD_ENTRY.json",
+        "federal/steps/FED_OMS_APPLY.json",
+        "federal/steps/FED_OMS_EAEU_EMPLOYEE.json",
+        "federal/steps/FED_REGISTRATION_CONFIRMATION.json",
+        "federal/steps/FED_REGISTRATION_DUPLICATE.json",
+        "federal/steps/FED_RESIDENCE_REGISTER.json",
+        "federal/steps/FED_RETURN_VISA_CHECK.json",
+        "federal/steps/FED_RKL_CHECK.json",
+        "federal/steps/FED_RKL_CLARIFY.json",
+        "federal/steps/FED_RUID_EMERGENCY.json",
+        "federal/steps/FED_RUID_STANDARD.json",
+        "federal/steps/FED_RVPO_APPLY.json",
+        "federal/steps/FED_RVP_ANNUAL_NOTICE.json",
+        "federal/steps/FED_RVP_APPLY.json",
+        "federal/steps/FED_SELF_ARRIVAL_NOTICE.json",
+        "federal/steps/FED_SIM_CONTRACT.json",
+        "federal/steps/FED_SNILS_COPY.json",
+        "federal/steps/FED_SNILS_REGISTER.json",
+        "federal/steps/FED_SNILS_UPDATE.json",
+        "federal/steps/FED_STAY_PETITION_REQUEST.json",
+        "federal/steps/FED_STUDY_VISA_COLLECT.json",
+        "federal/steps/FED_STUDY_VISA_EXTEND.json",
+        "federal/steps/FED_TAX_RESIDENCE_CONFIRM.json",
+        "federal/steps/FED_VISA_APPLY.json",
+        "federal/steps/FED_VISA_COLLECT_ABROAD.json",
+        "federal/steps/FED_VISA_RESTORE.json",
+        "federal/steps/FED_VNH_ANNUAL_NOTICE.json",
+        "federal/steps/FED_VNH_APPLY.json",
+        "federal/steps/FED_WORK_STUDY_END_NOTIFY.json",
+        "federal/steps/FED_WORK_STUDY_PROOF.json"
+      ]
+    },
+    {
+      "id": "universities",
+      "purpose": "Подключённые конфигурации вузов, локальные словари и карточки",
+      "files": [
+        "universities/UNIV_HSE/dictionaries/event_types.json",
+        "universities/UNIV_HSE/dictionaries/facts.json",
+        "universities/UNIV_HSE/dictionaries/hse_campuses.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_MOSCOW_DUPLICATE.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_MOSCOW_NEW_PASSPORT.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_MOSCOW_RVPO.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_MOSCOW_VISA.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_NN_HOST.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_PERM_COLLECT.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_PERM_VISA.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_SPB_HOST.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_SPB_STAY.json",
+        "universities/UNIV_HSE/overlays/OVR_HSE_SPB_VISA.json",
+        "universities/UNIV_HSE/research/federal_coverage.json",
+        "universities/UNIV_HSE/research/link_audit.json",
+        "universities/UNIV_HSE/steps/UNI_HSE_EXTENDED_COPY.json",
+        "universities/UNIV_HSE/steps/UNI_HSE_PERM_TRAVEL.json",
+        "universities/UNIV_HSE/steps/UNI_HSE_RVPO_COPY.json",
+        "universities/UNIV_HSE/steps/UNI_HSE_SPB_PRIVATE_COPY.json",
+        "universities/UNIV_HSE/university.json",
+        "universities/UNIV_ITMO/dictionaries/event_types.json",
+        "universities/UNIV_ITMO/dictionaries/facts.json",
+        "universities/UNIV_ITMO/dictionaries/itmo_study_levels.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_ACCOUNTING_DATA_UPDATE.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_DMS_CONTRACT.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_EDU_RECOGNITION_CHECK.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_FINGERPRINT_PHOTO.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_HOST_DOCUMENTS.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_INVITATION_REQUEST.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_MEDICAL_INITIAL.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_VISA_APPLY.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_VNH_APPLY.json",
+        "universities/UNIV_ITMO/overlays/OVR_ITMO_WORK_STUDY_PROOF.json",
+        "universities/UNIV_ITMO/research/federal_coverage.json",
+        "universities/UNIV_ITMO/research/link_audit.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_ARRIVAL_CARD_COPY.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_CLEARANCE.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_DORM_APPLICANT_REQUEST.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_DORM_CHECKIN.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_DORM_REQUEST.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_DORM_SLOT.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_MEDICAL_UPLOAD.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_MEDICAL_VISIT.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_POST_EXPULSION_DOCS.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_PREARRIVAL_NOTIFY.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_STATUS_NOTIFY.json",
+        "universities/UNIV_ITMO/steps/UNI_ITMO_TRAVEL_NOTIFY.json",
+        "universities/UNIV_ITMO/university.json",
+        "universities/UNIV_KFU/dictionaries/event_types.json",
+        "universities/UNIV_KFU/dictionaries/facts.json",
+        "universities/UNIV_KFU/dictionaries/kfu_campuses.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_CHELNY_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_CHELNY_VISA_RESTORE.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_HOST_DOCUMENTS.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_INVITE_DIRECT.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_INVITE_QUOTA.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_MEDICAL_INITIAL.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_RVPO_APPLY.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_KFU/overlays/OVR_KFU_VISA_RESTORE.json",
+        "universities/UNIV_KFU/research/federal_coverage.json",
+        "universities/UNIV_KFU/research/link_audit.json",
+        "universities/UNIV_KFU/steps/UNI_KFU_CONTINUING_NOTIFY.json",
+        "universities/UNIV_KFU/steps/UNI_KFU_CONTROL_SHEET.json",
+        "universities/UNIV_KFU/steps/UNI_KFU_PREP_LEASE.json",
+        "universities/UNIV_KFU/steps/UNI_KFU_TRAVEL_NOTIFY.json",
+        "universities/UNIV_KFU/university.json",
+        "universities/UNIV_MEPHI/dictionaries/event_types.json",
+        "universities/UNIV_MEPHI/dictionaries/facts.json",
+        "universities/UNIV_MEPHI/dictionaries/mephi_campuses.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_ACCOUNTING_DATA_UPDATE.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_HOST_DOCUMENTS.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_INVITATION_DEGREE.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_INVITATION_PREP.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_REGISTRATION_CONFIRMATION.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_REGISTRATION_DUPLICATE.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_MEPHI/overlays/OVR_MEPHI_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_MEPHI/research/federal_coverage.json",
+        "universities/UNIV_MEPHI/research/link_audit.json",
+        "universities/UNIV_MEPHI/steps/UNI_MEPHI_ARRIVAL_REQUEST.json",
+        "universities/UNIV_MEPHI/steps/UNI_MEPHI_PRIVATE_REG_COPY.json",
+        "universities/UNIV_MEPHI/university.json",
+        "universities/UNIV_MIPT/dictionaries/event_types.json",
+        "universities/UNIV_MIPT/dictionaries/facts.json",
+        "universities/UNIV_MIPT/dictionaries/mipt_campuses.json",
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_HOST_DOCUMENTS.json",
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_INVITATION_REQUEST.json",
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_REGISTRATION_CONFIRMATION.json",
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_STUDY_VISA_COLLECT.json",
+        "universities/UNIV_MIPT/overlays/OVR_MIPT_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_MIPT/research/federal_coverage.json",
+        "universities/UNIV_MIPT/research/link_audit.json",
+        "universities/UNIV_MIPT/steps/UNI_MIPT_FINGERPRINT_COPY.json",
+        "universities/UNIV_MIPT/steps/UNI_MIPT_LEAVE_DORM.json",
+        "universities/UNIV_MIPT/steps/UNI_MIPT_PASS.json",
+        "universities/UNIV_MIPT/steps/UNI_MIPT_POLICY_COPY.json",
+        "universities/UNIV_MIPT/university.json",
+        "universities/UNIV_MSU/dictionaries/event_types.json",
+        "universities/UNIV_MSU/dictionaries/facts.json",
+        "universities/UNIV_MSU/dictionaries/msu_campuses.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_DMS_CONTRACT.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_HOST_DOCUMENTS.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_INVITATION_REQUEST.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_STUDY_VISA_COLLECT.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_VISA_APPLY.json",
+        "universities/UNIV_MSU/overlays/OVR_MSU_VISA_COLLECT_ABROAD.json",
+        "universities/UNIV_MSU/research/federal_coverage.json",
+        "universities/UNIV_MSU/research/link_audit.json",
+        "universities/UNIV_MSU/steps/UNI_MSU_MEDICAL_COPY.json",
+        "universities/UNIV_MSU/steps/UNI_MSU_POLICY_COPY.json",
+        "universities/UNIV_MSU/steps/UNI_MSU_PREARRIVAL_NOTIFY.json",
+        "universities/UNIV_MSU/steps/UNI_MSU_PRIVATE_REG_COPY.json",
+        "universities/UNIV_MSU/steps/UNI_MSU_TRAVEL_NOTIFY.json",
+        "universities/UNIV_MSU/university.json",
+        "universities/UNIV_NSU/dictionaries/event_types.json",
+        "universities/UNIV_NSU/dictionaries/facts.json",
+        "universities/UNIV_NSU/dictionaries/nsu_campuses.json",
+        "universities/UNIV_NSU/overlays/OVR_NSU_INVITATION_REQUEST.json",
+        "universities/UNIV_NSU/overlays/OVR_NSU_VISA_APPLY.json",
+        "universities/UNIV_NSU/overlays/OVR_NSU_VISA_COLLECT_ABROAD.json",
+        "universities/UNIV_NSU/research/federal_coverage.json",
+        "universities/UNIV_NSU/research/link_audit.json",
+        "universities/UNIV_NSU/steps/UNI_NSU_ARRIVAL_NOTIFY.json",
+        "universities/UNIV_NSU/steps/UNI_NSU_CONTRACT.json",
+        "universities/UNIV_NSU/steps/UNI_NSU_DORM_CHECKIN.json",
+        "universities/UNIV_NSU/steps/UNI_NSU_PAYMENT_PROOF.json",
+        "universities/UNIV_NSU/university.json",
+        "universities/UNIV_RUDN/dictionaries/event_types.json",
+        "universities/UNIV_RUDN/dictionaries/facts.json",
+        "universities/UNIV_RUDN/dictionaries/rudn_campuses.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_DORM_EXTENSION.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_HOST_DOCUMENTS.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_INVITATION_REQUEST.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_MIGRATION_CARD_DUPLICATE.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_PRIVATE_PETITION.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_REGISTRATION_DUPLICATE.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_RVPO_APPLY.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_SNILS_REGISTER.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_STUDY_VISA_COLLECT.json",
+        "universities/UNIV_RUDN/overlays/OVR_RUDN_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_RUDN/research/federal_coverage.json",
+        "universities/UNIV_RUDN/research/link_audit.json",
+        "universities/UNIV_RUDN/steps/UNI_RUDN_ADAPTATION_CHECKIN.json",
+        "universities/UNIV_RUDN/steps/UNI_RUDN_DORM_DIRECTION.json",
+        "universities/UNIV_RUDN/steps/UNI_RUDN_DORM_LEASE.json",
+        "universities/UNIV_RUDN/steps/UNI_RUDN_DORM_PAYMENT.json",
+        "universities/UNIV_RUDN/university.json",
+        "universities/UNIV_SPBU/dictionaries/event_types.json",
+        "universities/UNIV_SPBU/dictionaries/facts.json",
+        "universities/UNIV_SPBU/dictionaries/spbu_campuses.json",
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_ACCOUNTING_DATA_UPDATE.json",
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_HOST_DOCUMENTS.json",
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_INVITATION_REQUEST.json",
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_SPBU/overlays/OVR_SPBU_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_SPBU/research/federal_coverage.json",
+        "universities/UNIV_SPBU/research/link_audit.json",
+        "universities/UNIV_SPBU/steps/UNI_SPBU_ARRIVAL_NOTIFY.json",
+        "universities/UNIV_SPBU/steps/UNI_SPBU_DORM_ASSIGNMENT.json",
+        "universities/UNIV_SPBU/steps/UNI_SPBU_POLICY_COPY.json",
+        "universities/UNIV_SPBU/steps/UNI_SPBU_PRIVATE_COPY.json",
+        "universities/UNIV_SPBU/steps/UNI_SPBU_TRAVEL_NOTIFY.json",
+        "universities/UNIV_SPBU/university.json",
+        "universities/UNIV_TSU/dictionaries/event_types.json",
+        "universities/UNIV_TSU/dictionaries/facts.json",
+        "universities/UNIV_TSU/dictionaries/tsu_campuses.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_FINGERPRINT_PHOTO.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_HOST_DOCUMENTS.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_INVITATION_REQUEST.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_MEDICAL_INITIAL.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_STAY_PETITION_REQUEST.json",
+        "universities/UNIV_TSU/overlays/OVR_TSU_STUDY_VISA_EXTEND.json",
+        "universities/UNIV_TSU/research/federal_coverage.json",
+        "universities/UNIV_TSU/research/link_audit.json",
+        "universities/UNIV_TSU/steps/UNI_TSU_MEDICAL_COPY.json",
+        "universities/UNIV_TSU/steps/UNI_TSU_TRAVEL_NOTIFY.json",
+        "universities/UNIV_TSU/university.json"
+      ]
+    },
+    {
+      "id": "unresolved",
+      "purpose": "Открытые вопросы и история документированных решений",
+      "files": [
+        "unresolved/unresolved.json"
+      ]
+    },
+    {
+      "id": "tests",
+      "purpose": "Канонические сценарии, арифметика и регрессионные проверки",
+      "files": [
+        "tests/deadline_cases.json",
+        "tests/federal_scenarios.json",
+        "tests/route_scenarios.json",
+        "tests/test_contract.py",
+        "tests/test_federal_layer.py",
+        "tests/test_itmo.py",
+        "tests/test_profile_audit.py",
+        "tests/test_quality.py",
+        "tests/test_research.py",
+        "tests/test_route_suite.py",
+        "tests/test_scalability.py",
+        "tests/university_scenarios.json"
+      ]
+    },
+    {
+      "id": "validation_tools",
+      "purpose": "Инструменты проверки пакета и эталонная проверочная реализация",
+      "files": [
+        "integration/audit_scenarios.py",
+        "integration/deadlines.py",
+        "integration/quality_checks.py",
+        "integration/requirements.txt",
+        "integration/route_tests.py",
+        "integration/run_checks.py",
+        "integration/validate.py",
+        "integration/vocabulary.py"
+      ]
+    }
+  ]
+}

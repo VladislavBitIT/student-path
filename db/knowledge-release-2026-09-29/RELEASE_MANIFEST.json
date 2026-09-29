@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "release_id": "student_path_verified_release",
+  "release_version": "1.0.0",
+  "package_version": "0.12.0",
+  "generated_at": "2026-09-29T00:00:00Z",
+  "information_checked_on": "2026-09-29",
+  "scope": {
+    "universities": 10,
+    "university_cards": 122,
+    "original_source_records": 144,
+    "release_source_records": 149,
+    "link_checks": 168
+  },
+  "production_ready_for_mvp_university_routes": true,
+  "production_boundary": "University route layer and listed federal overrides. Traceability materials are not active runtime data.",
+  "entrypoints": {
+    "university_requirements": "import/university_requirements.json",
+    "universities": "import/universities.json",
+    "federal_overrides": "import/federal_overrides.json",
+    "validation_report": "audit/validation_report.json"
+  },
+  "distribution": "runtime-subset",
+  "distribution_provenance": "../../SOURCE_PROVENANCE.json"
+}

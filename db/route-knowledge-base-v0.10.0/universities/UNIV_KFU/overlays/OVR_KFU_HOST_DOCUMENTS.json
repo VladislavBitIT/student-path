@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_KFU_HOST_DOCUMENTS",
+  "university_id": "UNIV_KFU",
+  "target_step_id": "FED_HOST_DOCUMENTS",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "kfu_campus",
+            "value": "main"
+          },
+          {
+            "op": "eq",
+            "fact": "kfu_own_dormitory",
+            "value": true
+          }
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "dormitory"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Лично передайте документы ДВС после заселения; при возвращении из гостиницы, стационара или поездки действует отдельное повторное обращение."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Паспортно-визовый отдел ДВС КФУ",
+      "address": "Казань, ул. Гвардейская, 9, зал А",
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/",
+      "contacts": [
+        {
+          "kind": "phone",
+          "value": "+7 (843) 206-52-89 доб. 8135",
+          "label": "Паспортно-визовый отдел"
+        }
+      ],
+      "appointment_required": "yes",
+      "notes": "Приём по электронной очереди и талонам; прямой адрес записи не подтверждён."
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_KFU_HOST_DOCUMENTS",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_KFU_HOST_DOCUMENTS"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_KFU_HOST_DOCUMENTS_1",
+        "title": "Паспорт",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_KFU_VISA_ENTRY",
+            "locator": "Профильный раздел локальной процедуры",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_KFU_HOST_DOCUMENTS_2",
+        "title": "Договор найма комнаты",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_KFU_VISA_ENTRY",
+            "locator": "Профильный раздел локальной процедуры",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_KFU_HOST_DOCUMENTS_3",
+        "title": "Справка об обучении / направление по гослинии",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_KFU_VISA_ENTRY",
+            "locator": "Профильный раздел локальной процедуры",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_KFU_HOST_DOCUMENTS_4",
+        "title": "Миграционная карта",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_KFU_VISA_ENTRY",
+            "locator": "Профильный раздел локальной процедуры",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ],
+        "condition": {
+          "op": "eq",
+          "fact": "migration_card_required",
+          "value": true
+        }
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_KFU_HOST_DOCUMENTS",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "Следующий рабочий день после заселения",
+        "state": "partial",
+        "deadline": {
+          "kind": "partial",
+          "known": {
+            "amount": 1,
+            "unit": "business_day",
+            "direction": "after",
+            "anchor_description": "Заселение в общежитие КФУ",
+            "actor": "student",
+            "legal_text": "Внутренний срок университета, не федеральная норма."
+          },
+          "calculation_allowed": false,
+          "unresolved_ids": [
+            "UNR_KFU_HOST_DOCUMENTS"
+          ]
+        },
+        "source_id": "SRC_KFU_VISA_ENTRY",
+        "locator": "Профильный раздел локальной процедуры",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_KFU_VISA_ENTRY",
+      "locator": "Профильный раздел локальной процедуры",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_KFU_FREE_ENTRY",
+      "locator": "Профильный раздел локальной процедуры",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_KFU_HOST_DOCUMENTS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:43:51.618487Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

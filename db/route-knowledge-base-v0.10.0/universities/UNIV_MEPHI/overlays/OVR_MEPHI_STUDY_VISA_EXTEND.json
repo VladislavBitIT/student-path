@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_MEPHI_STUDY_VISA_EXTEND",
+  "university_id": "UNIV_MEPHI",
+  "target_step_id": "FED_STUDY_VISA_EXTEND",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "mephi_campus",
+        "value": "main"
+      },
+      {
+        "op": "always"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "В Г-106 получите актуальную квитанцию и передайте визовый пакет."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Управление организационно-технического сопровождения международной деятельности, Г-106",
+      "address": "Москва, Каширское шоссе, 31, кабинет Г-106",
+      "url": "https://mephi.ru/foreign-nationals/visa/stud",
+      "contacts": [],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_MEPHI_STUDY_VISA_EXTEND",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_MEPHI_STUDY_VISA_EXTEND"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_MEPHI_STUDY_VISA_EXTEND_1",
+        "title": "Паспорт",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MEPHI_STUD",
+            "locator": "Визовая поддержка",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MEPHI_STUDY_VISA_EXTEND_2",
+        "title": "Миграционная карта",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MEPHI_STUD",
+            "locator": "Визовая поддержка",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MEPHI_STUDY_VISA_EXTEND_3",
+        "title": "Квитанция",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MEPHI_STUD",
+            "locator": "Визовая поддержка",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_MEPHI_STUDY_VISA_EXTEND_4",
+        "title": "Одна фотография 3×4",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_MEPHI_STUD",
+            "locator": "Визовая поддержка",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_MEPHI_STUDY_VISA_EXTEND",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "За месяц до окончания действующей визы",
+        "state": "unknown",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_MEPHI_STUDY_VISA_EXTEND"
+          ]
+        },
+        "source_id": "SRC_MEPHI_STUD",
+        "locator": "Визовая поддержка",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MEPHI_STUD",
+      "locator": "Визовая поддержка",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MEPHI_STUDY_VISA_EXTEND"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:40:44.639146Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

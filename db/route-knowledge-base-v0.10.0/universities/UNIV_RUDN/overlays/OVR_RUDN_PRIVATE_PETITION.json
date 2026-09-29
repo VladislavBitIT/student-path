@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_RUDN_PRIVATE_PETITION",
+  "university_id": "UNIV_RUDN",
+  "target_step_id": "FED_STAY_PETITION_REQUEST",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "rudn_campus",
+        "value": "main"
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "accommodation_type",
+            "value": "private_home"
+          },
+          {
+            "op": "eq",
+            "fact": "rudn_private_petition_eligible",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Закажите ходатайство через «Регистрация граждан» в МФЦ личного кабинета. Выберите электронный документ либо бумажный оригинал; для последнего запишитесь на получение."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "МФЦ РУДН",
+      "address": "Москва, ул. Миклухо-Маклая, 6, цокольный этаж",
+      "url": "https://lk.rudn.ru/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "mfc@rudn.ru",
+          "label": "МФЦ РУДН"
+        }
+      ],
+      "appointment_required": "yes"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_RUDN_PRIVATE_PETITION",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_RUDN_PRIVATE_PETITION"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_RUDN_PRIVATE_PETITION_1",
+        "title": "Удостоверение личности и копия",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PETITION",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_RUDN_PRIVATE_PETITION_2",
+        "title": "Миграционная карта и копия",
+        "requirement": "conditional",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PETITION",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ],
+        "condition": {
+          "op": "eq",
+          "fact": "migration_card_required",
+          "value": true
+        }
+      },
+      {
+        "id": "DOC_OVR_RUDN_PRIVATE_PETITION_3",
+        "title": "Действующая регистрация и копия",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_RUDN_PETITION",
+            "locator": "Как заказать и получить услугу",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_RUDN_PETITION",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUDN_MFC",
+      "locator": "Как заказать и получить услугу",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_RUDN_PRIVATE_PETITION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:47:31.010529Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

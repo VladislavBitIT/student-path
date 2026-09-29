@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/source_audit.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "meaning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^SRC_[A-Z0-9_]+$"
+          },
+          "access": {
+            "enum": [
+              "page_text",
+              "indexed_excerpt",
+              "metadata_only",
+              "unavailable"
+            ]
+          },
+          "authority": {
+            "enum": [
+              "federal_authority",
+              "official_legal_publication",
+              "state_operator",
+              "regional_authority",
+              "foreign_authority",
+              "interstate_authority",
+              "university"
+            ]
+          },
+          "temporal_limit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "permitted_use": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trace_files": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "source_id",
+          "access",
+          "authority",
+          "temporal_limit",
+          "permitted_use",
+          "trace_files"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "as_of",
+    "meaning",
+    "entries"
+  ],
+  "additionalProperties": false
+}

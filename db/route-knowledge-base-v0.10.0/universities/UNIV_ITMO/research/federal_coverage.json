@@ -1,0 +1,1382 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_ITMO",
+  "checked_on": "2026-09-26",
+  "rows": [
+    {
+      "federal_step_id": "FED_ENTRY_RULE_CHECK",
+      "federal_step_version": 3,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_ENTRY_RULE_CHECK"
+      ]
+    },
+    {
+      "federal_step_id": "FED_INVITATION_REQUEST",
+      "federal_step_version": 3,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_INVITATION_REQUEST"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "confirmed",
+        "phone": "confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "partial",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_INVITATION_REQUEST",
+        "UNR_ITMO_INVITATION_FORM"
+      ]
+    },
+    {
+      "federal_step_id": "FED_VISA_APPLY",
+      "federal_step_version": 2,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_VISA_APPLY"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "confirmed",
+        "phone": "confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "partial",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_VISA_APPLY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_VISA_COLLECT_ABROAD",
+      "federal_step_version": 3,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_VISA_COLLECT_ABROAD"
+      ]
+    },
+    {
+      "federal_step_id": "FED_EDU_RECOGNITION_CHECK",
+      "federal_step_version": 2,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_EDU_RECOGNITION_CHECK"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "not_confirmed",
+        "email": "confirmed",
+        "phone": "not_confirmed",
+        "local_form": "partial",
+        "internal_sequence": "partial",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_EDU_RECOGNITION_CHECK",
+        "UNR_ITMO_RECOGNITION"
+      ]
+    },
+    {
+      "federal_step_id": "FED_EDU_RECOGNITION_APPLY",
+      "federal_step_version": 1,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_EDU_RECOGNITION_APPLY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_RUID_STANDARD",
+      "federal_step_version": 3,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_RUID_STANDARD"
+      ]
+    },
+    {
+      "federal_step_id": "FED_RUID_EMERGENCY",
+      "federal_step_version": 3,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_RUID_EMERGENCY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_MIGRATION_CARD_ENTRY",
+      "federal_step_version": 1,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_MIGRATION_CARD_ENTRY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_HOST_DOCUMENTS",
+      "federal_step_version": 2,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_HOST_DOCUMENTS"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "confirmed",
+        "phone": "confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "partial",
+        "additional_documents": "partial",
+        "internal_deadline": "partial_or_conflicting",
+        "dormitory_specifics": "confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_HOST_DOCUMENTS",
+        "UNR_ITMO_ARRIVAL_DEADLINES",
+        "UNR_ITMO_CONTACT_VARIANTS"
+      ]
+    },
+    {
+      "federal_step_id": "FED_REGISTRATION_CONFIRMATION",
+      "federal_step_version": 1,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_REGISTRATION_CONFIRMATION"
+      ]
+    },
+    {
+      "federal_step_id": "FED_HOTEL_IDENTIFY",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_HOTEL_IDENTIFY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_SELF_ARRIVAL_NOTICE",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_SELF_ARRIVAL_NOTICE"
+      ]
+    },
+    {
+      "federal_step_id": "FED_RESIDENCE_REGISTER",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_RESIDENCE_REGISTER"
+      ]
+    },
+    {
+      "federal_step_id": "FED_REGISTRATION_DUPLICATE",
+      "federal_step_version": 1,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_REGISTRATION_DUPLICATE"
+      ]
+    },
+    {
+      "federal_step_id": "FED_ACCOUNTING_DATA_UPDATE",
+      "federal_step_version": 2,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_ACCOUNTING_DATA_UPDATE"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "confirmed",
+        "phone": "confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "partial",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "partial_or_conflicting",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_ACCOUNTING_DATA_UPDATE",
+        "UNR_ITMO_LOCAL_TIME",
+        "UNR_ITMO_CONTACT_VARIANTS"
+      ]
+    },
+    {
+      "federal_step_id": "FED_STAY_PETITION_REQUEST",
+      "federal_step_version": 2,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_STAY_PETITION_REQUEST"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "confirmed",
+        "phone": "confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "partial",
+        "additional_documents": "partial",
+        "internal_deadline": "partial_or_conflicting",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_STAY_PETITION_REQUEST",
+        "UNR_ITMO_LOCAL_TIME",
+        "UNR_ITMO_CONTACT_VARIANTS"
+      ]
+    },
+    {
+      "federal_step_id": "FED_STUDY_VISA_EXTEND",
+      "federal_step_version": 2,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_STUDY_VISA_EXTEND"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "confirmed",
+        "phone": "confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "partial",
+        "additional_documents": "partial",
+        "internal_deadline": "partial_or_conflicting",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_STUDY_VISA_EXTEND",
+        "UNR_ITMO_LOCAL_TIME",
+        "UNR_ITMO_FEDERAL_MEDICAL_CONFLICT",
+        "UNR_ITMO_CONTACT_VARIANTS"
+      ]
+    },
+    {
+      "federal_step_id": "FED_STUDY_VISA_COLLECT",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_STUDY_VISA_COLLECT"
+      ]
+    },
+    {
+      "federal_step_id": "FED_RVPO_APPLY",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_RVPO_APPLY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_RVP_APPLY",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_RVP_APPLY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_VNH_APPLY",
+      "federal_step_version": 2,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_VNH_APPLY"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "confirmed",
+        "phone": "confirmed",
+        "local_form": "partial",
+        "internal_sequence": "partial",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_VNH_APPLY",
+        "UNR_ITMO_AUTHENTICATED_FORMS"
+      ]
+    },
+    {
+      "federal_step_id": "FED_VNH_ANNUAL_NOTICE",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_VNH_ANNUAL_NOTICE"
+      ]
+    },
+    {
+      "federal_step_id": "FED_RVP_ANNUAL_NOTICE",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_RVP_ANNUAL_NOTICE"
+      ]
+    },
+    {
+      "federal_step_id": "FED_MEDICAL_INITIAL",
+      "federal_step_version": 3,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_MEDICAL_INITIAL"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "partial",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_MEDICAL_INITIAL",
+        "UNR_ITMO_FEDERAL_MEDICAL_CONFLICT"
+      ]
+    },
+    {
+      "federal_step_id": "FED_MEDICAL_REPEAT",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_MEDICAL_REPEAT"
+      ]
+    },
+    {
+      "federal_step_id": "FED_FINGERPRINT_PHOTO",
+      "federal_step_version": 3,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_FINGERPRINT_PHOTO"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "partial",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_FINGERPRINT_PHOTO",
+        "UNR_ITMO_FEDERAL_MEDICAL_CONFLICT"
+      ]
+    },
+    {
+      "federal_step_id": "FED_OMS_APPLY",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_OMS_APPLY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_DMS_CONTRACT",
+      "federal_step_version": 1,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_DMS_CONTRACT"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "confirmed",
+        "phone": "confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "partial",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_DMS_CONTRACT"
+      ]
+    },
+    {
+      "federal_step_id": "FED_EMERGENCY_HELP",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_EMERGENCY_HELP"
+      ]
+    },
+    {
+      "federal_step_id": "FED_MIGRATION_CARD_DUPLICATE",
+      "federal_step_version": 1,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_MIGRATION_CARD_DUPLICATE"
+      ]
+    },
+    {
+      "federal_step_id": "FED_VISA_RESTORE",
+      "federal_step_version": 1,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_VISA_RESTORE"
+      ]
+    },
+    {
+      "federal_step_id": "FED_RETURN_VISA_CHECK",
+      "federal_step_version": 3,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_RETURN_VISA_CHECK"
+      ]
+    },
+    {
+      "federal_step_id": "FED_WORK_STUDY_PROOF",
+      "federal_step_version": 2,
+      "disposition": "overlay_created",
+      "overlay_ids": [
+        "OVR_ITMO_WORK_STUDY_PROOF"
+      ],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_STAFF_WORK",
+        "SRC_ITMO_DOCUMENTS"
+      ],
+      "dimensions": {
+        "department": "confirmed",
+        "address": "confirmed",
+        "email": "confirmed",
+        "phone": "confirmed",
+        "local_form": "partial",
+        "internal_sequence": "partial",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Подтвержденная локальная часть включена в overlay; все федеральные условия сохранены.",
+      "unresolved_ids": [
+        "UNR_ITMO_WORK_STUDY_PROOF",
+        "UNR_ITMO_AUTHENTICATED_FORMS"
+      ]
+    },
+    {
+      "federal_step_id": "FED_WORK_STUDY_END_NOTIFY",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_STAFF_WORK",
+        "SRC_ITMO_DOCUMENTS"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_WORK_STUDY_END_NOTIFY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_SNILS_REGISTER",
+      "federal_step_version": 3,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_SNILS_REGISTER"
+      ]
+    },
+    {
+      "federal_step_id": "FED_SNILS_UPDATE",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_SNILS_UPDATE"
+      ]
+    },
+    {
+      "federal_step_id": "FED_SNILS_COPY",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_SNILS_COPY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_INN_APPLY",
+      "federal_step_version": 3,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_INN_APPLY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_ESIA_CONFIRM",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_ESIA_CONFIRM"
+      ]
+    },
+    {
+      "federal_step_id": "FED_EBS_REGISTER",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_EBS_REGISTER"
+      ]
+    },
+    {
+      "federal_step_id": "FED_SIM_CONTRACT",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_SIM_CONTRACT"
+      ]
+    },
+    {
+      "federal_step_id": "FED_RKL_CHECK",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_RKL_CHECK"
+      ]
+    },
+    {
+      "federal_step_id": "FED_RKL_CLARIFY",
+      "federal_step_version": 1,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_RKL_CLARIFY"
+      ]
+    },
+    {
+      "federal_step_id": "FED_TAX_RESIDENCE_CONFIRM",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_TAX_RESIDENCE_CONFIRM"
+      ]
+    },
+    {
+      "federal_step_id": "FED_OMS_EAEU_EMPLOYEE",
+      "federal_step_version": 2,
+      "disposition": "no_confirmed_overlay",
+      "overlay_ids": [],
+      "checked_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ],
+      "dimensions": {
+        "department": "not_confirmed",
+        "address": "not_confirmed",
+        "email": "not_confirmed",
+        "phone": "not_confirmed",
+        "local_form": "not_confirmed",
+        "internal_sequence": "not_confirmed",
+        "additional_documents": "not_confirmed",
+        "internal_deadline": "not_confirmed",
+        "dormitory_specifics": "not_confirmed"
+      },
+      "reason": "Проверены профильные страницы; конкретизация не подтверждена. Это не доказательство отсутствия услуги.",
+      "unresolved_ids": [
+        "UNR_ITMO_COVERAGE_OMS_EAEU_EMPLOYEE"
+      ]
+    }
+  ],
+  "limitations": [
+    "Не найденная деталь не равна отсутствующей услуге.",
+    "Страницы сотрудников, старые памятки и пересказы федеральных норм не определяют маршрут студента.",
+    "Публичная проверка ссылки на личный кабинет не проверяет отправку формы.",
+    "Повторный самостоятельный обзор 13 официальных источников выполнен после ТГУ; действующий федеральный слой не изменён. Разночтения 24/48 часов и локальных сроков сохраняются нерешёнными."
+  ],
+  "federal_snapshot": {
+    "federal/catalog.json": "88d4a3092cabe3f5a9f1de5123494c1ab3fff10bf0af6d048096e6319a9d8482",
+    "federal/audit/profile_audit.json": "09767e684bae05de7dbab15925c99ff82dae782fa5bf0416c3f83ba0cdb15b76",
+    "federal/audit/routing_policy.json": "90fb8fea4503ac865d9bb6623ed9425298b2a1220d0dcdc8c1b6b57f62383e19",
+    "federal/research/process_map.json": "86d5a10f6fd60af2c445bc7831c6d58cddcc5976558956260d40b272d994a80a",
+    "federal/steps/FED_ACCOUNTING_DATA_UPDATE.json": "29ef7b2eb1489317745041d97e3c8d018e7f21e3d1e67c1e854b64540fca9146",
+    "federal/steps/FED_DMS_CONTRACT.json": "339d2cdf2ae7299a8889a71b88789677365d38f6a3266067081341eb913841f3",
+    "federal/steps/FED_EBS_REGISTER.json": "13dce5b41bde865d008b3e5cbacff1027d2ae0a41745802efa2ee10cac4f011f",
+    "federal/steps/FED_EDU_RECOGNITION_APPLY.json": "b11ccc626c82f1267797d96a682dfb773e3be6740cdbf28a415c4ffedf8ba0b4",
+    "federal/steps/FED_EDU_RECOGNITION_CHECK.json": "c12701169ac1d505c1556613675fa2c633f62ef45f8acc3845c32b0bd78c438a",
+    "federal/steps/FED_EMERGENCY_HELP.json": "7b181b7b9e138146d94e68132ef8eedbcf8887cb73992c4e1cde5df34b8ba1fd",
+    "federal/steps/FED_ENTRY_RULE_CHECK.json": "7a09bfb5114681e278fc56d170961fce5abe0b89efc0660b385b7004f4c1cf65",
+    "federal/steps/FED_ESIA_CONFIRM.json": "59ec7bcdd91e2e968c271110924fe3b9eab3bc89b745671ffb5b45b4f49e15ad",
+    "federal/steps/FED_FINGERPRINT_PHOTO.json": "b233227cbcd6d24543e30077cb7791a207d460c150edf8c6a5185b7ce9fbdcf3",
+    "federal/steps/FED_HOST_DOCUMENTS.json": "b7c4bd2c15b1a9b89297c2b0934ac6acb5cff2eb7984d6073402fa5b15749d7f",
+    "federal/steps/FED_HOTEL_IDENTIFY.json": "a97232ac82be371a34b9e7c6b6d399c86edb15455dbb2958e11720bc80f3381d",
+    "federal/steps/FED_INN_APPLY.json": "2828b6fce236c13f1dc47c4a41ad60ad87b7e18d990db875d29be04075891e5d",
+    "federal/steps/FED_INVITATION_REQUEST.json": "1e8f46cc810752ad3b3b3241888e6e12cf5505dbd6a54fc7ca262fd10d35b332",
+    "federal/steps/FED_MEDICAL_INITIAL.json": "b959c15c3938ac64bb26dff0e43d5bef82c38126c6fc2a7564beda0139f140b8",
+    "federal/steps/FED_MEDICAL_REPEAT.json": "81e55565a959de84facb9d1a05fe75cabd858528cc097e458d04b9588917febf",
+    "federal/steps/FED_MIGRATION_CARD_DUPLICATE.json": "5881b96460ca9dd6213c17aaabf50884572975689fab681ceb69c3a8dbccf44e",
+    "federal/steps/FED_MIGRATION_CARD_ENTRY.json": "7f4ca2503305d23b58ad31164a960ef47e9c139a81b99a38e3eca7bea66a07b3",
+    "federal/steps/FED_OMS_APPLY.json": "5993e9f77dd6edbb87fdc7699bac7378fd8a4ab4bd12206b68c3d8837daa0b76",
+    "federal/steps/FED_OMS_EAEU_EMPLOYEE.json": "2f5b4aaa1f2fa036d3ccef91f16a97c3bbba284e7bf1ebe7db90ff9de0ac577b",
+    "federal/steps/FED_REGISTRATION_CONFIRMATION.json": "8c1c7d36c68b6a4ad560120600f69d9e7c0ba44ecaa40f7d4f9364fd3fa14c2a",
+    "federal/steps/FED_REGISTRATION_DUPLICATE.json": "9a29585a6140443710baf726e28eede2e331e98bf121aae63cba4d444fa57e26",
+    "federal/steps/FED_RESIDENCE_REGISTER.json": "4171231f1fa8c144e374215cef850cdc80e8ae27c264b9c6e799ca6c50079856",
+    "federal/steps/FED_RETURN_VISA_CHECK.json": "5bbd312afaf0ea785689c8ffc5d1fa3690d085efe211b22afe0ec3bf99e59174",
+    "federal/steps/FED_RKL_CHECK.json": "7737ae002e474113615ad20bfbdd3efeb42f7195c05603ef934f0f99e4fe3f4e",
+    "federal/steps/FED_RKL_CLARIFY.json": "7bec111544d06330f667885f0bd4b2fe1135907eaac20eaab1ca9f4adbe0e5bd",
+    "federal/steps/FED_RUID_EMERGENCY.json": "b3e91ac807bfb02eebf31e81f3380f181f0b151b6adf2ea277db4b03bebbebc7",
+    "federal/steps/FED_RUID_STANDARD.json": "3c9f0bc2f49ad9ce1d67a6acdcd1cd71ffdc9abb95b7db43c127cc52fff209a7",
+    "federal/steps/FED_RVPO_APPLY.json": "b183dd2b05d681b26c02232734451fb9ef5640f7145b452a85007815be998471",
+    "federal/steps/FED_RVP_ANNUAL_NOTICE.json": "fc9ebb28e2a3cfd13d2288dec78fa76b0fc9deccb1006c60334bf35340402157",
+    "federal/steps/FED_RVP_APPLY.json": "27eab5781241fd55797733d8013889c9820cf4b59fb9674c9044830aafb5c4cd",
+    "federal/steps/FED_SELF_ARRIVAL_NOTICE.json": "c2e73ff823a87aac7be3928d72172f78e8e32c072ecdb824c6b714cbf7180238",
+    "federal/steps/FED_SIM_CONTRACT.json": "6b735426ed02df13f1f003e4a1d374cf37505ac16181c1d7f4fb8f6096456d4b",
+    "federal/steps/FED_SNILS_COPY.json": "1a30dba39614e47bb16c42e5e2ed77b91f6f3999de4b68b31be0ea4007e7866f",
+    "federal/steps/FED_SNILS_REGISTER.json": "fa9115e0beeb9863b86c1ec5639746b86b64c595bba2c15df8eb1ff1f4667852",
+    "federal/steps/FED_SNILS_UPDATE.json": "40461cffe1c4bf15e62ef32f2eb76d1f9c6fc51f1f35de6b96d740c1af5e6a85",
+    "federal/steps/FED_STAY_PETITION_REQUEST.json": "71e0c9d716c950f88e6838ebef7ef7792aaea3061695d86ed299b7dcf7b2a360",
+    "federal/steps/FED_STUDY_VISA_COLLECT.json": "2693815a6417e32db501ecdaa616952be6eaac9e36114bcf5aa8a8c1ca49451b",
+    "federal/steps/FED_STUDY_VISA_EXTEND.json": "bf3ea67a5ccc93aa4341e02c332553c50358a7af97ff00b5e0a64b9ab690d8da",
+    "federal/steps/FED_TAX_RESIDENCE_CONFIRM.json": "ddc88a520b76da6f5813ba619b2b9dace2dfa36c0fb0dc2f7c68d7952b6825c3",
+    "federal/steps/FED_VISA_APPLY.json": "e8acc1a9a708486b9b6d34dcb2e9422afd92898d8dc3a81863db68db50beaff2",
+    "federal/steps/FED_VISA_COLLECT_ABROAD.json": "3e1c09d1f87c8e131f195a78b3a07bfceef09550dc8f0095f96970c8cf4eb523",
+    "federal/steps/FED_VISA_RESTORE.json": "fe06e27ac75c22e82c248f2f5c547b4fc6f9445b5389f310db920e5529738cd2",
+    "federal/steps/FED_VNH_ANNUAL_NOTICE.json": "391d9a12c018fa7901016adb80947d046320f61c1b6a58bc03bb24ca41b86062",
+    "federal/steps/FED_VNH_APPLY.json": "9cfeda298bb83be7deaa6f2f3b2c018adf6e063111495b6fca172181aacd4f51",
+    "federal/steps/FED_WORK_STUDY_END_NOTIFY.json": "89f9afed3f4a1b7c01ec4e17ee18e1616276d24f251c18b344470c9aa3199249",
+    "federal/steps/FED_WORK_STUDY_PROOF.json": "499631f0e842a2b14f23889aa74c72fd37f56df13d2da4184e00e2806b26bb0e"
+  }
+}

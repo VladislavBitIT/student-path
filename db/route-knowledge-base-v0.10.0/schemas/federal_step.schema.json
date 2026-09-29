@@ -1,0 +1,329 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/federal_step.schema.json",
+  "title": "federal_step",
+  "description": "Конкретное действие иностранного студента; версия 1.1 добавляет происхождение по полям и частичную подтверждённость.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0.0",
+        "1.1.0"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^FED_[A-Z0-9_]+$"
+    },
+    "kind": {
+      "const": "federal"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "retired"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "applicability": {
+      "$ref": "applicability.schema.json"
+    },
+    "trigger": {
+      "$ref": "trigger.schema.json"
+    },
+    "deadline": {
+      "$ref": "deadline.schema.json"
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "documents": {
+      "$ref": "documents.schema.json"
+    },
+    "destination": {
+      "$ref": "destination.schema.json"
+    },
+    "result": {
+      "$ref": "result.schema.json"
+    },
+    "warnings": {
+      "$ref": "warnings.schema.json"
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z][A-Z0-9_]*$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "effective_period": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "format": "date"
+        },
+        "through": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^SRC_[A-Z0-9_]+$"
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^/(?:[^~/]|~[01])+(?:/(?:[^~/]|~[01])+)*$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "checked_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "support_level": {
+            "enum": [
+              "direct",
+              "partial"
+            ]
+          }
+        },
+        "required": [
+          "source_id",
+          "locator",
+          "supports"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "unresolved_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^UNR_[A-Z0-9_]+$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_review_on": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "reviewed_at",
+        "reviewer",
+        "next_review_on"
+      ],
+      "additionalProperties": false
+    },
+    "category": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "research_process_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^PROC_[A-Z0-9_]+$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "obligation": {
+      "enum": [
+        "mandatory_when_applicable",
+        "optional",
+        "recommended"
+      ]
+    },
+    "actor": {
+      "const": "student"
+    },
+    "field_gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^/(?:[^~/]|~[01])+(?:/(?:[^~/]|~[01])+)*$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "unresolved_id": {
+            "type": "string",
+            "pattern": "^UNR_[A-Z0-9_]+$"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "fields",
+          "unresolved_id",
+          "note"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "condition": {
+            "$ref": "applicability.schema.json"
+          },
+          "unresolved_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^UNR_[A-Z0-9_]+$"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "description",
+          "unresolved_ids"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "version",
+    "status",
+    "title",
+    "summary",
+    "applicability",
+    "trigger",
+    "deadline",
+    "instructions",
+    "documents",
+    "destination",
+    "result",
+    "warnings",
+    "depends_on",
+    "effective_period",
+    "evidence",
+    "unresolved_ids"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "verified"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "review"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.1.0"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "category",
+          "research_process_ids",
+          "obligation",
+          "actor",
+          "field_gaps",
+          "exceptions",
+          "review"
+        ],
+        "properties": {
+          "evidence": {
+            "items": {
+              "required": [
+                "fields",
+                "checked_on",
+                "support_level"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

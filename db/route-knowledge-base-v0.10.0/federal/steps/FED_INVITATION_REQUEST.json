@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_INVITATION_REQUEST",
+  "kind": "federal",
+  "version": 3,
+  "status": "draft",
+  "title": "Передайте приглашающей организации данные для учебного приглашения",
+  "summary": "Передайте приглашающей образовательной организации данные действительного паспорта для оформления приглашения.",
+  "category": "entry",
+  "research_process_ids": [
+    "PROC_INVITATION"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "study_visa_needed",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "has_invitation",
+            "value": false
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "admission_confirmed",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_INVITATION_REQUEST"
+    ]
+  },
+  "instructions": [
+    "Передайте приглашающей образовательной организации данные действительного паспорта для оформления приглашения.",
+    "Сверьте ФИО и реквизиты полученного приглашения с паспортом до подачи на визу."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_VISA",
+          "locator": "Оформление российских виз",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ],
+      "instructions": "Используйте точные реквизиты документа. Карточка не устанавливает обязанность передавать оригинал для этого действия."
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Приглашающая образовательная организация",
+    "selection_basis": "Именно организация, оформляющая приглашение в МВД; получатель определяется зачислением.",
+    "information_url": "https://pvsmvd.ru/docs/100",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Получено приглашение с проверенными паспортными данными",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "В отдельных визовых/договорных основаниях состав основания отличается.",
+      "unresolved_ids": [
+        "UNR_INVITATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_INVITATION_REQUEST",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Форма приглашения подтверждена, но актуальный комплект и срок оформления не установлены; контакт ответственного подразделения добавить через UniversityConfig.",
+      "unresolved_ids": [
+        "UNR_STEP_INVITATION_REQUEST"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_ENTRY_PURPOSE",
+      "severity": "blocking",
+      "message": "Проверять цель, вид паспорта и действующий статус отдельно от гражданства: туристический/электронный безвизовый режим не доказывает право въезда для длительной учебы. Требуются особые документы при РВП/РВПО/ВНЖ.",
+      "unresolved_ids": [
+        "UNR_AUDIT_ENTRY_PURPOSE"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_INVITATION",
+      "locator": "Приказ МВД № 619 от 09.08.2017: форма приглашения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_INVITATION",
+      "locator": "Приказ МВД № 619 от 09.08.2017: форма приглашения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_INVITATION",
+      "locator": "Приказ МВД № 619 от 09.08.2017: форма приглашения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_INVITATION",
+      "locator": "Приказ МВД № 619 от 09.08.2017: форма приглашения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_INVITATION",
+      "locator": "Приказ МВД № 619 от 09.08.2017: форма приглашения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_VISA",
+      "locator": "Оформление российских виз — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_INVITATION",
+      "locator": "Приказ МВД № 619 от 09.08.2017: форма приглашения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "В отдельных визовых/договорных основаниях состав основания отличается.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_INVITATION",
+      "locator": "Приказ МВД № 619 от 09.08.2017: форма приглашения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Передайте приглашающей образовательной организации данные действительного паспорта для оформления приглашения. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_INVITATION",
+      "locator": "Приказ МВД № 619 от 09.08.2017: форма приглашения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Сверьте ФИО и реквизиты полученного приглашения с паспортом до подачи на визу. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_INVITATION_REQUEST",
+    "UNR_INVITATION",
+    "UNR_CURRENT_EDITION",
+    "UNR_AUDIT_ENTRY_PURPOSE",
+    "UNR_QUALITY_REMOTE_PASSPORT"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T07:54:30Z",
+    "reviewer": "Финальный аудит: исправлены перечисленные поля; статус draft сохранён",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_INVITATION_REQUEST",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_INVITATION_REQUEST",
+      "note": "Форма приглашения подтверждена, но актуальный комплект и срок оформления не установлены; контакт ответственного подразделения добавить через UniversityConfig."
+    },
+    {
+      "fields": [
+        "/applicability"
+      ],
+      "unresolved_id": "UNR_AUDIT_ENTRY_PURPOSE",
+      "note": "Проверять цель, вид паспорта и действующий статус отдельно от гражданства: туристический/электронный безвизовый режим не доказывает право въезда для длительной учебы. Требуются особые документы при РВП/РВПО/ВНЖ."
+    },
+    {
+      "fields": [
+        "/documents/0"
+      ],
+      "unresolved_id": "UNR_QUALITY_REMOTE_PASSPORT",
+      "note": "Обязательность предъявления оригинала источником не установлена."
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/research_process_collection.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "exhaustiveness": {
+      "const": "not_certified"
+    },
+    "method": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "profile_dimensions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "country_and_status_branches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "branch": {
+            "type": "string",
+            "minLength": 1
+          },
+          "finding": {
+            "$ref": "research_claim.schema.json"
+          },
+          "process_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^PROC_[A-Z0-9_]+$"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "branch",
+          "finding",
+          "process_ids"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "minLength": 1
+          },
+          "process_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^PROC_[A-Z0-9_]+$"
+            },
+            "minItems": 1
+          },
+          "status": {
+            "enum": [
+              "researched_with_gaps",
+              "candidate_only"
+            ]
+          }
+        },
+        "required": [
+          "domain",
+          "process_ids",
+          "status"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "research_process.schema.json"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "as_of",
+    "purpose",
+    "exhaustiveness",
+    "method",
+    "profile_dimensions",
+    "country_and_status_branches",
+    "coverage",
+    "items"
+  ],
+  "additionalProperties": false
+}

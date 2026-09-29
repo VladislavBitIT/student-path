@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_ITMO_STATUS_NOTIFY",
+  "university_id": "UNIV_ITMO",
+  "kind": "university",
+  "version": 2,
+  "status": "draft",
+  "title": "Сообщите ОМУ о получении нового статуса",
+  "summary": "При получении РВП, РВПО или ВНЖ сообщите ОМУ о новом документе для проверки местного учета.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "itmo_current_student",
+        "value": true
+      },
+      {
+        "op": "in",
+        "fact": "residence_status",
+        "values": [
+          "rvp",
+          "rvpo",
+          "vnh"
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "residence_status_changed",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "partial",
+    "known": {
+      "amount": 1,
+      "unit": "business_day",
+      "direction": "after",
+      "anchor_description": "Получение документа статуса",
+      "actor": "student",
+      "legal_text": "Внутренний срок ИТМО, не федеральная норма."
+    },
+    "calculation_allowed": false,
+    "unresolved_ids": [
+      "UNR_ITMO_LOCAL_TIME"
+    ]
+  },
+  "instructions": [
+    "При получении РВП, РВПО или ВНЖ сообщите ОМУ о новом документе для проверки местного учета."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "physical",
+    "name": "Отдел миграционного учета ИТМО",
+    "address": "Санкт-Петербург, ул. Ломоносова, 9, кабинет 2139d",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "omu@itmo.ru",
+        "label": "ОМУ"
+      },
+      {
+        "kind": "phone",
+        "value": "+7 (812) 480-09-17",
+        "label": "ОМУ; подтверждено двумя русскими страницами"
+      }
+    ],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сообщите ОМУ о получении нового статуса — действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_ITMO_STEP_STATUS_NOTIFY",
+      "severity": "blocking",
+      "message": "Подтвержденные локальные сведения сохранены; пробелы перечислены в unresolved.",
+      "unresolved_ids": [
+        "UNR_ITMO_STEP_STATUS_NOTIFY"
+      ]
+    },
+    {
+      "id": "WARN_ITMO_LOCAL_TIME",
+      "severity": "blocking",
+      "message": "Не опубликованы полные правила отсчета внутренних сроков, часы окончания приема и календарь. «45 дней» не превращать в рабочие дни, а «1,5 месяца» — автоматически в 45 дней.",
+      "unresolved_ids": [
+        "UNR_ITMO_LOCAL_TIME"
+      ]
+    },
+    {
+      "id": "WARN_ITMO_CONTACT_VARIANTS",
+      "severity": "blocking",
+      "message": "Телефон ОМУ на актуальной странице и странице отчисления: +7 (812) 480-09-17; английский гайд содержит +7 (812) 607-04-60. Выбран подтвержденный двумя русскими страницами контакт, альтернативный номер не включен в рабочие контакты. Часы приема и запись не подтверждены.",
+      "unresolved_ids": [
+        "UNR_ITMO_CONTACT_VARIANTS"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_ITMO_MIGRATION",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Локальные сведения ИТМО; область применения ограничена карточкой.",
+      "fields": [
+        "/instructions",
+        "/applicability",
+        "/destination",
+        "/documents",
+        "/deadline"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_MIGRATION",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Результат означает подтверждение пользователем выполнения описанного действия; не гарантирует положительное решение университета.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_MIGRATION",
+      "locator": "Локальное указание срока в источнике карточки",
+      "supports": "Опубликованный внутренний срок; неполное исчисление остаётся unresolved.",
+      "fields": [
+        "/deadline",
+        "/reported_deadline_text"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_ITMO_STEP_STATUS_NOTIFY",
+    "UNR_ITMO_LOCAL_TIME",
+    "UNR_ITMO_CONTACT_VARIANTS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:40:30.570901Z",
+    "reviewer": "Повторное самостоятельное исследование официальных страниц в последовательном обзоре десяти вузов",
+    "next_review_on": "2026-10-26"
+  },
+  "reported_deadline_text": "1 рабочий день"
+}

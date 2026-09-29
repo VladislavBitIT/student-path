@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "id": "accommodation_types",
+  "status": "maintained",
+  "description": "Фактическое место проживания; unknown хранится отсутствием факта.",
+  "entries": [
+    {
+      "code": "dormitory",
+      "label": "Общежитие"
+    },
+    {
+      "code": "private_home",
+      "label": "Квартира/жилой дом"
+    },
+    {
+      "code": "hotel",
+      "label": "Гостиница"
+    },
+    {
+      "code": "inpatient",
+      "label": "Стационар"
+    },
+    {
+      "code": "other",
+      "label": "Иное место"
+    }
+  ]
+}

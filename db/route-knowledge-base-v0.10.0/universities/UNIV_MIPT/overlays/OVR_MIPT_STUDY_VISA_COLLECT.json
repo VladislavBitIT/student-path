@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_MIPT_STUDY_VISA_COLLECT",
+  "university_id": "UNIV_MIPT",
+  "target_step_id": "FED_STUDY_VISA_COLLECT",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "mipt_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "mipt_preparatory",
+        "value": true
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "После уведомления миграционного отдела получите паспорт и визу лично в 312 АК."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Отдел международных связей МФТИ, 312 АК",
+      "address": "Долгопрудный, Аудиторный корпус МФТИ, кабинет 312; адрес корпуса сверять по официальной странице",
+      "url": "https://pk.mipt.ru/foreign/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "migrationservice@phystech.edu",
+          "label": "Визы и миграционный учёт"
+        },
+        {
+          "kind": "phone",
+          "value": "+7 (495) 408-75-63",
+          "label": "Отдел международных связей"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_MIPT_STUDY_VISA_COLLECT",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_MIPT_STUDY_VISA_COLLECT"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MIPT_PREP",
+      "locator": "Visa extension",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MIPT_PK",
+      "locator": "Visa extension",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MIPT_STUDY_VISA_COLLECT"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:43:03.629789Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

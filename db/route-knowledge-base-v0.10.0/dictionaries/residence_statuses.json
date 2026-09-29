@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "id": "residence_statuses",
+  "status": "maintained",
+  "description": "Технические категории по документу пользователя; код не подтверждает юридическую действительность документа.",
+  "entries": [
+    {
+      "code": "temporary_stay",
+      "label": "Временно пребывающий"
+    },
+    {
+      "code": "rvp",
+      "label": "РВП"
+    },
+    {
+      "code": "rvpo",
+      "label": "РВПО"
+    },
+    {
+      "code": "vnh",
+      "label": "ВНЖ"
+    },
+    {
+      "code": "special",
+      "label": "Специальный статус, требуется отдельная оценка"
+    }
+  ]
+}

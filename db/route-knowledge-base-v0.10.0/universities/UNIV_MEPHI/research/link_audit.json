@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_MEPHI",
+  "checked_on": "2026-09-26",
+  "scope": "Новое чтение официальных страниц; формы не отправлялись.",
+  "checks": [
+    {
+      "url": "https://mephi.ru/foreign-nationals/visa/stud",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://mephi.ru/foreign-nationals/visa/stud",
+      "detail": "Текст содержит пошлину 2022 года и спорные правовые обобщения об учёте, выезде и академическом отпуске. Они не импортированы как действующее право."
+    },
+    {
+      "url": "https://mephi.ru/foreign-nationals/visa/visa-entr",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://mephi.ru/foreign-nationals/visa/visa-entr",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://mephi.ru/foreign-nationals/visa-application",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://mephi.ru/foreign-nationals/visa-application",
+      "detail": "Прямо указан набор 2022/23, присутствуют старые COVID-требования. Срок 10 дней не принят как действующее требование 2026 года."
+    },
+    {
+      "url": "https://mephi.ru/foreign-nationals/fingerprinting",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://mephi.ru/foreign-nationals/fingerprinting",
+      "detail": "Не подтверждены актуальные адреса, тарифы, запись и исчерпывающие исключения на 2026 год; платные услуги не навязываются."
+    },
+    {
+      "url": "https://mephi.ru/node/19028",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://mephi.ru/node/19028",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://mephi.ru/foreign-nationals/student/hostel-rules",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://mephi.ru/foreign-nationals/student/hostel-rules",
+      "detail": "Текст связанного сканированного PDF не извлечён; его положения не выданы за проверенные."
+    },
+    {
+      "url": "https://mephi.ru/foreign-students-feedback",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://mephi.ru/foreign-students-feedback",
+      "detail": "Поля формы доступны; отправка и получение ответа не проверялись."
+    }
+  ]
+}

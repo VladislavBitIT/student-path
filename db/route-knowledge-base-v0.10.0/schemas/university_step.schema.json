@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/university_step.schema.json",
+  "title": "university_step",
+  "description": "Самостоятельный шаг конкретного вуза; не подменяет федеральный шаг.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0.0",
+        "1.1.0"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^UNI_[A-Z0-9_]+$"
+    },
+    "kind": {
+      "const": "university"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "retired"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "applicability": {
+      "$ref": "applicability.schema.json"
+    },
+    "trigger": {
+      "$ref": "trigger.schema.json"
+    },
+    "deadline": {
+      "$ref": "deadline.schema.json"
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "documents": {
+      "$ref": "documents.schema.json"
+    },
+    "destination": {
+      "$ref": "destination.schema.json"
+    },
+    "result": {
+      "$ref": "result.schema.json"
+    },
+    "warnings": {
+      "$ref": "warnings.schema.json"
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z][A-Z0-9_]*$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "effective_period": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "format": "date"
+        },
+        "through": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^SRC_[A-Z0-9_]+$"
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "checked_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "support_level": {
+            "enum": [
+              "direct",
+              "partial"
+            ]
+          }
+        },
+        "required": [
+          "source_id",
+          "locator",
+          "supports"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "unresolved_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^UNR_[A-Z0-9_]+$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_review_on": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "reviewed_at",
+        "reviewer",
+        "next_review_on"
+      ],
+      "additionalProperties": false
+    },
+    "university_id": {
+      "type": "string",
+      "pattern": "^UNIV_[A-Z0-9_]+$"
+    },
+    "obligation_scope": {
+      "const": "university_internal"
+    },
+    "reported_deadline_text": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "version",
+    "status",
+    "title",
+    "summary",
+    "applicability",
+    "trigger",
+    "deadline",
+    "instructions",
+    "documents",
+    "destination",
+    "result",
+    "warnings",
+    "depends_on",
+    "effective_period",
+    "evidence",
+    "unresolved_ids",
+    "university_id"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "verified"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "review"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.1.0"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "obligation_scope"
+        ],
+        "properties": {
+          "evidence": {
+            "items": {
+              "required": [
+                "fields",
+                "checked_on",
+                "support_level"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

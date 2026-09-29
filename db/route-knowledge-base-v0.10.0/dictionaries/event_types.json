@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0.0",
+  "id": "event_types",
+  "status": "maintained",
+  "description": "События сервиса соответствуют фактическим событиям пользователя. Подтверждение документа не создаётся автоматически из даты или отсутствия ответа.",
+  "entries": [
+    {
+      "code": "trip_planned",
+      "label": "trip planned"
+    },
+    {
+      "code": "admission_confirmed",
+      "label": "admission confirmed"
+    },
+    {
+      "code": "invitation_received",
+      "label": "invitation received"
+    },
+    {
+      "code": "consular_visa_ready",
+      "label": "consular visa ready"
+    },
+    {
+      "code": "admission_planned",
+      "label": "admission planned"
+    },
+    {
+      "code": "recognition_path_selected",
+      "label": "recognition path selected"
+    },
+    {
+      "code": "border_entry",
+      "label": "border entry"
+    },
+    {
+      "code": "accommodation_arrival",
+      "label": "accommodation arrival"
+    },
+    {
+      "code": "arrival_notice_submitted",
+      "label": "arrival notice submitted"
+    },
+    {
+      "code": "residence_address_established",
+      "label": "residence address established"
+    },
+    {
+      "code": "registration_proof_lost",
+      "label": "registration proof lost"
+    },
+    {
+      "code": "identity_data_changed",
+      "label": "identity data changed"
+    },
+    {
+      "code": "stay_extension_needed",
+      "label": "stay extension needed"
+    },
+    {
+      "code": "visa_extension_needed",
+      "label": "visa extension needed"
+    },
+    {
+      "code": "mvd_visa_ready",
+      "label": "mvd visa ready"
+    },
+    {
+      "code": "rvpo_selected",
+      "label": "rvpo selected"
+    },
+    {
+      "code": "rvp_selected",
+      "label": "rvp selected"
+    },
+    {
+      "code": "vnh_selected",
+      "label": "vnh selected"
+    },
+    {
+      "code": "permit_anniversary",
+      "label": "permit anniversary"
+    },
+    {
+      "code": "medical_anniversary",
+      "label": "medical anniversary"
+    },
+    {
+      "code": "fingerprint_obligation_identified",
+      "label": "fingerprint obligation identified"
+    },
+    {
+      "code": "oms_entitlement_confirmed",
+      "label": "oms entitlement confirmed"
+    },
+    {
+      "code": "dms_selected",
+      "label": "dms selected"
+    },
+    {
+      "code": "medical_emergency",
+      "label": "medical emergency"
+    },
+    {
+      "code": "migration_card_lost",
+      "label": "migration card lost"
+    },
+    {
+      "code": "passport_lost",
+      "label": "passport lost"
+    },
+    {
+      "code": "replacement_passport_received",
+      "label": "replacement passport received"
+    },
+    {
+      "code": "transfer_enrollment_confirmed",
+      "label": "transfer enrollment confirmed"
+    },
+    {
+      "code": "departure_planned",
+      "label": "departure planned"
+    },
+    {
+      "code": "employment_planned",
+      "label": "employment planned"
+    },
+    {
+      "code": "study_ended",
+      "label": "study ended"
+    },
+    {
+      "code": "snils_needed",
+      "label": "snils needed"
+    },
+    {
+      "code": "snils_document_needed",
+      "label": "snils document needed"
+    },
+    {
+      "code": "inn_needed",
+      "label": "inn needed"
+    },
+    {
+      "code": "digital_service_selected",
+      "label": "digital service selected"
+    },
+    {
+      "code": "sim_selected",
+      "label": "sim selected"
+    },
+    {
+      "code": "ebs_ready",
+      "label": "ebs ready"
+    },
+    {
+      "code": "rkl_check_requested",
+      "label": "rkl check requested"
+    },
+    {
+      "code": "rkl_entry_detected",
+      "label": "rkl entry detected"
+    },
+    {
+      "code": "tax_certificate_needed",
+      "label": "tax certificate needed"
+    },
+    {
+      "code": "residence_status_changed",
+      "label": "Изменился документально подтвержденный статус"
+    },
+    {
+      "code": "hospital_discharged",
+      "label": "Выписка из стационара"
+    },
+    {
+      "code": "outpatient_visit",
+      "label": "Посещение врача без госпитализации"
+    },
+    {
+      "code": "accommodation_moved",
+      "label": "Переезд к новому месту пребывания"
+    },
+    {
+      "code": "return_to_accommodation",
+      "label": "Фактическое возвращение к месту пребывания"
+    },
+    {
+      "code": "education_conditions_changed",
+      "label": "Перевод, академический отпуск или изменение формы обучения"
+    }
+  ]
+}

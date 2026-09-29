@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "university_id": "UNIV_NSU",
+  "checked_on": "2026-09-26",
+  "scope": "Новое чтение официальных страниц; формы не отправлялись.",
+  "checks": [
+    {
+      "url": "https://ciep.nsu.ru/kakpostupit",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ciep.nsu.ru/kakpostupit",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://ciep.nsu.ru/chavo",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ciep.nsu.ru/chavo",
+      "detail": "Область — программы центра. Общие утверждения о регистрации, выезде и стоимости жилья не подтверждают федеральные правила 2026 года."
+    },
+    {
+      "url": "https://ciep.nsu.ru/kontakti",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ciep.nsu.ru/kontakti",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://ciep.nsu.ru/oplatangu",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ciep.nsu.ru/oplatangu",
+      "detail": "Работа иностранных банковских карт, валютные реквизиты и тарифы не подтверждены."
+    },
+    {
+      "url": "https://education.nsu.ru/freshmen",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://education.nsu.ru/freshmen",
+      "detail": "Общий перечень не уточняет исключения для иностранцев и СНИЛС; воинские документы не назначаются иностранцам автоматически."
+    },
+    {
+      "url": "https://events.nsu.ru/open_doors/en/",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://events.nsu.ru/open_doors/en/",
+      "detail": "Календарь олимпиады относится к 2025 году; использованы только опубликованные контакты поддержки."
+    },
+    {
+      "url": "https://ciep.nsu.ru/prozhivanie",
+      "checked_on": "2026-09-26",
+      "result": "page_text",
+      "resolved_url": "https://ciep.nsu.ru/prozhivanie",
+      "detail": "Текст официальной страницы прочитан; аутентифицированные операции не выполнялись."
+    },
+    {
+      "url": "https://english.nsu.ru/",
+      "checked_on": "2026-09-26",
+      "result": "tool_unavailable",
+      "resolved_url": "https://english.nsu.ru/",
+      "detail": "Тайм-аут инструмента. Контакты и правила из сторонних копий не импортированы."
+    }
+  ]
+}

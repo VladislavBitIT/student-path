@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_RKL_CHECK",
+  "kind": "federal",
+  "version": 2,
+  "status": "draft",
+  "title": "Проверьте свои сведения в реестре контролируемых лиц",
+  "summary": "Откройте официальный сервис МВД и введите запрошенные реквизиты своего документа.",
+  "category": "protection",
+  "research_process_ids": [
+    "PROC_RKL"
+  ],
+  "actor": "student",
+  "obligation": "optional",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "rkl_check_requested",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "rkl_check_requested",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_RKL_CHECK"
+    ]
+  },
+  "instructions": [
+    "Откройте официальный сервис МВД и введите запрошенные реквизиты своего документа.",
+    "Проверьте результат и сохраните дату проверки; при наличии записи установите её основание в МВД."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "recommended",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_RKL_SERVICE",
+          "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ],
+      "instructions": "Используйте точные реквизиты документа. Карточка не устанавливает обязанность передавать оригинал для этого действия."
+    }
+  ],
+  "destination": {
+    "kind": "online",
+    "name": "МВД: реестр контролируемых лиц",
+    "url": "https://xn--b1aew.xn--p1ai/rkl",
+    "contacts": [],
+    "appointment_required": "no"
+  },
+  "result": {
+    "title": "Получен результат официальной проверки РКЛ",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Автоматическое исключение после получения МВД сведений и срок личного обращения — разные события; жалоба не предполагает автоматическую приостановку.",
+      "unresolved_ids": [
+        "UNR_RKL",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_RKL_CHECK",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Проверка сервиса не заменяет проверку действительности статуса. Причина записи, порядок исправления и сроки обжалования определяются отдельно.",
+      "unresolved_ids": [
+        "UNR_STEP_RKL_CHECK"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_RKL_SERVICE",
+      "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RKL_SERVICE",
+      "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RKL_SERVICE",
+      "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RKL_SERVICE",
+      "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RKL_SERVICE",
+      "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RKL_SERVICE",
+      "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RKL_SERVICE",
+      "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+      "supports": "Автоматическое исключение после получения МВД сведений и срок личного обращения — разные события; жалоба не предполагает автоматическую приостановку.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RKL_SERVICE",
+      "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+      "supports": "Откройте официальный сервис МВД и введите запрошенные реквизиты своего документа. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RKL_SERVICE",
+      "locator": "Абзац о двух официальных бесплатных сервисах: мвд.рф/rkl и gosuslugi.ru/655781/1/form",
+      "supports": "Проверьте результат и сохраните дату проверки; при наличии записи установите её основание в МВД. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_RKL_CHECK",
+    "UNR_RKL",
+    "UNR_CURRENT_EDITION",
+    "UNR_QUALITY_REMOTE_PASSPORT"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T07:54:30Z",
+    "reviewer": "Финальный аудит: исправлены перечисленные поля; статус draft сохранён",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_RKL_CHECK",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_RKL_CHECK",
+      "note": "Проверка сервиса не заменяет проверку действительности статуса. Причина записи, порядок исправления и сроки обжалования определяются отдельно."
+    },
+    {
+      "fields": [
+        "/documents/0"
+      ],
+      "unresolved_id": "UNR_QUALITY_REMOTE_PASSPORT",
+      "note": "Обязательность предъявления оригинала источником не установлена."
+    }
+  ]
+}

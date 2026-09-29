@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_HSE_SPB_HOST",
+  "university_id": "UNIV_HSE",
+  "target_step_id": "FED_HOST_DOCUMENTS",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "hse_campus",
+            "value": "spb"
+          },
+          {
+            "op": "all",
+            "args": [
+              {
+                "op": "eq",
+                "fact": "full_time",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "fact": "hse_own_dormitory",
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "dormitory"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "После заселения передайте миграционные документы в ЦВМС и следите за письмом о готовности регистрации."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "ЦВМС ВШЭ — Санкт-Петербург",
+      "url": "https://spb.hse.ru/pochemuchnik/interstud/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "migrationspb@hse.ru",
+          "label": "ЦВМС ВШЭ — Санкт-Петербург"
+        }
+      ],
+      "appointment_required": "unknown",
+      "address": "Санкт-Петербург, Кантемировская, 3, корпус 1, офис 1005"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_HSE_SPB_HOST",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_HSE_SPB_HOST"
+        ]
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_HSE_SPB_HOST",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "В день приезда после заселения",
+        "state": "unknown",
+        "deadline": {
+          "kind": "unknown",
+          "unresolved_ids": [
+            "UNR_HSE_SPB_HOST"
+          ]
+        },
+        "source_id": "SRC_HSE_SPB",
+        "locator": "Профильный раздел указанной страницы",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_HSE_SPB",
+      "locator": "Профильный раздел указанной страницы",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_HSE_SPB_HOST"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:26:55.858077Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

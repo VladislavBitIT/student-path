@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "tsu_campus",
+      "label": "Кампус/область локальной инструкции",
+      "type": "enum",
+      "dictionary_id": "tsu_campuses"
+    },
+    {
+      "code": "tsu_own_dormitory",
+      "label": "Общежитие ТГУ",
+      "type": "boolean"
+    },
+    {
+      "code": "tsu_first_year_level_one",
+      "label": "Первокурсник I уровня, охваченный инструкцией организованного сбора",
+      "type": "boolean"
+    },
+    {
+      "code": "tsu_cis_visa_free",
+      "label": "Безвизовый студент СНГ в области инструкции ТГУ",
+      "type": "boolean"
+    }
+  ]
+}

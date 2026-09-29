@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_KFU_STAY_PETITION_REQUEST",
+  "university_id": "UNIV_KFU",
+  "target_step_id": "FED_STAY_PETITION_REQUEST",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "kfu_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "private_home"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Для частного жилья получите ходатайство ДВС, предъявив паспорт и подписанный обеими сторонами договор найма."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Паспортно-визовый отдел ДВС КФУ",
+      "address": "Казань, ул. Гвардейская, 9, зал А",
+      "url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/",
+      "contacts": [
+        {
+          "kind": "phone",
+          "value": "+7 (843) 206-52-89 доб. 8135",
+          "label": "Паспортно-визовый отдел"
+        }
+      ],
+      "appointment_required": "yes",
+      "notes": "Приём по электронной очереди и талонам; прямой адрес записи не подтверждён."
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_KFU_STAY_PETITION_REQUEST",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_KFU_STAY_PETITION_REQUEST"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "id": "DOC_OVR_KFU_STAY_PETITION_REQUEST_1",
+        "title": "Паспорт",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_KFU_FREE_ENTRY",
+            "locator": "Профильный раздел локальной процедуры",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      },
+      {
+        "id": "DOC_OVR_KFU_STAY_PETITION_REQUEST_2",
+        "title": "Договор найма жилья с подписями сторон",
+        "requirement": "required",
+        "form": "unspecified",
+        "evidence": [
+          {
+            "source_id": "SRC_KFU_FREE_ENTRY",
+            "locator": "Профильный раздел локальной процедуры",
+            "supports": "Локальный комплект из указанного раздела."
+          }
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_KFU_FREE_ENTRY",
+      "locator": "Профильный раздел локальной процедуры",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination",
+        "/additions/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_KFU_STAY_PETITION_REQUEST"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:43:51.618487Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

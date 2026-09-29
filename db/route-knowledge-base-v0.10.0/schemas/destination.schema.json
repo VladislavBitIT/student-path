@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/destination.schema.json",
+  "title": "destination",
+  "description": "Место обращения. Отсутствующее назначение нельзя подставлять автоматически.",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "unknown"
+        },
+        "unresolved_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^UNR_[A-Z0-9_]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "unresolved_ids"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "none"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "physical",
+            "online",
+            "hybrid"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "address": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "contacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "email",
+                  "phone",
+                  "url"
+                ]
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "value",
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "appointment_required": {
+          "enum": [
+            "yes",
+            "no",
+            "unknown"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "name",
+        "contacts",
+        "appointment_required"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "physical",
+                  "hybrid"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "address"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "online",
+                  "hybrid"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "url"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "authority"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "selection_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "information_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "appointment_required": {
+          "enum": [
+            "yes",
+            "no",
+            "unknown"
+          ]
+        },
+        "resolution": {
+          "const": "select_local_service_point"
+        },
+        "unresolved_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^UNR_[A-Z0-9_]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "name",
+        "selection_basis",
+        "information_url",
+        "appointment_required",
+        "resolution",
+        "unresolved_ids"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

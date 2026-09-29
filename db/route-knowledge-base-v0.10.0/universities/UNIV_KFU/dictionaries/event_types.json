@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "id": "event_types",
+  "status": "maintained",
+  "description": "Локальные события, подтверждаемые сервисом; не правовые обязанности.",
+  "entries": [
+    {
+      "code": "kfu_dorm_offer_received",
+      "label": "Получено уведомление о койко-месте"
+    },
+    {
+      "code": "kfu_arrival_local",
+      "label": "Прибыл в Казань для заселения"
+    }
+  ]
+}

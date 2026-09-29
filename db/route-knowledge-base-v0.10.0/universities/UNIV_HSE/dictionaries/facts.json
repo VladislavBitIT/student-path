@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "hse_campus",
+      "label": "Кампус/область локальной инструкции",
+      "type": "enum",
+      "dictionary_id": "hse_campuses"
+    },
+    {
+      "code": "hse_own_dormitory",
+      "label": "Общежитие своего кампуса ВШЭ",
+      "type": "boolean"
+    },
+    {
+      "code": "hse_not_phd",
+      "label": "Студент основных программ, не аспирант",
+      "type": "boolean"
+    }
+  ]
+}

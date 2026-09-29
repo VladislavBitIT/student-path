@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_ITMO_EDU_RECOGNITION_CHECK",
+  "university_id": "UNIV_ITMO",
+  "target_step_id": "FED_EDU_RECOGNITION_CHECK",
+  "target_step_version": 2,
+  "version": 2,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "itmo_study_level",
+        "value": "bachelor"
+      },
+      {
+        "op": "eq",
+        "fact": "itmo_admission_year",
+        "value": 2026
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Сопоставьте документ с правилами приема ИТМО 2026 для бакалавриата; при подтвержденной необходимости признания включите свидетельство в приемный комплект."
+    ],
+    "destination": {
+      "kind": "online",
+      "name": "Приемная комиссия ИТМО — бакалавриат 2026",
+      "url": "https://abit.itmo.ru/page/66",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "abit@itmo.ru",
+          "label": "Приемная комиссия"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_ITMO_EDU_RECOGNITION_CHECK",
+        "severity": "blocking",
+        "message": "Сохранена подтвержденная местная часть; недостающие детали требуют уточнения.",
+        "unresolved_ids": [
+          "UNR_ITMO_EDU_RECOGNITION_CHECK"
+        ]
+      },
+      {
+        "id": "WARN_ITMO_RECOGNITION",
+        "severity": "blocking",
+        "message": "Не найдено публичного отдельного сервиса ИТМО, который устанавливает признание каждого иностранного документа. Правила приема не доказывают отсутствие освобождения и не заменяют федеральный анализ.",
+        "unresolved_ids": [
+          "UNR_ITMO_RECOGNITION"
+        ]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_ITMO_ADMISSION_BACHELOR_2026",
+      "locator": "Правила приёма 2026: документы об иностранном образовании и признание; контакты ответственного подразделения на странице источника",
+      "supports": "Сопоставление перечисленных локальных полей с разделом страницы. Это не подтверждение федеральных оснований и не закрытие локальных пробелов.",
+      "fields": [
+        "/additions/instructions/0",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_ITMO_EDU_RECOGNITION_CHECK",
+    "UNR_ITMO_RECOGNITION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:40:30.570901Z",
+    "reviewer": "Повторное самостоятельное исследование официальных страниц в последовательном обзоре десяти вузов",
+    "next_review_on": "2026-10-26"
+  }
+}

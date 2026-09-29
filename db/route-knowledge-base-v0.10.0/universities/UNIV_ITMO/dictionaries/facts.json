@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "itmo_paid_education",
+      "label": "Обучение в ИТМО по платному договору",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_current_student",
+      "label": "Обучающийся ИТМО; подтвержден зачислением",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_needs_dorm",
+      "label": "Пользователь запросил место в общежитии ИТМО",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_dorm_is_itmo",
+      "label": "Назначенное общежитие принадлежит ИТМО, не МСГ/партнерскому вузу",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_account_available",
+      "label": "Есть доступ к my.itmo",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_medical_upload_needed",
+      "label": "Нужно дополнить медицинские сведения ИТМО",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_dorm_assigned",
+      "label": "Получено уведомление о выделении места",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_nonurgent_medical_help",
+      "label": "Нужна плановая консультация медпункта, без экстренной ситуации",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_clearance_complete",
+      "label": "Обходной лист согласован",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_expulsion_order_issued",
+      "label": "Есть приказ об отчислении",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_needs_local_stay_documents",
+      "label": "Для выбранного заявления ВНЖ понадобились документы ИТМО",
+      "type": "boolean"
+    },
+    {
+      "code": "itmo_study_level",
+      "label": "Программа ИТМО",
+      "type": "enum",
+      "dictionary_id": "itmo_study_levels"
+    },
+    {
+      "code": "itmo_admission_year",
+      "label": "Год приемной кампании",
+      "type": "integer"
+    },
+    {
+      "code": "itmo_registration_expires_at",
+      "label": "Указанный в документе конец текущего учета",
+      "type": "date_time"
+    },
+    {
+      "code": "itmo_application_via_gosuslugi",
+      "label": "Поступающий подает заявление в ИТМО через Госуслуги; доступность канала подтверждена",
+      "type": "boolean"
+    }
+  ]
+}

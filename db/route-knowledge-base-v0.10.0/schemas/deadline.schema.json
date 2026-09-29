@@ -1,0 +1,348 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/deadline.schema.json",
+  "title": "deadline",
+  "description": "Явная модель срока. Неизвестный срок не равен отсутствию срока. Расчет выполняет Route Engine согласно INTEGRATION.md.",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "none"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "unknown"
+        },
+        "unresolved_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^UNR_[A-Z0-9_]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "unresolved_ids"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "fixed"
+        },
+        "at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        }
+      },
+      "required": [
+        "kind",
+        "at"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "relative"
+        },
+        "anchor": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "trigger_event"
+                }
+              },
+              "required": [
+                "kind"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "fact"
+                },
+                "fact": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]*$"
+                }
+              },
+              "required": [
+                "kind",
+                "fact"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "event"
+                },
+                "event_type": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]*$"
+                },
+                "occurrence": {
+                  "enum": [
+                    "first",
+                    "latest"
+                  ]
+                }
+              },
+              "required": [
+                "kind",
+                "event_type",
+                "occurrence"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unit": {
+          "enum": [
+            "hour",
+            "calendar_day",
+            "business_day",
+            "calendar_month",
+            "calendar_year"
+          ]
+        },
+        "direction": {
+          "enum": [
+            "before",
+            "after"
+          ]
+        },
+        "include_anchor_day": {
+          "type": "boolean"
+        },
+        "time_of_day": {
+          "type": "string",
+          "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "calendar_ref": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "rollover": {
+          "enum": [
+            "none",
+            "next_business_day",
+            "previous_business_day"
+          ]
+        },
+        "month_end": {
+          "enum": [
+            "clamp",
+            "error"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "anchor",
+        "amount",
+        "unit",
+        "direction",
+        "include_anchor_day",
+        "timezone",
+        "rollover",
+        "month_end"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "anyOf": [
+              {
+                "properties": {
+                  "unit": {
+                    "const": "business_day"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "rollover": {
+                    "not": {
+                      "const": "none"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "then": {
+            "required": [
+              "calendar_ref"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "unit": {
+                "const": "hour"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "include_anchor_day": {
+                "const": false
+              },
+              "rollover": {
+                "const": "none"
+              }
+            },
+            "not": {
+              "required": [
+                "time_of_day"
+              ]
+            }
+          },
+          "else": {
+            "required": [
+              "time_of_day"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "unit": {
+                "enum": [
+                  "calendar_month",
+                  "calendar_year"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "include_anchor_day": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "partial"
+        },
+        "known": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unit": {
+              "enum": [
+                "hour",
+                "calendar_day",
+                "business_day",
+                "calendar_month",
+                "calendar_year",
+                "day_unspecified"
+              ]
+            },
+            "direction": {
+              "enum": [
+                "before",
+                "after"
+              ]
+            },
+            "anchor_description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "anchor_fact": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$"
+            },
+            "actor": {
+              "enum": [
+                "student",
+                "host",
+                "university",
+                "authority",
+                "medical_provider"
+              ]
+            },
+            "legal_text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "amount",
+            "unit",
+            "direction",
+            "anchor_description",
+            "actor",
+            "legal_text"
+          ],
+          "additionalProperties": false
+        },
+        "calculation_allowed": {
+          "const": false
+        },
+        "unresolved_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^UNR_[A-Z0-9_]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "known",
+        "calculation_allowed",
+        "unresolved_ids"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

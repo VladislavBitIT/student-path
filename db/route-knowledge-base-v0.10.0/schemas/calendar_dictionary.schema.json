@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/calendar_dictionary.schema.json",
+  "title": "calendar_dictionary",
+  "description": "Календарь требует явного диапазона покрытия и подтверждения. За его пределами расчет неизвестен.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "const": "calendars"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "timezone": {
+            "type": "string",
+            "minLength": 1
+          },
+          "coverage_start": {
+            "type": "string",
+            "format": "date"
+          },
+          "coverage_end": {
+            "type": "string",
+            "format": "date"
+          },
+          "weekend_days": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 7
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "non_working_dates": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "date"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "working_dates": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "date"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_id": {
+                  "type": "string",
+                  "pattern": "^SRC_[A-Z0-9_]+$"
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "supports": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "source_id",
+                "locator",
+                "supports"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "code",
+          "timezone",
+          "coverage_start",
+          "coverage_end",
+          "weekend_days",
+          "non_working_dates",
+          "working_dates",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "entries"
+  ],
+  "additionalProperties": false
+}

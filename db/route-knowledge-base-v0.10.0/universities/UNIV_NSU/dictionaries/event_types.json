@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "id": "event_types",
+  "status": "maintained",
+  "description": "Локальные события, подтверждаемые сервисом; не правовые обязанности.",
+  "entries": [
+    {
+      "code": "nsu_tickets_ready",
+      "label": "Получены виза и билеты в Новосибирск"
+    },
+    {
+      "code": "nsu_payment_completed",
+      "label": "Оплачено обучение ЦМУП"
+    },
+    {
+      "code": "nsu_ciep_contract_ready",
+      "label": "ЦМУП направил договор для подписания"
+    }
+  ]
+}

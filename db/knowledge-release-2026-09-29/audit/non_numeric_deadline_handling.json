@@ -1,0 +1,1692 @@
+{
+  "schema_version": "1.0.0",
+  "meaning": "These are not missing cards. The official rule is event-, contract-, authority-, office- or faculty-specific, so a fictional calendar date is forbidden.",
+  "count": 80,
+  "items": [
+    {
+      "record_id": "OVR_HSE_MOSCOW_DUPLICATE",
+      "university_id": "UNIV_HSE",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Паспортист назначенного общежития ВШЭ",
+        "contact_url": "https://ivisa.hse.ru/faq",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_HSE_MOSCOW_RVPO",
+      "university_id": "UNIV_HSE",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Визовый центр ВШЭ — Москва; приём через Центр сервиса «Студент»",
+        "contact_url": "https://ivisa.hse.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "visa-registration@hse.ru",
+            "label": "Визовый центр ВШЭ — Москва; приём через Центр сервиса «Студент»"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (495) 531-00-63",
+            "label": "Визовый центр ВШЭ — Москва; приём через Центр сервиса «Студент»"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_HSE_PERM_COLLECT",
+      "university_id": "UNIV_HSE",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел международного сотрудничества ВШЭ — Пермь",
+        "contact_url": "https://perm.hse.ru/upr/inoffice/intoffice",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "supportperm@hse.ru",
+            "label": "Отдел международного сотрудничества ВШЭ — Пермь"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (342) 254-41-64",
+            "label": "Отдел международного сотрудничества ВШЭ — Пермь"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_HSE_PERM_TRAVEL",
+      "university_id": "UNIV_HSE",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел международного сотрудничества ВШЭ — Пермь",
+        "contact_url": "https://perm.hse.ru/upr/inoffice/intoffice",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "supportperm@hse.ru",
+            "label": "Отдел международного сотрудничества ВШЭ — Пермь"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (342) 254-41-64",
+            "label": "Отдел международного сотрудничества ВШЭ — Пермь"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_HSE_RVPO_COPY",
+      "university_id": "UNIV_HSE",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Визовый центр ВШЭ — Москва; приём через Центр сервиса «Студент»",
+        "contact_url": "https://ivisa.hse.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "visa-registration@hse.ru",
+            "label": "Визовый центр ВШЭ — Москва; приём через Центр сервиса «Студент»"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (495) 531-00-63",
+            "label": "Визовый центр ВШЭ — Москва; приём через Центр сервиса «Студент»"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_HSE_SPB_PRIVATE_COPY",
+      "university_id": "UNIV_HSE",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "ЦВМС ВШЭ — Санкт-Петербург",
+        "contact_url": "https://spb.hse.ru/pochemuchnik/interstud/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "migrationspb@hse.ru",
+            "label": "ЦВМС ВШЭ — Санкт-Петербург"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_ITMO_DMS_CONTRACT",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "before_enrollment_or_checkin",
+      "published_rule": "Оформите действующий полис до начала обучения/заселения либо в момент, установленный университетом.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Центр обучения иностранных студентов ИТМО",
+        "contact_url": null,
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "int.students@itmo.ru",
+            "label": "Центр обучения иностранных студентов"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-09-12",
+            "label": "Контакт из блока подразделения"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-09-19",
+            "label": "Контакт из блока подразделения"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_ITMO_EDU_RECOGNITION_CHECK",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "before_application_completion",
+      "published_rule": "Проверьте требование до подачи окончательного комплекта документов на поступление.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Приемная комиссия ИТМО — бакалавриат 2026",
+        "contact_url": "https://abit.itmo.ru/page/66",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "abit@itmo.ru",
+            "label": "Приемная комиссия"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_ITMO_FINGERPRINT_PHOTO",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Пункт ПВС, указанный ИТМО",
+        "contact_url": null,
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_ITMO_INVITATION_REQUEST",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "university_defined",
+      "published_rule": "Подайте полный комплект заранее; точный срок обработки устанавливает университет и зависит от полноты документов.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Центр обучения иностранных студентов ИТМО",
+        "contact_url": null,
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "int.students@itmo.ru",
+            "label": "Центр обучения иностранных студентов"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-09-12",
+            "label": "Контакт из блока подразделения"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-09-19",
+            "label": "Контакт из блока подразделения"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_ITMO_MEDICAL_INITIAL",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Пункт ПВС, указанный ИТМО",
+        "contact_url": null,
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_ITMO_STUDY_VISA_EXTEND",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "relative_before_expiry",
+      "published_rule": "За 1,5 месяца до окончания визы",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "published_relative_text_no_safe_machine_conversion",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел миграционного учета ИТМО",
+        "contact_url": null,
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "omu@itmo.ru",
+            "label": "ОМУ"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-09-17",
+            "label": "ОМУ; подтверждено двумя русскими страницами"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_ITMO_VISA_APPLY",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "authority_defined",
+      "published_rule": "После получения приглашения действуйте в срок, назначенный российским консульством.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Центр обучения иностранных студентов ИТМО",
+        "contact_url": null,
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "int.students@itmo.ru",
+            "label": "Центр обучения иностранных студентов"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-09-12",
+            "label": "Контакт из блока подразделения"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-09-19",
+            "label": "Контакт из блока подразделения"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_ITMO_VNH_APPLY",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Студенческий офис ИТМО",
+        "contact_url": "https://my.itmo.ru/requests",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "so@itmo.ru",
+            "label": "Студенческий офис"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-90-00",
+            "label": "Студенческий офис"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_ITMO_WORK_STUDY_PROOF",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Студенческий офис ИТМО",
+        "contact_url": "https://my.itmo.ru/requests",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "so@itmo.ru",
+            "label": "Студенческий офис"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-90-00",
+            "label": "Студенческий офис"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_ITMO_CLEARANCE",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Студенческий офис ИТМО",
+        "contact_url": "https://my.itmo.ru/requests",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "so@itmo.ru",
+            "label": "Студенческий офис"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-90-00",
+            "label": "Студенческий офис"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_ITMO_DORM_APPLICANT_REQUEST",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "university_scheduled",
+      "published_rule": "Выполните действие в назначенный университетом день или слот заселения.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Личный кабинет абитуриента ИТМО",
+        "contact_url": "https://abitlk.itmo.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "campus@itmo.ru",
+            "label": "Заселение"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-90-00 доб. 7",
+            "label": "Заселение"
+          },
+          {
+            "kind": "email",
+            "value": "int.students@itmo.ru",
+            "label": "Сопровождение иностранных студентов"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_ITMO_DORM_CHECKIN",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "university_scheduled",
+      "published_rule": "Выполните действие в назначенный университетом день или слот заселения.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "my.itmo — Общежития",
+        "contact_url": "https://my.itmo.ru/services/dormitories",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "campus@itmo.ru",
+            "label": "Заселение"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-90-00 доб. 7",
+            "label": "Заселение"
+          },
+          {
+            "kind": "email",
+            "value": "int.students@itmo.ru",
+            "label": "Сопровождение иностранных студентов"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_ITMO_DORM_REQUEST",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "my.itmo — Общежития",
+        "contact_url": "https://my.itmo.ru/services/dormitories",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "campus@itmo.ru",
+            "label": "Заселение"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-90-00 доб. 7",
+            "label": "Заселение"
+          },
+          {
+            "kind": "email",
+            "value": "int.students@itmo.ru",
+            "label": "Сопровождение иностранных студентов"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_ITMO_MEDICAL_UPLOAD",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "my.itmo — медицинские заявки",
+        "contact_url": "https://my.itmo.ru/requests",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "medinform@itmo.ru",
+            "label": "Медпункт"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_ITMO_MEDICAL_VISIT",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Медпункт ИТМО на Кронверкском",
+        "contact_url": null,
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "medinform@itmo.ru",
+            "label": "Медпункт"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-03-40 доб. 1",
+            "label": "Кронверкский"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_ITMO_POST_EXPULSION_DOCS",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Студенческий офис ИТМО",
+        "contact_url": "https://my.itmo.ru/requests",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "so@itmo.ru",
+            "label": "Студенческий офис"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-90-00",
+            "label": "Студенческий офис"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_ITMO_TRAVEL_NOTIFY",
+      "university_id": "UNIV_ITMO",
+      "deadline_kind": "relative_before_event",
+      "published_rule": "Заблаговременно до отъезда",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "published_advance_notice_without_numeric_offset",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел миграционного учета ИТМО",
+        "contact_url": null,
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "omu@itmo.ru",
+            "label": "ОМУ"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (812) 480-09-17",
+            "label": "ОМУ; подтверждено двумя русскими страницами"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_KFU_CHELNY_VISA_RESTORE",
+      "university_id": "UNIV_KFU",
+      "deadline_kind": "immediate_after_incident",
+      "published_rule": "Обратитесь без промедления после утраты, повреждения или замены документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел международной деятельности НЧИ КФУ",
+        "contact_url": "https://kpfu.ru/chelny/international-activities/pravila-prebyvaniya-inostrannyh-grazhdan/prodlenie-rossijskoj-vizy",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "EVMaksimova@kpfu.ru",
+            "label": "НЧИ"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (8552) 39-63-12",
+            "label": "НЧИ"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_KFU_MEDICAL_INITIAL",
+      "university_id": "UNIV_KFU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Медико-санитарная часть КФУ",
+        "contact_url": null,
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_KFU_RVPO_APPLY",
+      "university_id": "UNIV_KFU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "КФУ: документы для РВПО",
+        "contact_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/rvpo",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "education@kpfu.ru",
+            "label": "Учебный отдел"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_KFU_STAY_PETITION_REQUEST",
+      "university_id": "UNIV_KFU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Паспортно-визовый отдел ДВС КФУ",
+        "contact_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/",
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 (843) 206-52-89 доб. 8135",
+            "label": "Паспортно-визовый отдел"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_KFU_VISA_RESTORE",
+      "university_id": "UNIV_KFU",
+      "deadline_kind": "immediate_after_incident",
+      "published_rule": "Обратитесь без промедления после утраты, повреждения или замены документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Паспортно-визовый отдел ДВС КФУ",
+        "contact_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/",
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 (843) 206-52-89 доб. 8135",
+            "label": "Паспортно-визовый отдел"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_KFU_CONTROL_SHEET",
+      "university_id": "UNIV_KFU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Паспортно-визовый отдел ДВС КФУ",
+        "contact_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/",
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 (843) 206-52-89 доб. 8135",
+            "label": "Паспортно-визовый отдел"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_KFU_TRAVEL_NOTIFY",
+      "university_id": "UNIV_KFU",
+      "deadline_kind": "relative_before_event",
+      "published_rule": "До выезда",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "published_before_departure_without_numeric_offset",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Паспортно-визовый отдел ДВС КФУ",
+        "contact_url": "https://kpfu.ru/international/migracionnoe-soprovozhdenie-inostrannyh-grazhdan/",
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 (843) 206-52-89 доб. 8135",
+            "label": "Паспортно-визовый отдел"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MEPHI_INVITATION_DEGREE",
+      "university_id": "UNIV_MEPHI",
+      "deadline_kind": "university_defined",
+      "published_rule": "Подайте полный комплект заранее; точный срок обработки устанавливает университет и зависит от полноты документов.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Учебный отдел своего института МИФИ; сведения о зачислении",
+        "contact_url": "https://admission.mephi.ru/",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MEPHI_INVITATION_PREP",
+      "university_id": "UNIV_MEPHI",
+      "deadline_kind": "university_defined",
+      "published_rule": "Подайте полный комплект заранее; точный срок обработки устанавливает университет и зависит от полноты документов.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Факультет иностранных учащихся МИФИ",
+        "contact_url": "https://mephi.ru/foreign-nationals/visa/visa-entr",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "OGChugunova@mephi.ru",
+            "label": "Приглашение на подготовительное отделение"
+          },
+          {
+            "kind": "email",
+            "value": "ONPetukhova@mephi.ru",
+            "label": "Приглашение на подготовительное отделение"
+          },
+          {
+            "kind": "email",
+            "value": "OVlikhacheva@mephi.ru",
+            "label": "Приглашение на подготовительное отделение"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MEPHI_REGISTRATION_CONFIRMATION",
+      "university_id": "UNIV_MEPHI",
+      "deadline_kind": "after_process_completion",
+      "published_rule": "Получите подтверждение после завершения постановки на миграционный учёт.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Управление организационно-технического сопровождения международной деятельности, Г-106",
+        "contact_url": "https://mephi.ru/foreign-nationals/visa/stud",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MEPHI_REGISTRATION_DUPLICATE",
+      "university_id": "UNIV_MEPHI",
+      "deadline_kind": "immediate_after_incident",
+      "published_rule": "Обратитесь без промедления после утраты, повреждения или замены документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Управление организационно-технического сопровождения международной деятельности, Г-106",
+        "contact_url": "https://mephi.ru/foreign-nationals/visa/stud",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MEPHI_ARRIVAL_REQUEST",
+      "university_id": "UNIV_MEPHI",
+      "deadline_kind": "relative_to_arrival",
+      "published_rule": "Выполните действие до приезда либо сразу после возникновения подтверждённого плана прибытия.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Горячая линия прибывающим иностранным студентам МИФИ",
+        "contact_url": "https://mephi.ru/foreign-students-feedback",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MEPHI_PRIVATE_REG_COPY",
+      "university_id": "UNIV_MEPHI",
+      "deadline_kind": "after_document_received",
+      "published_rule": "Передайте копию в университет сразу после получения документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Управление организационно-технического сопровождения международной деятельности, Г-106",
+        "contact_url": "https://mephi.ru/foreign-nationals/visa/stud",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MIPT_REGISTRATION_CONFIRMATION",
+      "university_id": "UNIV_MIPT",
+      "deadline_kind": "after_process_completion",
+      "published_rule": "Получите подтверждение после завершения постановки на миграционный учёт.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел международных связей МФТИ, 312 АК",
+        "contact_url": "https://pk.mipt.ru/foreign/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "migrationservice@phystech.edu",
+            "label": "Визы и миграционный учёт"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (495) 408-75-63",
+            "label": "Отдел международных связей"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MIPT_STUDY_VISA_COLLECT",
+      "university_id": "UNIV_MIPT",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел международных связей МФТИ, 312 АК",
+        "contact_url": "https://pk.mipt.ru/foreign/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "migrationservice@phystech.edu",
+            "label": "Визы и миграционный учёт"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (495) 408-75-63",
+            "label": "Отдел международных связей"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MIPT_FINGERPRINT_COPY",
+      "university_id": "UNIV_MIPT",
+      "deadline_kind": "after_document_received",
+      "published_rule": "Передайте копию в университет сразу после получения документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Подготовительное отделение МФТИ",
+        "contact_url": "https://eng.mipt.ru/info/preparatory_faq/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "foundationcourse@phystech.edu",
+            "label": "Подтверждение процедуры"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MIPT_LEAVE_DORM",
+      "university_id": "UNIV_MIPT",
+      "deadline_kind": "conditional",
+      "published_rule": "При отсутствии в общежитии более 24 часов направить заявление; при отсутствии более 72 часов оформить учёт по месту пребывания и повторный учёт после возвращения; при отсутствии более 7 дней после возвращения передать в миграционный отдел МФТИ регистрацию по месту пребывания.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "multiple_conditional_thresholds_not_single_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Подготовительное отделение МФТИ",
+        "contact_url": "https://eng.mipt.ru/docs/preparatory_faq/Application_for_Leaving_the_Dormitory.pdf",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "foundationcourse@phystech.edu",
+            "label": "Заявление об отсутствии"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MIPT_PASS",
+      "university_id": "UNIV_MIPT",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Бюро пропусков, Новый корпус МФТИ",
+        "contact_url": null,
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MIPT_POLICY_COPY",
+      "university_id": "UNIV_MIPT",
+      "deadline_kind": "after_document_received",
+      "published_rule": "Передайте копию в университет сразу после получения документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Подготовительное отделение МФТИ",
+        "contact_url": "https://eng.mipt.ru/info/preparatory_faq/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "foundationcourse@phystech.edu",
+            "label": "Копии полиса"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MSU_DMS_CONTRACT",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "before_enrollment_or_checkin",
+      "published_rule": "Оформите действующий полис до начала обучения/заселения либо в момент, установленный университетом.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MSU_HOST_DOCUMENTS",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "relative_to_arrival",
+      "published_rule": "Передайте документы принимающей стороне сразу после прибытия или заселения согласно инструкции вуза.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MSU_INVITATION_REQUEST",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "university_defined",
+      "published_rule": "Подайте полный комплект заранее; точный срок обработки устанавливает университет и зависит от полноты документов.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MSU_STUDY_VISA_COLLECT",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MSU_STUDY_VISA_EXTEND",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "faculty_specific",
+      "published_rule": "Срок определяется иностранным отделом факультета. Для ИСАА опубликовано: не позднее 45 календарных дней до окончания визы; общая страница МГУ указывает минимум 30 дней, поэтому универсальный срок не применяется.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "official_sources_conflict_resolved_by_scope",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MSU_VISA_APPLY",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "authority_defined",
+      "published_rule": "После получения приглашения действуйте в срок, назначенный российским консульством.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_MSU_VISA_COLLECT_ABROAD",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "authority_defined",
+      "published_rule": "Получите визу в дату, назначенную консульством, и сразу выполните университетское действие после получения.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MSU_MEDICAL_COPY",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "after_document_received",
+      "published_rule": "Передайте копию в университет сразу после получения документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MSU_PREARRIVAL_NOTIFY",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "university_scheduled",
+      "published_rule": "Выполните действие в назначенный университетом день или слот заселения.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MSU_PRIVATE_REG_COPY",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "after_document_received",
+      "published_rule": "Передайте копию в университет сразу после получения документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_MSU_TRAVEL_NOTIFY",
+      "university_id": "UNIV_MSU",
+      "deadline_kind": "relative_before_event",
+      "published_rule": "Выполните действие до поездки.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Иностранный отдел своего факультета — официальный каталог МГУ",
+        "contact_url": "https://international.msu.ru/faculties",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_NSU_INVITATION_REQUEST",
+      "university_id": "UNIV_NSU",
+      "deadline_kind": "processing_duration",
+      "published_rule": "Оформление приглашения обычно занимает 4–6 недель после подписания договора и выполнения условий ЦМУП.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "published_current",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Центр международных учебных программ НГУ",
+        "contact_url": "https://ciep.nsu.ru/kakpostupit",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "ciep@nsu.ru",
+            "label": "ЦМУП"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_NSU_VISA_APPLY",
+      "university_id": "UNIV_NSU",
+      "deadline_kind": "authority_defined",
+      "published_rule": "После появления электронного приглашения обратитесь в выбранное консульство; срок подачи и рассмотрения устанавливает консульство.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "authority_specific",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Центр международных учебных программ НГУ",
+        "contact_url": "https://ciep.nsu.ru/kakpostupit",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "ciep@nsu.ru",
+            "label": "ЦМУП"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_NSU_VISA_COLLECT_ABROAD",
+      "university_id": "UNIV_NSU",
+      "deadline_kind": "authority_defined",
+      "published_rule": "Получите визу в срок, назначенный консульством; после получения сохраните скан для ЦМУП.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "authority_specific",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Центр международных учебных программ НГУ",
+        "contact_url": "https://ciep.nsu.ru/kakpostupit",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "ciep@nsu.ru",
+            "label": "ЦМУП"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_NSU_CONTRACT",
+      "university_id": "UNIV_NSU",
+      "deadline_kind": "workflow_milestone",
+      "published_rule": "При положительном решении ЦМУП направляет договор обычно в течение двух недель после окончания приёма заявок; подпишите его в срок, указанный в сообщении и договоре.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "published_current_plus_contract_specific",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Центр международных учебных программ НГУ",
+        "contact_url": "https://ciep.nsu.ru/kakpostupit",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "ciep@nsu.ru",
+            "label": "ЦМУП"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_RUDN_INVITATION_REQUEST",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "university_defined",
+      "published_rule": "Подайте полный комплект заранее; точный срок обработки устанавливает университет и зависит от полноты документов.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Департамент аспирантуры РУДН",
+        "contact_url": "https://www.rudn.ru/science/dad/aspirantura/postuplenie",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "phd@rudn.ru",
+            "label": "Аспирантура"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_RUDN_MIGRATION_CARD_DUPLICATE",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "МФЦ РУДН",
+        "contact_url": "https://lk.rudn.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "mfc@rudn.ru",
+            "label": "МФЦ РУДН"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_RUDN_PRIVATE_PETITION",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "МФЦ РУДН",
+        "contact_url": "https://lk.rudn.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "mfc@rudn.ru",
+            "label": "МФЦ РУДН"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_RUDN_REGISTRATION_DUPLICATE",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "immediate_after_incident",
+      "published_rule": "Обратитесь без промедления после утраты, повреждения или замены документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "МФЦ РУДН",
+        "contact_url": "https://lk.rudn.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "mfc@rudn.ru",
+            "label": "МФЦ РУДН"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_RUDN_RVPO_APPLY",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "МФЦ РУДН",
+        "contact_url": "https://lk.rudn.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "mfc@rudn.ru",
+            "label": "МФЦ РУДН"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_RUDN_SNILS_REGISTER",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "МФЦ РУДН",
+        "contact_url": "https://lk.rudn.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "mfc@rudn.ru",
+            "label": "МФЦ РУДН"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_RUDN_STUDY_VISA_COLLECT",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "МФЦ РУДН",
+        "contact_url": "https://lk.rudn.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "mfc@rudn.ru",
+            "label": "МФЦ РУДН"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_RUDN_ADAPTATION_CHECKIN",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Центр адаптации иностранных граждан РУДН",
+        "contact_url": null,
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_RUDN_DORM_DIRECTION",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "МФЦ РУДН",
+        "contact_url": "https://lk.rudn.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "mfc@rudn.ru",
+            "label": "МФЦ РУДН"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_RUDN_DORM_LEASE",
+      "university_id": "UNIV_RUDN",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "МФЦ РУДН",
+        "contact_url": "https://lk.rudn.ru/",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "mfc@rudn.ru",
+            "label": "МФЦ РУДН"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_SPBU_ACCOUNTING_DATA_UPDATE",
+      "university_id": "UNIV_SPBU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Управление по миграционной и регистрационной работе СПбГУ",
+        "contact_url": "https://guide.spbu.ru/foreigner",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "pvo@spbu.ru",
+            "label": "УМиРР"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_SPBU_INVITATION_REQUEST",
+      "university_id": "UNIV_SPBU",
+      "deadline_kind": "university_defined",
+      "published_rule": "Подайте полный комплект заранее; точный срок обработки устанавливает университет и зависит от полноты документов.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Управление по миграционной и регистрационной работе СПбГУ",
+        "contact_url": "https://guide.spbu.ru/foreigner",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "pvo@spbu.ru",
+            "label": "УМиРР"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_SPBU_DORM_ASSIGNMENT",
+      "university_id": "UNIV_SPBU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Студгородок СПбГУ",
+        "contact_url": "https://guide.spbu.ru/dormitory",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "911@spbu.ru",
+            "label": "Студгородок"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_SPBU_POLICY_COPY",
+      "university_id": "UNIV_SPBU",
+      "deadline_kind": "after_document_received",
+      "published_rule": "Передайте копию в университет сразу после получения документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Управление по миграционной и регистрационной работе СПбГУ",
+        "contact_url": "https://guide.spbu.ru/foreigner",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "pvo@spbu.ru",
+            "label": "УМиРР"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_SPBU_PRIVATE_COPY",
+      "university_id": "UNIV_SPBU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Управление по миграционной и регистрационной работе СПбГУ",
+        "contact_url": "https://guide.spbu.ru/foreigner",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "pvo@spbu.ru",
+            "label": "УМиРР"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_SPBU_TRAVEL_NOTIFY",
+      "university_id": "UNIV_SPBU",
+      "deadline_kind": "relative_before_event",
+      "published_rule": "Выполните действие до поездки.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Управление по миграционной и регистрационной работе СПбГУ",
+        "contact_url": "https://guide.spbu.ru/foreigner",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "pvo@spbu.ru",
+            "label": "УМиРР"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_TSU_FINGERPRINT_PHOTO",
+      "university_id": "UNIV_TSU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Организованный сбор иностранных первокурсников ТГУ",
+        "contact_url": "https://forms.yandex.ru/cloud/6a83d1ff6d2d735ae991e21d",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_TSU_INVITATION_REQUEST",
+      "university_id": "UNIV_TSU",
+      "deadline_kind": "processing_duration_advisory",
+      "published_rule": "Направьте анкету и скан паспорта координатору программы заранее. Официальная страница ТГУ указывает 30–40 дней, а в разделе визовой поддержки — 35 рабочих дней; планируйте не менее 35 рабочих дней и подтвердите дату у координатора.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "published_official_advisory",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел визового сопровождения ТГУ",
+        "contact_url": "https://tsu.ru/university/structure/upravl/inter_upr.php?nv=on",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "visa@mail.tsu.ru",
+            "label": "Визовое сопровождение"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (3822) 526-945",
+            "label": "Визовое сопровождение"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_TSU_MEDICAL_INITIAL",
+      "university_id": "UNIV_TSU",
+      "deadline_kind": "event_based",
+      "published_rule": "Выполните действие при наступлении указанного в карточке события; отдельный универсальный числовой срок официально не опубликован.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Организованный сбор иностранных первокурсников ТГУ",
+        "contact_url": "https://forms.yandex.ru/cloud/6a83d1ff6d2d735ae991e21d",
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_TSU_STAY_PETITION_REQUEST",
+      "university_id": "UNIV_TSU",
+      "deadline_kind": "office_defined",
+      "published_rule": "Получите ходатайство в кабинете 327 до подачи на продление; конкретный срок зависит от основания и подтверждается отделом визового сопровождения.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "no_universal_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел визового сопровождения ТГУ",
+        "contact_url": "https://tsu.ru/university/structure/upravl/inter_upr.php?nv=on",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "visa@mail.tsu.ru",
+            "label": "Визовое сопровождение"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (3822) 526-945",
+            "label": "Визовое сопровождение"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "OVR_TSU_STUDY_VISA_EXTEND",
+      "university_id": "UNIV_TSU",
+      "deadline_kind": "relative_before_expiry",
+      "published_rule": "На старой официальной странице ТГУ опубликован ориентир 50 календарных дней до окончания визы. Перед созданием напоминания подтвердите актуальный срок в отделе визового сопровождения; автоматическая дата отключена.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "published_old_or_undated_reference_requires_current_confirmation",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Отдел визового сопровождения ТГУ",
+        "contact_url": "https://tsu.ru/university/structure/upravl/inter_upr.php?nv=on",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "visa@mail.tsu.ru",
+            "label": "Визовое сопровождение"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 (3822) 526-945",
+            "label": "Визовое сопровождение"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_TSU_MEDICAL_COPY",
+      "university_id": "UNIV_TSU",
+      "deadline_kind": "after_document_received",
+      "published_rule": "Передайте копию в университет сразу после получения документа.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "explicit_event_rule_no_public_numeric_deadline",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "УСМП ТГУ",
+        "contact_url": null,
+        "contacts": []
+      },
+      "unhandled_gap": false
+    },
+    {
+      "record_id": "UNI_TSU_TRAVEL_NOTIFY",
+      "university_id": "UNIV_TSU",
+      "deadline_kind": "relative_before_event",
+      "published_rule": "До поездки свяжитесь с отделом визового сопровождения и уточните необходимость уведомления и повторной регистрации.",
+      "handling": "No invented date. Show checklist/event rule and fallback contact.",
+      "fallback": {
+        "reason": "contact_before_trip_without_numeric_offset",
+        "instruction": "Покажите пользователю правило-событие и официальный контакт; не создавайте вымышленную календарную дату.",
+        "contact_name": "Центр сопровождения ТГУ",
+        "contact_url": "https://tsu.ru/university/structure/upravl/inter_upr.php?nv=on",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "studentcenter@mail.tsu.ru",
+            "label": "Сопровождение"
+          }
+        ]
+      },
+      "unhandled_gap": false
+    }
+  ]
+}

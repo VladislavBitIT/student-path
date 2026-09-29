@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "msu_campus",
+      "label": "Кампус/область локальной инструкции",
+      "type": "enum",
+      "dictionary_id": "msu_campuses"
+    },
+    {
+      "code": "msu_own_dormitory",
+      "label": "Предоставлено место в общежитии МГУ",
+      "type": "boolean"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_REGISTRATION_CONFIRMATION",
+  "kind": "federal",
+  "version": 1,
+  "status": "draft",
+  "title": "Получите подтверждение постановки на учёт у принимающей стороны",
+  "summary": "Получите от принимающей стороны подтверждение принятого уведомления о прибытии.",
+  "category": "accounting",
+  "research_process_ids": [
+    "PROC_ARRIVAL_REGISTRATION"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "arrival_notice_submitted",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "arrival_notice_submitted",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_REGISTRATION_CONFIRMATION"
+    ]
+  },
+  "instructions": [
+    "Получите от принимающей стороны подтверждение принятого уведомления о прибытии.",
+    "Сверьте адрес, данные паспорта и срок; сохраните подтверждение."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "authority",
+    "name": "Принимающая сторона, подавшая уведомление",
+    "selection_basis": "Организация/лицо, направившие уведомление по фактическому адресу.",
+    "information_url": "https://epp.genproc.gov.ru/ru/proc_50/activity/legal-education/explain/e472548/",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Подтверждение учёта получено",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Договоры, гостиницы/стационары, самостоятельное уведомление и эксперимент Москвы/области — отдельные ветки.",
+      "unresolved_ids": [
+        "UNR_ARRIVAL_REGISTRATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_REGISTRATION_CONFIRMATION",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Форма бумажного/электронного результата зависит от канала; срок получения пользователем отдельно не установлен. Учёт сам по себе не продлевает законное пребывание.",
+      "unresolved_ids": [
+        "UNR_STEP_REGISTRATION_CONFIRMATION"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Договоры, гостиницы/стационары, самостоятельное уведомление и эксперимент Москвы/области — отдельные ветки.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Получите от принимающей стороны подтверждение принятого уведомления о прибытии. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_REG_GUIDE",
+      "locator": "Разъяснение 02.02.2024: обычный учёт, принимающая сторона и 7 рабочих дней",
+      "supports": "Сверьте адрес, данные паспорта и срок; сохраните подтверждение. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_REGISTRATION_CONFIRMATION",
+    "UNR_ARRIVAL_REGISTRATION",
+    "UNR_CURRENT_EDITION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T06:06:57Z",
+    "reviewer": "Проверка федеральной карточки по сохранённым и повторно прочитанным государственным материалам",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_REGISTRATION_CONFIRMATION",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_REGISTRATION_CONFIRMATION",
+      "note": "Форма бумажного/электронного результата зависит от канала; срок получения пользователем отдельно не установлен. Учёт сам по себе не продлевает законное пребывание."
+    }
+  ]
+}

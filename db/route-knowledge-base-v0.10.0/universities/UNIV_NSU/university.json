@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNIV_NSU",
+  "name": "Новосибирский государственный университет",
+  "status": "draft",
+  "timezone": "Asia/Novosibirsk",
+  "contacts": [
+    {
+      "kind": "email",
+      "value": "intersupport@nsu.ru",
+      "label": "ОСИО, поддержка иностранных студентов"
+    },
+    {
+      "kind": "phone",
+      "value": "+7 (383) 363-43-56",
+      "label": "ОСИО"
+    }
+  ],
+  "overlay_ids": [
+    "OVR_NSU_INVITATION_REQUEST",
+    "OVR_NSU_VISA_APPLY",
+    "OVR_NSU_VISA_COLLECT_ABROAD"
+  ],
+  "step_ids": [
+    "UNI_NSU_ARRIVAL_NOTIFY",
+    "UNI_NSU_DORM_CHECKIN",
+    "UNI_NSU_PAYMENT_PROOF",
+    "UNI_NSU_CONTRACT"
+  ],
+  "evidence": [
+    {
+      "source_id": "SRC_NSU_ADMISSION",
+      "locator": "Название и локальная область источника",
+      "supports": "Университет и назначение раздела."
+    }
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:30:00.761040Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  },
+  "extension_resources": {
+    "facts": "universities/UNIV_NSU/dictionaries/facts.json",
+    "event_types": "universities/UNIV_NSU/dictionaries/event_types.json",
+    "dictionaries": [
+      "universities/UNIV_NSU/dictionaries/nsu_campuses.json"
+    ]
+  }
+}

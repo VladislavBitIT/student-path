@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_ITMO_MEDICAL_UPLOAD",
+  "university_id": "UNIV_ITMO",
+  "kind": "university",
+  "version": 2,
+  "status": "draft",
+  "title": "Дополните медицинские сведения в my.itmo",
+  "summary": "В «Заявках» my.itmo загрузите недостающие медицинские документы. Для общежития проверьте ФЛГ, сведения о прививках с датами и форму СЭМД-196 либо 086/у.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "itmo_medical_upload_needed",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "itmo_account_available",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "itmo_medical_upload_needed",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_ITMO_STEP_MEDICAL_UPLOAD"
+    ]
+  },
+  "instructions": [
+    "В «Заявках» my.itmo загрузите недостающие медицинские документы. Для общежития проверьте ФЛГ, сведения о прививках с датами и форму СЭМД-196 либо 086/у."
+  ],
+  "documents": [
+    {
+      "id": "DOC_ITMO_FLG",
+      "title": "ФЛГ из РФ давностью до 12 месяцев",
+      "requirement": "conditional",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_ITMO_HOUSING_RU",
+          "locator": "Перечень документов соответствующей локальной процедуры",
+          "supports": "Локальная позиция перечня."
+        }
+      ],
+      "condition": {
+        "op": "eq",
+        "fact": "itmo_needs_dorm",
+        "value": true
+      }
+    },
+    {
+      "id": "DOC_ITMO_VACCINATION",
+      "title": "Сведения о прививках с датами",
+      "requirement": "conditional",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_ITMO_HOUSING_RU",
+          "locator": "Перечень документов соответствующей локальной процедуры",
+          "supports": "Локальная позиция перечня."
+        }
+      ],
+      "condition": {
+        "op": "eq",
+        "fact": "itmo_needs_dorm",
+        "value": true
+      }
+    },
+    {
+      "id": "DOC_ITMO_MED_FORM",
+      "title": "СЭМД-196 либо 086/у",
+      "requirement": "conditional",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_ITMO_HOUSING_RU",
+          "locator": "Перечень документов соответствующей локальной процедуры",
+          "supports": "Локальная позиция перечня."
+        }
+      ],
+      "condition": {
+        "op": "eq",
+        "fact": "itmo_needs_dorm",
+        "value": true
+      }
+    }
+  ],
+  "destination": {
+    "kind": "online",
+    "name": "my.itmo — медицинские заявки",
+    "url": "https://my.itmo.ru/requests",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "medinform@itmo.ru",
+        "label": "Медпункт"
+      }
+    ],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Дополните медицинские сведения в my.itmo — действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_ITMO_STEP_MEDICAL_UPLOAD",
+      "severity": "blocking",
+      "message": "Подтвержденные локальные сведения сохранены; пробелы перечислены в unresolved.",
+      "unresolved_ids": [
+        "UNR_ITMO_STEP_MEDICAL_UPLOAD"
+      ]
+    },
+    {
+      "id": "WARN_ITMO_AUTHENTICATED_FORMS",
+      "severity": "blocking",
+      "message": "Ссылки my.itmo ведут на авторизацию. Публичное назначение подтверждено страницами ИТМО; поля форм, доступы и успешная отправка после входа не проверены. Форма 086/у /requests/new/8326 не открылась инструментом.",
+      "unresolved_ids": [
+        "UNR_ITMO_AUTHENTICATED_FORMS"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_ITMO_MEDICINE",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Локальные сведения ИТМО; область применения ограничена карточкой.",
+      "fields": [
+        "/instructions",
+        "/applicability",
+        "/destination",
+        "/documents",
+        "/deadline"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_HOUSING_RU",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Локальные сведения ИТМО; область применения ограничена карточкой.",
+      "fields": [
+        "/instructions",
+        "/applicability",
+        "/destination",
+        "/documents",
+        "/deadline"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_MEDICINE",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Результат означает подтверждение пользователем выполнения описанного действия; не гарантирует положительное решение университета.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_ITMO_STEP_MEDICAL_UPLOAD",
+    "UNR_ITMO_AUTHENTICATED_FORMS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:40:30.570901Z",
+    "reviewer": "Повторное самостоятельное исследование официальных страниц в последовательном обзоре десяти вузов",
+    "next_review_on": "2026-10-26"
+  }
+}

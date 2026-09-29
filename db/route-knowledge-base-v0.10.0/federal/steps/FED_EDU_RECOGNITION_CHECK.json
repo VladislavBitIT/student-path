@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_EDU_RECOGNITION_CHECK",
+  "kind": "federal",
+  "version": 2,
+  "status": "draft",
+  "title": "Проверьте необходимость признания документа об образовании",
+  "summary": "Укажите страну, организацию выдачи, уровень и дату документа об образовании.",
+  "category": "entry",
+  "research_process_ids": [
+    "PROC_EDU_RECOGNITION"
+  ],
+  "actor": "student",
+  "obligation": "recommended",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "foreign_education_document",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "admission_planned",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_EDU_RECOGNITION_CHECK"
+    ]
+  },
+  "instructions": [
+    "Укажите страну, организацию выдачи, уровень и дату документа об образовании.",
+    "На сайте Национального информационного центра сопоставьте документ с международными договорами и перечнем признаваемых организаций. Отдельно проверьте опубликованное основание права принимающей организации на самостоятельное признание; отсутствие сведений не означает, что признание не требуется."
+  ],
+  "documents": [
+    {
+      "id": "DOC_EDUCATION",
+      "title": "Иностранный документ об образовании и приложение",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_RECOGNITION",
+          "locator": "Признание иностранного образования: основания и исключения",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Рособрнадзор/уполномоченный центр признания",
+    "selection_basis": "Проверка основания признания по документу; право отдельного вуза не предполагается автоматически.",
+    "information_url": "https://minobrnauki.gov.ru/press-center/news/?ELEMENT_ID=49790",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Установлено, требуется ли индивидуальная процедура признания",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Самостоятельное признание вузом может иметь ограниченную область действия; не считать все иностранные дипломы непризнанными.",
+      "unresolved_ids": [
+        "UNR_EDU_RECOGNITION",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_EDU_RECOGNITION_CHECK",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Текущие договоры и перечни не сведены полностью; гражданство владельца само по себе не определяет необходимость признания.",
+      "unresolved_ids": [
+        "UNR_STEP_EDU_RECOGNITION_CHECK"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Иностранный документ об образовании и приложение",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Самостоятельное признание вузом может иметь ограниченную область действия; не считать все иностранные дипломы непризнанными.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Укажите страну, организацию выдачи, уровень и дату документа об образовании. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Проверка оснований признания по официальному информационному ресурсу; действующие перечни требуют дополнительной сверки.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_EDU_RECOGNITION_CHECK",
+    "UNR_EDU_RECOGNITION",
+    "UNR_CURRENT_EDITION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T07:54:30Z",
+    "reviewer": "Финальный аудит: исправлены перечисленные поля; статус draft сохранён",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_EDU_RECOGNITION_CHECK",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_EDU_RECOGNITION_CHECK",
+      "note": "Текущие договоры и перечни не сведены полностью; гражданство владельца само по себе не определяет необходимость признания."
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_EDU_RECOGNITION_APPLY",
+  "kind": "federal",
+  "version": 1,
+  "status": "draft",
+  "title": "Подайте документ на индивидуальное признание",
+  "summary": "Подайте заявление о признании иностранного образования по установленной процедуре Рособрнадзора.",
+  "category": "entry",
+  "research_process_ids": [
+    "PROC_EDU_RECOGNITION"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "foreign_education_document",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "recognition_required",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "wants_recognition",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "recognition_path_selected",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_EDU_RECOGNITION_APPLY"
+    ]
+  },
+  "instructions": [
+    "Подайте заявление о признании иностранного образования по установленной процедуре Рособрнадзора.",
+    "Приложите документ об образовании с приложением и предусмотренный перевод; сохраните подтверждение подачи."
+  ],
+  "documents": [
+    {
+      "id": "DOC_EDUCATION",
+      "title": "Документ об образовании и приложение",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_RECOGNITION",
+          "locator": "Признание иностранного образования: основания и исключения",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    },
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "original",
+      "evidence": [
+        {
+          "source_id": "SRC_RECOGNITION",
+          "locator": "Признание иностранного образования: основания и исключения",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Рособрнадзор и уполномоченный центр признания",
+    "selection_basis": "Индивидуальная государственная процедура; самостоятельное признание вузом — другая ветка.",
+    "information_url": "https://minobrnauki.gov.ru/press-center/news/?ELEMENT_ID=49790",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Заявление о признании подано",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Самостоятельное признание вузом может иметь ограниченную область действия; не считать все иностранные дипломы непризнанными.",
+      "unresolved_ids": [
+        "UNR_EDU_RECOGNITION",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_EDU_RECOGNITION_APPLY",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Полный актуальный регламент № 1443, комплект/переводы, госпошлина и каналы подачи не подтверждены. Карточка сохраняет саму процедуру и подтверждённые документы, но не разрешает подачу неполного комплекта.",
+      "unresolved_ids": [
+        "UNR_STEP_EDU_RECOGNITION_APPLY"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Документ об образовании и приложение",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Самостоятельное признание вузом может иметь ограниченную область действия; не считать все иностранные дипломы непризнанными.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Подайте заявление о признании иностранного образования по установленной процедуре Рособрнадзора. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RECOGNITION",
+      "locator": "Признание иностранного образования: основания и исключения — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Приложите документ об образовании с приложением и предусмотренный перевод; сохраните подтверждение подачи. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_EDU_RECOGNITION_APPLY",
+    "UNR_EDU_RECOGNITION",
+    "UNR_CURRENT_EDITION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T06:06:57Z",
+    "reviewer": "Проверка федеральной карточки по сохранённым и повторно прочитанным государственным материалам",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_EDU_RECOGNITION_APPLY",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_EDU_RECOGNITION_APPLY",
+      "note": "Полный актуальный регламент № 1443, комплект/переводы, госпошлина и каналы подачи не подтверждены. Карточка сохраняет саму процедуру и подтверждённые документы, но не разрешает подачу неполного комплекта."
+    }
+  ]
+}

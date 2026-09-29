@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.1.0",
+  "id": "OVR_MIPT_HOST_DOCUMENTS",
+  "university_id": "UNIV_MIPT",
+  "target_step_id": "FED_HOST_DOCUMENTS",
+  "target_step_version": 2,
+  "version": 1,
+  "status": "draft",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "mipt_campus",
+            "value": "main"
+          },
+          {
+            "op": "all",
+            "args": [
+              {
+                "op": "eq",
+                "fact": "mipt_own_dormitory",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "fact": "has_study_visa",
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "eq",
+        "fact": "accommodation_type",
+        "value": "dormitory"
+      }
+    ]
+  },
+  "effective_period": {},
+  "additions": {
+    "instructions": [
+      "Отправьте в миграционный отдел чёткие фотографии всех разворотов паспорта, включая пустые, и миграционной карты."
+    ],
+    "destination": {
+      "kind": "hybrid",
+      "name": "Отдел международных связей МФТИ, 312 АК",
+      "address": "Долгопрудный, Аудиторный корпус МФТИ, кабинет 312; адрес корпуса сверять по официальной странице",
+      "url": "https://pk.mipt.ru/foreign/",
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "migrationservice@phystech.edu",
+          "label": "Визы и миграционный учёт"
+        },
+        {
+          "kind": "phone",
+          "value": "+7 (495) 408-75-63",
+          "label": "Отдел международных связей"
+        }
+      ],
+      "appointment_required": "unknown"
+    },
+    "warnings": [
+      {
+        "id": "WARN_OVR_MIPT_HOST_DOCUMENTS",
+        "severity": "blocking",
+        "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+        "unresolved_ids": [
+          "UNR_MIPT_HOST_DOCUMENTS"
+        ]
+      }
+    ],
+    "local_deadlines": [
+      {
+        "id": "LD_OVR_MIPT_HOST_DOCUMENTS",
+        "scope": "university_internal",
+        "title": "Передача документов в университет",
+        "applicability": {
+          "op": "always"
+        },
+        "reported_text": "В течение двух дней после въезда",
+        "state": "partial",
+        "deadline": {
+          "kind": "partial",
+          "known": {
+            "amount": 2,
+            "unit": "day_unspecified",
+            "direction": "after",
+            "anchor_description": "Въезд в Россию",
+            "actor": "student",
+            "legal_text": "Внутренний срок университета, не федеральная норма."
+          },
+          "calculation_allowed": false,
+          "unresolved_ids": [
+            "UNR_MIPT_HOST_DOCUMENTS"
+          ]
+        },
+        "source_id": "SRC_MIPT_PK",
+        "locator": "После зачисления, визовые страны",
+        "checked_on": "2026-09-26"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MIPT_PK",
+      "locator": "После зачисления, визовые страны",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/additions/instructions",
+        "/additions/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MIPT_HOST_DOCUMENTS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:43:03.629789Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

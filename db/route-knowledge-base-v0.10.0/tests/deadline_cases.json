@@ -1,0 +1,1573 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Искусственные тесты арифметики контракта. Календарь, источники и сроки не являются миграционными правилами.",
+  "cases": [
+    {
+      "id": "TEST_CLOCK_DAYS_AFTER",
+      "title": "3 календарных дня после события",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-28T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_DAYS_INCLUDE",
+      "title": "Включение дня события",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": true,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-27T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_DAYS_BEFORE",
+      "title": "3 календарных дня до события",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "before",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-22T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_DAYS_BEFORE_INCLUDE",
+      "title": "Обратный отсчёт с включением дня",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "before",
+        "include_anchor_day": true,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-23T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_ZERO",
+      "title": "Нулевое смещение не вычитает день",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 0,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": true,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-25T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_HOURS_AFTER",
+      "title": "72 часа считаются по моментам UTC",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 72,
+        "unit": "hour",
+        "direction": "after",
+        "include_anchor_day": false,
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-28T09:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_HOURS_BEFORE",
+      "title": "4 часа до события",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 4,
+        "unit": "hour",
+        "direction": "before",
+        "include_anchor_day": false,
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-25T05:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_HOURS_DATE_ONLY",
+      "title": "Для часов недостаточно даты",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "fact",
+          "fact": "anchor_date"
+        },
+        "amount": 4,
+        "unit": "hour",
+        "direction": "after",
+        "include_anchor_day": false,
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {
+        "anchor_date": "2026-09-25"
+      },
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "imprecise_hour_anchor"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_FACT_DATE",
+      "title": "Якорь из календарной даты",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "fact",
+          "fact": "anchor_date"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {
+        "anchor_date": "2026-09-25"
+      },
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-28T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_FACT_DATETIME_ZONE",
+      "title": "Дата якоря определяется в часовом поясе срока",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "fact",
+          "fact": "anchor_at"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {
+        "anchor_at": "2026-09-25T23:30:00Z"
+      },
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-29T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_MISSING_FACT",
+      "title": "Отсутствующий якорь не заменяется сегодня",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "fact",
+          "fact": "anchor_date"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "missing_anchor"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_MISSING_TRIGGER",
+      "title": "Нет запускающего события",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": null,
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "missing_anchor"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_MISSING_EVENT",
+      "title": "Не найдено событие-якорь",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "event",
+          "event_type": "synthetic_event",
+          "occurrence": "latest"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "missing_anchor"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_FIRST_EVENT",
+      "title": "Первое событие, входной массив перемешан",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "event",
+          "event_type": "synthetic_event",
+          "occurrence": "first"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [
+        {
+          "id": "E2",
+          "event_type": "synthetic_event",
+          "occurred_at": "2026-09-28T09:00:00Z",
+          "facts": {}
+        },
+        {
+          "id": "E1",
+          "event_type": "synthetic_event",
+          "occurred_at": "2026-09-25T09:00:00Z",
+          "facts": {}
+        }
+      ],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-28T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_LATEST_EVENT",
+      "title": "Последнее событие, будущее игнорируется",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "event",
+          "event_type": "synthetic_event",
+          "occurrence": "latest"
+        },
+        "amount": 3,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [
+        {
+          "id": "E1",
+          "event_type": "synthetic_event",
+          "occurred_at": "2026-09-25T09:00:00Z",
+          "facts": {}
+        },
+        {
+          "id": "E2",
+          "event_type": "synthetic_event",
+          "occurred_at": "2026-09-28T09:00:00Z",
+          "facts": {}
+        },
+        {
+          "id": "FUTURE",
+          "event_type": "synthetic_event",
+          "occurred_at": "2027-01-01T00:00:00Z",
+          "facts": {}
+        }
+      ],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-10-01T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_MONTH_CLAMP",
+      "title": "31 января плюс месяц: конец месяца",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 1,
+        "unit": "calendar_month",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-01-31T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-02-28T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_MONTH_ERROR",
+      "title": "Запрет округления конца месяца",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 1,
+        "unit": "calendar_month",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "error"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-01-31T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "month_end_overflow"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_MONTH_LEAP",
+      "title": "Високосный февраль",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 1,
+        "unit": "calendar_month",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2024-01-31T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2024-02-29T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_MONTH_BACK",
+      "title": "Месяц назад через границу года",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 1,
+        "unit": "calendar_month",
+        "direction": "before",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-01-31T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2025-12-31T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_YEAR_LEAP_CLAMP",
+      "title": "29 февраля плюс год",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 1,
+        "unit": "calendar_year",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2024-02-29T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2025-02-28T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_YEAR_LEAP_ERROR",
+      "title": "Невозможная дата при политике error",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 1,
+        "unit": "calendar_year",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "error"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2024-02-29T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "month_end_overflow"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_BUSINESS_WEEKEND",
+      "title": "Два рабочих дня после пятницы",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "known",
+        "at": "2026-09-29T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_BUSINESS_INCLUDE",
+      "title": "Пятница включается как первый рабочий день",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "after",
+        "include_anchor_day": true,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "known",
+        "at": "2026-09-28T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_BUSINESS_INCLUDE_WEEKEND",
+      "title": "Выходной не становится рабочим из-за include",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "after",
+        "include_anchor_day": true,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-26T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "known",
+        "at": "2026-09-29T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_BUSINESS_BEFORE",
+      "title": "Два рабочих дня до понедельника",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "before",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-28T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "known",
+        "at": "2026-09-24T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_HOLIDAY",
+      "title": "Явный нерабочий понедельник",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [
+            "2026-09-28"
+          ],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "known",
+        "at": "2026-09-30T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_WORKING_SATURDAY",
+      "title": "Явная рабочая суббота",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [
+            "2026-09-26"
+          ],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "known",
+        "at": "2026-09-28T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_MISSING_CALENDAR",
+      "title": "Пятидневка не подставляется автоматически",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "missing_calendar"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_CALENDAR_END",
+      "title": "Расчёт выходит за покрытие",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-09-28",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "unknown",
+        "reason": "calendar_out_of_coverage"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_CALENDAR_START",
+      "title": "Обратный расчёт выходит за покрытие",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "before",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-01-01T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "unknown",
+        "reason": "calendar_out_of_coverage"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_CALENDAR_ZONE",
+      "title": "Часовой пояс календаря не совпадает",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "business_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "none",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Asia/Vladivostok",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "unknown",
+        "reason": "calendar_timezone_mismatch"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_ROLLOVER_NEXT",
+      "title": "Воскресенье переносится на понедельник",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "next_business_day",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "known",
+        "at": "2026-09-28T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_ROLLOVER_PREVIOUS",
+      "title": "Воскресенье переносится на пятницу",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 2,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "18:00:00",
+        "timezone": "Europe/Moscow",
+        "rollover": "previous_business_day",
+        "month_end": "clamp",
+        "calendar_ref": "fixture"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {
+        "fixture": {
+          "code": "fixture",
+          "timezone": "Europe/Moscow",
+          "coverage_start": "2026-01-01",
+          "coverage_end": "2026-12-31",
+          "weekend_days": [
+            6,
+            7
+          ],
+          "working_dates": [],
+          "non_working_dates": [],
+          "evidence": [
+            {
+              "source_id": "SRC_TEST_CLOCK",
+              "locator": "Synthetic calendar",
+              "supports": "Arithmetic fixture only; not an official calendar"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "state": "known",
+        "at": "2026-09-25T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_DST_GAP",
+      "title": "Несуществующее местное время",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 1,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "02:30:00",
+        "timezone": "Europe/Berlin",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-03-28T10:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "ambiguous_or_nonexistent_local_time"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_DST_FOLD",
+      "title": "Неоднозначное местное время",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 1,
+        "unit": "calendar_day",
+        "direction": "after",
+        "include_anchor_day": false,
+        "time_of_day": "02:30:00",
+        "timezone": "Europe/Berlin",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-10-24T10:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "ambiguous_or_nonexistent_local_time"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_DST_HOURS",
+      "title": "24 часа через перевод часов",
+      "synthetic": true,
+      "model": {
+        "kind": "relative",
+        "anchor": {
+          "kind": "trigger_event"
+        },
+        "amount": 24,
+        "unit": "hour",
+        "direction": "after",
+        "include_anchor_day": false,
+        "timezone": "Europe/Berlin",
+        "rollover": "none",
+        "month_end": "clamp"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-03-28T10:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-03-29T10:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_FIXED",
+      "title": "Заданный момент нормализуется в UTC",
+      "synthetic": true,
+      "model": {
+        "kind": "fixed",
+        "at": "2026-09-25T18:00:00+03:00"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "known",
+        "at": "2026-09-25T15:00:00Z"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_NONE",
+      "title": "Отсутствие срока явно отличается от неизвестности",
+      "synthetic": true,
+      "model": {
+        "kind": "none",
+        "reason": "Synthetic no deadline"
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "none"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_UNKNOWN",
+      "title": "Неизвестный срок остаётся неизвестным",
+      "synthetic": true,
+      "model": {
+        "kind": "unknown",
+        "unresolved_ids": [
+          "UNR_TEST_CLOCK"
+        ]
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "incomplete_model"
+      }
+    },
+    {
+      "id": "TEST_CLOCK_PARTIAL",
+      "title": "Число дней без полной модели не превращается в дату",
+      "synthetic": true,
+      "model": {
+        "kind": "partial",
+        "known": {
+          "amount": 30,
+          "unit": "calendar_day",
+          "direction": "after",
+          "anchor_description": "Synthetic trigger",
+          "actor": "student",
+          "legal_text": "Synthetic only"
+        },
+        "calculation_allowed": false,
+        "unresolved_ids": [
+          "UNR_TEST_CLOCK"
+        ]
+      },
+      "facts": {},
+      "events": [],
+      "trigger_event": {
+        "id": "E1",
+        "event_type": "synthetic_event",
+        "occurred_at": "2026-09-25T09:00:00Z",
+        "facts": {}
+      },
+      "as_of": "2026-12-31T23:59:59Z",
+      "calendars": {},
+      "expected": {
+        "state": "unknown",
+        "reason": "incomplete_model"
+      }
+    }
+  ]
+}

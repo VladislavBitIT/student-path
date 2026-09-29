@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_MIPT_LEAVE_DORM",
+  "university_id": "UNIV_MIPT",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Направить заявление об отсутствии в общежитии МФТИ",
+  "summary": "Впишите сроки и причину отсутствия в форму, подпишите и отправьте на указанный email до отъезда.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "mipt_campus",
+        "value": "main"
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "mipt_preparatory",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "mipt_own_dormitory",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "mipt_absence_over_24h",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "departure_planned",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_MIPT_LEAVE_DORM"
+    ]
+  },
+  "instructions": [
+    "Впишите сроки и причину отсутствия в форму, подпишите и отправьте на указанный email до отъезда."
+  ],
+  "documents": [
+    {
+      "id": "DOC_UNI_MIPT_LEAVE_DORM_1",
+      "title": "Подписанное заявление об отсутствии",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_MIPT_LEAVE_FORM",
+          "locator": "Application for Leaving the Dormitory",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "online",
+    "name": "Подготовительное отделение МФТИ",
+    "url": "https://eng.mipt.ru/docs/preparatory_faq/Application_for_Leaving_the_Dormitory.pdf",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "foundationcourse@phystech.edu",
+        "label": "Заявление об отсутствии"
+      }
+    ],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_MIPT_LEAVE_DORM",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_MIPT_LEAVE_DORM"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_MIPT_LEAVE_FORM",
+      "locator": "Application for Leaving the Dormitory",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination",
+        "/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_MIPT_LEAVE_DORM"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T08:43:03.629789Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

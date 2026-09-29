@@ -1,0 +1,439 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "citizenship_country",
+      "label": "Гражданство (одна страна; множественное гражданство требует расширения модели)",
+      "type": "enum",
+      "dictionary_id": "countries"
+    },
+    {
+      "code": "residence_status",
+      "label": "Статус пребывания/проживания",
+      "type": "enum",
+      "dictionary_id": "residence_statuses"
+    },
+    {
+      "code": "accommodation_type",
+      "label": "Тип размещения",
+      "type": "enum",
+      "dictionary_id": "accommodation_types"
+    },
+    {
+      "code": "arrival_on",
+      "label": "Дата прибытия, значение из анкеты",
+      "type": "date"
+    },
+    {
+      "code": "study_started_on",
+      "label": "Дата начала обучения, значение из анкеты",
+      "type": "date"
+    },
+    {
+      "code": "foreign_person",
+      "label": "Лицо не является гражданином РФ; двойное гражданство РФ проверено отдельно",
+      "type": "boolean"
+    },
+    {
+      "code": "plans_study_entry",
+      "label": "Планирует въезд для обучения",
+      "type": "boolean"
+    },
+    {
+      "code": "study_visa_needed",
+      "label": "Для конкретного документа/цели подтверждена необходимость учебной визы",
+      "type": "boolean"
+    },
+    {
+      "code": "has_invitation",
+      "label": "Приглашение получено",
+      "type": "boolean"
+    },
+    {
+      "code": "has_study_visa",
+      "label": "Имеется действующая учебная виза",
+      "type": "boolean"
+    },
+    {
+      "code": "needs_visa_extension",
+      "label": "Требуется продолжение учебной визы",
+      "type": "boolean"
+    },
+    {
+      "code": "foreign_education_document",
+      "label": "Имеется иностранный документ об образовании",
+      "type": "boolean"
+    },
+    {
+      "code": "recognition_required",
+      "label": "Отсутствие применимого освобождения от признания установлено по документу и договору",
+      "type": "boolean"
+    },
+    {
+      "code": "wants_recognition",
+      "label": "Пользователь выбрал подачу на признание",
+      "type": "boolean"
+    },
+    {
+      "code": "visa_free_entry",
+      "label": "Въезд по подтверждённому безвизовому основанию",
+      "type": "boolean"
+    },
+    {
+      "code": "ruid_applicable",
+      "label": "Участие в действующем эксперименте ruID установлено после проверки исключений",
+      "type": "boolean"
+    },
+    {
+      "code": "emergency_entry",
+      "label": "Документированное экстренное основание для ruID",
+      "type": "boolean"
+    },
+    {
+      "code": "migration_card_required",
+      "label": "Обязанность иметь миграционную карту установлена для документа/поездки",
+      "type": "boolean"
+    },
+    {
+      "code": "has_migration_card",
+      "label": "Миграционная карта имеется",
+      "type": "boolean"
+    },
+    {
+      "code": "ordinary_arrival_accounting",
+      "label": "Применим обычный учёт по месту пребывания; специальные режимы исключены",
+      "type": "boolean"
+    },
+    {
+      "code": "host_handles_notification",
+      "label": "Уведомление о прибытии подаёт принимающая сторона",
+      "type": "boolean"
+    },
+    {
+      "code": "arrival_notice_submitted",
+      "label": "Уведомление о прибытии фактически подано",
+      "type": "boolean"
+    },
+    {
+      "code": "self_notice_legal_ground",
+      "label": "Правовое основание самостоятельного уведомления подтверждено",
+      "type": "boolean"
+    },
+    {
+      "code": "amina_applicable",
+      "label": "Применимость действующего этапа эксперимента Москва/область подтверждена",
+      "type": "boolean"
+    },
+    {
+      "code": "needs_study_stay_extension",
+      "label": "Есть законное учебное основание и требуется продление пребывания",
+      "type": "boolean"
+    },
+    {
+      "code": "is_enrolled",
+      "label": "Имеется действующее зачисление",
+      "type": "boolean"
+    },
+    {
+      "code": "full_time",
+      "label": "Форма обучения очная",
+      "type": "boolean"
+    },
+    {
+      "code": "program_accredited",
+      "label": "Требуемая государственная аккредитация программы подтверждена",
+      "type": "boolean"
+    },
+    {
+      "code": "state_education_or_science_org",
+      "label": "Организация государственная образовательная или научная",
+      "type": "boolean"
+    },
+    {
+      "code": "rvpo_program_eligible",
+      "label": "Уровень и вид программы входят в установленный перечень РВПО",
+      "type": "boolean"
+    },
+    {
+      "code": "wants_rvpo",
+      "label": "Пользователь хочет подать на РВПО",
+      "type": "boolean"
+    },
+    {
+      "code": "wants_rvp",
+      "label": "Пользователь хочет подать на обычное РВП",
+      "type": "boolean"
+    },
+    {
+      "code": "rvp_ground_confirmed",
+      "label": "Квота/внеквотное основание обычного РВП документально подтверждены",
+      "type": "boolean"
+    },
+    {
+      "code": "wants_vnh",
+      "label": "Пользователь хочет подать на ВНЖ",
+      "type": "boolean"
+    },
+    {
+      "code": "vnh_ground_confirmed",
+      "label": "Конкретное основание ВНЖ документально подтверждено",
+      "type": "boolean"
+    },
+    {
+      "code": "residence_registration_required",
+      "label": "Установлена обязанность регистрации по месту жительства",
+      "type": "boolean"
+    },
+    {
+      "code": "annual_notice_required",
+      "label": "Для данного разрешения установлена ежегодная обязанность, исключения проверены",
+      "type": "boolean"
+    },
+    {
+      "code": "medical_exam_required",
+      "label": "Обязанность медосвидетельствования подтверждена с учётом даты въезда, исключений и переходных норм",
+      "type": "boolean"
+    },
+    {
+      "code": "medical_repeat_required",
+      "label": "Подтверждена обязанность повторного осмотра по действующим правилам",
+      "type": "boolean"
+    },
+    {
+      "code": "fingerprint_required",
+      "label": "Дактилоскопическая обязанность подтверждена с учётом исключений",
+      "type": "boolean"
+    },
+    {
+      "code": "fingerprint_completed",
+      "label": "Обязательная дактилоскопия уже выполнена и имеется подтверждение",
+      "type": "boolean"
+    },
+    {
+      "code": "oms_entitled",
+      "label": "Право на ОМС по действующей норме подтверждено",
+      "type": "boolean"
+    },
+    {
+      "code": "has_snils",
+      "label": "СНИЛС ранее присвоен",
+      "type": "boolean"
+    },
+    {
+      "code": "needs_snils",
+      "label": "СНИЛС нужен для выбранного сервиса или работы",
+      "type": "boolean"
+    },
+    {
+      "code": "needs_snils_copy",
+      "label": "Нужен документ с уже присвоенным СНИЛС",
+      "type": "boolean"
+    },
+    {
+      "code": "id_in_foreign_language",
+      "label": "Документ личности составлен на иностранном языке",
+      "type": "boolean"
+    },
+    {
+      "code": "needs_inn",
+      "label": "Нужен ИНН для выбранного действия",
+      "type": "boolean"
+    },
+    {
+      "code": "inn_assigned",
+      "label": "ИНН уже присвоен",
+      "type": "boolean"
+    },
+    {
+      "code": "needs_esia",
+      "label": "Нужна подтверждённая ЕСИА",
+      "type": "boolean"
+    },
+    {
+      "code": "esia_confirmed",
+      "label": "ЕСИА подтверждена",
+      "type": "boolean"
+    },
+    {
+      "code": "wants_sim",
+      "label": "Пользователь хочет российскую SIM-карту",
+      "type": "boolean"
+    },
+    {
+      "code": "ebs_registered",
+      "label": "Необходимая регистрация в ЕБС выполнена",
+      "type": "boolean"
+    },
+    {
+      "code": "wants_dms",
+      "label": "Пользователь выбрал ДМС",
+      "type": "boolean"
+    },
+    {
+      "code": "has_oms",
+      "label": "Имеется действующее страхование ОМС",
+      "type": "boolean"
+    },
+    {
+      "code": "emergency_medical_need",
+      "label": "Возникло состояние, требующее экстренной помощи",
+      "type": "boolean"
+    },
+    {
+      "code": "wants_work",
+      "label": "Пользователь хочет работать",
+      "type": "boolean"
+    },
+    {
+      "code": "student_work_program_eligible",
+      "label": "Программа подпадает под учебное освобождение по статье 13",
+      "type": "boolean"
+    },
+    {
+      "code": "works_in_free_time",
+      "label": "Работа планируется в свободное от учёбы время",
+      "type": "boolean"
+    },
+    {
+      "code": "relies_on_student_work_exemption",
+      "label": "Работа основана на учебной льготе, а не ином праве",
+      "type": "boolean"
+    },
+    {
+      "code": "rvpo_transfer_notice_required",
+      "label": "Обязанность уведомить выдавшее РВПО МВД о данном переводе подтверждена",
+      "type": "boolean"
+    },
+    {
+      "code": "passport_lost",
+      "label": "Паспорт утрачен/похищен",
+      "type": "boolean"
+    },
+    {
+      "code": "migration_card_lost",
+      "label": "Миграционная карта утрачена/испорчена",
+      "type": "boolean"
+    },
+    {
+      "code": "registration_proof_lost",
+      "label": "Утрачено подтверждение действующего миграционного учёта",
+      "type": "boolean"
+    },
+    {
+      "code": "visa_restoration_required",
+      "label": "Восстановление/перенос визы требуется по документированному случаю",
+      "type": "boolean"
+    },
+    {
+      "code": "rkl_check_requested",
+      "label": "Пользователь хочет проверить сведения РКЛ",
+      "type": "boolean"
+    },
+    {
+      "code": "rkl_listed",
+      "label": "Обнаружена запись в РКЛ",
+      "type": "boolean"
+    },
+    {
+      "code": "rkl_entry_disputed",
+      "label": "Имеются основания оспаривать/уточнять запись РКЛ",
+      "type": "boolean"
+    },
+    {
+      "code": "tax_residence_certificate_needed",
+      "label": "Нужно подтверждение налогового резидентства",
+      "type": "boolean"
+    },
+    {
+      "code": "age_years",
+      "label": "Возраст на дату события",
+      "type": "integer"
+    },
+    {
+      "code": "entry_at",
+      "label": "Момент планируемого/совершённого въезда",
+      "type": "date_time"
+    },
+    {
+      "code": "visa_expires_at",
+      "label": "Конец действия визы",
+      "type": "date_time"
+    },
+    {
+      "code": "stay_expires_at",
+      "label": "Конец разрешённого пребывания",
+      "type": "date_time"
+    },
+    {
+      "code": "medical_anniversary_at",
+      "label": "Годовщина предыдущего освидетельствования",
+      "type": "date_time"
+    },
+    {
+      "code": "permit_anniversary_at",
+      "label": "Годовщина получения конкретного разрешения",
+      "type": "date_time"
+    },
+    {
+      "code": "entry_on",
+      "label": "Дата въезда в РФ для соответствующего события",
+      "type": "date"
+    },
+    {
+      "code": "planned_stay_days",
+      "label": "Планируемая продолжительность пребывания для конкретного въезда",
+      "type": "integer"
+    },
+    {
+      "code": "non_work_entry",
+      "label": "Въезд с целью, не связанной с трудовой деятельностью",
+      "type": "boolean"
+    },
+    {
+      "code": "is_in_russia",
+      "label": "Фактическое нахождение в РФ в контексте текущего действия",
+      "type": "boolean"
+    },
+    {
+      "code": "employment_contract_active",
+      "label": "Имеется действующий трудовой договор; ГПХ не приравнивается автоматически",
+      "type": "boolean"
+    },
+    {
+      "code": "lawful_employment",
+      "label": "Законность текущего трудоустройства проверена отдельно",
+      "type": "boolean"
+    },
+    {
+      "code": "host_is_relative_or_friend",
+      "label": "Предоставивший частное жилье — родственник или знакомый; само по себе не льгота",
+      "type": "boolean"
+    },
+    {
+      "code": "medical_visit_outpatient",
+      "label": "Посещение врача без стационарного проживания; не событие заселения",
+      "type": "boolean"
+    },
+    {
+      "code": "multiple_citizenships",
+      "label": "Имеется более одного гражданства; состав требует отдельного рассмотрения",
+      "type": "boolean"
+    },
+    {
+      "code": "moscow_experiment_region",
+      "label": "Текущий адрес находится в Москве или Московской области",
+      "type": "boolean"
+    },
+    {
+      "code": "special_diplomatic_status",
+      "label": "Дипломатические/служебные исключения требуют документальной проверки",
+      "type": "boolean"
+    },
+    {
+      "code": "repeat_entry",
+      "label": "Это повторный въезд; новый контекст проверяется заново",
+      "type": "boolean"
+    }
+  ]
+}

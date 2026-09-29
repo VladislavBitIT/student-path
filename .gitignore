@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+apps/miniapp/dist/
+playwright-report/
+test-results/
+deploy/production.env
+*.log
+.DS_Store
+design-review/
+submission/

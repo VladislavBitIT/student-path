@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_MEDICAL_INITIAL",
+  "kind": "federal",
+  "version": 3,
+  "status": "draft",
+  "title": "Пройдите первичное обязательное медицинское освидетельствование",
+  "summary": "Выберите организацию из реестра уполномоченных медицинских организаций Росздравнадзора.",
+  "category": "health",
+  "research_process_ids": [
+    "PROC_MED_INITIAL"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "medical_exam_required",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "residence_status",
+        "value": "temporary_stay"
+      },
+      {
+        "op": "gt",
+        "fact": "planned_stay_days",
+        "value": 90
+      },
+      {
+        "op": "gte",
+        "fact": "entry_on",
+        "value": "2026-09-01"
+      },
+      {
+        "op": "eq",
+        "fact": "non_work_entry",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "border_entry",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "partial",
+    "known": {
+      "amount": 30,
+      "unit": "calendar_day",
+      "direction": "after",
+      "anchor_description": "Въезд в РФ",
+      "actor": "student",
+      "legal_text": "Разъяснение № 162-ФЗ: с 01.09.2026 — 30 календарных дней со дня въезда.",
+      "anchor_fact": "entry_at"
+    },
+    "calculation_allowed": false,
+    "unresolved_ids": [
+      "UNR_STEP_MEDICAL_INITIAL"
+    ]
+  },
+  "instructions": [
+    "Выберите организацию из реестра уполномоченных медицинских организаций Росздравнадзора.",
+    "Пройдите предусмотренное освидетельствование. Электронные медицинские заключения оформляет медицинская организация; размещение результатов в ЕГИСЗ является её действием."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "authority",
+    "name": "Уполномоченная медицинская организация",
+    "selection_basis": "Выбирается по действующему реестру Росздравнадзора, а не по любому предложению платной клиники.",
+    "information_url": "https://epp.genproc.gov.ru/ru/proc_50/activity/legal-education/explain/e8585073/",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Обязательное медицинское освидетельствование пройдено",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "Карточка ограничена нетрудовой студенческой веткой длительного временного пребывания при въезде с 01.09.2026. Переходные случаи и отдельные заявления на статусы требуют другой оценки.",
+      "unresolved_ids": [
+        "UNR_MED_INITIAL",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_MEDICAL_INITIAL",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Нужны точные исключения/переходные нормы, состав документов и исчисление даты. Срок 24 часа размещения заключения в ЕГИСЗ относится к клинике.",
+      "unresolved_ids": [
+        "UNR_STEP_MEDICAL_INITIAL"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_MEDICAL_TRANSITION",
+      "severity": "blocking",
+      "message": "Для въезда до 01.09.2026, повторного въезда с действительными медицинскими документами, возраста и национальных исключений требуется проверка переходных правил 162-ФЗ. Исключение из FED_MEDICAL_INITIAL не означает отсутствие медицинской обязанности.",
+      "unresolved_ids": [
+        "UNR_AUDIT_MEDICAL_TRANSITION"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {
+    "from": "2026-09-01"
+  },
+  "evidence": [
+    {
+      "source_id": "SRC_MED2026",
+      "locator": "Разъяснение 24.07.2026 о 162-ФЗ: абзацы о 30 днях, повторном осмотре и уполномоченных организациях; с 01.09.2026",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MED2026",
+      "locator": "Разъяснение 24.07.2026 о 162-ФЗ: абзацы о 30 днях, повторном осмотре и уполномоченных организациях; с 01.09.2026",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MED2026",
+      "locator": "Разъяснение 24.07.2026 о 162-ФЗ: абзацы о 30 днях, повторном осмотре и уполномоченных организациях; с 01.09.2026",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MED2026",
+      "locator": "Разъяснение 24.07.2026 о 162-ФЗ: абзацы о 30 днях, повторном осмотре и уполномоченных организациях; с 01.09.2026",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MED2026",
+      "locator": "Разъяснение 24.07.2026 о 162-ФЗ: абзацы о 30 днях, повторном осмотре и уполномоченных организациях; с 01.09.2026",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MED2026",
+      "locator": "Разъяснение 24.07.2026 о 162-ФЗ: абзацы о 30 днях, повторном осмотре и уполномоченных организациях; с 01.09.2026",
+      "supports": "Разъяснение № 162-ФЗ: с 01.09.2026 — 30 календарных дней со дня въезда.",
+      "fields": [
+        "/deadline/known"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "direct"
+    },
+    {
+      "source_id": "SRC_MED2026",
+      "locator": "Разъяснение 24.07.2026 о 162-ФЗ: абзацы о 30 днях, повторном осмотре и уполномоченных организациях; с 01.09.2026",
+      "supports": "Карточка ограничена нетрудовой студенческой веткой длительного временного пребывания при въезде с 01.09.2026. Переходные случаи и отдельные заявления на статусы требуют другой оценки.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MED2026",
+      "locator": "Разъяснение 24.07.2026 о 162-ФЗ: абзацы о 30 днях, повторном осмотре и уполномоченных организациях; с 01.09.2026",
+      "supports": "Выберите организацию из реестра уполномоченных медицинских организаций Росздравнадзора. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_MED2026",
+      "locator": "Разъяснение от 24.07.2026: абзац об электронной форме заключений и размещении в ЕГИСЗ",
+      "supports": "Медицинское освидетельствование и оформление медицинской организацией электронных заключений.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "direct"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_MEDICAL_INITIAL",
+    "UNR_MED_INITIAL",
+    "UNR_CURRENT_EDITION",
+    "UNR_AUDIT_MEDICAL_TRANSITION"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T07:54:30Z",
+    "reviewer": "Финальный аудит: исправлены перечисленные поля; статус draft сохранён",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_MEDICAL_INITIAL",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_MEDICAL_INITIAL",
+      "note": "Нужны точные исключения/переходные нормы, состав документов и исчисление даты. Срок 24 часа размещения заключения в ЕГИСЗ относится к клинике."
+    },
+    {
+      "fields": [
+        "/applicability"
+      ],
+      "unresolved_id": "UNR_AUDIT_MEDICAL_TRANSITION",
+      "note": "Для въезда до 01.09.2026, повторного въезда с действительными медицинскими документами, возраста и национальных исключений требуется проверка переходных правил 162-ФЗ. Исключение из FED_MEDICAL_INITIAL не означает отсутствие медицинской обязанности."
+    }
+  ]
+}

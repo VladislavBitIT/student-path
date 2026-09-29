@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "id": "facts",
+  "entries": [
+    {
+      "code": "kfu_campus",
+      "label": "Кампус/область локальной инструкции",
+      "type": "enum",
+      "dictionary_id": "kfu_campuses"
+    },
+    {
+      "code": "kfu_own_dormitory",
+      "label": "Проживание в общежитии КФУ",
+      "type": "boolean"
+    },
+    {
+      "code": "kfu_direct_invitation",
+      "label": "Бюджет/контракт основной программы, не гослиния, не дистанционное обучение; приказ о зачислении действует",
+      "type": "boolean"
+    },
+    {
+      "code": "kfu_quota_continuing",
+      "label": "Продолжает обучение по гослинии и запрашивает визовую поддержку",
+      "type": "boolean"
+    },
+    {
+      "code": "kfu_continuing_years_two_five",
+      "label": "Продолжает обучение на 2–5 курсе",
+      "type": "boolean"
+    },
+    {
+      "code": "kfu_prep_student",
+      "label": "Слушатель подготовительного факультета",
+      "type": "boolean"
+    },
+    {
+      "code": "kfu_dorm_assigned",
+      "label": "Получено назначение места в общежитии",
+      "type": "boolean"
+    },
+    {
+      "code": "kfu_departure_abroad",
+      "label": "Планируется выезд за пределы Российской Федерации",
+      "type": "boolean"
+    }
+  ]
+}

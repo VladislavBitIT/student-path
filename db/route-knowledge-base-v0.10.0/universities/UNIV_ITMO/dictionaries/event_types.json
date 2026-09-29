@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "id": "event_types",
+  "status": "maintained",
+  "description": "Локальные события ИТМО. Подключаются только через UniversityConfig.",
+  "entries": [
+    {
+      "code": "itmo_dorm_requested",
+      "label": "Запрошено общежитие ИТМО"
+    },
+    {
+      "code": "itmo_dorm_assigned",
+      "label": "Получено уведомление о выделении места"
+    },
+    {
+      "code": "itmo_dorm_checkin_scheduled",
+      "label": "Назначено заселение"
+    },
+    {
+      "code": "itmo_medical_upload_needed",
+      "label": "Не хватает медицинских сведений в ИТМО"
+    },
+    {
+      "code": "itmo_medical_visit_requested",
+      "label": "Запрошена плановая консультация"
+    },
+    {
+      "code": "itmo_clearance_ready",
+      "label": "Согласован обходной лист"
+    },
+    {
+      "code": "itmo_status_document_received",
+      "label": "Получен новый документ статуса и требуется сообщить ИТМО"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_ITMO_DORM_REQUEST",
+  "university_id": "UNIV_ITMO",
+  "kind": "university",
+  "version": 2,
+  "status": "draft",
+  "title": "Подайте заявку на место в общежитии ИТМО",
+  "summary": "Подайте заявку через раздел «Общежития» my.itmo; контролируйте состояние очереди.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "itmo_current_student",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "itmo_needs_dorm",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "itmo_account_available",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "itmo_dorm_requested",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_ITMO_STEP_DORM_REQUEST"
+    ]
+  },
+  "instructions": [
+    "Подайте заявку через раздел «Общежития» my.itmo; контролируйте состояние очереди."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "online",
+    "name": "my.itmo — Общежития",
+    "url": "https://my.itmo.ru/services/dormitories",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "campus@itmo.ru",
+        "label": "Заселение"
+      },
+      {
+        "kind": "phone",
+        "value": "+7 (812) 480-90-00 доб. 7",
+        "label": "Заселение"
+      },
+      {
+        "kind": "email",
+        "value": "int.students@itmo.ru",
+        "label": "Сопровождение иностранных студентов"
+      }
+    ],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Подайте заявку на место в общежитии ИТМО — действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_ITMO_STEP_DORM_REQUEST",
+      "severity": "blocking",
+      "message": "Подтвержденные локальные сведения сохранены; пробелы перечислены в unresolved.",
+      "unresolved_ids": [
+        "UNR_ITMO_STEP_DORM_REQUEST"
+      ]
+    },
+    {
+      "id": "WARN_ITMO_AUTHENTICATED_FORMS",
+      "severity": "blocking",
+      "message": "Ссылки my.itmo ведут на авторизацию. Публичное назначение подтверждено страницами ИТМО; поля форм, доступы и успешная отправка после входа не проверены. Форма 086/у /requests/new/8326 не открылась инструментом.",
+      "unresolved_ids": [
+        "UNR_ITMO_AUTHENTICATED_FORMS"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_ITMO_HOUSING_RU",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Локальные сведения ИТМО; область применения ограничена карточкой.",
+      "fields": [
+        "/instructions",
+        "/applicability",
+        "/destination",
+        "/documents",
+        "/deadline"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_ITMO_HOUSING_RU",
+      "locator": "Раздел, указанный в названии источника",
+      "supports": "Результат означает подтверждение пользователем выполнения описанного действия; не гарантирует положительное решение университета.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_ITMO_STEP_DORM_REQUEST",
+    "UNR_ITMO_AUTHENTICATED_FORMS"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:40:30.570901Z",
+    "reviewer": "Повторное самостоятельное исследование официальных страниц в последовательном обзоре десяти вузов",
+    "next_review_on": "2026-10-26"
+  }
+}

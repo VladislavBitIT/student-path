@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://route-engine.example/schemas/result.schema.json",
+  "title": "result",
+  "description": "Ожидаемый результат шага и способ подтверждения выполнения.",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "completion_mode": {
+      "enum": [
+        "user_confirmation",
+        "document_upload",
+        "service_event"
+      ]
+    },
+    "event_type": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "output_document": {
+      "type": "string",
+      "minLength": 1
+    },
+    "instructions": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "title",
+    "completion_mode"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "completion_mode": {
+            "const": "service_event"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "event_type"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "event_type"
+          ]
+        }
+      }
+    }
+  ]
+}

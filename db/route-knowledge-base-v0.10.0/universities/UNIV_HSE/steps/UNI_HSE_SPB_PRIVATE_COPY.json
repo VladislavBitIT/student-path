@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_HSE_SPB_PRIVATE_COPY",
+  "university_id": "UNIV_HSE",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Передать частную регистрацию в ВШЭ — Санкт-Петербург",
+  "summary": "Отправьте двусторонний скан регистрации на migrationspb@hse.ru.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "hse_campus",
+        "value": "spb"
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "full_time",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "accommodation_type",
+            "value": "private_home"
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "hse_private_registration_received",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_HSE_SPB_PRIVATE_COPY"
+    ]
+  },
+  "instructions": [
+    "Отправьте двусторонний скан регистрации на migrationspb@hse.ru."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "hybrid",
+    "name": "ЦВМС ВШЭ — Санкт-Петербург",
+    "url": "https://spb.hse.ru/pochemuchnik/interstud/",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "migrationspb@hse.ru",
+        "label": "ЦВМС ВШЭ — Санкт-Петербург"
+      }
+    ],
+    "appointment_required": "unknown",
+    "address": "Санкт-Петербург, Кантемировская, 3, корпус 1, офис 1005"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_HSE_SPB_PRIVATE_COPY",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_HSE_SPB_PRIVATE_COPY"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_HSE_SPB",
+      "locator": "Локальная передача сведений",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_HSE_SPB_PRIVATE_COPY"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:26:55.858077Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

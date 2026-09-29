@@ -1,0 +1,658 @@
+{
+  "schema_version": "1.0.0",
+  "as_of": "2026-09-26",
+  "categories": [
+    {
+      "code": "entry",
+      "title": "Подготовка к въезду, образование и виза",
+      "step_ids": [
+        "FED_ENTRY_RULE_CHECK",
+        "FED_INVITATION_REQUEST",
+        "FED_VISA_APPLY",
+        "FED_VISA_COLLECT_ABROAD",
+        "FED_EDU_RECOGNITION_CHECK",
+        "FED_EDU_RECOGNITION_APPLY",
+        "FED_RUID_STANDARD",
+        "FED_RUID_EMERGENCY",
+        "FED_MIGRATION_CARD_ENTRY"
+      ]
+    },
+    {
+      "code": "accounting",
+      "title": "Миграционный учёт и адрес проживания",
+      "step_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_REGISTRATION_CONFIRMATION",
+        "FED_HOTEL_IDENTIFY",
+        "FED_SELF_ARRIVAL_NOTICE",
+        "FED_RESIDENCE_REGISTER",
+        "FED_REGISTRATION_DUPLICATE",
+        "FED_ACCOUNTING_DATA_UPDATE"
+      ]
+    },
+    {
+      "code": "stay_status",
+      "title": "Продление пребывания и статусы РВП/РВПО/ВНЖ",
+      "step_ids": [
+        "FED_STAY_PETITION_REQUEST",
+        "FED_STUDY_VISA_EXTEND",
+        "FED_STUDY_VISA_COLLECT",
+        "FED_RVPO_APPLY",
+        "FED_RVP_APPLY",
+        "FED_VNH_APPLY",
+        "FED_VNH_ANNUAL_NOTICE",
+        "FED_RVP_ANNUAL_NOTICE"
+      ]
+    },
+    {
+      "code": "health",
+      "title": "Медицина, дактилоскопия и страхование",
+      "step_ids": [
+        "FED_MEDICAL_INITIAL",
+        "FED_MEDICAL_REPEAT",
+        "FED_FINGERPRINT_PHOTO",
+        "FED_OMS_APPLY",
+        "FED_DMS_CONTRACT",
+        "FED_EMERGENCY_HELP",
+        "FED_OMS_EAEU_EMPLOYEE"
+      ]
+    },
+    {
+      "code": "changes",
+      "title": "Утрата документов, перевод и поездки",
+      "step_ids": [
+        "FED_MIGRATION_CARD_DUPLICATE",
+        "FED_VISA_RESTORE",
+        "FED_RETURN_VISA_CHECK"
+      ]
+    },
+    {
+      "code": "work",
+      "title": "Действия студента при трудоустройстве",
+      "step_ids": [
+        "FED_WORK_STUDY_PROOF",
+        "FED_WORK_STUDY_END_NOTIFY"
+      ]
+    },
+    {
+      "code": "digital",
+      "title": "СНИЛС, ИНН, Госуслуги, ЕБС и связь",
+      "step_ids": [
+        "FED_SNILS_REGISTER",
+        "FED_SNILS_UPDATE",
+        "FED_SNILS_COPY",
+        "FED_INN_APPLY",
+        "FED_ESIA_CONFIRM",
+        "FED_EBS_REGISTER",
+        "FED_SIM_CONTRACT"
+      ]
+    },
+    {
+      "code": "protection",
+      "title": "Проверка РКЛ и налоговые подтверждения",
+      "step_ids": [
+        "FED_RKL_CHECK",
+        "FED_RKL_CLARIFY",
+        "FED_TAX_RESIDENCE_CONFIRM"
+      ]
+    }
+  ],
+  "process_disposition": [
+    {
+      "process_id": "PROC_ENTRY_REGIME",
+      "step_ids": [
+        "FED_ENTRY_RULE_CHECK"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_ENTRY_REGIME",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_EDU_RECOGNITION",
+      "step_ids": [
+        "FED_EDU_RECOGNITION_CHECK",
+        "FED_EDU_RECOGNITION_APPLY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_EDU_RECOGNITION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_EDU_LEGALIZATION",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_EDU_LEGALIZATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_ADMISSION_QUOTA",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_ADMISSION_QUOTA",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_INVITATION",
+      "step_ids": [
+        "FED_INVITATION_REQUEST"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_INVITATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_STUDY_VISA",
+      "step_ids": [
+        "FED_VISA_APPLY",
+        "FED_VISA_COLLECT_ABROAD"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_STUDY_VISA",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_RUID",
+      "step_ids": [
+        "FED_RUID_STANDARD",
+        "FED_RUID_EMERGENCY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_RUID",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_BORDER_BIOMETRICS",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_BORDER_BIOMETRICS",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_MIGRATION_CARD",
+      "step_ids": [
+        "FED_MIGRATION_CARD_ENTRY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_MIGRATION_CARD",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_ARRIVAL_REGISTRATION",
+      "step_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_REGISTRATION_CONFIRMATION"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_ARRIVAL_REGISTRATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_HOTEL_HOSPITAL",
+      "step_ids": [
+        "FED_HOTEL_IDENTIFY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_HOTEL_HOSPITAL",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_SELF_NOTIFICATION",
+      "step_ids": [
+        "FED_SELF_ARRIVAL_NOTICE"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_SELF_NOTIFICATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_AMINA",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_AMINA",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_STAY_EXTENSION",
+      "step_ids": [
+        "FED_STAY_PETITION_REQUEST"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_STAY_EXTENSION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_VISA_EXTENSION",
+      "step_ids": [
+        "FED_STUDY_VISA_EXTEND",
+        "FED_STUDY_VISA_COLLECT"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_VISA_EXTENSION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_MED_INITIAL",
+      "step_ids": [
+        "FED_MEDICAL_INITIAL"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_MED_INITIAL",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_MED_REPEAT",
+      "step_ids": [
+        "FED_MEDICAL_REPEAT"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_MED_REPEAT",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_FINGERPRINT",
+      "step_ids": [
+        "FED_FINGERPRINT_PHOTO"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_FINGERPRINT",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_DMS",
+      "step_ids": [
+        "FED_DMS_CONTRACT"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_DMS",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_OMS",
+      "step_ids": [
+        "FED_OMS_APPLY",
+        "FED_OMS_EAEU_EMPLOYEE"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_OMS",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_EMERGENCY_CARE",
+      "step_ids": [
+        "FED_EMERGENCY_HELP"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_EMERGENCY_CARE",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_RVP",
+      "step_ids": [
+        "FED_RVP_APPLY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_RVP",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_RVPO",
+      "step_ids": [
+        "FED_RVPO_APPLY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_RVPO",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_VNH",
+      "step_ids": [
+        "FED_VNH_APPLY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_VNH",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_RESIDENCE_REGISTRATION",
+      "step_ids": [
+        "FED_RESIDENCE_REGISTER"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_RESIDENCE_REGISTRATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_ANNUAL_NOTICE",
+      "step_ids": [
+        "FED_VNH_ANNUAL_NOTICE",
+        "FED_RVP_ANNUAL_NOTICE"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_ANNUAL_NOTICE",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_ABSENCE",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_ABSENCE",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_LOST_PASSPORT",
+      "step_ids": [
+        "FED_VISA_RESTORE"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved. Порядок иностранного консульства не подтверждён государственным источником для конкретного гражданства. В федеральном слое оставлено восстановление российской визы после получения нового документа.",
+      "unresolved_ids": [
+        "UNR_LOST_PASSPORT",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_LOST_CARD",
+      "step_ids": [
+        "FED_MIGRATION_CARD_DUPLICATE"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_LOST_CARD",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_LOST_REGISTRATION",
+      "step_ids": [
+        "FED_REGISTRATION_DUPLICATE"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_LOST_REGISTRATION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_DATA_CHANGE",
+      "step_ids": [
+        "FED_ACCOUNTING_DATA_UPDATE",
+        "FED_SNILS_UPDATE"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_DATA_CHANGE",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_MOVE",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_MOVE",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_EXIT_REENTRY",
+      "step_ids": [
+        "FED_RETURN_VISA_CHECK"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_EXIT_REENTRY",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_TRANSFER",
+      "step_ids": [],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved. Публикация Минобрнауки рассматривает проект. До подтверждения действующей нормы действие и срок не превращаются в федеральную карточку.",
+      "unresolved_ids": [
+        "UNR_TRANSFER",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_ACADEMIC_CHANGE",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_ACADEMIC_CHANGE",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_STUDY_END",
+      "step_ids": [
+        "FED_WORK_STUDY_END_NOTIFY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_STUDY_END",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_STUDENT_WORK",
+      "step_ids": [
+        "FED_WORK_STUDY_PROOF"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_STUDENT_WORK",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_EMPLOYER_NOTIFY",
+      "step_ids": [],
+      "reason": "Уведомление МВД подаёт работодатель; его обязанность не превращена в личное заявление студента.",
+      "unresolved_ids": [
+        "UNR_EMPLOYER_NOTIFY",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_PATENT_BRANCH",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_PATENT_BRANCH",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_SNILS",
+      "step_ids": [
+        "FED_SNILS_REGISTER",
+        "FED_SNILS_COPY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_SNILS",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_INN",
+      "step_ids": [
+        "FED_INN_APPLY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_INN",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_ESIA",
+      "step_ids": [
+        "FED_ESIA_CONFIRM"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_ESIA",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_SIM_EBS",
+      "step_ids": [
+        "FED_EBS_REGISTER",
+        "FED_SIM_CONTRACT"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_SIM_EBS",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_BANK",
+      "step_ids": [],
+      "reason": "В исследовании только кандидатная ветка; достаточных доказательств действий/комплекта нет.",
+      "unresolved_ids": [
+        "UNR_BANK",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_TAX",
+      "step_ids": [
+        "FED_TAX_RESIDENCE_CONFIRM"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_TAX",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_SELF_EMPLOYMENT",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_SELF_EMPLOYMENT",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_REGULATED_PROFESSION",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_REGULATED_PROFESSION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_RKL",
+      "step_ids": [
+        "FED_RKL_CHECK",
+        "FED_RKL_CLARIFY"
+      ],
+      "reason": "Подтверждённая часть выделена в конкретные действия; недостающие поля связаны с unresolved.",
+      "unresolved_ids": [
+        "UNR_RKL",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_ADVERSE_DECISION",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_ADVERSE_DECISION",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_MINORS_FAMILY",
+      "step_ids": [],
+      "reason": "Самостоятельный пользовательский шаг не выдан: недостаточно подтверждённого порядка либо процесс исполняет организация. Исследование и вопрос сохранены.",
+      "unresolved_ids": [
+        "UNR_MINORS_FAMILY",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_SPECIAL_STATUS",
+      "step_ids": [],
+      "reason": "В исследовании только кандидатная ветка; достаточных доказательств действий/комплекта нет.",
+      "unresolved_ids": [
+        "UNR_SPECIAL_STATUS",
+        "UNR_CURRENT_EDITION"
+      ]
+    },
+    {
+      "process_id": "PROC_CUSTOMS",
+      "step_ids": [],
+      "reason": "В исследовании только кандидатная ветка; достаточных доказательств действий/комплекта нет.",
+      "unresolved_ids": [
+        "UNR_CUSTOMS",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "limitations": [
+    "Федеральный слой составлен как проверяемые карточки действий, но все карточки пока draft: остаются содержательные блокеры из исследования.",
+    "Отсутствующий факт не заменяется false. *_required/*_confirmed — результат отдельной подтверждённой оценки, а не повод спросить пользователя о неизвестном ему правовом выводе.",
+    "partial deadline сохраняет известное число/единицу и запрещает автоматический расчёт. Сроки вуза/работодателя/МВД не назначаются личными сроками студента.",
+    "Конкретное подразделение authority выбирается по фактическому месту и компетенции; information_url не является ссылкой подачи.",
+    "Неразрешённые вопросы не объявлены закрытыми после технической валидации."
+  ]
+}

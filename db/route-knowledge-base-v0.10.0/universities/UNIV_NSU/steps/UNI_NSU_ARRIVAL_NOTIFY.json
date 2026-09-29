@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_NSU_ARRIVAL_NOTIFY",
+  "university_id": "UNIV_NSU",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Отправить ЦМУП НГУ визу и билет",
+  "summary": "Направьте ЦМУП копии визы и билета; затем согласуйте трансфер с сотрудником ОСИО, который свяжется с вами.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "nsu_campus",
+        "value": "main"
+      },
+      {
+        "op": "eq",
+        "fact": "nsu_ciep_student",
+        "value": true
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "nsu_tickets_ready",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_NSU_ARRIVAL_NOTIFY"
+    ]
+  },
+  "instructions": [
+    "Направьте ЦМУП копии визы и билета; затем согласуйте трансфер с сотрудником ОСИО, который свяжется с вами."
+  ],
+  "documents": [
+    {
+      "id": "DOC_UNI_NSU_ARRIVAL_NOTIFY_1",
+      "title": "Копия визы",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_NSU_ADMISSION",
+          "locator": "Билеты и прибытие",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    },
+    {
+      "id": "DOC_UNI_NSU_ARRIVAL_NOTIFY_2",
+      "title": "Копия билета в Новосибирск",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_NSU_ADMISSION",
+          "locator": "Билеты и прибытие",
+          "supports": "Локальный комплект из указанного раздела."
+        }
+      ]
+    }
+  ],
+  "destination": {
+    "kind": "online",
+    "name": "Центр международных учебных программ НГУ",
+    "url": "https://ciep.nsu.ru/kakpostupit",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "ciep@nsu.ru",
+        "label": "ЦМУП"
+      }
+    ],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_NSU_ARRIVAL_NOTIFY",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_NSU_ARRIVAL_NOTIFY"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_NSU_ADMISSION",
+      "locator": "Билеты и прибытие",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination",
+        "/documents"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_NSU_ARRIVAL_NOTIFY"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:30:00.761040Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

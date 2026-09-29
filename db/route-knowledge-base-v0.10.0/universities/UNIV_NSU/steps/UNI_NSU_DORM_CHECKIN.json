@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.1.0",
+  "id": "UNI_NSU_DORM_CHECKIN",
+  "university_id": "UNIV_NSU",
+  "kind": "university",
+  "version": 1,
+  "status": "draft",
+  "title": "Оформить заселение слушателя ЦМУП НГУ",
+  "summary": "По прибытии заполните документы у заведующей назначенного общежития и получите ключ и пропуск.",
+  "obligation_scope": "university_internal",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "eq",
+        "fact": "nsu_campus",
+        "value": "main"
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "nsu_ciep_student",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "nsu_own_dormitory",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "accommodation_arrival",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_NSU_DORM_CHECKIN"
+    ]
+  },
+  "instructions": [
+    "По прибытии заполните документы у заведующей назначенного общежития и получите ключ и пропуск."
+  ],
+  "documents": [],
+  "destination": {
+    "kind": "online",
+    "name": "Заведующая выделенным общежитием НГУ",
+    "url": "https://ciep.nsu.ru/prozhivanie",
+    "contacts": [],
+    "appointment_required": "unknown"
+  },
+  "result": {
+    "title": "Сведения переданы / локальное действие выполнено",
+    "completion_mode": "user_confirmation"
+  },
+  "warnings": [
+    {
+      "id": "WARN_UNI_NSU_DORM_CHECKIN",
+      "severity": "blocking",
+      "message": "Локальная инструкция ограничена указанным контекстом; нерешённые детали перечислены отдельно.",
+      "unresolved_ids": [
+        "UNR_NSU_DORM_CHECKIN"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_NSU_FAQ",
+      "locator": "Прибытие; как найти комнату",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_NSU_HOUSING",
+      "locator": "Прибытие; как найти комнату",
+      "supports": "Перечисленные локальные действия и реквизиты; федеральный нормативный срок этим источником не устанавливается.",
+      "fields": [
+        "/instructions",
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_NSU_DORM_CHECKIN"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T11:30:00.761040Z",
+    "reviewer": "Новое последовательное исследование официальных ресурсов",
+    "next_review_on": "2026-10-26"
+  }
+}

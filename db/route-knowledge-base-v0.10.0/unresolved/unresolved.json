@@ -1,0 +1,4851 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ENTRY_REGIME",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Заполнить версионированную матрицу всех гражданств, паспортов и учебных целей по договорам; отдельно электронные визы, Беларусь, лица без гражданства и ограничения въезда.",
+      "affected_ids": [
+        "PROC_ENTRY_REGIME",
+        "FED_ENTRY_RULE_CHECK"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_ENTRY_TABLE",
+        "SRC_LAW114"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_EDU_RECOGNITION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Получить регламент Рособрнадзора № 1443 от 26.07.2023 с изменениями: комплект, сроки услуги, госпошлина, выписка; проверить текущие перечни и договоры.",
+      "affected_ids": [
+        "PROC_EDU_RECOGNITION",
+        "FED_EDU_RECOGNITION_CHECK",
+        "FED_EDU_RECOGNITION_APPLY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_RECOGNITION",
+        "SRC_NIC"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_EDU_LEGALIZATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить действующие договоры и требования перевода по каждому типу документа; не переносить историческую страновую памятку без проверки.",
+      "affected_ids": [
+        "PROC_EDU_LEGALIZATION"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_CHINA_EDU",
+        "SRC_RECOGNITION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ADMISSION_QUOTA",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить текущий порядок приёма, квотного отбора, документы и сроки по странам; отделить федеральные требования от локального конкурса.",
+      "affected_ids": [
+        "PROC_ADMISSION_QUOTA"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_QUOTA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_INVITATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Получить актуальный регламент приглашений, точные сроки услуги, документы и исключения; форма № 619 сама по себе не доказывает процедуру.",
+      "affected_ids": [
+        "PROC_INVITATION",
+        "FED_INVITATION_REQUEST"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_INVITATION",
+        "SRC_LAW115",
+        "SRC_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STUDY_VISA",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить полный комплект, сроки выдачи, страховые/ВИЧ-исключения, сбор и паспортный запас по действующему консульскому регламенту.",
+      "affected_ids": [
+        "PROC_STUDY_VISA",
+        "FED_VISA_APPLY",
+        "FED_VISA_COLLECT_ABROAD"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_VISA",
+        "SRC_ENTRY_TABLE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUID",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Прочитать № 1510 в редакции № 468: точная обязательность после 30.06.2026, пункт 15.1, исключения, срок эксперимента и последствия отсутствия заявки.",
+      "affected_ids": [
+        "PROC_RUID",
+        "FED_RUID_STANDARD",
+        "FED_RUID_EMERGENCY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_RUID",
+        "SRC_RUID468"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_BORDER_BIOMETRICS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить актуальные пункты, технологии, исключения и взаимозачёт биометрии по редакции эксперимента на дату поездки.",
+      "affected_ids": [
+        "PROC_BORDER_BIOMETRICS"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_BORDER_BIO",
+        "SRC_RUID468"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIGRATION_CARD",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сверить действующее постановление № 413, электронные варианты и исчерпывающие освобождения; старое упоминание ФМС в памятке заменить актуальным основанием МВД.",
+      "affected_ids": [
+        "PROC_MIGRATION_CARD",
+        "FED_MIGRATION_CARD_ENTRY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_CARD",
+        "SRC_LAW114"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ARRIVAL_REGISTRATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить точный отсчёт/включение дня прибытия, документы и каналы по № 9 и № 856; полный набор международных исключений; учёт не заменяет продление законного пребывания.",
+      "affected_ids": [
+        "PROC_ARRIVAL_REGISTRATION",
+        "FED_HOST_DOCUMENTS",
+        "FED_REGISTRATION_CONFIRMATION"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW109",
+        "SRC_REG9",
+        "SRC_REG_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HOTEL_HOSPITAL",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Прочитать специальные пункты № 9 и статьи 20–23 109-ФЗ: срок прибытия/убытия и влияние на предыдущий адрес для каждого типа размещения.",
+      "affected_ids": [
+        "PROC_HOTEL_HOSPITAL",
+        "FED_HOTEL_IDENTIFY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW109",
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SELF_NOTIFICATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить действующий перечень случаев самостоятельной подачи, требования к договору найма, ЕСИА и электронному согласию собственника.",
+      "affected_ids": [
+        "PROC_SELF_NOTIFICATION",
+        "FED_SELF_ARRIVAL_NOTICE"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW109",
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AMINA",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Прочитать полный 121-ФЗ и подзаконные акты: исключения, даты, сроки постановки/геолокации, гостиницы, переходный учёт, последствия сбоев приложения.",
+      "affected_ids": [
+        "PROC_AMINA"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_AMINA121",
+        "SRC_AMINA_MVD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STAY_EXTENSION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить актуальные статьи 5 и 17 115-ФЗ: программы/формы обучения, подготовительные отделения, сроки и единицы, переход между уровнями; не смешивать со сроком визы.",
+      "affected_ids": [
+        "PROC_STAY_EXTENSION",
+        "FED_STAY_PETITION_REQUEST"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_STAY",
+        "SRC_STUDENT_EXTEND",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_VISA_EXTENSION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сверить актуальность приказа № 907 на 26.09.2026, срок услуги, документы, страховку и правила поздней подачи. Не принимать опубликованный проект нового регламента за вступивший в силу.",
+      "affected_ids": [
+        "PROC_VISA_EXTENSION",
+        "FED_STUDY_VISA_EXTEND",
+        "FED_STUDY_VISA_COLLECT"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_VISA907",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MED_INITIAL",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Получить полный 162-ФЗ и новые подзаконные акты: освобождения, прибывшие до 01.09.2026, Беларусь/ЕАЭС, дети, РВП/ВНЖ, действующие старые справки, состав обследования и санкции.",
+      "affected_ids": [
+        "PROC_MED_INITIAL",
+        "FED_MEDICAL_INITIAL"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_MED2026",
+        "SRC_MED2026_2"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MED_REPEAT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить точный якорь 24 часов и совместимость приказа МВД № 775 с новыми правилами; исключения из периодичности и переход от срока действия старой справки к годовому циклу.",
+      "affected_ids": [
+        "PROC_MED_REPEAT",
+        "FED_MEDICAL_REPEAT"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_MED2026",
+        "SRC_MED_SUBMIT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_FINGERPRINT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить 128-ФЗ и 115-ФЗ на 26.09.2026: сохранён ли срок 90 дней, возраст/Беларусь/статусы, повторность, действующие медицинские документы и форма подтверждения.",
+      "affected_ids": [
+        "PROC_FINGERPRINT",
+        "FED_FINGERPRINT_PHOTO"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_FINGERPRINT",
+        "SRC_FINGERPRINT_PVS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_DMS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить действующие федеральные/визовые требования к страховке и исключения, не выдавать вузовскую рекомендацию за федеральную обязанность.",
+      "affected_ids": [
+        "PROC_DMS",
+        "FED_DMS_CONTRACT"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_HEALTH",
+        "SRC_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_OMS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить категории и исключения по действующему 326-ФЗ, правилам ОМС и ЕАЭС; сроки действия/замены, дети/семья, стаж уплаты для временно пребывающих работников.",
+      "affected_ids": [
+        "PROC_OMS",
+        "FED_OMS_APPLY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_OMS",
+        "SRC_OMS_WORK",
+        "SRC_HEALTH"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_EMERGENCY_CARE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сверить действующую редакцию постановления № 186 и 323-ФЗ, маршрутизацию обращения и оплату после устранения угрозы жизни.",
+      "affected_ids": [
+        "PROC_EMERGENCY_CARE",
+        "FED_EMERGENCY_HELP"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_HEALTH"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RVP",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сверить актуальную статью 6, квоты 2026, освобождения от экзамена, срок услуги и документы; будущие требования 314-ФЗ не применять заранее.",
+      "affected_ids": [
+        "PROC_RVP",
+        "FED_RVP_APPLY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115",
+        "SRC_RVP"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RVPO",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Прочитать действующий регламент № 949 и статью 6.2: документы/срок услуги, программы, негосударственные вузы, подготовительные отделения, несовершеннолетние и основания аннулирования.",
+      "affected_ids": [
+        "PROC_RVPO",
+        "FED_RVPO_APPLY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_RVPO",
+        "SRC_RVPO_GUIDE",
+        "SRC_RVPO949"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_VNH",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить окна подачи для РВПО/выпускников и обычного РВП, длительность услуги, документы/экзамены, льготы по гражданствам; отделить поправки с будущим вступлением в силу.",
+      "affected_ids": [
+        "PROC_VNH",
+        "FED_VNH_APPLY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_VNH",
+        "SRC_VNH_NOTICE",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RESIDENCE_REGISTRATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить статьи 14–19 109-ФЗ: точный семидневный рабочий отсчёт, исключения, пошлина и каналы; различить место жительства и место пребывания.",
+      "affected_ids": [
+        "PROC_RESIDENCE_REGISTRATION",
+        "FED_RESIDENCE_REGISTER"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW109",
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ANNUAL_NOTICE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить сроки и каналы РВП/ВНЖ, шестимесячное исключение, личную подачу раз в пять лет, доходы и освобождение РВПО по действующей редакции.",
+      "affected_ids": [
+        "PROC_ANNUAL_NOTICE",
+        "FED_VNH_ANNUAL_NOTICE",
+        "FED_RVP_ANNUAL_NOTICE"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_VNH_NOTICE",
+        "SRC_LAW115",
+        "SRC_RVPO"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ABSENCE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить по статьям 7, 9 и 6.2 точные периоды, календарный/непрерывный счёт, статус РВПО и исключения болезни/ухода/служебных обстоятельств.",
+      "affected_ids": [
+        "PROC_ABSENCE"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_LOST_PASSPORT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Найти актуальные первичные правила утраты паспорта, восстановления визы/РВП/ВНЖ и выезда; не утверждать единый срок или автоматическое продление.",
+      "affected_ids": [
+        "PROC_LOST_PASSPORT",
+        "FED_VISA_RESTORE"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_VISA",
+        "SRC_LAW114",
+        "SRC_VISA907"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_LOST_CARD",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сверить постановление № 413: единица и якорь трёхдневного срока, форма заявления, услуга/плата и электронные записи.",
+      "affected_ids": [
+        "PROC_LOST_CARD",
+        "FED_MIGRATION_CARD_DUPLICATE"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_CARD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_LOST_REGISTRATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить точный пункт № 9, документы и начало срока услуги; различить выдачу дубликата и восстановление незаконно отсутствующей записи.",
+      "affected_ids": [
+        "PROC_LOST_REGISTRATION",
+        "FED_REGISTRATION_DUPLICATE"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_DATA_CHANGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить срок уведомления об изменениях, субъект обязанности, переоформление ВНЖ/РВП и отражение изменений в электронных системах.",
+      "affected_ids": [
+        "PROC_DATA_CHANGE",
+        "FED_ACCOUNTING_DATA_UPDATE",
+        "FED_SNILS_UPDATE"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW109",
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MOVE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сверить сроки новой постановки/снятия, самостоятельные уведомления об убытии, ограничения обычного РВП и переход между Москвой/областью и иными регионами.",
+      "affected_ids": [
+        "PROC_MOVE"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW109",
+        "SRC_REG9",
+        "SRC_AMINA121"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_EXIT_REENTRY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить снятие при выезде, сроки повторного учёта, статус незавершённых заявлений, ограничения въезда/выезда и правила возвращения при замене паспорта.",
+      "affected_ids": [
+        "PROC_EXIT_REENTRY",
+        "FED_RETURN_VISA_CHECK"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW114",
+        "SRC_LAW109",
+        "SRC_VISA907",
+        "SRC_STAY",
+        "SRC_RUID468"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TRANSFER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить действующие сроки перевода РВПО, уведомления вузов и МВД, переоформление визы/приглашения, допустимые перерывы между программами.",
+      "affected_ids": [
+        "PROC_TRANSFER"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115",
+        "SRC_STUDENT_EXTEND",
+        "SRC_RVPO_TRANSFER",
+        "SRC_RVPO949"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ACADEMIC_CHANGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Найти прямые нормы и официальные разъяснения по каждому виду отпуска/перерыва; недопустимо автоматически продлевать РВПО или разрешать работу.",
+      "affected_ids": [
+        "PROC_ACADEMIC_CHANGE"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115",
+        "SRC_RVPO_GUIDE",
+        "SRC_WORK_STUDENT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STUDY_END",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить сроки сокращения пребывания/выезда и межуровневого перехода; применение 180 дней РВПО, уведомления вузов, работа после выпуска.",
+      "affected_ids": [
+        "PROC_STUDY_END",
+        "FED_WORK_STUDY_END_NOTIFY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_STUDENT_EXTEND",
+        "SRC_RVPO_GUIDE",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STUDENT_WORK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить актуальную статью 13, уровни программ, возраст, территориальные ограничения и документы; отдельные ветки каникул, работы в вузе, ЕАЭС и РВПО.",
+      "affected_ids": [
+        "PROC_STUDENT_WORK",
+        "FED_WORK_STUDY_PROOF"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_WORK_STUDENT",
+        "SRC_LAW115",
+        "SRC_EAEU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_EMPLOYER_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить пункт 8 статьи 13 и действующий приказ о формах: срок 3 рабочих дня, якорь, допустимый электронный канал и международные исключения.",
+      "affected_ids": [
+        "PROC_EMPLOYER_NOTIFY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_PATENT_BRANCH",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Исследовать отдельно актуальные сроки подачи/выдачи/платежей, смену цели въезда без выезда, медосмотр 2026 и территориальный эксперимент патентов.",
+      "affected_ids": [
+        "PROC_PATENT_BRANCH"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_PATENT",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SNILS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить сроки и комплект каждого канала, оформление без российского телефона и корректировку данных; исключить дублирование номера.",
+      "affected_ids": [
+        "PROC_SNILS",
+        "FED_SNILS_REGISTER",
+        "FED_SNILS_COPY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_SNILS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_INN",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить актуальную форму/результат с 2026 года, сроки услуги, автоматическую регистрацию по биометрии/ruID и документы по каждому статусу.",
+      "affected_ids": [
+        "PROC_INN",
+        "FED_INN_APPLY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_INN"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ESIA",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить текущий сценарий для иностранца без российского телефона, банковского счёта и кириллических данных; ruID/ЕСИА не приравнивать без подтверждения.",
+      "affected_ids": [
+        "PROC_ESIA",
+        "FED_ESIA_CONFIRM"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_SIM",
+        "SRC_SNILS",
+        "SRC_SIM_GOS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SIM_EBS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить статью 45.1 126-ФЗ и изменения 2026: 10 номеров, минимальный возраст, устройство/IMEI, подтверждение личности, банки и исключения.",
+      "affected_ids": [
+        "PROC_SIM_EBS",
+        "FED_EBS_REGISTER",
+        "FED_SIM_CONTRACT"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_SIM",
+        "SRC_SIM_GOS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_BANK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Найти действующие нормы Банка России и 115-ФЗ о противодействии легализации (это другой 115-ФЗ), процедуры идентификации, ограничения РКЛ и доступность счёта без SIM.",
+      "affected_ids": [
+        "PROC_BANK"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TAX",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить ставки и декларационные/платёжные сроки для конкретного дохода; не назначать 3-НДФЛ каждому студенту и не считать все стипендии облагаемыми.",
+      "affected_ids": [
+        "PROC_TAX",
+        "FED_TAX_RESIDENCE_CONFIRM"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_NDFL",
+        "SRC_TAX_RESIDENCE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SELF_EMPLOYMENT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить актуальный перечень гражданств НПД и взаимодействие с учебной трудовой льготой, ГПХ, РВПО и ЕАЭС; не выводить разрешение бизнеса из студенческого статуса.",
+      "affected_ids": [
+        "PROC_SELF_EMPLOYMENT"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_NPD",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_REGULATED_PROFESSION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить актуальные порядки допуска и аккредитации, правила работы студентов на отдельных должностях; другие регулируемые профессии исследовать по запросу.",
+      "affected_ids": [
+        "PROC_REGULATED_PROFESSION"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_MED_PROFESSION",
+        "SRC_RECOGNITION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RKL",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить полный акт ведения РКЛ, актуальный URL сервиса, основания включения/исключения, ограничения и сроки обжалования; определить переходный режим 2026.",
+      "affected_ids": [
+        "PROC_RKL",
+        "FED_RKL_CHECK",
+        "FED_RKL_CLARIFY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_RKL",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ADVERSE_DECISION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Исследовать сроки, подсудность и приостановление для каждого вида решения; ни 3, ни 15, ни 30 дней не назначать универсально.",
+      "affected_ids": [
+        "PROC_ADVERSE_DECISION"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW114",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MINORS_FAMILY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Установить сопровождение/визы семьи студентов, новорождённых, представителей и возрастные исключения каждой процедуры; не выводить права семьи из одной справки об обучении.",
+      "affected_ids": [
+        "PROC_MINORS_FAMILY"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW114",
+        "SRC_LAW115",
+        "SRC_EAEU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPECIAL_STATUS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Получить действующие на 26.09.2026 специальные указы/законы по убежищу, безгражданству и временным режимам; не переносить гуманитарные исключения прошлых лет.",
+      "affected_ids": [
+        "PROC_SPECIAL_STATUS"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW114",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_CUSTOMS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Найти первичные материалы ФТС/ЕЭК о наличных, личных вещах и рецептурных/контролируемых лекарствах; числовые лимиты не установлены.",
+      "affected_ids": [
+        "PROC_CUSTOMS"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_EAEU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_CURRENT_EDITION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Получить официальные полные редакции базовых 115-ФЗ, 109-ФЗ, 114-ФЗ на 26.09.2026, учесть даты вступления поправок. Проиндексированный фрагмент/старое разъяснение не удостоверяет действующее право. Проверить новые медицинские нормы 162-ФЗ, ruID № 468, эксперимент № 121-ФЗ и не применять будущий № 314-ФЗ.",
+      "affected_ids": [
+        "PROC_ENTRY_REGIME",
+        "PROC_EDU_RECOGNITION",
+        "PROC_EDU_LEGALIZATION",
+        "PROC_ADMISSION_QUOTA",
+        "PROC_INVITATION",
+        "PROC_STUDY_VISA",
+        "PROC_RUID",
+        "PROC_BORDER_BIOMETRICS",
+        "PROC_MIGRATION_CARD",
+        "PROC_ARRIVAL_REGISTRATION",
+        "PROC_HOTEL_HOSPITAL",
+        "PROC_SELF_NOTIFICATION",
+        "PROC_AMINA",
+        "PROC_STAY_EXTENSION",
+        "PROC_VISA_EXTENSION",
+        "PROC_MED_INITIAL",
+        "PROC_MED_REPEAT",
+        "PROC_FINGERPRINT",
+        "PROC_DMS",
+        "PROC_OMS",
+        "PROC_EMERGENCY_CARE",
+        "PROC_RVP",
+        "PROC_RVPO",
+        "PROC_VNH",
+        "PROC_RESIDENCE_REGISTRATION",
+        "PROC_ANNUAL_NOTICE",
+        "PROC_ABSENCE",
+        "PROC_LOST_PASSPORT",
+        "PROC_LOST_CARD",
+        "PROC_LOST_REGISTRATION",
+        "PROC_DATA_CHANGE",
+        "PROC_MOVE",
+        "PROC_EXIT_REENTRY",
+        "PROC_TRANSFER",
+        "PROC_ACADEMIC_CHANGE",
+        "PROC_STUDY_END",
+        "PROC_STUDENT_WORK",
+        "PROC_EMPLOYER_NOTIFY",
+        "PROC_PATENT_BRANCH",
+        "PROC_SNILS",
+        "PROC_INN",
+        "PROC_ESIA",
+        "PROC_SIM_EBS",
+        "PROC_BANK",
+        "PROC_TAX",
+        "PROC_SELF_EMPLOYMENT",
+        "PROC_REGULATED_PROFESSION",
+        "PROC_RKL",
+        "PROC_ADVERSE_DECISION",
+        "PROC_MINORS_FAMILY",
+        "PROC_SPECIAL_STATUS",
+        "PROC_CUSTOMS",
+        "FED_ENTRY_RULE_CHECK",
+        "FED_INVITATION_REQUEST",
+        "FED_VISA_APPLY",
+        "FED_VISA_COLLECT_ABROAD",
+        "FED_EDU_RECOGNITION_CHECK",
+        "FED_EDU_RECOGNITION_APPLY",
+        "FED_RUID_STANDARD",
+        "FED_RUID_EMERGENCY",
+        "FED_MIGRATION_CARD_ENTRY",
+        "FED_HOST_DOCUMENTS",
+        "FED_REGISTRATION_CONFIRMATION",
+        "FED_HOTEL_IDENTIFY",
+        "FED_SELF_ARRIVAL_NOTICE",
+        "FED_RESIDENCE_REGISTER",
+        "FED_REGISTRATION_DUPLICATE",
+        "FED_ACCOUNTING_DATA_UPDATE",
+        "FED_STAY_PETITION_REQUEST",
+        "FED_STUDY_VISA_EXTEND",
+        "FED_STUDY_VISA_COLLECT",
+        "FED_RVPO_APPLY",
+        "FED_RVP_APPLY",
+        "FED_VNH_APPLY",
+        "FED_VNH_ANNUAL_NOTICE",
+        "FED_RVP_ANNUAL_NOTICE",
+        "FED_MEDICAL_INITIAL",
+        "FED_MEDICAL_REPEAT",
+        "FED_FINGERPRINT_PHOTO",
+        "FED_OMS_APPLY",
+        "FED_DMS_CONTRACT",
+        "FED_EMERGENCY_HELP",
+        "FED_MIGRATION_CARD_DUPLICATE",
+        "FED_VISA_RESTORE",
+        "FED_RETURN_VISA_CHECK",
+        "FED_WORK_STUDY_PROOF",
+        "FED_WORK_STUDY_END_NOTIFY",
+        "FED_SNILS_REGISTER",
+        "FED_SNILS_UPDATE",
+        "FED_SNILS_COPY",
+        "FED_INN_APPLY",
+        "FED_ESIA_CONFIRM",
+        "FED_EBS_REGISTER",
+        "FED_SIM_CONTRACT",
+        "FED_RKL_CHECK",
+        "FED_RKL_CLARIFY",
+        "FED_TAX_RESIDENCE_CONFIRM"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115",
+        "SRC_LAW109",
+        "SRC_LAW114",
+        "SRC_MED2026",
+        "SRC_RUID468",
+        "SRC_AMINA121",
+        "SRC_FUTURE314"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_COUNTRY_MATRIX",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Составить полную актуальную матрицу гражданств/типов паспортов: визовый учебный режим, договорные освобождения от учёта и их точный отсчёт, исключения медицинские/биометрические/трудовые. Беларусь 90 дней, Казахстан 30, Таджикистан/Узбекистан 15 — проверять по действующим российским публикациям договоров; не считать срок освобождения готовым дедлайном регистрации.",
+      "affected_ids": [
+        "PROC_ENTRY_REGIME",
+        "PROC_ARRIVAL_REGISTRATION",
+        "PROC_AMINA",
+        "PROC_MED_INITIAL",
+        "PROC_FINGERPRINT",
+        "PROC_STUDENT_WORK"
+      ],
+      "created_at": "2026-09-26T05:30:00Z",
+      "candidate_source_ids": [
+        "SRC_ENTRY_TABLE",
+        "SRC_KZ_TREATY",
+        "SRC_UZ_TREATY",
+        "SRC_TJ_TREATY",
+        "SRC_TJ_RU",
+        "SRC_EAEU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_ENTRY_RULE_CHECK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить полную действующую редакцию, исчерпывающие документы/исключения и точный порядок срока; сохранить только приведённую подтверждённую часть.",
+      "affected_ids": [
+        "FED_ENTRY_RULE_CHECK",
+        "PROC_ENTRY_REGIME"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_ENTRY_TABLE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_INVITATION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Форма приглашения подтверждена, но актуальный комплект и срок оформления не установлены; контакт ответственного подразделения добавить через UniversityConfig.",
+      "affected_ids": [
+        "FED_INVITATION_REQUEST",
+        "PROC_INVITATION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_INVITATION",
+        "SRC_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_VISA_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не установлены единый для профиля комплект фото/ВИЧ/страховки, сбор, срок услуги и исключения паспортного срока. Не выдавать перечисленный минимум за исчерпывающий комплект.",
+      "affected_ids": [
+        "FED_VISA_APPLY",
+        "PROC_STUDY_VISA"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_VISA_COLLECT_ABROAD",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точный способ выдачи/исправления ошибки и срок получения зависят от консульского порядка; не обещать выдачу после одной подачи.",
+      "affected_ids": [
+        "FED_VISA_COLLECT_ABROAD",
+        "PROC_STUDY_VISA"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_EDU_RECOGNITION_CHECK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Текущие договоры и перечни не сведены полностью; гражданство владельца само по себе не определяет необходимость признания.",
+      "affected_ids": [
+        "FED_EDU_RECOGNITION_CHECK",
+        "PROC_EDU_RECOGNITION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_RECOGNITION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_EDU_RECOGNITION_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Полный актуальный регламент № 1443, комплект/переводы, госпошлина и каналы подачи не подтверждены. Карточка сохраняет саму процедуру и подтверждённые документы, но не разрешает подачу неполного комплекта.",
+      "affected_ids": [
+        "FED_EDU_RECOGNITION_APPLY",
+        "PROC_EDU_RECOGNITION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_RECOGNITION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RUID_STANDARD",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Нужно подтвердить обязательность, исключения и последствия после поправок № 468 от 27.04.2026; 72/4 часа сохранены как частичная норма, подтверждение заявления не гарантирует въезд.",
+      "affected_ids": [
+        "FED_RUID_STANDARD",
+        "PROC_RUID"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_RUID"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RUID_EMERGENCY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Нужно подтвердить обязательность, исключения и последствия после поправок № 468 от 27.04.2026; 72/4 часа сохранены как частичная норма, подтверждение заявления не гарантирует въезд.",
+      "affected_ids": [
+        "FED_RUID_EMERGENCY",
+        "PROC_RUID"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_RUID"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_MIGRATION_CARD_ENTRY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Освобождения по документу/статусу и электронные варианты карты требуют сверки № 413; день/срок из старой памятки с названием ФМС не переносится автоматически.",
+      "affected_ids": [
+        "FED_MIGRATION_CARD_ENTRY",
+        "PROC_MIGRATION_CARD"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_CARD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_HOST_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Общий срок подачи 7 рабочих дней относится к уведомлению принимающей стороны, а не к отдельному личному дедлайну передачи студентом. Нужны договорные освобождения и точный состав копий.",
+      "affected_ids": [
+        "FED_HOST_DOCUMENTS",
+        "PROC_ARRIVAL_REGISTRATION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_REG_GUIDE",
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_REGISTRATION_CONFIRMATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Форма бумажного/электронного результата зависит от канала; срок получения пользователем отдельно не установлен. Учёт сам по себе не продлевает законное пребывание.",
+      "affected_ids": [
+        "FED_REGISTRATION_CONFIRMATION",
+        "PROC_ARRIVAL_REGISTRATION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_REG_GUIDE",
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_HOTEL_IDENTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Специальные сроки организации не назначаются студенту; порядок больницы/гостиницы, выходные и влияние на предыдущий адрес требуют проверки.",
+      "affected_ids": [
+        "FED_HOTEL_IDENTIFY",
+        "PROC_HOTEL_HOSPITAL"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_SELF_ARRIVAL_NOTICE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Основание самостоятельной подачи нельзя вывести из факта аренды без проверки закона. Точный комплект подтверждений, согласие собственника, канал и срок остаются открытыми.",
+      "affected_ids": [
+        "FED_SELF_ARRIVAL_NOTICE",
+        "PROC_SELF_NOTIFICATION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW109",
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RESIDENCE_REGISTER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Семидневный рабочий отсчёт, набор документов/межведомственных сведений, пошлина и особенности общежития не подтверждены полностью; учёт по месту пребывания — другая процедура.",
+      "affected_ids": [
+        "FED_RESIDENCE_REGISTER",
+        "PROC_RESIDENCE_REGISTRATION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW109",
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_REGISTRATION_DUPLICATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Указанные в исследовании 3 рабочих дня относятся к действиям МВД, не к сроку заявления пользователя. Точный комплект и якорь срока услуги уточнить.",
+      "affected_ids": [
+        "FED_REGISTRATION_DUPLICATE",
+        "PROC_LOST_REGISTRATION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_ACCOUNTING_DATA_UPDATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Субъект подачи, срок и дополнительные подтверждения изменения имени/гражданства должны быть установлены по конкретному основанию. Срок внесения данных МВД не считать личным сроком студента.",
+      "affected_ids": [
+        "FED_ACCOUNTING_DATA_UPDATE",
+        "PROC_DATA_CHANGE"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_REG9",
+        "SRC_LAW109"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_STAY_PETITION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "20 дней из разъяснения — срок ходатайства организации, не установленный федеральный срок передачи студентом документов. Проверить программы, форму и текущий порядок продления.",
+      "affected_ids": [
+        "FED_STAY_PETITION_REQUEST",
+        "PROC_STAY_EXTENSION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_STUDENT_EXTEND"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Известны 20 рабочих дней; действующая редакция, полный комплект, поздняя подача, календарь и момент окончания дня не подтверждены. Поданная анкета не продлевает визу автоматически.",
+      "affected_ids": [
+        "FED_STUDY_VISA_EXTEND",
+        "PROC_VISA_EXTENSION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_VISA907"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_STUDY_VISA_COLLECT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Пункты 32 и 156 подтверждают получение с оригиналами; конкретные оригиналы и способ получения через представителя сверить по заявлению.",
+      "affected_ids": [
+        "FED_STUDY_VISA_COLLECT",
+        "PROC_VISA_EXTENSION"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_VISA907"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RVPO_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Регламент № 949 и полный комплект, срок услуги/подачи и исключения для отдельных программ требуют проверки. Срок обучения плюс 180 дней — действие РВПО, не дедлайн заявления.",
+      "affected_ids": [
+        "FED_RVPO_APPLY",
+        "PROC_RVPO"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_RVPO",
+        "SRC_RVPO_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RVP_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждены все действующие основания, медицинские/языковые документы, сроки и квоты. Обучение не считается автоматическим внеквотным основанием; будущие требования № 314-ФЗ не применять заранее.",
+      "affected_ids": [
+        "FED_RVP_APPLY",
+        "PROC_RVP"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_RVP"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_VNH_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Окно обычного РВП нельзя переносить на выпускника с РВПО. Точные основания, сроки, документы и освобождения проверить; диплом с отличием не универсальное требование.",
+      "affected_ids": [
+        "FED_VNH_APPLY",
+        "PROC_VNH"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_VNH",
+        "SRC_VNH_NOTICE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_VNH_ANNUAL_NOTICE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить актуальный комплект и канал, личную подачу раз в пять лет, уважительные причины поздней подачи и календарное исчисление. РВПО не входит в эту карточку.",
+      "affected_ids": [
+        "FED_VNH_ANNUAL_NOTICE",
+        "PROC_ANNUAL_NOTICE"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_VNH_NOTICE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RVP_ANNUAL_NOTICE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Срок и комплект ежегодного уведомления РВП должны быть подтверждены отдельно от ВНЖ. Не назначать уведомление владельцу РВПО по аналогии.",
+      "affected_ids": [
+        "FED_RVP_ANNUAL_NOTICE",
+        "PROC_ANNUAL_NOTICE"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115",
+        "SRC_RVP"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_MEDICAL_INITIAL",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Нужны точные исключения/переходные нормы, состав документов и исчисление даты. Срок 24 часа размещения заключения в ЕГИСЗ относится к клинике.",
+      "affected_ids": [
+        "FED_MEDICAL_INITIAL",
+        "PROC_MED_INITIAL"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_MED2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_MEDICAL_REPEAT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить переход старых справок, освобождения и порядок передачи результатов МВД после 01.09.2026; не прибавлять 30 дней к произвольной дате выдачи справки.",
+      "affected_ids": [
+        "FED_MEDICAL_REPEAT",
+        "PROC_MED_REPEAT"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_MED2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_FINGERPRINT_PHOTO",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить актуальную область 90-дневного срока, возраст/гражданство/статусы, взаимозачёт уже пройденной процедуры и медицинские документы.",
+      "affected_ids": [
+        "FED_FINGERPRINT_PHOTO",
+        "PROC_FINGERPRINT"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_FINGERPRINT",
+        "SRC_FINGERPRINT_PVS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_OMS_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Федеральные категории/исключения 326-ФЗ, РВПО и сроки действия нужно сверить; региональная инструкция подтверждает выбранный способ, не все основания ОМС.",
+      "affected_ids": [
+        "FED_OMS_APPLY",
+        "PROC_OMS"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_OMS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_DMS_CONTRACT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Источник не устанавливает универсальную покупку ДМС для каждого студента. Визовые требования, минимальное покрытие и комплект страховщика не подтверждены; обязательный медосмотр — отдельная процедура.",
+      "affected_ids": [
+        "FED_DMS_CONTRACT",
+        "PROC_DMS"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_HEALTH",
+        "SRC_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_EMERGENCY_HELP",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Карточка не определяет клинический диагноз. Неотложную и плановую помощь нельзя считать бесплатными на том же основании; проверить действующие нормы о формах помощи.",
+      "affected_ids": [
+        "FED_EMERGENCY_HELP",
+        "PROC_EMERGENCY_CARE"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_HEALTH"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_MIGRATION_CARD_DUPLICATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Памятка МИД содержит старое название ФМС. Подтвердить № 413, единицу трёхдневного срока, заявление и компетенцию МВД; дубликат не продлевает пребывание.",
+      "affected_ids": [
+        "FED_MIGRATION_CARD_DUPLICATE",
+        "PROC_LOST_CARD"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_CARD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_PASSPORT_RESTORE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Порядок иностранного консульства не подтверждён государственным источником для конкретного гражданства. В федеральном слое оставлено восстановление российской визы после получения нового документа. Порядок зависит от иностранного государства и не установлен российским федеральным исследованием; справка полиции/сроки/комплект не назначаются без источника. Сохранена необходимость действительного проездного документа.",
+      "affected_ids": [
+        "PROC_LOST_PASSPORT"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW114",
+        "SRC_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_VISA_RESTORE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точное основание, дополнительные документы, сбор и срок обращения/выезда не установлены; не считать новый паспорт автоматически визированным.",
+      "affected_ids": [
+        "FED_VISA_RESTORE",
+        "PROC_LOST_PASSPORT"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_VISA907"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RVPO_TRANSFER_NOTICE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Публикация Минобрнауки рассматривает проект. До подтверждения действующей нормы действие и срок не превращаются в федеральную карточку. Материал Минобрнауки содержит проектное регулирование; действующая обязанность должна быть подтверждена до включения карточки. 30 дней и 5 рабочих дней не объявляются установленным сроком студента.",
+      "affected_ids": [
+        "PROC_TRANSFER"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_RVPO_TRANSFER",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RETURN_VISA_CHECK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждены все договорные/статусные исключения, выезд при незавершённой заявке и ограничения въезда. Поездка не обнуляет годовой безвизовый лимит.",
+      "affected_ids": [
+        "FED_RETURN_VISA_CHECK",
+        "PROC_EXIT_REENTRY"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_VISA",
+        "SRC_LAW114"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_WORK_STUDY_PROOF",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точная форма справки и полный кадровый комплект не установлены; проверить актуальную статью 13. Уведомление МВД работодателем не подменяется передачей справки студентом.",
+      "affected_ids": [
+        "FED_WORK_STUDY_PROOF",
+        "PROC_STUDENT_WORK"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_WORK_STUDENT",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_WORK_STUDY_END_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Личный срок сообщения студентом не подтверждён. Законное прекращение/продолжение договора зависит от действующей нормы и другого основания; решение работодателя не подменяется карточкой.",
+      "affected_ids": [
+        "FED_WORK_STUDY_END_NOTIFY",
+        "PROC_STUDY_END"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_WORK_STUDENT",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_SNILS_REGISTER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить доступность конкретной клиентской службы и действующую форму АДВ-1; это не основание повторно создавать уже присвоенный номер.",
+      "affected_ids": [
+        "FED_SNILS_REGISTER",
+        "PROC_SNILS"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_SNILS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_SNILS_UPDATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для конкретного изменения уточнить подтверждающий документ/перевод; личный обязательный срок после смены паспорта в прочитанной инструкции не установлен.",
+      "affected_ids": [
+        "FED_SNILS_UPDATE",
+        "PROC_DATA_CHANGE"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_SNILS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_SNILS_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Форму запроса и доступный электронный способ уточнить по текущей инструкции. Зелёная пластиковая карточка не требуется как обязательный результат.",
+      "affected_ids": [
+        "FED_SNILS_COPY",
+        "PROC_SNILS"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_SNILS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_INN_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить отсутствие уже присвоенного ИНН; межведомственная регистрация возможна без заявления. Уточнить перевод и действующую редакцию формы для личной подачи.",
+      "affected_ids": [
+        "FED_INN_APPLY",
+        "PROC_INN"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_INN"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_ESIA_CONFIRM",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сценарий без российского номера и актуальный перечень банков/центров требуется проверить. Подтверждение ЕСИА не приравнивается к получению SIM.",
+      "affected_ids": [
+        "FED_ESIA_CONFIRM",
+        "PROC_ESIA"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_SIM"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_EBS_REGISTER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверить актуальную форму биометрической регистрации и банки. Дактилоскопия МВД и ruID не подставляются вместо ЕБС автоматически.",
+      "affected_ids": [
+        "FED_EBS_REGISTER",
+        "PROC_SIM_EBS"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_SIM"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_SIM_CONTRACT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Перечень допустимых документов, лимит номеров и изменения 2026 года требуют проверки по 126-ФЗ. Переходный дедлайн 2025 года не является новым сроком студента.",
+      "affected_ids": [
+        "FED_SIM_CONTRACT",
+        "PROC_SIM_EBS"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_SIM"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RKL_CHECK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверка сервиса не заменяет проверку действительности статуса. Причина записи, порядок исправления и сроки обжалования определяются отдельно.",
+      "affected_ids": [
+        "FED_RKL_CHECK",
+        "PROC_RKL"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_RKL_SERVICE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_RKL_CLARIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждены отдельная форма исправления, срок и подсудность жалобы. Простое обращение не объявляется приостановкой режима или продлением пребывания.",
+      "affected_ids": [
+        "FED_RKL_CLARIFY",
+        "PROC_RKL"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_RKL",
+        "SRC_RKL_SERVICE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_STEP_TAX_RESIDENCE_CONFIRM",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Миграционный ВНЖ не доказывает налоговое резидентство. Точный комплект, способ подачи и срок услуги должны быть подтверждены отдельно от определения 183 дней.",
+      "affected_ids": [
+        "FED_TAX_RESIDENCE_CONFIRM",
+        "PROC_TAX"
+      ],
+      "created_at": "2026-09-26T06:00:00Z",
+      "candidate_source_ids": [
+        "SRC_TAX_RESIDENCE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_MINORS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подготовить отдельные процедуры представителя до 14 лет, ИНН/ЕСИА/ЕБС/SIM для несовершеннолетних и проверить допустимые документы. Исключение из взрослой карточки не означает отсутствие права.",
+      "affected_ids": [
+        "FED_SNILS_REGISTER",
+        "FED_SNILS_UPDATE",
+        "FED_SNILS_COPY",
+        "FED_INN_APPLY",
+        "FED_ESIA_CONFIRM",
+        "FED_EBS_REGISTER",
+        "FED_SIM_CONTRACT"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_SNILS",
+        "SRC_AUDIT_SNILS_AGE",
+        "SRC_SIM"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_OMS_EAEU",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сверить действующую федеральную норму ОМС, случаи ГПХ, освобождения от учета и подтверждение проживания в экспериментальном режиме. Региональный перечень документов не заменяет эти проверки.",
+      "affected_ids": [
+        "FED_OMS_EAEU_EMPLOYEE"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_OMS_WORK",
+        "SRC_EAEU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_CITIZENSHIP",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Нужна актуальная матрица договоров по гражданству, документу, цели въезда, льготному периоду и типу размещения. Не переносить 30 дней ЕАЭС на всех студентов и Беларусь; не превращать освобождение в срок подачи студентом.",
+      "affected_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_SELF_ARRIVAL_NOTICE",
+        "FED_ENTRY_RULE_CHECK"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_AUDIT_BY",
+        "SRC_AUDIT_REG_CONFLICT",
+        "SRC_AUDIT_REG_COMPARE",
+        "SRC_KZ_TREATY",
+        "SRC_TJ_TREATY",
+        "SRC_UZ_TREATY"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_AMINA",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить текущую редакцию 121-ФЗ, переход с сохраненного обычного учета, исключения и правила гостиниц/стационаров. Пока конфликт ordinary_arrival_accounting и amina_applicable блокирует выбор режима; отсутствие шага Амина не означает освобождение.",
+      "affected_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_SELF_ARRIVAL_NOTICE",
+        "FED_HOTEL_IDENTIFY",
+        "FED_ACCOUNTING_DATA_UPDATE"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_AMINA121",
+        "SRC_AMINA_MVD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_MEDICAL_TRANSITION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для въезда до 01.09.2026, повторного въезда с действительными медицинскими документами, возраста и национальных исключений требуется проверка переходных правил 162-ФЗ. Исключение из FED_MEDICAL_INITIAL не означает отсутствие медицинской обязанности.",
+      "affected_ids": [
+        "FED_MEDICAL_INITIAL",
+        "FED_MEDICAL_REPEAT",
+        "FED_FINGERPRINT_PHOTO"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_MED2026",
+        "SRC_FINGERPRINT",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_CHANGES",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить действия и сроки при смене паспорта, статуса, переводе/академическом отпуске/отчислении, аннулировании документа и длительном выезде. Пересчет применимости не равен исполнению уведомительной обязанности.",
+      "affected_ids": [
+        "FED_ACCOUNTING_DATA_UPDATE",
+        "FED_STAY_PETITION_REQUEST",
+        "FED_STUDY_VISA_EXTEND",
+        "FED_RVPO_APPLY",
+        "FED_VNH_APPLY",
+        "FED_RVP_ANNUAL_NOTICE",
+        "FED_VNH_ANNUAL_NOTICE",
+        "FED_WORK_STUDY_END_NOTIFY"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115",
+        "SRC_REG9",
+        "SRC_RVPO_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_HOSPITAL_RETURN",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сверить сохранение/прекращение предыдущего учета при гостинице и стационаре и действия после возвращения. Сам факт возвращения создает контекст проверки; не устанавливает автоматически обязанность новой постановки.",
+      "affected_ids": [
+        "FED_HOST_DOCUMENTS",
+        "FED_HOTEL_IDENTIFY",
+        "FED_SELF_ARRIVAL_NOTICE"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW109",
+        "SRC_REG9"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_WORK_OTHER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подготовить самостоятельные основания работы ЕАЭС/РВП/РВПО/ВНЖ и границы по региону и виду договора. Не трактовать ложность студенческой льготы как запрет на работу или автоматическую обязанность получить патент.",
+      "affected_ids": [
+        "FED_WORK_STUDY_PROOF",
+        "FED_WORK_STUDY_END_NOTIFY"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115",
+        "SRC_EAEU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_SPECIAL",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Раскрыть лица без гражданства, убежище/беженство, особые указные режимы и несколько гражданств. Не сводить их к обычному temporary_stay или одному выбранному паспорту.",
+      "affected_ids": [
+        "FED_ENTRY_RULE_CHECK",
+        "FED_RVP_APPLY",
+        "FED_VNH_APPLY",
+        "FED_OMS_APPLY"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_LAW115",
+        "SRC_OMS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_RUID_CURRENT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждены полный обязательный порядок и исключения ruID после изменений 2026 года. Факт ruid_applicable нельзя вычислять из одного признака безвизового въезда; интервалы 72/4 часа не превращать в безусловный дедлайн.",
+      "affected_ids": [
+        "FED_RUID_STANDARD",
+        "FED_RUID_EMERGENCY"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_RUID",
+        "SRC_RUID468"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_ENTRY_PURPOSE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Проверять цель, вид паспорта и действующий статус отдельно от гражданства: туристический/электронный безвизовый режим не доказывает право въезда для длительной учебы. Требуются особые документы при РВП/РВПО/ВНЖ.",
+      "affected_ids": [
+        "FED_ENTRY_RULE_CHECK",
+        "FED_INVITATION_REQUEST",
+        "FED_VISA_APPLY",
+        "FED_RETURN_VISA_CHECK"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_ENTRY_TABLE",
+        "SRC_VISA",
+        "SRC_LAW114"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_AUDIT_STAY_COUNTER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Нужен подтвержденный расчет суммарного срока временного пребывания, исключений и продлений по истории въездов/выездов. Повторный въезд не означает автоматического нового полного лимита; не применять старое 90/180 или обнулять годовой счетчик.",
+      "affected_ids": [
+        "FED_ENTRY_RULE_CHECK",
+        "FED_STAY_PETITION_REQUEST"
+      ],
+      "created_at": "2026-09-26T06:25:00Z",
+      "candidate_source_ids": [
+        "SRC_STAY",
+        "SRC_LAW115"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_CONTACT_VARIANTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Телефон ОМУ на актуальной странице и странице отчисления: +7 (812) 480-09-17; английский гайд содержит +7 (812) 607-04-60. Выбран подтвержденный двумя русскими страницами контакт, альтернативный номер не включен в рабочие контакты. Часы приема и запись не подтверждены. На странице бакалавриата внутри текста и в блоке Центра обучения иностранных студентов также различаются телефоны; в конфигурацию перенесены телефоны блока подразделения, мобильный номер не перенесен.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "OVR_ITMO_HOST_DOCUMENTS",
+        "OVR_ITMO_ACCOUNTING_DATA_UPDATE",
+        "OVR_ITMO_STAY_PETITION_REQUEST",
+        "OVR_ITMO_STUDY_VISA_EXTEND",
+        "UNI_ITMO_PREARRIVAL_NOTIFY",
+        "UNI_ITMO_TRAVEL_NOTIFY",
+        "UNI_ITMO_ARRIVAL_CARD_COPY",
+        "UNI_ITMO_STATUS_NOTIFY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_EN",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_AUTHENTICATED_FORMS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Ссылки my.itmo ведут на авторизацию. Публичное назначение подтверждено страницами ИТМО; поля форм, доступы и успешная отправка после входа не проверены. Форма 086/у /requests/new/8326 не открылась инструментом.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "OVR_ITMO_WORK_STUDY_PROOF",
+        "OVR_ITMO_VNH_APPLY",
+        "UNI_ITMO_DORM_REQUEST",
+        "UNI_ITMO_MEDICAL_UPLOAD",
+        "UNI_ITMO_DORM_SLOT",
+        "UNI_ITMO_DORM_CHECKIN",
+        "UNI_ITMO_DORM_APPLICANT_REQUEST"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_MEDICINE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_INVITATION_FORM",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Публичная анкета учебного приглашения и точный комплект документов не обнаружены. FAQ указывает 30 рабочих дней изготовления, другой гайд — не менее месяца. Это время работы вуза, не дедлайн студента.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "OVR_ITMO_INVITATION_REQUEST"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_INVITATION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_INVITATION_REQUEST"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_VISA_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_VISA_APPLY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_BACHELOR"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_RECOGNITION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не найдено публичного отдельного сервиса ИТМО, который устанавливает признание каждого иностранного документа. Правила приема не доказывают отсутствие освобождения и не заменяют федеральный анализ.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "OVR_ITMO_EDU_RECOGNITION_CHECK"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_EDU_RECOGNITION_CHECK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_EDU_RECOGNITION_CHECK"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_ADMISSION_BACHELOR_2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_ARRIVAL_DEADLINES",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Сентябрьская миграционная страница дает 3 рабочих дня после прибытия; гайд заселения — день заселения/следующий рабочий день. Якоря и приоритет различаются; FAQ не уточняет рабочие дни. Хранить варианты, не выбирать молча минимум.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "OVR_ITMO_HOST_DOCUMENTS"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_HOST_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_HOST_DOCUMENTS"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_LOCAL_TIME",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не опубликованы полные правила отсчета внутренних сроков, часы окончания приема и календарь. «45 дней» не превращать в рабочие дни, а «1,5 месяца» — автоматически в 45 дней.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "OVR_ITMO_ACCOUNTING_DATA_UPDATE",
+        "OVR_ITMO_STAY_PETITION_REQUEST",
+        "OVR_ITMO_STUDY_VISA_EXTEND",
+        "UNI_ITMO_PREARRIVAL_NOTIFY",
+        "UNI_ITMO_STATUS_NOTIFY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_ACCOUNTING_DATA_UPDATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_ACCOUNTING_DATA_UPDATE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STAY_PETITION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_STAY_PETITION_REQUEST"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_FEDERAL_MEDICAL_CONFLICT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Страница ИТМО объединяет медосмотр и дактилоскопию под общим сроком 30 дней. Федеральный слой содержит отдельные основания и сроки. Вузовская страница используется только для локального адреса и передачи документов; правовая коллизия не разрешена.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "OVR_ITMO_STUDY_VISA_EXTEND",
+        "OVR_ITMO_MEDICAL_INITIAL",
+        "OVR_ITMO_FINGERPRINT_PHOTO"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_STUDY_VISA_EXTEND"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_MEDICAL_INITIAL",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_MEDICAL_INITIAL"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_FINGERPRINT_PHOTO",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_FINGERPRINT_PHOTO"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_DMS_CONTRACT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_DMS_CONTRACT"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_BACHELOR"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_WORK_STUDY_PROOF",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_WORK_STUDY_PROOF"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_VNH_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущие часы/запись, применимость к программе и недостающие детали локальной процедуры. Не считать федеральные пробелы закрытыми вузовской страницей.",
+      "affected_ids": [
+        "OVR_ITMO_VNH_APPLY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_PREARRIVAL_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_PREARRIVAL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_HOUSING_RU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_DORM_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_DORM_REQUEST"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_HOUSING_RU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_MEDICAL_UPLOAD",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_MEDICAL_UPLOAD"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_HOUSING_RU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_DORM_SLOT_CONFLICT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Русский гайд: выбор времени за 48 часов, 24 часа для МСГ. Английский: 48 часов, 24 часа для иностранных студентов. Приоритет не установлен; точный дедлайн для иностранца заблокирован, нужно уточнение campus@itmo.ru.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "UNI_ITMO_DORM_SLOT"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_HOUSING_EN"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_DORM_SLOT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_DORM_SLOT"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_HOUSING_EN"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_DORM_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Раскрывающийся блок актуального русского перечня не прочитан: ссылка открывается как @block и дает 404 в инструменте. Английский список подтверждает лишь часть; актуальный полный пакет, форма согласия родителя и отдельный пакет МСГ требуют проверки.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "UNI_ITMO_DORM_CHECKIN"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_HOUSING_EN"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_DORM_CHECKIN",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_DORM_CHECKIN"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_HOUSING_EN"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_TRAVEL_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_TRAVEL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_ARRIVAL_CARD_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_ARRIVAL_CARD_COPY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_STATUS_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_STATUS_NOTIFY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_MEDICAL_VISIT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_MEDICAL_VISIT"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MEDICINE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_CLEARANCE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_CLEARANCE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_POST_EXPULSION_DOCS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить недостающие детали и применимость локальной процедуры; числовой срок без подтвержденной формулы не рассчитывать.",
+      "affected_ids": [
+        "UNI_ITMO_POST_EXPULSION_DOCS"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_ENTRY_RULE_CHECK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_ENTRY_RULE_CHECK. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_ENTRY_RULE_CHECK"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_VISA_COLLECT_ABROAD",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_VISA_COLLECT_ABROAD. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_VISA_COLLECT_ABROAD"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_EDU_RECOGNITION_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_EDU_RECOGNITION_APPLY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_EDU_RECOGNITION_APPLY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_RUID_STANDARD",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_RUID_STANDARD. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_RUID_STANDARD"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_RUID_EMERGENCY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_RUID_EMERGENCY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_RUID_EMERGENCY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_MIGRATION_CARD_ENTRY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_MIGRATION_CARD_ENTRY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_MIGRATION_CARD_ENTRY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_BACHELOR",
+        "SRC_ITMO_ADMISSION_BACHELOR_2026",
+        "SRC_ITMO_PHD_ADMISSION_2026"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_REGISTRATION_CONFIRMATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_REGISTRATION_CONFIRMATION. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_REGISTRATION_CONFIRMATION"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_HOTEL_IDENTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_HOTEL_IDENTIFY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_HOTEL_IDENTIFY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_SELF_ARRIVAL_NOTICE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_SELF_ARRIVAL_NOTICE. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_SELF_ARRIVAL_NOTICE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_RESIDENCE_REGISTER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_RESIDENCE_REGISTER. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_RESIDENCE_REGISTER"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_REGISTRATION_DUPLICATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_REGISTRATION_DUPLICATE. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_REGISTRATION_DUPLICATE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_STUDY_VISA_COLLECT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_STUDY_VISA_COLLECT. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_STUDY_VISA_COLLECT"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_RVPO_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_RVPO_APPLY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_RVPO_APPLY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_RVP_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_RVP_APPLY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_RVP_APPLY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_VNH_ANNUAL_NOTICE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_VNH_ANNUAL_NOTICE. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_VNH_ANNUAL_NOTICE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_RVP_ANNUAL_NOTICE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_RVP_ANNUAL_NOTICE. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_RVP_ANNUAL_NOTICE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_MEDICAL_REPEAT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_MEDICAL_REPEAT. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_MEDICAL_REPEAT"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_OMS_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_OMS_APPLY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_OMS_APPLY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_EMERGENCY_HELP",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_EMERGENCY_HELP. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_EMERGENCY_HELP"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_MIGRATION_CARD_DUPLICATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_MIGRATION_CARD_DUPLICATE. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_MIGRATION_CARD_DUPLICATE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_VISA_RESTORE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_VISA_RESTORE. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_VISA_RESTORE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_RETURN_VISA_CHECK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_RETURN_VISA_CHECK. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_RETURN_VISA_CHECK"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_HOUSING_RU",
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_ACADEMIC_LEAVE",
+        "SRC_ITMO_EXPULSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_WORK_STUDY_END_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_WORK_STUDY_END_NOTIFY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_WORK_STUDY_END_NOTIFY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_STAFF_WORK",
+        "SRC_ITMO_DOCUMENTS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_SNILS_REGISTER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_SNILS_REGISTER. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_SNILS_REGISTER"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_SNILS_UPDATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_SNILS_UPDATE. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_SNILS_UPDATE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_SNILS_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_SNILS_COPY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_SNILS_COPY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_INN_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_INN_APPLY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_INN_APPLY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_ESIA_CONFIRM",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_ESIA_CONFIRM. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_ESIA_CONFIRM"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_EBS_REGISTER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_EBS_REGISTER. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_EBS_REGISTER"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_SIM_CONTRACT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_SIM_CONTRACT. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_SIM_CONTRACT"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_RKL_CHECK",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_RKL_CHECK. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_RKL_CHECK"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_RKL_CLARIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_RKL_CLARIFY. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_RKL_CLARIFY"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_TAX_RESIDENCE_CONFIRM",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_TAX_RESIDENCE_CONFIRM. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_TAX_RESIDENCE_CONFIRM"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_FAQ",
+        "SRC_ITMO_DOCUMENTS",
+        "SRC_ITMO_CONTACTS",
+        "SRC_ITMO_STAFF_WORK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_COVERAGE_OMS_EAEU_EMPLOYEE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "По проверенным страницам ИТМО не подтверждена самостоятельная локальная процедура для FED_OMS_EAEU_EMPLOYEE. Не заменять пробел общей рекомендацией обратиться в вуз; федеральный шаг остается без наложения.",
+      "affected_ids": [
+        "UNIV_ITMO",
+        "FED_OMS_EAEU_EMPLOYEE"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_MIGRATION",
+        "SRC_ITMO_MEDICINE",
+        "SRC_ITMO_BACHELOR"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_ITMO_STEP_DORM_APPLICANT_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Уточнить текущий порядок для иностранных поступающих, не использующих Госуслуги; этот маршрут действует только при подтвержденной подаче через данный канал.",
+      "affected_ids": [
+        "UNI_ITMO_DORM_APPLICANT_REQUEST"
+      ],
+      "created_at": "2026-09-26T06:55:00Z",
+      "candidate_source_ids": [
+        "SRC_ITMO_HOUSING_RU"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_QUALITY_REMOTE_PASSPORT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Источники описывают использование паспортных данных, но не подтверждают обязательное предъявление оригинала для этих дистанционных/самостоятельных действий. Форма документа оставлена unspecified; для самопроверок документ рекомендован как источник точных данных, а не юридически обязательное приложение.",
+      "affected_ids": [
+        "FED_ENTRY_RULE_CHECK",
+        "FED_INVITATION_REQUEST",
+        "FED_RUID_STANDARD",
+        "FED_RUID_EMERGENCY",
+        "FED_RKL_CHECK",
+        "FED_RETURN_VISA_CHECK"
+      ],
+      "created_at": "2026-09-26T07:54:30Z",
+      "candidate_source_ids": [
+        "SRC_ENTRY_TABLE",
+        "SRC_RKL_SERVICE",
+        "SRC_RUID",
+        "SRC_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_QUALITY_RUID_CURRENT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Первоначальные разъяснения ruID содержат 72/4 часа, но продолжение режима после 30.06.2026 и редакция постановления № 468 на дату аудита не подтверждены полным текстом. Эти числа удалены из рабочего deadline; восстановить только после проверки действующей нормы.",
+      "affected_ids": [
+        "FED_RUID_STANDARD",
+        "FED_RUID_EMERGENCY"
+      ],
+      "created_at": "2026-09-26T07:54:30Z",
+      "candidate_source_ids": [
+        "SRC_BORDER_BIO",
+        "SRC_RUID",
+        "SRC_RUID468"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_QUALITY_VISA_COLLECTION_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Паспорт является получаемым результатом, а не автоматически документом для предъявления при выдаче паспорта. Подтвердить удостоверение личности, расписку или доверенность для конкретного консульского способа выдачи.",
+      "affected_ids": [
+        "FED_VISA_COLLECT_ABROAD"
+      ],
+      "created_at": "2026-09-26T07:54:30Z",
+      "candidate_source_ids": [
+        "SRC_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_QUALITY_FINGERPRINT_CURRENT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "90 календарных дней подтверждены старым разъяснением 2024 года, а локальный источник объединяет разные процедуры под 30 днями. Актуальный федеральный срок и переходные нормы после 01.09.2026 не установлены. Старые 90 дней удалены из рабочего deadline; не заменять их вузовскими 30 днями.",
+      "affected_ids": [
+        "FED_FINGERPRINT_PHOTO"
+      ],
+      "created_at": "2026-09-26T07:54:30Z",
+      "candidate_source_ids": [
+        "SRC_FINGERPRINT",
+        "SRC_MED2026",
+        "SRC_MED2026_2"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_QUALITY_LINK_ACCESS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Финальная повторная проверка URL не получила содержимое части официальных источников; список и состояние каждого URL находятся в sources/quality_audit.json. Порталы требуют входа/JavaScript. Подтвердить доступ, актуальный текст и работу форм отдельно; не считать все URL проверенными по содержанию.",
+      "affected_ids": [
+        "SRC_AMINA121",
+        "SRC_CHINA_EDU",
+        "SRC_FINGERPRINT_PVS",
+        "SRC_FUTURE314",
+        "SRC_INVITATION",
+        "SRC_LAW109",
+        "SRC_LAW114",
+        "SRC_LAW115",
+        "SRC_MED_SUBMIT",
+        "SRC_NIC",
+        "SRC_PATENT",
+        "SRC_QUOTA",
+        "SRC_RECOGNITION",
+        "SRC_REG9",
+        "SRC_RKL",
+        "SRC_RUID468",
+        "SRC_RVP",
+        "SRC_RVPO",
+        "SRC_RVPO949",
+        "SRC_RVPO_TRANSFER",
+        "SRC_SIM_GOS",
+        "SRC_STAY",
+        "SRC_TJ_RU",
+        "SRC_TJ_TREATY",
+        "SRC_VISA907",
+        "SRC_VNH",
+        "SRC_VNH_NOTICE"
+      ],
+      "created_at": "2026-09-26T07:54:30Z",
+      "candidate_source_ids": [
+        "SRC_AMINA121",
+        "SRC_CHINA_EDU",
+        "SRC_FINGERPRINT_PVS",
+        "SRC_FUTURE314",
+        "SRC_INVITATION",
+        "SRC_LAW109",
+        "SRC_LAW114",
+        "SRC_LAW115",
+        "SRC_MED_SUBMIT",
+        "SRC_NIC",
+        "SRC_PATENT",
+        "SRC_QUOTA",
+        "SRC_RECOGNITION",
+        "SRC_REG9",
+        "SRC_RKL",
+        "SRC_RUID468",
+        "SRC_RVP",
+        "SRC_RVPO",
+        "SRC_RVPO949",
+        "SRC_RVPO_TRANSFER",
+        "SRC_SIM_GOS",
+        "SRC_STAY",
+        "SRC_TJ_RU",
+        "SRC_TJ_TREATY",
+        "SRC_VISA907",
+        "SRC_VNH",
+        "SRC_VNH_NOTICE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_QUALITY_UNMAPPED_FIELDS",
+      "status": "resolved",
+      "severity": "blocking",
+      "question": "Карта полей обнаружила фактические поля без собственного адресного доказательства. Они перечислены со state=unmapped в sources/quality_audit.json; статус draft и блокировка публикации сохранены. Общая ссылка карточки не объявляется подтверждением каждого её утверждения.",
+      "affected_ids": [
+        "FED_EMERGENCY_HELP",
+        "FED_INN_APPLY",
+        "FED_OMS_EAEU_EMPLOYEE",
+        "FED_SNILS_REGISTER",
+        "UNI_ITMO_ARRIVAL_CARD_COPY",
+        "UNI_ITMO_CLEARANCE",
+        "UNI_ITMO_DORM_APPLICANT_REQUEST",
+        "UNI_ITMO_DORM_CHECKIN",
+        "UNI_ITMO_DORM_REQUEST",
+        "UNI_ITMO_DORM_SLOT",
+        "UNI_ITMO_MEDICAL_UPLOAD",
+        "UNI_ITMO_MEDICAL_VISIT",
+        "UNI_ITMO_POST_EXPULSION_DOCS",
+        "UNI_ITMO_PREARRIVAL_NOTIFY",
+        "UNI_ITMO_STATUS_NOTIFY",
+        "UNI_ITMO_TRAVEL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T07:54:30Z",
+      "candidate_source_ids": [],
+      "resolution": {
+        "text": "Добавлены адресные связи 16 полей результатов/редакционных решений со сведениями об услуге. Это исправление прослеживаемости, а не подтверждение всей нормы; support_level=partial и draft сохранены.",
+        "resolved_at": "2026-09-26T07:54:30Z",
+        "evidence": [
+          {
+            "source_id": "SRC_SNILS",
+            "locator": "Регистрация граждан и оформление СНИЛС",
+            "supports": "Заявительный характер услуги; частичное подтверждение."
+          },
+          {
+            "source_id": "SRC_INN",
+            "locator": "Постановка физических лиц на учёт по заявлению",
+            "supports": "Заявительный характер услуги; частичное подтверждение."
+          },
+          {
+            "source_id": "SRC_ITMO_DOCUMENTS",
+            "locator": "Заказ и получение документов",
+            "supports": "Действие пользователя и результат обращения различаются; частичное подтверждение."
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_INVITATION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждены сроки и дополнительные требования каждого факультета; формы по внешним ссылкам не отправлялись.",
+      "affected_ids": [
+        "OVR_MSU_INVITATION_REQUEST"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_BEFORE",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_VISA_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Консульский комплект зависит от места обращения; памятка МГУ не подтверждает его полноту.",
+      "affected_ids": [
+        "OVR_MSU_VISA_APPLY"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_BEFORE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_VISA_COLLECT_ABROAD",
+      "status": "open",
+      "severity": "blocking",
+      "question": "МГУ не указывает единый срок отправки скана.",
+      "affected_ids": [
+        "OVR_MSU_VISA_COLLECT_ABROAD"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_BEFORE",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_HOST_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Нужно согласовать разные внутренние сроки и якоря; частное жильё и филиалы не охвачены этой процедурой.",
+      "affected_ids": [
+        "OVR_MSU_HOST_DOCUMENTS"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_AFTER",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Нужно подтвердить текущий комплект и срок конкретного факультета; опубликованные старые пошлины не использовать.",
+      "affected_ids": [
+        "OVR_MSU_STUDY_VISA_EXTEND"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_AFTER",
+        "SRC_MSU_IAAS",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_STUDY_VISA_COLLECT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Единая система записи и срок выдачи университетом не опубликованы.",
+      "affected_ids": [
+        "OVR_MSU_STUDY_VISA_COLLECT"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_AFTER",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_DMS_CONTRACT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Применимость федерального ДМС определяется базовым шагом; список страховщиков МГУ является рекомендацией, а не обязательным поставщиком.",
+      "affected_ids": [
+        "OVR_MSU_DMS_CONTRACT"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_HEALTH"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_PREARRIVAL_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Единый точный срок уведомления не указан.",
+      "affected_ids": [
+        "UNI_MSU_PREARRIVAL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_BEFORE",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_TRAVEL_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не установлен единый канал формы и срок предварительной передачи сведений.",
+      "affected_ids": [
+        "UNI_MSU_TRAVEL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_AFTER",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_PRIVATE_REG_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Срок представления и допустимость электронных копий по факультетам не уточнены.",
+      "affected_ids": [
+        "UNI_MSU_PRIVATE_REG_COPY"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_AFTER",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_MEDICAL_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждены единые срок, канал и перечень принимаемых форм подтверждений.",
+      "affected_ids": [
+        "UNI_MSU_MEDICAL_COPY"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_AFTER",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_POLICY_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не определены включение дня въезда и время окончания приёма; срок хранится как внутренний, без автоматического расчёта.",
+      "affected_ids": [
+        "UNI_MSU_POLICY_COPY"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_HEALTH",
+        "SRC_MSU_FACULTIES"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MSU_COVERAGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для федеральных действий без overlay локальная реализация не подтверждена просмотренными официальными разделами. Это не означает отсутствия услуги. Не переносить центральные реквизиты на филиалы. Москва, основная инструкция МГУ; филиалы не наследуют её автоматически. Контакты выбираются по факультету. Отдельные реквизиты ИСАА и противоречащие сроки обозначены явно. Проживание, медицинские провайдеры и факультетские исключения требуют уточнения; опубликованные правовые пересказы не использованы для изменения федеральных шагов.",
+      "affected_ids": [
+        "UNIV_MSU"
+      ],
+      "created_at": "2026-09-26T08:36:33.319008Z",
+      "candidate_source_ids": [
+        "SRC_MSU_BEFORE",
+        "SRC_MSU_ARRIVAL",
+        "SRC_MSU_AFTER",
+        "SRC_MSU_FACULTIES",
+        "SRC_MSU_HEALTH",
+        "SRC_MSU_IAAS"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_INVITATION_DEGREE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не опубликован единый комплект и прямой контакт каждого учебного отдела. Квотный маршрут не заменяется университетским.",
+      "affected_ids": [
+        "OVR_MEPHI_INVITATION_DEGREE"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_INVITE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_INVITATION_PREP",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Анкета и срок из памятки 2022/23 не подтверждены для текущего набора.",
+      "affected_ids": [
+        "OVR_MEPHI_INVITATION_PREP"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_INVITE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_HOST_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Необходимо подтвердить конкретный якорь, учебную группу и режим приёма; московское общежитие не означает все филиалы.",
+      "affected_ids": [
+        "OVR_MEPHI_HOST_DOCUMENTS"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_HOUSING",
+        "SRC_MEPHI_STUD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_REGISTRATION_CONFIRMATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не опубликованы срок готовности и канал оповещения.",
+      "affected_ids": [
+        "OVR_MEPHI_REGISTRATION_CONFIRMATION"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_STUD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не определена календарная арифметика месяца; сумма 2022 года исключена, текущие реквизиты не опубликованы.",
+      "affected_ids": [
+        "OVR_MEPHI_STUDY_VISA_EXTEND"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_STUD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_STAY_PETITION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Памятка смешивает срок пребывания и учёт; вид дней и корректный якорь требуют подтверждения.",
+      "affected_ids": [
+        "OVR_MEPHI_STAY_PETITION_REQUEST"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_STUD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_ACCOUNTING_DATA_UPDATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Интервал и исключения при получении гражданства РФ не превращены в единую федеральную обязанность.",
+      "affected_ids": [
+        "OVR_MEPHI_ACCOUNTING_DATA_UPDATE"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_STUD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_REGISTRATION_DUPLICATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не опубликованы форма заявления и срок выдачи.",
+      "affected_ids": [
+        "OVR_MEPHI_REGISTRATION_DUPLICATE"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_STUD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_PRIVATE_REG_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Срок и электронный способ передачи копии не установлены.",
+      "affected_ids": [
+        "UNI_MEPHI_PRIVATE_REG_COPY"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_STUD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_ARRIVAL_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Это добровольно выбранное обращение, а не замена миграционной процедуры; срок ответа и работа отправки не проверены.",
+      "affected_ids": [
+        "UNI_MEPHI_ARRIVAL_REQUEST"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_FEEDBACK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MEPHI_COVERAGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для федеральных действий без overlay локальная реализация не подтверждена просмотренными официальными разделами. Это не означает отсутствия услуги. Не переносить центральные реквизиты на филиалы. Основной московский кампус. Открытые материалы не подтверждают актуальные COVID-условия, тарифы и действия всех филиалов. Отдельная текущая местная процедура РВПО не найдена. Разделён приём на основные программы, контрактное подготовительное отделение и квота; непроверенные старые указания о выезде не включены в маршрут.",
+      "affected_ids": [
+        "UNIV_MEPHI"
+      ],
+      "created_at": "2026-09-26T08:40:44.639146Z",
+      "candidate_source_ids": [
+        "SRC_MEPHI_STUD",
+        "SRC_MEPHI_INVITE",
+        "SRC_MEPHI_ARRIVAL",
+        "SRC_MEPHI_FINGER",
+        "SRC_MEPHI_HOUSING",
+        "SRC_MEPHI_HOSTEL_INDEX",
+        "SRC_MEPHI_FEEDBACK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_INVITATION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждены текущие сроки обработки и отдельный порядок квоты.",
+      "affected_ids": [
+        "OVR_MIPT_INVITATION_REQUEST"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_VISA_FORM",
+        "SRC_MIPT_PREP"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_HOST_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Вид дней и исключения для статусов не указаны. Частные адреса не относятся к общежитию МФТИ.",
+      "affected_ids": [
+        "OVR_MIPT_HOST_DOCUMENTS"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_PK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_REGISTRATION_CONFIRMATION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Срок готовности не гарантирован; английское название документа не означает разрешение на проживание.",
+      "affected_ids": [
+        "OVR_MIPT_REGISTRATION_CONFIRMATION"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_PREP",
+        "SRC_MIPT_PK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Порядок для уже многократной визы и полный актуальный комплект этой страницей не подтверждены.",
+      "affected_ids": [
+        "OVR_MIPT_STUDY_VISA_EXTEND"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_PK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_STUDY_VISA_COLLECT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Ориентир около 30 дней в FAQ не является гарантированным сроком.",
+      "affected_ids": [
+        "OVR_MIPT_STUDY_VISA_COLLECT"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_PREP",
+        "SRC_MIPT_PK"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_POLICY_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Срок не указан; старые цены и обязательность покупки у указанного поставщика исключены.",
+      "affected_ids": [
+        "UNI_MIPT_POLICY_COPY"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_PREP"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_FINGERPRINT_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не установлен срок передачи копии; федеральная обязанность проверяется отдельно.",
+      "affected_ids": [
+        "UNI_MIPT_FINGERPRINT_COPY"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_PREP"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_LEAVE_DORM",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждена актуальность правовых заверений внутри формы; они не создают правил Route Engine.",
+      "affected_ids": [
+        "UNI_MIPT_LEAVE_DORM"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_LEAVE_FORM"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_PASS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Текущие часы приёма не опубликованы в FAQ.",
+      "affected_ids": [
+        "UNI_MIPT_PASS"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_PREP"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_MIPT_COVERAGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для федеральных действий без overlay локальная реализация не подтверждена просмотренными официальными разделами. Это не означает отсутствия услуги. Не переносить центральные реквизиты на филиалы. Главный контур — Долгопрудный; инструкции подготовительного отделения отдельно отмечены фактом профиля. Адреса в двух языковых версиях различаются: стабильный ориентир — 312 АК. Для безвизового учёта, частного жилья, нового паспорта, РВПО и филиалов не найдено достаточно современной местной детализации. Формы и сроки 2022 года не принимаются автоматически как требования 2026 года.",
+      "affected_ids": [
+        "UNIV_MIPT"
+      ],
+      "created_at": "2026-09-26T08:43:03.629789Z",
+      "candidate_source_ids": [
+        "SRC_MIPT_PK",
+        "SRC_MIPT_DEGREE",
+        "SRC_MIPT_PREP",
+        "SRC_MIPT_LEAVE_FORM",
+        "SRC_MIPT_VISA_FORM",
+        "SRC_MIPT_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_MOSCOW_VISA",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Различающиеся сроки и суммы требуют согласования; запись обязательна, форма после входа не проверена.",
+      "affected_ids": [
+        "OVR_HSE_MOSCOW_VISA"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_FAQ",
+        "SRC_HSE_CENTER"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_MOSCOW_RVPO",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Здесь только подготовка документов университета; подача в МВД остаётся федеральным действием.",
+      "affected_ids": [
+        "OVR_HSE_MOSCOW_RVPO"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_RVPO"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_MOSCOW_NEW_PASSPORT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Разделить срок по визовому статусу; до подтверждения не считать единый дедлайн.",
+      "affected_ids": [
+        "OVR_HSE_MOSCOW_NEW_PASSPORT"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_STAY",
+        "SRC_HSE_CENTER"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_MOSCOW_DUPLICATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Конкретный адрес зависит от общежития; его нельзя заменять адресом визового центра.",
+      "affected_ids": [
+        "OVR_HSE_MOSCOW_DUPLICATE"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_FAQ"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_SPB_HOST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Время окончания приёма и действие в выходной день не указаны.",
+      "affected_ids": [
+        "OVR_HSE_SPB_HOST"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_SPB"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_NN_HOST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не указан выбор между двумя местными офисами и полный комплект документов.",
+      "affected_ids": [
+        "OVR_HSE_NN_HOST"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_NN"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_SPB_VISA",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждены календарь приёма, исключения и полный комплект для всех статусов.",
+      "affected_ids": [
+        "OVR_HSE_SPB_VISA"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_SPB"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_PERM_VISA",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Вид дней и срок последующих многократных виз не уточнены; общие правовые заявления страницы исключены.",
+      "affected_ids": [
+        "OVR_HSE_PERM_VISA"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_PERM_EXTENSION",
+        "SRC_HSE_PERM"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_PERM_COLLECT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не подтверждены календарь приёма, исключения и полный комплект для всех статусов.",
+      "affected_ids": [
+        "OVR_HSE_PERM_COLLECT"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_PERM_EXTENSION",
+        "SRC_HSE_PERM"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_SPB_STAY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Памятка смешивает учёт и разрешённый срок пребывания; якорь требует подтверждения.",
+      "affected_ids": [
+        "OVR_HSE_SPB_STAY"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_SPB"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_RVPO_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точный срок и подтверждение приёма не установлены.",
+      "affected_ids": [
+        "UNI_HSE_RVPO_COPY"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_RVPO"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_EXTENDED_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не установлены отсечение времени и возможность альтернативного канала при сбое приложения.",
+      "affected_ids": [
+        "UNI_HSE_EXTENDED_COPY"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_STAY"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_SPB_PRIVATE_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точный срок и подтверждение приёма не установлены.",
+      "affected_ids": [
+        "UNI_HSE_SPB_PRIVATE_COPY"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_SPB"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_PERM_TRAVEL",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точный срок и подтверждение приёма не установлены.",
+      "affected_ids": [
+        "UNI_HSE_PERM_TRAVEL"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_PERM_EXTENSION",
+        "SRC_HSE_PERM"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_HSE_COVERAGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для федеральных действий без overlay локальная реализация не подтверждена просмотренными официальными разделами. Это не означает отсутствия услуги. Не переносить центральные реквизиты на филиалы. main = Москва; spb, nnov, perm — отдельные кампусы. Московский личный кабинет не является универсальной процедурой других кампусов. Юридические пересказы, спорные штрафы, ruID и Амина не заменяют федеральные карточки. Доступ к авторизованной форме и работа мобильного приложения не проверены.",
+      "affected_ids": [
+        "UNIV_HSE"
+      ],
+      "created_at": "2026-09-26T11:26:55.858077Z",
+      "candidate_source_ids": [
+        "SRC_HSE_CENTER",
+        "SRC_HSE_FAQ",
+        "SRC_HSE_RVPO",
+        "SRC_HSE_STAY",
+        "SRC_HSE_SPB",
+        "SRC_HSE_NN",
+        "SRC_HSE_PERM",
+        "SRC_HSE_PERM_EXTENSION",
+        "SRC_HSE_PERM_INDEX",
+        "SRC_HSE_RECORD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_NSU_INVITATION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подготовка 4–6 недель названа ориентиром, а не сроком обязанности студента. Квотный путь отдельно указан в FAQ и не подменяется договорным.",
+      "affected_ids": [
+        "OVR_NSU_INVITATION_REQUEST"
+      ],
+      "created_at": "2026-09-26T11:30:00.761040Z",
+      "candidate_source_ids": [
+        "SRC_NSU_ADMISSION",
+        "SRC_NSU_FAQ"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_NSU_VISA_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Перечень консульских документов не устанавливается университетской страницей.",
+      "affected_ids": [
+        "OVR_NSU_VISA_APPLY"
+      ],
+      "created_at": "2026-09-26T11:30:00.761040Z",
+      "candidate_source_ids": [
+        "SRC_NSU_ADMISSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_NSU_VISA_COLLECT_ABROAD",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Отдельный срок передачи скана не указан; отправка объединена с локальным действием уведомления о поездке.",
+      "affected_ids": [
+        "OVR_NSU_VISA_COLLECT_ABROAD"
+      ],
+      "created_at": "2026-09-26T11:30:00.761040Z",
+      "candidate_source_ids": [
+        "SRC_NSU_ADMISSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_NSU_ARRIVAL_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не указаны крайний срок сообщения и условия оплаты трансфера.",
+      "affected_ids": [
+        "UNI_NSU_ARRIVAL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T11:30:00.761040Z",
+      "candidate_source_ids": [
+        "SRC_NSU_ADMISSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_NSU_DORM_CHECKIN",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Номер общежития берётся из индивидуального назначения; список заселения иностранцев и местный миграционный срок не подтверждены.",
+      "affected_ids": [
+        "UNI_NSU_DORM_CHECKIN"
+      ],
+      "created_at": "2026-09-26T11:30:00.761040Z",
+      "candidate_source_ids": [
+        "SRC_NSU_FAQ",
+        "SRC_NSU_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_NSU_PAYMENT_PROOF",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Срок отправки не указан; сумма определяется индивидуальным договором.",
+      "affected_ids": [
+        "UNI_NSU_PAYMENT_PROOF"
+      ],
+      "created_at": "2026-09-26T11:30:00.761040Z",
+      "candidate_source_ids": [
+        "SRC_NSU_PAYMENT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_NSU_CONTRACT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Срок возврата и электронная форма подписи не установлены; размер аванса не распространяется на все программы НГУ.",
+      "affected_ids": [
+        "UNI_NSU_CONTRACT"
+      ],
+      "created_at": "2026-09-26T11:30:00.761040Z",
+      "candidate_source_ids": [
+        "SRC_NSU_ADMISSION"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_NSU_COVERAGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для федеральных действий без overlay локальная реализация не подтверждена просмотренными официальными разделами. Это не означает отсутствия услуги. Не переносить центральные реквизиты на филиалы. Полный действующий миграционный регламент основных программ не получен из официального сайта. Визовое продление, новый паспорт, РВПО, частное жильё и повторная постановка после гостиницы остаются без неподтверждённых локальных карточек. Реальные действия сохранены для ЦМУП; контакт ОСИО подтверждён отдельно и не объявлен местом подачи каждого федерального заявления.",
+      "affected_ids": [
+        "UNIV_NSU"
+      ],
+      "created_at": "2026-09-26T11:30:00.761040Z",
+      "candidate_source_ids": [
+        "SRC_NSU_ADMISSION",
+        "SRC_NSU_FAQ",
+        "SRC_NSU_CONTACT",
+        "SRC_NSU_PAYMENT",
+        "SRC_NSU_FRESHMEN",
+        "SRC_NSU_SUPPORT",
+        "SRC_NSU_HOUSING",
+        "SRC_NSU_MAIN_UNAVAILABLE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_INVITATION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точная процедура приёма и полный комплект для исключительных статусов не опубликованы.",
+      "affected_ids": [
+        "OVR_SPBU_INVITATION_REQUEST"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_HOST_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не определены переносы, время окончания приёма и точка обслуживания; срок локальный, не федеральный срок учёта.",
+      "affected_ids": [
+        "OVR_SPBU_HOST_DOCUMENTS"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для расчёта нужен соответствующий срок, рабочий календарь и полный список документов; не подменять этим федеральный срок.",
+      "affected_ids": [
+        "OVR_SPBU_STUDY_VISA_EXTEND"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_STAY_PETITION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для расчёта нужен соответствующий срок, рабочий календарь и полный список документов; не подменять этим федеральный срок.",
+      "affected_ids": [
+        "OVR_SPBU_STAY_PETITION_REQUEST"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_ACCOUNTING_DATA_UPDATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точная процедура приёма и полный комплект для исключительных статусов не опубликованы.",
+      "affected_ids": [
+        "OVR_SPBU_ACCOUNTING_DATA_UPDATE"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_ARRIVAL_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Тип дней в сроке двух дней не указан; автоматический расчёт запрещён.",
+      "affected_ids": [
+        "UNI_SPBU_ARRIVAL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_PRIVATE_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не опубликованы полный комплект и однозначный срок передачи для всех ситуаций.",
+      "affected_ids": [
+        "UNI_SPBU_PRIVATE_COPY"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_POLICY_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Эта карточка не устанавливает обязанность покупать ДМС при наличии иного права на медицинскую помощь.",
+      "affected_ids": [
+        "UNI_SPBU_POLICY_COPY"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_TRAVEL_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не опубликованы полный комплект и однозначный срок передачи для всех ситуаций.",
+      "affected_ids": [
+        "UNI_SPBU_TRAVEL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_DORM_ASSIGNMENT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Полный иностранный комплект заселения определяется отдельной инструкцией; она не извлечена.",
+      "affected_ids": [
+        "UNI_SPBU_DORM_ASSIGNMENT"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_DORM"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_SPBU_COVERAGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для федеральных действий без overlay локальная реализация не подтверждена просмотренными официальными разделами. Это не означает отсутствия услуги. Не переносить центральные реквизиты на филиалы. Недоступны полный текст памятки 2025 и РВПО. Не подтверждены отдельные процедуры по РВП/ВНЖ, восстановлению визы и утрате документов. Не распространять main на филиалы вне Петербурга. В справочнике указаны приём: Университетская наб. 7–9Б, каб.102, +7 (812) 363-64-03; Петергоф, Ботаническая 66, корп.2, каб.103, +7 (812) 363-64-07. Выбор кабинета и запись требуют назначения. Старый порядок с одним календарным месяцем не заменяет опубликованные 20 рабочих дней.",
+      "affected_ids": [
+        "UNIV_SPBU"
+      ],
+      "created_at": "2026-09-26T11:34:43.776826Z",
+      "candidate_source_ids": [
+        "SRC_SPBU_GUIDE",
+        "SRC_SPBU_DORM",
+        "SRC_SPBU_DORM_RULES",
+        "SRC_SPBU_RVPO",
+        "SRC_SPBU_MEMO",
+        "SRC_SPBU_INTERNATIONAL"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TSU_INVITATION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Нужны актуальные исключения по статусу и уточнение записи/срока приёма.",
+      "affected_ids": [
+        "OVR_TSU_INVITATION_REQUEST"
+      ],
+      "created_at": "2026-09-26T11:37:54.661491Z",
+      "candidate_source_ids": [
+        "SRC_TSU_VISA",
+        "SRC_TSU_CONTACT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TSU_HOST_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Нужны актуальные исключения по статусу и уточнение записи/срока приёма.",
+      "affected_ids": [
+        "OVR_TSU_HOST_DOCUMENTS"
+      ],
+      "created_at": "2026-09-26T11:37:54.661491Z",
+      "candidate_source_ids": [
+        "SRC_TSU_VISA",
+        "SRC_TSU_CONTACT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TSU_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Тип дней и актуальный размер пошлины не подтверждены. Список — опубликованный местный пакет, действительность всех реквизитов требует проверки.",
+      "affected_ids": [
+        "OVR_TSU_STUDY_VISA_EXTEND"
+      ],
+      "created_at": "2026-09-26T11:37:54.661491Z",
+      "candidate_source_ids": [
+        "SRC_TSU_VISA",
+        "SRC_TSU_CONTACT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TSU_STAY_PETITION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Источник описывает безвизовых студентов СНГ; другие основания и отсутствие миграционной карты требуют уточнения.",
+      "affected_ids": [
+        "OVR_TSU_STAY_PETITION_REQUEST"
+      ],
+      "created_at": "2026-09-26T11:37:54.661491Z",
+      "candidate_source_ids": [
+        "SRC_TSU_VISA",
+        "SRC_TSU_CONTACT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TSU_MEDICAL_INITIAL",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Содержимое формы недоступно; даты групп, место процедуры и состав полей не подтверждены. Наличие обязанности определяет федеральный шаг.",
+      "affected_ids": [
+        "OVR_TSU_MEDICAL_INITIAL"
+      ],
+      "created_at": "2026-09-26T11:37:54.661491Z",
+      "candidate_source_ids": [
+        "SRC_TSU_MEDICAL"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TSU_FINGERPRINT_PHOTO",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Содержимое формы недоступно; даты групп, место процедуры и состав полей не подтверждены. Наличие обязанности определяет федеральный шаг.",
+      "affected_ids": [
+        "OVR_TSU_FINGERPRINT_PHOTO"
+      ],
+      "created_at": "2026-09-26T11:37:54.661491Z",
+      "candidate_source_ids": [
+        "SRC_TSU_MEDICAL"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TSU_TRAVEL_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Английская инструкция не определяет однозначно начало отсчёта; включены поездки, гостиница и больница, федеральные последствия требуют отдельного пересчёта.",
+      "affected_ids": [
+        "UNI_TSU_TRAVEL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T11:37:54.661491Z",
+      "candidate_source_ids": [
+        "SRC_TSU_VISA",
+        "SRC_TSU_CONTACT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TSU_MEDICAL_COPY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Срок передачи и распространение порядка за пределы первокурсников I уровня не указаны.",
+      "affected_ids": [
+        "UNI_TSU_MEDICAL_COPY"
+      ],
+      "created_at": "2026-09-26T11:37:54.661491Z",
+      "candidate_source_ids": [
+        "SRC_TSU_MEDICAL"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_TSU_COVERAGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для федеральных действий без overlay локальная реализация не подтверждена просмотренными официальными разделами. Это не означает отсутствия услуги. Не переносить центральные реквизиты на филиалы. main — томские подразделения; филиалы не наследуют правила. Недатированный англоязычный визовый текст используется только для локального порядка. Нужны актуальные документы по новым паспортам, РВПО/ВНЖ, утратам и подтверждение приёма визового пакета; 50 дней без типа дней не рассчитываются. Полный медицинский маршрут ограничен явно указанной группой первокурсников.",
+      "affected_ids": [
+        "UNIV_TSU"
+      ],
+      "created_at": "2026-09-26T11:37:54.661491Z",
+      "candidate_source_ids": [
+        "SRC_TSU_VISA",
+        "SRC_TSU_CONTACT",
+        "SRC_TSU_HOUSING",
+        "SRC_TSU_GGF",
+        "SRC_TSU_MEDICAL",
+        "SRC_TSU_FORM",
+        "SRC_TSU_PHILOLOGY"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_INVITE_DIRECT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Публично объявлена временная приостановка приглашений для ряда гражданств без даты окончания; нельзя автоматически обещать выдачу. Поля кабинета не проверены.",
+      "affected_ids": [
+        "OVR_KFU_INVITE_DIRECT"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_INVITE"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_INVITE_QUOTA",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не установлены все исключения, рабочий календарь и условия записи.",
+      "affected_ids": [
+        "OVR_KFU_INVITE_QUOTA"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_INVITE",
+        "SRC_KFU_STUDENT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_HOST_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не установлены все исключения, рабочий календарь и условия записи.",
+      "affected_ids": [
+        "OVR_KFU_HOST_DOCUMENTS"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_VISA_ENTRY",
+        "SRC_KFU_FREE_ENTRY"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_STAY_PETITION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Не установлены все исключения, рабочий календарь и условия записи.",
+      "affected_ids": [
+        "OVR_KFU_STAY_PETITION_REQUEST"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_FREE_ENTRY"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Тип 45 дней не указан; документы медосвидетельствования/дактилоскопии и дополнительные документы при переводе требуют индивидуальной применимости. Старый вариант 30/40 дней не принят.",
+      "affected_ids": [
+        "OVR_KFU_STUDY_VISA_EXTEND"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_VISA_RESTORE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Полный комплект восстановления на центральной странице не указан.",
+      "affected_ids": [
+        "OVR_KFU_VISA_RESTORE"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_VISA"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_MEDICAL_INITIAL",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Режим записи и применимость перевода к двуязычным паспортам не уточнены. Стоимость и федеральный срок не устанавливаются этой карточкой.",
+      "affected_ids": [
+        "OVR_KFU_MEDICAL_INITIAL"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_MEDICAL"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_RVPO_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Содержимое скачиваемых файлов и заверение копий не проверены; полный государственный комплект задаётся федеральным слоем.",
+      "affected_ids": [
+        "OVR_KFU_RVPO_APPLY"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_RVPO",
+        "SRC_KFU_STUDENT"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_CHELNY_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "На странице НЧИ указан старый размер пошлины; актуальные реквизиты и полнота комплекта не подтверждены.",
+      "affected_ids": [
+        "OVR_KFU_CHELNY_STUDY_VISA_EXTEND"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_CHELNY"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_CHELNY_VISA_RESTORE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "На странице НЧИ указан старый размер пошлины; актуальные реквизиты и полнота комплекта не подтверждены.",
+      "affected_ids": [
+        "OVR_KFU_CHELNY_VISA_RESTORE"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_CHELNY"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_CONTINUING_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точный график и персональное назначение определяются уведомлением; не переносить на другие категории.",
+      "affected_ids": [
+        "UNI_KFU_CONTINUING_NOTIFY"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_CONTROL_SHEET",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точный график и персональное назначение определяются уведомлением; не переносить на другие категории.",
+      "affected_ids": [
+        "UNI_KFU_CONTROL_SHEET"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_PREP_LEASE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Порядок восстановления места после пропуска срока не опубликован; отказ указан как возможный, не автоматический.",
+      "affected_ids": [
+        "UNI_KFU_PREP_LEASE"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_TRAVEL_NOTIFY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Подтвердить, что планируется выезд за пределы РФ; метод сообщения не ограничен страницей.",
+      "affected_ids": [
+        "UNI_KFU_TRAVEL_NOTIFY"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_VISA_ENTRY",
+        "SRC_KFU_FREE_ENTRY"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_KFU_COVERAGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для федеральных действий без overlay локальная реализация не подтверждена просмотренными официальными разделами. Это не означает отсутствия услуги. Не переносить центральные реквизиты на филиалы. main — Казань; chelny — только явно выделенные визовые процедуры НЧИ. Другие филиалы не наследуют адреса. Встречаются разные сроки и старые тарифы, а также временная приостановка приглашений по ряду гражданств без даты действия. Эти сведения не превращены в федеральные запреты; применимость приглашения требует проверки ограничений. Полный приём после сентября, исключения по РВП/ВНЖ и работа закрытых форм не подтверждены.",
+      "affected_ids": [
+        "UNIV_KFU"
+      ],
+      "created_at": "2026-09-26T11:43:51.618487Z",
+      "candidate_source_ids": [
+        "SRC_KFU_INDEX",
+        "SRC_KFU_INVITE",
+        "SRC_KFU_VISA_ENTRY",
+        "SRC_KFU_FREE_ENTRY",
+        "SRC_KFU_VISA",
+        "SRC_KFU_MEDICAL",
+        "SRC_KFU_RVPO",
+        "SRC_KFU_STUDENT",
+        "SRC_KFU_HOUSING",
+        "SRC_KFU_CHELNY"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_INVITATION_REQUEST",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Срок 4–6 недель — ориентир подготовки, не дедлайн студента; это не инструкция остальных уровней обучения.",
+      "affected_ids": [
+        "OVR_RUDN_INVITATION_REQUEST"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_PHD"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_HOST_DOCUMENTS",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Тип трёх дней и соотношение с двумя рабочими днями старого справочника не определены. Срок государственной постановки не заменяется временем изготовления документа МФЦ.",
+      "affected_ids": [
+        "OVR_RUDN_HOST_DOCUMENTS"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_PRIMARY",
+        "SRC_RUDN_MFC",
+        "SRC_RUDN_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_PRIVATE_PETITION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Один рабочий день обозначает изготовление университетом, не срок подачи студентом. Доступность услуги при отсутствии предыдущего учёта не уточнена.",
+      "affected_ids": [
+        "OVR_RUDN_PRIVATE_PETITION"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_PETITION",
+        "SRC_RUDN_MFC"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_DORM_EXTENSION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Локальная ветка источника ограничена безвизовыми странами СНГ; не расширять её на всех безвизовых иностранцев.",
+      "affected_ids": [
+        "OVR_RUDN_DORM_EXTENSION"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_EXTEND",
+        "SRC_RUDN_MFC"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_STUDY_VISA_EXTEND",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Тип 45 дней не указан. Копии медицинских результатов и дактилоскопии — условные требования по подтверждённой обязанности, а не универсальные.",
+      "affected_ids": [
+        "OVR_RUDN_STUDY_VISA_EXTEND"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_VISA",
+        "SRC_RUDN_MFC"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_STUDY_VISA_COLLECT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Поля закрытой формы, время окончания приёма и полный порядок для исключений не проверены.",
+      "affected_ids": [
+        "OVR_RUDN_STUDY_VISA_COLLECT"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_VISA",
+        "SRC_RUDN_MFC"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_REGISTRATION_DUPLICATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "В тексте ошибочный подзаголовок «Восстановление миграционной карты»; комплект сканов описан неодинаково. Не смешивать два вида документов.",
+      "affected_ids": [
+        "OVR_RUDN_REGISTRATION_DUPLICATE"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_DUPLICATE",
+        "SRC_RUDN_MFC"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_MIGRATION_CARD_DUPLICATE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Описание снятия отпечатков и трёхдневного срока в университетской инструкции не подтверждено федеральным источником; требуется отдельная проверка, автоматический срок не задан.",
+      "affected_ids": [
+        "OVR_RUDN_MIGRATION_CARD_DUPLICATE"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_CARD",
+        "SRC_RUDN_MFC"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_SNILS_REGISTER",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Семь рабочих дней — срок местной обработки, не дедлайн студента; исключения по переводу не перечислены.",
+      "affected_ids": [
+        "OVR_RUDN_SNILS_REGISTER"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_SNILS",
+        "SRC_RUDN_MFC"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_RVPO_APPLY",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Университетский пакет не равен полному заявлению МВД. Направление Минобрнауки применимо лишь при его наличии; один рабочий день — изготовление.",
+      "affected_ids": [
+        "OVR_RUDN_RVPO_APPLY"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_RVPO",
+        "SRC_RUDN_MFC"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_ADAPTATION_CHECKIN",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Персональное назначение и наличие комнаты должны быть подтверждены; тарифы не вычисляются.",
+      "affected_ids": [
+        "UNI_RUDN_ADAPTATION_CHECKIN"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_DORM_DIRECTION",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Персональное назначение и наличие комнаты должны быть подтверждены; тарифы не вычисляются.",
+      "affected_ids": [
+        "UNI_RUDN_DORM_DIRECTION"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_DORM_LEASE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Персональное назначение и наличие комнаты должны быть подтверждены; тарифы не вычисляются.",
+      "affected_ids": [
+        "UNI_RUDN_DORM_LEASE"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_DORM_PAYMENT",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Точное включение десятого числа, часовой пояс отсечения и первый неполный месяц не определены; автоматический срок не вычисляется.",
+      "affected_ids": [
+        "UNI_RUDN_DORM_PAYMENT"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_HOUSING"
+      ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "UNR_RUDN_COVERAGE",
+      "status": "open",
+      "severity": "blocking",
+      "question": "Для федеральных действий без overlay локальная реализация не подтверждена просмотренными официальными разделами. Это не означает отсутствия услуги. Не переносить центральные реквизиты на филиалы. main — московский кампус. Приглашение подтверждено отдельно для контрактной аспирантуры; остальные программы и филиалы не наследуют его. Текущие услуги МФЦ приоритетны перед ковидной памяткой 2021. Не подтверждены все процедуры нового паспорта/РВП/ВНЖ и повторного въезда для частного жилья. Доступ к реальным формам личного кабинета отсутствует.",
+      "affected_ids": [
+        "UNIV_RUDN"
+      ],
+      "created_at": "2026-09-26T11:47:31.010529Z",
+      "candidate_source_ids": [
+        "SRC_RUDN_MFC",
+        "SRC_RUDN_VISA",
+        "SRC_RUDN_PETITION",
+        "SRC_RUDN_PRIMARY",
+        "SRC_RUDN_EXTEND",
+        "SRC_RUDN_DUPLICATE",
+        "SRC_RUDN_CARD",
+        "SRC_RUDN_SNILS",
+        "SRC_RUDN_RVPO",
+        "SRC_RUDN_HOUSING",
+        "SRC_RUDN_PHD",
+        "SRC_RUDN_PORTAL"
+      ]
+    }
+  ]
+}

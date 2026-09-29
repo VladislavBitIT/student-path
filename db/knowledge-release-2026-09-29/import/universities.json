@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "university_id": "UNIV_HSE",
+      "university_name": "НИУ ВШЭ",
+      "card_count": 14,
+      "verification_status_counts": {
+        "confirmed_current": 13,
+        "confirmed_current_with_exclusions": 1
+      },
+      "reminder_eligible_cards": 8,
+      "campaign_2026_cards": 0
+    },
+    {
+      "university_id": "UNIV_ITMO",
+      "university_name": "Университет ИТМО",
+      "card_count": 24,
+      "verification_status_counts": {
+        "confirmed_current": 17,
+        "confirmed_event_based": 4,
+        "confirmed_campaign_2026": 3
+      },
+      "reminder_eligible_cards": 7,
+      "campaign_2026_cards": 3
+    },
+    {
+      "university_id": "UNIV_KFU",
+      "university_name": "Казанский (Приволжский) федеральный университет",
+      "card_count": 14,
+      "verification_status_counts": {
+        "confirmed_current_with_exclusions": 2,
+        "confirmed_current": 8,
+        "confirmed_event_based": 1,
+        "confirmed_campaign_2026": 3
+      },
+      "reminder_eligible_cards": 7,
+      "campaign_2026_cards": 3
+    },
+    {
+      "university_id": "UNIV_MEPHI",
+      "university_name": "НИЯУ МИФИ",
+      "card_count": 10,
+      "verification_status_counts": {
+        "confirmed_current_with_exclusions": 7,
+        "confirmed_current": 2,
+        "confirmed_event_based": 1
+      },
+      "reminder_eligible_cards": 4,
+      "campaign_2026_cards": 0
+    },
+    {
+      "university_id": "UNIV_MIPT",
+      "university_name": "МФТИ",
+      "card_count": 9,
+      "verification_status_counts": {
+        "confirmed_current": 8,
+        "confirmed_current_with_exclusions": 1
+      },
+      "reminder_eligible_cards": 3,
+      "campaign_2026_cards": 0
+    },
+    {
+      "university_id": "UNIV_MSU",
+      "university_name": "МГУ имени М. В. Ломоносова",
+      "card_count": 12,
+      "verification_status_counts": {
+        "confirmed_current": 10,
+        "confirmed_event_based": 1,
+        "confirmed_faculty_specific": 1
+      },
+      "reminder_eligible_cards": 1,
+      "campaign_2026_cards": 0
+    },
+    {
+      "university_id": "UNIV_NSU",
+      "university_name": "Новосибирский государственный университет",
+      "card_count": 7,
+      "verification_status_counts": {
+        "confirmed_current": 7
+      },
+      "reminder_eligible_cards": 3,
+      "campaign_2026_cards": 0
+    },
+    {
+      "university_id": "UNIV_RUDN",
+      "university_name": "Российский университет дружбы народов имени Патриса Лумумбы",
+      "card_count": 14,
+      "verification_status_counts": {
+        "confirmed_current": 14
+      },
+      "reminder_eligible_cards": 4,
+      "campaign_2026_cards": 0
+    },
+    {
+      "university_id": "UNIV_SPBU",
+      "university_name": "Санкт-Петербургский государственный университет",
+      "card_count": 10,
+      "verification_status_counts": {
+        "confirmed_current": 10
+      },
+      "reminder_eligible_cards": 4,
+      "campaign_2026_cards": 0
+    },
+    {
+      "university_id": "UNIV_TSU",
+      "university_name": "Национальный исследовательский Томский государственный университет",
+      "card_count": 8,
+      "verification_status_counts": {
+        "confirmed_current": 3,
+        "confirmed_current_with_exclusions": 4,
+        "confirmed_event_based": 1
+      },
+      "reminder_eligible_cards": 1,
+      "campaign_2026_cards": 0
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.1.0",
+  "id": "FED_RUID_EMERGENCY",
+  "kind": "federal",
+  "version": 3,
+  "status": "draft",
+  "title": "Подайте экстренное заявление о въезде в ruID",
+  "summary": "Откройте ruID и зарегистрируйтесь доступным способом.",
+  "category": "entry",
+  "research_process_ids": [
+    "PROC_RUID"
+  ],
+  "actor": "student",
+  "obligation": "mandatory_when_applicable",
+  "applicability": {
+    "op": "all",
+    "args": [
+      {
+        "op": "eq",
+        "fact": "foreign_person",
+        "value": true
+      },
+      {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "fact": "visa_free_entry",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "ruid_applicable",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "fact": "emergency_entry",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "kind": "event",
+    "event_type": "trip_planned",
+    "occurrence": "each",
+    "where": {
+      "op": "always"
+    }
+  },
+  "deadline": {
+    "kind": "unknown",
+    "unresolved_ids": [
+      "UNR_STEP_RUID_EMERGENCY",
+      "UNR_QUALITY_RUID_CURRENT"
+    ]
+  },
+  "instructions": [
+    "Откройте ruID и зарегистрируйтесь доступным способом.",
+    "Укажите данные паспорта, цель и планируемую дату въезда; передайте запрошенные приложением сведения и сохраните подтверждение заявления."
+  ],
+  "documents": [
+    {
+      "id": "DOC_IDENTITY",
+      "title": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "requirement": "required",
+      "form": "unspecified",
+      "evidence": [
+        {
+          "source_id": "SRC_RUID",
+          "locator": "Порядок использования ruID перед въездом",
+          "supports": "Указанный документ в пределах описанного источником способа обращения."
+        }
+      ],
+      "instructions": "Используйте точные реквизиты документа. Карточка не устанавливает обязанность передавать оригинал для этого действия."
+    }
+  ],
+  "destination": {
+    "kind": "authority",
+    "name": "Государственное приложение ruID",
+    "selection_basis": "Использовать официальный канал установки, указанный государственным ведомством.",
+    "information_url": "https://www.mintrans.gov.ru/press-center/branch-news/7162",
+    "appointment_required": "unknown",
+    "resolution": "select_local_service_point",
+    "unresolved_ids": []
+  },
+  "result": {
+    "title": "Заявление о предстоящем въезде отправлено",
+    "completion_mode": "user_confirmation",
+    "instructions": "Отметить действие после фактического выполнения; подача заявления не означает положительное решение."
+  },
+  "exceptions": [
+    {
+      "description": "В первоначальном порядке исключены, в частности, Беларусь, дети до 6 лет и отдельные дипломатические категории; после поправок нужно сверить.",
+      "unresolved_ids": [
+        "UNR_RUID",
+        "UNR_CURRENT_EDITION"
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN_RUID_EMERGENCY",
+      "severity": "blocking",
+      "message": "В карточке сохранена подтверждённая часть. Нужно подтвердить обязательность, исключения и последствия после поправок № 468 от 27.04.2026; 72/4 часа сохранены как частичная норма, подтверждение заявления не гарантирует въезд.",
+      "unresolved_ids": [
+        "UNR_STEP_RUID_EMERGENCY"
+      ]
+    },
+    {
+      "id": "WARN_AUDIT_RUID_CURRENT",
+      "severity": "blocking",
+      "message": "Не подтверждены полный обязательный порядок и исключения ruID после изменений 2026 года. Факт ruid_applicable нельзя вычислять из одного признака безвизового въезда; интервалы 72/4 часа не превращать в безусловный дедлайн.",
+      "unresolved_ids": [
+        "UNR_AUDIT_RUID_CURRENT"
+      ]
+    }
+  ],
+  "depends_on": [],
+  "effective_period": {},
+  "evidence": [
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Условия отобранной ветки; факты подтверждённого основания не вычисляются по неподтверждённым признакам.",
+      "fields": [
+        "/applicability"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Событие сервиса, соответствующее фактическому началу действия; это не отдельное правовое требование.",
+      "fields": [
+        "/trigger"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Компетентная организация/канал в пределах описанного способа обращения.",
+      "fields": [
+        "/destination"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Ожидаемый документ или факт подачи; положительное решение не обещается.",
+      "fields": [
+        "/result"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Обязательность относится только к подтверждённой области применимости.",
+      "fields": [
+        "/obligation"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Паспорт иностранного гражданина или иной допустимый документ личности",
+      "fields": [
+        "/documents/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Исторический срок не подтверждает действующий срок на дату аудита.",
+      "fields": [
+        "/deadline"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "В первоначальном порядке исключены, в частности, Беларусь, дети до 6 лет и отдельные дипломатические категории; после поправок нужно сверить.",
+      "fields": [
+        "/exceptions"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Откройте ruID и зарегистрируйтесь доступным способом. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/0"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    },
+    {
+      "source_id": "SRC_RUID",
+      "locator": "Порядок использования ruID перед въездом — относящийся к действию раздел; ограничения в аудите",
+      "supports": "Укажите данные паспорта, цель и планируемую дату въезда; передайте запрошенные приложением сведения и сохраните подтверждение заявления. Подтверждение ограничено указанным источником и зарегистрированными пробелами.",
+      "fields": [
+        "/instructions/1"
+      ],
+      "checked_on": "2026-09-26",
+      "support_level": "partial"
+    }
+  ],
+  "unresolved_ids": [
+    "UNR_STEP_RUID_EMERGENCY",
+    "UNR_RUID",
+    "UNR_CURRENT_EDITION",
+    "UNR_AUDIT_RUID_CURRENT",
+    "UNR_QUALITY_REMOTE_PASSPORT",
+    "UNR_QUALITY_RUID_CURRENT"
+  ],
+  "review": {
+    "reviewed_at": "2026-09-26T07:54:30Z",
+    "reviewer": "Финальный аудит: исправлены перечисленные поля; статус draft сохранён",
+    "next_review_on": "2026-10-26"
+  },
+  "field_gaps": [
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_STEP_RUID_EMERGENCY",
+      "note": "Не подставлять начало/конец дня, календарь или неизвестную единицу. Автоматический дедлайн заблокирован."
+    },
+    {
+      "fields": [
+        "/applicability",
+        "/documents",
+        "/exceptions"
+      ],
+      "unresolved_id": "UNR_STEP_RUID_EMERGENCY",
+      "note": "Нужно подтвердить обязательность, исключения и последствия после поправок № 468 от 27.04.2026; 72/4 часа сохранены как частичная норма, подтверждение заявления не гарантирует въезд."
+    },
+    {
+      "fields": [
+        "/applicability"
+      ],
+      "unresolved_id": "UNR_AUDIT_RUID_CURRENT",
+      "note": "Не подтверждены полный обязательный порядок и исключения ruID после изменений 2026 года. Факт ruid_applicable нельзя вычислять из одного признака безвизового въезда; интервалы 72/4 часа не превращать в безусловный дедлайн."
+    },
+    {
+      "fields": [
+        "/documents/0"
+      ],
+      "unresolved_id": "UNR_QUALITY_REMOTE_PASSPORT",
+      "note": "Обязательность предъявления оригинала источником не установлена."
+    },
+    {
+      "fields": [
+        "/deadline"
+      ],
+      "unresolved_id": "UNR_QUALITY_RUID_CURRENT",
+      "note": "Исторические 72/4 часа не являются установленным текущим сроком."
+    }
+  ]
+}
