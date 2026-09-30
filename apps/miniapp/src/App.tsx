@@ -810,29 +810,6 @@ function Onboarding({
           <>
             {citizenshipType === 'foreign' && (
               <>
-                <label className="field-label" htmlFor="study-arrival">
-                  {translate(language, 'studyArrival')}
-                </label>
-                <select
-                  id="study-arrival"
-                  value={studyArrival}
-                  aria-describedby="study-arrival-hint"
-                  onChange={(event) => {
-                    const next = event.target.value as typeof studyArrival;
-                    setStudyArrival(next);
-                    if (next === 'no') {
-                      setArrivalStatus('preparing');
-                      if (mobilityStatus === 'local' || mobilityStatus === 'moved') setMobilityStatus('moving');
-                    }
-                  }}
-                >
-                  <option value="unknown">{copy.unknown}</option>
-                  <option value="yes">{translate(language, 'studyArrivalYes')}</option>
-                  <option value="no">{translate(language, 'studyArrivalNo')}</option>
-                </select>
-                <p id="study-arrival-hint" className="microcopy">
-                  {translate(language, 'studyArrivalHint')}
-                </p>
                 <label className="field-label" htmlFor="russia-presence">
                   {translate(language, 'russiaPresence')}
                 </label>
@@ -848,6 +825,35 @@ function Onboarding({
                   <option value="no">{translate(language, 'russiaNo')}</option>
                   <option value="yes">{translate(language, 'russiaYes')}</option>
                 </select>
+                {russiaPresence !== 'unknown' && (
+                  <>
+                    <label className="field-label" htmlFor="study-arrival">
+                      {translate(language, 'studyArrival')}
+                    </label>
+                    <select
+                      id="study-arrival"
+                      value={studyArrival}
+                      aria-describedby={russiaPresence === 'no' ? 'study-arrival-hint' : undefined}
+                      onChange={(event) => {
+                        const next = event.target.value as typeof studyArrival;
+                        setStudyArrival(next);
+                        if (next === 'no') {
+                          setArrivalStatus('preparing');
+                          if (mobilityStatus === 'local' || mobilityStatus === 'moved') setMobilityStatus('moving');
+                        }
+                      }}
+                    >
+                      <option value="unknown">{copy.unknown}</option>
+                      <option value="yes">{translate(language, 'studyArrivalYes')}</option>
+                      <option value="no">{translate(language, 'studyArrivalNo')}</option>
+                    </select>
+                    {russiaPresence === 'no' && (
+                      <p id="study-arrival-hint" className="microcopy">
+                        {translate(language, 'studyArrivalHint')}
+                      </p>
+                    )}
+                  </>
+                )}
                 {(russiaPresence === 'yes' || studyArrival === 'yes') && (
                   <>
                     <label className="field-label" htmlFor="russia-entry-date">
@@ -1103,9 +1109,6 @@ function ProgressCard({ language, route }: { language: Language; route: Route })
         </p>
         <p className="progress-caption">
           {translate(language, 'completedOf', { completed: route.progress.completed, total: route.progress.total })}
-          <span className="remaining-count">
-            {translate(language, 'remainingSteps', { count: route.progress.total - route.progress.completed })}
-          </span>
         </p>
       </div>
       <strong className="progress-number">{percent}%</strong>
@@ -1328,27 +1331,6 @@ function RouteView({
 
   return (
     <section className="route-view">
-      {(route.possibleSteps ?? []).some((step) => step.knowledge?.releaseVerified) && (
-        <label className="field">
-          <span>{routeKnowledgeText(language, 'additional')}</span>
-          <select
-            value=""
-            onChange={(e) => {
-              const step = route.possibleSteps?.find((s) => s.code === e.target.value);
-              if (step) onOpenStep(step);
-            }}
-          >
-            <option value="">{translate(language, 'unknown')}</option>
-            {route.possibleSteps
-              ?.filter((step) => step.knowledge?.releaseVerified)
-              .map((step) => (
-                <option key={step.code} value={step.code}>
-                  {step.title}
-                </option>
-              ))}
-          </select>
-        </label>
-      )}
       <div className="page-heading">
         <div>
           <span className="eyebrow">{route.university ?? translate(language, 'pilot')}</span>
@@ -1683,19 +1665,25 @@ function KnowledgeContextForm({
   language,
   step,
   onSaved,
+  title,
+  onlyMissingAnswers = false,
 }: {
   language: Language;
   step: RouteStep;
   onSaved: (route: Route) => void;
+  title?: string;
+  onlyMissingAnswers?: boolean;
 }) {
-  const fields = (step.knowledge?.inputs ?? []).filter((field) => !field.readOnly);
+  const fields = (step.knowledge?.inputs ?? []).filter(
+    (field) => !field.readOnly && (!onlyMissingAnswers || (field.kind === 'fact' && field.value == null)),
+  );
   const [values, setValues] = useState<Record<string, string | number | boolean | null>>({});
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(false);
   if (!fields.length) return null;
   return (
     <details className="preview-block">
-      <summary>{routeKnowledgeText(language, 'inputs')}</summary>
+      <summary>{title ?? routeKnowledgeText(language, 'inputs')}</summary>
       {language !== 'ru' && <p>{routeKnowledgeText(language, 'original')}</p>}
       <form
         onSubmit={async (e) => {
@@ -2835,6 +2823,7 @@ function ProfileView({
   onArrival,
   onOpenStep,
   onEditProfile,
+  onRouteUpdated,
   initialScreen = 'profile',
 }: {
   language: Language;
@@ -2846,8 +2835,14 @@ function ProfileView({
   onArrival: () => void;
   onOpenStep: (step: RouteStep) => void;
   onEditProfile: () => void;
+  onRouteUpdated: (route: Route) => void;
   initialScreen?: 'profile' | 'reminders';
 }) {
+  const pendingSteps = (route?.possibleSteps ?? []).filter(
+    (step) =>
+      step.knowledge?.releaseVerified &&
+      step.knowledge.inputs?.some((field) => !field.readOnly && field.kind === 'fact' && field.value == null),
+  );
   const [screen, setScreen] = useState<'profile' | 'reminders' | 'settings'>(initialScreen);
   const [savingLanguage, setSavingLanguage] = useState(false);
   const [savingReminder, setSavingReminder] = useState(false);
@@ -3171,6 +3166,25 @@ function ProfileView({
             </p>
           </div>
         )}
+      {pendingSteps.length > 0 && (
+        <details className="preview-block">
+          <summary>{routeKnowledgeText(language, 'clarify')}</summary>
+          <p className="microcopy">{routeKnowledgeText(language, 'clarifyHint')}</p>
+          {pendingSteps.map((step) => (
+            <KnowledgeContextForm
+              key={step.code}
+              language={language}
+              step={step}
+              title={
+                step.knowledge?.inputs?.find((field) => !field.readOnly && field.kind === 'fact' && field.value == null)
+                  ?.label
+              }
+              onlyMissingAnswers
+              onSaved={onRouteUpdated}
+            />
+          ))}
+        </details>
+      )}
       <div className="profile-actions">
         <button type="button" onClick={onEditProfile}>
           <span className="setting-icon">
@@ -3521,6 +3535,7 @@ export function App() {
             onArrival={() => setArrivalOpen(true)}
             onOpenStep={(step) => setSelectedCode(step.code)}
             onEditProfile={() => setProfileEdit(true)}
+            onRouteUpdated={setRoute}
           />
         )}
       </main>

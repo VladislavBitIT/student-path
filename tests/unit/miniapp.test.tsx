@@ -429,6 +429,7 @@ describe('mini app', () => {
               journeyVersion: 'city_v1',
               citizenshipType: 'foreign',
               russiaPresence: String(body.russiaPresence),
+              studyArrival: String(body.studyArrival),
               russiaEntryDate: body.russiaEntryDate as string | null,
               mobilityStatus: String(body.mobilityStatus),
               entryMode: String(body.entryMode),
@@ -449,7 +450,9 @@ describe('mini app', () => {
     expect(screen.getByLabelText('How did or will you enter Russia?')).toBeTruthy();
     await user.selectOptions(screen.getByLabelText('How did or will you enter Russia?'), 'visa');
     await user.click(screen.getByRole('button', { name: 'Continue' }));
-    await user.selectOptions(screen.getByLabelText('Are you in Russia now?'), 'yes');
+    expect(screen.queryByLabelText('Have you already come to Russia to study?')).toBeNull();
+    await user.selectOptions(screen.getByLabelText('Where are you now?'), 'yes');
+    await user.selectOptions(screen.getByLabelText('Have you already come to Russia to study?'), 'yes');
     fireEvent.change(screen.getByLabelText('Date of your last entry to Russia, if known'), {
       target: { value: '2026-09-20' },
     });
@@ -483,10 +486,18 @@ describe('mini app', () => {
     expect((screen.getByLabelText('Date of your last entry to Russia, if known') as HTMLInputElement).value).toBe(
       '2026-09-20',
     );
+    await user.selectOptions(screen.getByLabelText('Where are you now?'), 'no');
+    expect((screen.getByLabelText('Have you already come to Russia to study?') as HTMLSelectElement).value).toBe('yes');
     await user.selectOptions(screen.getByLabelText('Are you moving to your study city?'), 'moved');
     expect((screen.getByLabelText('Arrived in my study city') as HTMLInputElement).checked).toBe(true);
     await user.click(screen.getByRole('button', { name: 'Update your answers' }));
-    expect(requests[1]).toMatchObject({ russiaPresence: 'yes', arrivalStatus: 'arrived', mobilityStatus: 'moved' });
+    expect(requests[1]).toMatchObject({
+      russiaPresence: 'no',
+      studyArrival: 'yes',
+      arrivalStatus: 'arrived',
+      mobilityStatus: 'moved',
+      russiaEntryDate: '2026-09-20',
+    });
   });
 
   it('asks to clarify a legacy date without copying it into the study-city date', async () => {
@@ -548,27 +559,83 @@ describe('mini app', () => {
     expect(JSON.parse(String(authCall?.[1]?.body))).toEqual({ devUserId: 'dev-student-clean' });
   });
 
-  it('keeps unresolved possible steps out of the regular plan', async () => {
-    const baseFetch = installSuccessfulApi();
-    vi.stubGlobal(
-      'fetch',
-      vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
-        if (urlOf(input).endsWith('/api/route')) {
-          return json({
-            route: {
-              ...baseRoute,
-              possibleSteps: [{ ...firstStep, code: 'UNRESOLVED_ACTION', title: 'Unresolved card' }],
+  it.each([true, false])(
+    'clarifies pending actions in the profile and follows the returned plan (%s)',
+    async (applies) => {
+      const pending: RouteStep = {
+        ...firstStep,
+        code: 'UNRESOLVED_ACTION',
+        title: 'Additional housing documents',
+        isActive: false,
+        knowledge: {
+          id: 'UNRESOLVED_ACTION',
+          scope: 'university',
+          title: 'Additional housing documents',
+          summary: '',
+          instructions: [],
+          documents: [],
+          destination: null,
+          warnings: [],
+          exceptions: [],
+          unresolvedIds: [],
+          deadlineKind: 'event_based',
+          deadlineNotes: [],
+          reportedDeadlineText: null,
+          result: null,
+          triggerEvent: null,
+          applicability: 'unknown',
+          selection: 'pending',
+          sources: [],
+          overlays: [],
+          releaseVerified: true,
+          inputs: [
+            {
+              key: 'needs_housing',
+              label: 'Do you need university housing?',
+              kind: 'fact',
+              options: [true, false],
+              value: null,
             },
-          });
-        }
-        return baseFetch(input, init);
-      }),
-    );
-    render(<App />);
-    await userEvent.click(await screen.findByRole('button', { name: 'Route' }));
-    expect(screen.queryByText(/More answers needed/)).toBeNull();
-    expect(screen.queryByText('Unresolved card')).toBeNull();
-  });
+          ],
+        },
+      };
+      const baseFetch = installSuccessfulApi(false, 'en', { ...baseRoute, possibleSteps: [pending] });
+      const updated = {
+        ...baseRoute,
+        steps: applies ? [...baseRoute.steps, { ...pending, isActive: true }] : baseRoute.steps,
+        possibleSteps: [],
+        progress: { completed: 0, total: applies ? 3 : 2, percent: 0 },
+      };
+      let submitted: unknown;
+      vi.stubGlobal(
+        'fetch',
+        vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+          if (urlOf(input).endsWith('/UNRESOLVED_ACTION/context') && init?.method === 'PATCH') {
+            submitted = JSON.parse(String(init.body));
+            return json({ route: updated });
+          }
+          return baseFetch(input, init);
+        }),
+      );
+      const user = userEvent.setup();
+      render(<App />);
+      await user.click(await screen.findByRole('button', { name: 'Route' }));
+      expect(screen.queryByText('Additional housing documents')).toBeNull();
+      expect(screen.queryByText('Other actions for your situation')).toBeNull();
+      expect(screen.queryByText(/Remaining steps/)).toBeNull();
+      await user.click(screen.getByRole('button', { name: 'Profile' }));
+      await user.click(screen.getByText('Clarify answers for your plan'));
+      expect(screen.queryByText('Additional housing documents')).toBeNull();
+      await user.click(screen.getByText('Do you need university housing?', { selector: 'summary' }));
+      await user.selectOptions(screen.getByLabelText('Do you need university housing?'), String(applies));
+      await user.click(screen.getByRole('button', { name: 'Save answers' }));
+      await waitFor(() => expect(screen.queryByText('Clarify answers for your plan')).toBeNull());
+      expect(submitted).toEqual({ facts: { needs_housing: applies }, dates: {} });
+      await user.click(screen.getByRole('button', { name: 'Route' }));
+      expect(Boolean(screen.queryByText('Additional housing documents'))).toBe(applies);
+      expect(screen.getByText(`0 of ${applies ? 3 : 2} completed`)).toBeTruthy();
+    },
+  );
 
   it('renders step documents and opens its official source through MAX Bridge', async () => {
     const openLink = vi.fn();
@@ -676,7 +743,7 @@ describe('mini app', () => {
     await screen.findByRole('heading', { name: 'Your plan for the first steps' });
     expect(screen.getAllByText(firstStep.title)).toHaveLength(1);
     expect(screen.queryByText(secondStep.title)).toBeNull();
-    expect(screen.getByText('Steps remaining: 2')).toBeTruthy();
+    expect(screen.queryByText('Steps remaining: 2')).toBeNull();
     expect(screen.getByRole('combobox', { name: 'Language' })).toBeTruthy();
     await userEvent.click(screen.getByRole('button', { name: 'Full route' }));
     expect(screen.getByText(secondStep.title)).toBeTruthy();

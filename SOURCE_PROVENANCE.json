@@ -51,10 +51,20 @@
     "historical_traceability": "Original release traceability archive, its copied source tree and their tests are omitted. validate_release.py therefore does not compare the optional original traceability tree.",
     "archive_sha256": "Original content-import identifier retained; this is not the checksum of the new submission ZIP."
   },
-  "code_commit": "a9544d24c4dd8c98eb948d483dae7aa3a63dfa35",
   "excluded_file_count": 391,
   "presentation": "Deferred by owner; to be added separately",
-  "checks": {
+  "previous_code_commit": "37a851ada3fbbc2ed1ec2bdf750c01bcc155be60",
+  "application_changes": [
+    "Document actual API response schemas without dropping existing fields",
+    "Extend existing local mock smoke with profile, instructions, progress and reminder lifecycle",
+    "Include the same smoke in Docker runtime and document reproducible invocation",
+    "Reject malformed step UUID in status requests with HTTP 400 instead of 500"
+  ],
+  "deployment": "Deployed 2026-09-30; full development source and running production assets verified read-only.",
+  "data_packaging_reused_from": "Сдача_Путь_студента_2026-09-30; data trees and locks byte-identical",
+  "base_code_commit": "a9544d24c4dd8c98eb948d483dae7aa3a63dfa35",
+  "code_commit": "727e351bbcf8c4d2b75fbc24f4101bcad2e7397e",
+  "historical_checks": {
     "integration_api": {
       "passed": 38
     },
@@ -89,13 +99,67 @@
     "real_MAX_client": "not verified; separate manual acceptance",
     "presentation": "not included; added separately"
   },
-  "previous_code_commit": "37a851ada3fbbc2ed1ec2bdf750c01bcc155be60",
-  "application_changes": [
-    "Document actual API response schemas without dropping existing fields",
-    "Extend existing local mock smoke with profile, instructions, progress and reminder lifecycle",
-    "Include the same smoke in Docker runtime and document reproducible invocation",
-    "Reject malformed step UUID in status requests with HTTP 400 instead of 500"
-  ],
-  "deployment": "Not deployed as part of this task",
-  "data_packaging_reused_from": "Сдача_Путь_студента_2026-09-30; data trees and locks byte-identical"
+  "local_patch": {
+    "revision": "ui-clarifications-2026-09-30",
+    "files": [
+      "apps/miniapp/src/App.tsx",
+      "apps/miniapp/src/i18n.ts",
+      "apps/miniapp/src/locale-overlays.ts",
+      "apps/miniapp/src/route-knowledge-i18n.ts",
+      "apps/miniapp/src/styles.css",
+      "tests/unit/miniapp.test.tsx",
+      "apps/api/src/app.ts",
+      "tests/integration/api.test.ts",
+      "openapi.json"
+    ],
+    "scope": [
+      "Sequential location/study-arrival questions in seven languages",
+      "Pending applicability questions in profile, no action picker on route",
+      "Single completion counter",
+      "Fix HTTP context schema coercion: preserve boolean/null answers instead of converting to strings"
+    ],
+    "identity": "Public release tag plus the SHA-256 of the competition ZIP",
+    "checks": {
+      "miniapp_unit_tests": {
+        "passed": 41,
+        "environment": "jsdom; synthetic API fixtures"
+      },
+      "typecheck": "passed",
+      "targeted_eslint": "passed",
+      "i18n": "passed; 415 keys",
+      "docker_build": "passed; local isolated Compose, cached layers, mock MAX; temporary localhost ports and matching frontend API URL",
+      "docker_services_healthy": 5,
+      "mock_smoke": "passed with synthetic data and cleanup",
+      "browser": "local Chromium, 390px viewport; onboarding, plan, profile clarifications, reentry; not real MAX",
+      "real_MAX_manual_acceptance": "not performed",
+      "targeted_http_integration": {
+        "passed": 1,
+        "skipped": 38,
+        "scope": "Boolean true/false, null reset and date null preserved; string instead of boolean rejected with 422, object rejected with 400; isolated PostgreSQL"
+      },
+      "browser_context_save": "Confirmed: saved itmo_needs_dorm=true and the returned route replaced ITMO_FOREIGN_PREARRIVAL with UNI_ITMO_PREARRIVAL_NOTIFY",
+      "openapi_freshness": "passed"
+    }
+  },
+  "public_release_tag": "hackathon-2026-09-30-ui-final",
+  "production_verification": {
+    "checked_at_utc": "2026-09-30T08:38:05.354078+00:00",
+    "active_release": "/opt/first30/releases/727e351bbcf8",
+    "previous_release": "/opt/first30/releases/37a851ada3fb",
+    "source_files_matched_to_development_commit": 951,
+    "development_commit": "727e351bbcf8c4d2b75fbc24f4101bcad2e7397e",
+    "health_live": {
+      "status": "ok"
+    },
+    "health_ready": {
+      "status": "ready",
+      "database": "ok",
+      "maxProvider": "real"
+    },
+    "public_openapi_paths_components_match": "passed; five local /api/dev/* mock helpers are intentionally absent in production",
+    "unauthenticated_profile_status": 401,
+    "public_assets_match_running_container": 2,
+    "services_healthy": 5,
+    "production_tests_scope": "Read-only GET and source/container inspection; no synthetic writes or real messages"
+  }
 }

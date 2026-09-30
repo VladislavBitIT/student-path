@@ -297,6 +297,30 @@ describe('P0/P1 PostgreSQL integration', () => {
     expect(await inject({ method: 'GET', url: '/api/reminders', headers: otherHeaders })).toEqual({ reminders: [] });
   });
 
+  it('preserves boolean and null knowledge answers through HTTP validation', async () => {
+    const user = await auth(`context-types-${randomUUID().slice(0, 8)}`);
+    await onboard(user.token);
+    const headers = { authorization: `Bearer ${user.token}` };
+    const url = '/api/route/steps/UNI_ITMO_PREARRIVAL_NOTIFY/context';
+    const key = 'kb:UNIV_ITMO:UNI_ITMO_PREARRIVAL_NOTIFY:fact:itmo_needs_dorm';
+    for (const value of [true, false, null]) {
+      await inject({
+        method: 'PATCH',
+        url,
+        headers,
+        payload: { facts: { itmo_needs_dorm: value }, dates: { entry_to_russia: null } },
+      });
+      const result = await inject<{ profile: { attributes: Record<string, unknown> } }>({
+        method: 'GET',
+        url: '/api/profile',
+        headers,
+      });
+      expect(result.profile.attributes[key]).toBe(value === null ? undefined : value);
+    }
+    await inject({ method: 'PATCH', url, headers, payload: { facts: { itmo_needs_dorm: 'true' }, dates: {} } }, 422);
+    await inject({ method: 'PATCH', url, headers, payload: { facts: { itmo_needs_dorm: {} }, dates: {} } }, 400);
+  });
+
   it('returns a validation error for a malformed step UUID instead of a database error', async () => {
     const user = await auth(`invalid-step-${randomUUID().slice(0, 8)}`);
     await onboard(user.token);

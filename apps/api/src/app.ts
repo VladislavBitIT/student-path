@@ -190,6 +190,7 @@ function validated<T>(schema: z.ZodType<T>, input: unknown): T {
 export async function buildApp(options: BuildAppOptions): Promise<FastifyInstance> {
   const { config, database } = options;
   const app = Fastify({
+    ajv: { customOptions: { allowUnionTypes: true } },
     logger:
       options.logger === false
         ? false
@@ -595,13 +596,15 @@ export async function buildApp(options: BuildAppOptions): Promise<FastifyInstanc
               type: 'object',
               maxProperties: 100,
               additionalProperties: {
-                anyOf: [{ type: 'string', maxLength: 200 }, { type: 'number' }, { type: 'boolean' }, { type: 'null' }],
+                // Preserve scalar types: anyOf with coercion converts booleans to strings.
+                type: ['string', 'number', 'boolean', 'null'],
+                maxLength: 200,
               },
             },
             dates: {
               type: 'object',
               maxProperties: 30,
-              additionalProperties: { anyOf: [{ type: 'string', maxLength: 40 }, { type: 'null' }] },
+              additionalProperties: { type: ['string', 'null'], maxLength: 40 },
             },
           },
         },

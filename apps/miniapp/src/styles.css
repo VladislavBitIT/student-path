@@ -2260,11 +2260,6 @@ textarea {
   align-items: center;
   gap: 8px;
 }
-.remaining-count {
-  display: block;
-  margin-top: 5px;
-  color: var(--muted);
-}
 .deadline.overdue {
   color: #a1352a;
 }

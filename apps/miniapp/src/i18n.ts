@@ -2,7 +2,6 @@ import type { AccommodationType, Language } from './types';
 import { miniappLocaleOverlays } from './locale-overlays';
 
 const ru = {
-  remainingSteps: 'Осталось шагов: {count}',
   stageHint: 'Этапы — ориентиры маршрута. Конкретный срок указан отдельно у каждого шага.',
   overdue: 'Срок прошёл',
   startStep: 'Начать выполнение',
@@ -11,11 +10,10 @@ const ru = {
   automaticReminder: 'По сроку шага',
   reminderSavedTime: 'Назначено: {time}',
   reminderLocalTime: 'Время указано в часовом поясе вашего устройства.',
-  studyArrival: 'Вы уже приехали в Россию для учёбы?',
-  studyArrivalYes: 'Да, уже приехал(а)',
-  studyArrivalNo: 'Нет, ещё не приехал(а)',
-  studyArrivalHint:
-    'Если вы временно выехали из России после приезда для учёбы, выберите «Да». Текущее местонахождение укажите отдельно.',
+  studyArrival: 'Вы уже приезжали в Россию для учёбы?',
+  studyArrivalYes: 'Да, уже приезжал(а) для учёбы',
+  studyArrivalNo: 'Нет, ещё не приезжал(а) для учёбы',
+  studyArrivalHint: 'Если вы приехали для учёбы и временно уехали, выберите «Да».',
   mobilityLocal: 'Жил(а) здесь до поступления',
   mobilityMoving: 'Планирую переехать для учёбы',
   mobilityMoved: 'Переехал(а) сюда для учёбы',
@@ -192,9 +190,9 @@ const ru = {
   preparing: 'Ещё не приехал(а) в город учёбы',
   arrived: 'Уже приехал(а) в город учёбы',
   arrivalDate: 'Дата приезда в город учёбы, если известна',
-  russiaPresence: 'Вы сейчас в России?',
-  russiaNo: 'Нет',
-  russiaYes: 'Да',
+  russiaPresence: 'Где вы сейчас?',
+  russiaNo: 'За пределами России',
+  russiaYes: 'В России',
   russiaEntryDate: 'Дата последнего въезда в РФ, если известна',
   entryModeQuestion: 'Как вы въехали или планируете въехать в Россию?',
   legacyDateHint:
@@ -217,7 +215,6 @@ const ru = {
 } as const;
 
 export const en: Record<keyof typeof ru, string> = {
-  remainingSteps: 'Steps remaining: {count}',
   stageHint: 'Stages are route guides. Each step shows its own deadline separately.',
   overdue: 'Overdue',
   startStep: 'Start working on this',
@@ -226,11 +223,10 @@ export const en: Record<keyof typeof ru, string> = {
   automaticReminder: 'Use the step’s deadline',
   reminderSavedTime: 'Scheduled: {time}',
   reminderLocalTime: 'Times use your device’s time zone.',
-  studyArrival: 'Have you already arrived in Russia to study?',
-  studyArrivalYes: 'Yes, I have arrived',
-  studyArrivalNo: 'No, I have not arrived yet',
-  studyArrivalHint:
-    'Choose Yes if you arrived to study and then temporarily left Russia. Indicate your current location separately.',
+  studyArrival: 'Have you already come to Russia to study?',
+  studyArrivalYes: 'Yes, I have come to study',
+  studyArrivalNo: 'No, not yet',
+  studyArrivalHint: 'Choose Yes if you came to study and have temporarily left Russia.',
   mobilityLocal: 'Lived here before admission',
   mobilityMoving: 'Planning to move here to study',
   mobilityMoved: 'Moved here to study',
@@ -407,9 +403,9 @@ export const en: Record<keyof typeof ru, string> = {
   preparing: 'Not yet arrived in my study city',
   arrived: 'Arrived in my study city',
   arrivalDate: 'Arrival date in your study city, if known',
-  russiaPresence: 'Are you in Russia now?',
-  russiaNo: 'No',
-  russiaYes: 'Yes',
+  russiaPresence: 'Where are you now?',
+  russiaNo: 'Outside Russia',
+  russiaYes: 'In Russia',
   russiaEntryDate: 'Date of your last entry to Russia, if known',
   entryModeQuestion: 'How did or will you enter Russia?',
   legacyDateHint:
